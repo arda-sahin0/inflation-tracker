@@ -1,0 +1,3 @@
+date,product_id,category,store,sku,name,store_id,regular_price,sale_price,loyalty_price,unit,net_amount,in_stock
+2026-09-11,sut-sek-1l,dairy,migros,11019550,Sek Yeni Nesil Pastörize Günlük Süt 1 L,20000000000607,9995,9995,9995,PIECE,1000.0,True
+2026-09-11,ceviz-masterfarm-150g,nuts,migros,08079757,Master Farm Yerli Ceviz İçi 150 G,20000000000607,16495,16495,16495,PIECE,150.0,True
