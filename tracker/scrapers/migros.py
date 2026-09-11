@@ -1,8 +1,4 @@
-import json
-import time
-from pathlib import Path
 from urllib.parse import urlparse
-
 import requests
 
 URL = "https://www.migros.com.tr/rest/products/screens/{sku}"

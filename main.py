@@ -8,6 +8,7 @@ from tracker import ROOT
 from tracker.scrapers import get_scraper
 
 TURKEY = timezone(timedelta(hours=3))
+EXPECTED_STORE_IDS = {"migros": 20000000000607}
 FIELDS = ["date", "product_id", "category", "store", "sku", "name", "store_id",
           "regular_price", "sale_price", "loyalty_price", "unit", "net_amount", "in_stock"]
 
@@ -16,7 +17,7 @@ def main() -> int:
     today = datetime.now(TURKEY).date().isoformat()
     products = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
 
-    rows, failures = [], []
+    rows, failures, warnings = [], [], []
     for product in products:
         try:
             scrape = get_scraper(product["url"])
@@ -24,6 +25,10 @@ def main() -> int:
             row.update(date=today, product_id=product["id"], category=product["category"])
             rows.append(row)
             print(f"OK   {product['id']}: {row['regular_price'] / 100:.2f} TL")
+
+            expected = EXPECTED_STORE_IDS.get(row["store"])
+            if expected is not None and row["store_id"] != expected:
+                warnings.append(f"{product['id']}: store_id {row['store_id']} (expected {expected})")
         except Exception as e:
             failures.append(product["id"])
             print(f"FAIL {product['id']}: {e!r}")
@@ -38,10 +43,11 @@ def main() -> int:
             writer.writerows(rows)
         print(f"Saved {len(rows)} rows to {out.relative_to(ROOT)}")
 
+    for w in warnings:
+        print(f"WARNING {w}")
     if failures:
         print(f"{len(failures)} failed: {', '.join(failures)}")
-        return 1
-    return 0
+    return 1 if (failures or warnings) else 0
 
 
 if __name__ == "__main__":
