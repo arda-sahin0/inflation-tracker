@@ -1,5 +1,6 @@
 import csv
 import json
+import os
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -35,7 +36,8 @@ def main() -> int:
         time.sleep(2)
 
     if rows:
-        out = ROOT / "data" / "raw" / f"{today}.csv"
+        folder = "raw" if os.getenv("GITHUB_ACTIONS") == "true" else "local"
+        out = ROOT / "data" / folder / f"{today}.csv"
         out.parent.mkdir(parents=True, exist_ok=True)
         with out.open("w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=FIELDS)
