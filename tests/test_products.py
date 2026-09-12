@@ -1,6 +1,7 @@
 import json
 
 from tracker import ROOT
+from tracker.scrapers import a101, migros
 from tracker.scrapers import get_scraper
 from tracker.scrapers.migros import to_sku
 
@@ -25,6 +26,9 @@ def test_every_product_is_valid():
     for p in load_products():
         assert {"id", "category", "url"} <= p.keys(), f"Missing field in {p}"
         assert p["category"] in ALLOWED_CATEGORIES, f"{p['id']}: unknown category {p['category']!r}"
-        get_scraper(p["url"])                  # no scraper handles this domain
+        get_scraper(p["url"])
         if "migros.com.tr" in p["url"]:
-            to_sku(p["url"])                   # link has no valid SKU
+            migros.to_sku(p["url"])
+        elif "a101.com.tr" in p["url"]:
+            a101.to_sku(p["url"])
+            assert "name" in p and "unit" in p, f"{p['id']}: A101 products need name and unit"

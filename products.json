@@ -1,84 +1,512 @@
 [
-  {"id": "ekmek-sofra-adet", "category": "bread_cereals",
-   "url": "https://www.migros.com.tr/sofra-ekmek-adet-p-4e2000"},
-  {"id": "pirinc-baldo-hasata-2kg", "category": "bread_cereals",
-   "url": "https://www.migros.com.tr/hasata-gonen-baldo-pirinc-2-kg-p-f70c5"},
-  {"id": "un-soke-2kg", "category": "bread_cereals",
-   "url": "https://www.migros.com.tr/soke-un-2-kg-p-4c73e2"},
-  {"id": "bulgur-reis-pilavlik-1kg", "category": "bread_cereals",
-   "url": "https://www.migros.com.tr/reis-pilavlik-bulgur-1-kg-p-1053d6"},
-  {"id": "pilic-bonfile-banvit-kg", "category": "meat",
-   "url": "https://www.migros.com.tr/banvit-pilic-bonfile-kg-p-2be844b"},
-  {"id": "dana-kiyma-kg", "category": "meat",
-   "url": "https://www.migros.com.tr/dana-kiymalik-kg-p-17d9f99"},
-  {"id": "sucuk-cumhuriyet-kg", "category": "meat",
-   "url": "https://www.migros.com.tr/cumhuriyet-parmak-sucuk-kg-p-d8c432"},
-  {"id": "sut-sek-1l", "category": "dairy_eggs",
-   "url": "https://www.migros.com.tr/sek-yeni-nesil-pastorize-gunluk-sut-1-l-p-a8251e"},
-  {"id": "peynir-beyaz-ekici-kg", "category": "dairy_eggs",
-   "url": "https://www.migros.com.tr/ekici-beyaz-peynir-kg-p-98d9b9"},
-  {"id": "yogurt-sutas-1kg", "category": "dairy_eggs",
-   "url": "https://www.migros.com.tr/sutas-tava-yogurt-1000-g-p-bebffa"},
-  {"id": "yumurta-naturakoy-15li", "category": "dairy_eggs",
-   "url": "https://www.migros.com.tr/naturakoy-gezen-15li-yumurta-m-orta-boy-53-62-g-p-2bebb85"},
-  {"id": "tereyagi-migros-1kg", "category": "oils_fats",
-   "url": "https://www.migros.com.tr/migros-tereyagi-1-kg-p-b75d84"},
-  {"id": "aycicek-yagi-migros-5l", "category": "oils_fats",
-   "url": "https://www.migros.com.tr/migros-aycicek-yagi-5-l-p-3ec039"},
-  {"id": "zeytinyagi-yudum-1l", "category": "oils_fats",
-   "url": "https://www.migros.com.tr/yudum-egemden-sizma-zeytinyagi-yumusak-lezzet-1-l-p-3f0509"},
-  {"id": "margarin-sana-500g", "category": "oils_fats",
-   "url": "https://www.migros.com.tr/sana-kase-margarin-tereyagi-lezzeti-500-g-p-402a3b"},
-  {"id": "muz-yerli-kg", "category": "fruit_nuts",
-   "url": "https://www.migros.com.tr/muz-yerli-kg-p-1a01b70"},
-  {"id": "elma-gala-kg", "category": "fruit_nuts",
-   "url": "https://www.migros.com.tr/elma-gala-kg-p-19e1000"},
-  {"id": "portakal-kg", "category": "fruit_nuts",
-   "url": "https://www.migros.com.tr/portakal-kg-p-1a0a047"},
-  {"id": "ceviz-masterfarm-150g", "category": "fruit_nuts",
-   "url": "https://www.migros.com.tr/master-farm-yerli-ceviz-ici-150-g-p-7b498d"},
-  {"id": "domates-kg", "category": "vegetables_pulses",
-   "url": "https://www.migros.com.tr/domates-kg-p-1ac7780"},
-  {"id": "patates-kg", "category": "vegetables_pulses",
-   "url": "https://www.migros.com.tr/patates-yeni-mahsul-kg-p-1afb90b"},
-  {"id": "sogan-kuru-kg", "category": "vegetables_pulses",
-   "url": "https://www.migros.com.tr/sogan-kuru-yeni-mahsul-kg-p-1b13277"},
-  {"id": "mercimek-yesil-migros-1kg", "category": "vegetables_pulses",
-   "url": "https://www.migros.com.tr/migros-yerli-yesil-mercimek-1-kg-p-10059d"},
-  {"id": "nohut-reis-1kg", "category": "vegetables_pulses",
-   "url": "https://www.migros.com.tr/reis-kocbasi-nohut-1-kg-p-fde92"},
-  {"id": "seker-toz-migros-5kg", "category": "sugar_sweets",
-   "url": "https://www.migros.com.tr/migros-toz-seker-5-kg-p-3281b6"},
-  {"id": "bal-balparmak-850g", "category": "sugar_sweets",
-   "url": "https://www.migros.com.tr/balparmak-yayla-ve-ova-cicek-bali-850-g-p-6c070c"},
-  {"id": "cikolata-ulker-sutlu-60g", "category": "sugar_sweets",
-   "url": "https://www.migros.com.tr/ulker-bol-sutlu-kare-cikolata-60-g-p-6b644e"},
-  {"id": "salca-domates-migros-830g", "category": "other_food",
-   "url": "https://www.migros.com.tr/migros-domates-salcasi-830-g-p-898084"},
-  {"id": "tuz-billur-750g", "category": "other_food",
-   "url": "https://www.migros.com.tr/billur-tuz-rafine-iyotlu-sofra-tuzu-750-g-p-5bdfee"},
-  {"id": "karabiber-knorr-60g", "category": "other_food",
-   "url": "https://www.migros.com.tr/knorr-baharat-serisi-karabiber-60-g-p-5bb4e4"},
-  {"id": "cay-caykur-tiryaki-1kg", "category": "tea_coffee",
-   "url": "https://www.migros.com.tr/caykur-tiryaki-cayi-1-kg-p-2f7993"},
-  {"id": "kahve-mehmet-efendi-100g", "category": "tea_coffee",
-   "url": "https://www.migros.com.tr/kurukahveci-mehmet-efendi-turk-kahvesi-100-g-p-310151"},
-  {"id": "su-hamidiye-5l", "category": "drinks",
-   "url": "https://www.migros.com.tr/hamidiye-kaynak-suyu-pet-5-l-p-7a8047"},
-  {"id": "maden-suyu-kizilay-6x200ml", "category": "drinks",
-   "url": "https://www.migros.com.tr/kizilay-erzincan-dogal-maden-suyu-6-x-200-ml-p-87cde5"},
-  {"id": "meyve-suyu-tamek-1l", "category": "drinks",
-   "url": "https://www.migros.com.tr/tamek-100-karisik-meyve-suyu-1-lt-p-7af8f1"},
-  {"id": "kola-cocacola-zero-6x250ml", "category": "drinks",
-   "url": "https://www.migros.com.tr/coca-cola-zero-sugar-kutu-6-x-250-ml-p-7a5ca8"},
-  {"id": "bulasik-deterjani-fairy-1350ml", "category": "household",
-   "url": "https://www.migros.com.tr/fairy-sivi-bulasik-deterjani-limon-1350-ml-p-1d313ce"},
-  {"id": "camasir-deterjani-mroxy-1480ml", "category": "household",
-   "url": "https://www.migros.com.tr/mroxy-arap-sabunu-soda-katkili-camasir-deterjani-beyazlar-1480-ml-p-1d1db98"},
-  {"id": "tuvalet-kagidi-familia-32li", "category": "household",
-   "url": "https://www.migros.com.tr/familia-plus-natural-tuvalet-kagidi-32li-p-1d92d0f"},
-  {"id": "sampuan-gliss-400ml", "category": "personal_care",
-   "url": "https://www.migros.com.tr/gliss-full-hair-wonder-sampuan-400-ml-p-20a820d"},
-  {"id": "dis-macunu-signal-75ml", "category": "personal_care",
-   "url": "https://www.migros.com.tr/signal-white-system-dis-macunu-75-ml-p-2070680"}
+  {
+    "id": "ekmek-sofra-adet",
+    "category": "bread_cereals",
+    "url": "https://www.migros.com.tr/sofra-ekmek-adet-p-4e2000"
+  },
+  {
+    "id": "pirinc-baldo-hasata-2kg",
+    "category": "bread_cereals",
+    "url": "https://www.migros.com.tr/hasata-gonen-baldo-pirinc-2-kg-p-f70c5"
+  },
+  {
+    "id": "un-soke-2kg",
+    "category": "bread_cereals",
+    "url": "https://www.migros.com.tr/soke-un-2-kg-p-4c73e2"
+  },
+  {
+    "id": "bulgur-reis-pilavlik-1kg",
+    "category": "bread_cereals",
+    "url": "https://www.migros.com.tr/reis-pilavlik-bulgur-1-kg-p-1053d6"
+  },
+  {
+    "id": "pilic-bonfile-banvit-kg",
+    "category": "meat",
+    "url": "https://www.migros.com.tr/banvit-pilic-bonfile-kg-p-2be844b"
+  },
+  {
+    "id": "dana-kiyma-kg",
+    "category": "meat",
+    "url": "https://www.migros.com.tr/dana-kiymalik-kg-p-17d9f99"
+  },
+  {
+    "id": "sucuk-cumhuriyet-kg",
+    "category": "meat",
+    "url": "https://www.migros.com.tr/cumhuriyet-parmak-sucuk-kg-p-d8c432"
+  },
+  {
+    "id": "sut-sek-1l",
+    "category": "dairy_eggs",
+    "url": "https://www.migros.com.tr/sek-yeni-nesil-pastorize-gunluk-sut-1-l-p-a8251e"
+  },
+  {
+    "id": "peynir-beyaz-ekici-kg",
+    "category": "dairy_eggs",
+    "url": "https://www.migros.com.tr/ekici-beyaz-peynir-kg-p-98d9b9"
+  },
+  {
+    "id": "yogurt-sutas-1kg",
+    "category": "dairy_eggs",
+    "url": "https://www.migros.com.tr/sutas-tava-yogurt-1000-g-p-bebffa"
+  },
+  {
+    "id": "yumurta-naturakoy-15li",
+    "category": "dairy_eggs",
+    "url": "https://www.migros.com.tr/naturakoy-gezen-15li-yumurta-m-orta-boy-53-62-g-p-2bebb85"
+  },
+  {
+    "id": "tereyagi-migros-1kg",
+    "category": "oils_fats",
+    "url": "https://www.migros.com.tr/migros-tereyagi-1-kg-p-b75d84"
+  },
+  {
+    "id": "aycicek-yagi-migros-5l",
+    "category": "oils_fats",
+    "url": "https://www.migros.com.tr/migros-aycicek-yagi-5-l-p-3ec039"
+  },
+  {
+    "id": "zeytinyagi-yudum-1l",
+    "category": "oils_fats",
+    "url": "https://www.migros.com.tr/yudum-egemden-sizma-zeytinyagi-yumusak-lezzet-1-l-p-3f0509"
+  },
+  {
+    "id": "margarin-sana-500g",
+    "category": "oils_fats",
+    "url": "https://www.migros.com.tr/sana-kase-margarin-tereyagi-lezzeti-500-g-p-402a3b"
+  },
+  {
+    "id": "muz-yerli-kg",
+    "category": "fruit_nuts",
+    "url": "https://www.migros.com.tr/muz-yerli-kg-p-1a01b70"
+  },
+  {
+    "id": "elma-gala-kg",
+    "category": "fruit_nuts",
+    "url": "https://www.migros.com.tr/elma-gala-kg-p-19e1000"
+  },
+  {
+    "id": "portakal-kg",
+    "category": "fruit_nuts",
+    "url": "https://www.migros.com.tr/portakal-kg-p-1a0a047"
+  },
+  {
+    "id": "ceviz-masterfarm-150g",
+    "category": "fruit_nuts",
+    "url": "https://www.migros.com.tr/master-farm-yerli-ceviz-ici-150-g-p-7b498d"
+  },
+  {
+    "id": "domates-kg",
+    "category": "vegetables_pulses",
+    "url": "https://www.migros.com.tr/domates-kg-p-1ac7780"
+  },
+  {
+    "id": "patates-kg",
+    "category": "vegetables_pulses",
+    "url": "https://www.migros.com.tr/patates-yeni-mahsul-kg-p-1afb90b"
+  },
+  {
+    "id": "sogan-kuru-kg",
+    "category": "vegetables_pulses",
+    "url": "https://www.migros.com.tr/sogan-kuru-yeni-mahsul-kg-p-1b13277"
+  },
+  {
+    "id": "mercimek-yesil-migros-1kg",
+    "category": "vegetables_pulses",
+    "url": "https://www.migros.com.tr/migros-yerli-yesil-mercimek-1-kg-p-10059d"
+  },
+  {
+    "id": "nohut-reis-1kg",
+    "category": "vegetables_pulses",
+    "url": "https://www.migros.com.tr/reis-kocbasi-nohut-1-kg-p-fde92"
+  },
+  {
+    "id": "seker-toz-migros-5kg",
+    "category": "sugar_sweets",
+    "url": "https://www.migros.com.tr/migros-toz-seker-5-kg-p-3281b6"
+  },
+  {
+    "id": "bal-balparmak-850g",
+    "category": "sugar_sweets",
+    "url": "https://www.migros.com.tr/balparmak-yayla-ve-ova-cicek-bali-850-g-p-6c070c"
+  },
+  {
+    "id": "cikolata-ulker-sutlu-60g",
+    "category": "sugar_sweets",
+    "url": "https://www.migros.com.tr/ulker-bol-sutlu-kare-cikolata-60-g-p-6b644e"
+  },
+  {
+    "id": "salca-domates-migros-830g",
+    "category": "other_food",
+    "url": "https://www.migros.com.tr/migros-domates-salcasi-830-g-p-898084"
+  },
+  {
+    "id": "tuz-billur-750g",
+    "category": "other_food",
+    "url": "https://www.migros.com.tr/billur-tuz-rafine-iyotlu-sofra-tuzu-750-g-p-5bdfee"
+  },
+  {
+    "id": "karabiber-knorr-60g",
+    "category": "other_food",
+    "url": "https://www.migros.com.tr/knorr-baharat-serisi-karabiber-60-g-p-5bb4e4"
+  },
+  {
+    "id": "cay-caykur-tiryaki-1kg",
+    "category": "tea_coffee",
+    "url": "https://www.migros.com.tr/caykur-tiryaki-cayi-1-kg-p-2f7993"
+  },
+  {
+    "id": "kahve-mehmet-efendi-100g",
+    "category": "tea_coffee",
+    "url": "https://www.migros.com.tr/kurukahveci-mehmet-efendi-turk-kahvesi-100-g-p-310151"
+  },
+  {
+    "id": "su-hamidiye-5l",
+    "category": "drinks",
+    "url": "https://www.migros.com.tr/hamidiye-kaynak-suyu-pet-5-l-p-7a8047"
+  },
+  {
+    "id": "maden-suyu-kizilay-6x200ml",
+    "category": "drinks",
+    "url": "https://www.migros.com.tr/kizilay-erzincan-dogal-maden-suyu-6-x-200-ml-p-87cde5"
+  },
+  {
+    "id": "meyve-suyu-tamek-1l",
+    "category": "drinks",
+    "url": "https://www.migros.com.tr/tamek-100-karisik-meyve-suyu-1-lt-p-7af8f1"
+  },
+  {
+    "id": "kola-cocacola-zero-6x250ml",
+    "category": "drinks",
+    "url": "https://www.migros.com.tr/coca-cola-zero-sugar-kutu-6-x-250-ml-p-7a5ca8"
+  },
+  {
+    "id": "bulasik-deterjani-fairy-1350ml",
+    "category": "household",
+    "url": "https://www.migros.com.tr/fairy-sivi-bulasik-deterjani-limon-1350-ml-p-1d313ce"
+  },
+  {
+    "id": "camasir-deterjani-mroxy-1480ml",
+    "category": "household",
+    "url": "https://www.migros.com.tr/mroxy-arap-sabunu-soda-katkili-camasir-deterjani-beyazlar-1480-ml-p-1d1db98"
+  },
+  {
+    "id": "tuvalet-kagidi-familia-32li",
+    "category": "household",
+    "url": "https://www.migros.com.tr/familia-plus-natural-tuvalet-kagidi-32li-p-1d92d0f"
+  },
+  {
+    "id": "sampuan-gliss-400ml",
+    "category": "personal_care",
+    "url": "https://www.migros.com.tr/gliss-full-hair-wonder-sampuan-400-ml-p-20a820d"
+  },
+  {
+    "id": "dis-macunu-signal-75ml",
+    "category": "personal_care",
+    "url": "https://www.migros.com.tr/signal-white-system-dis-macunu-75-ml-p-2070680"
+  },
+  {
+    "id": "ekmek-200g-a101",
+    "category": "bread_cereals",
+    "name": "Ekmek 200 g",
+    "unit": "PIECE",
+    "net_amount": 200,
+    "url": "https://www.a101.com.tr/kapida/firindan/ekmek-200-g_p-14000041"
+  },
+  {
+    "id": "pirinc-baldo-1kg-a101",
+    "category": "bread_cereals",
+    "name": "Ovadan Baldo Pirinç 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/ovadan-baldo-pirinc-1-kg_p-14001902"
+  },
+  {
+    "id": "un-2kg-a101",
+    "category": "bread_cereals",
+    "name": "Söke Gelenek Buğday Unu 2 kg",
+    "unit": "PIECE",
+    "net_amount": 2000,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/soke-gelenek-bugday-unu-2-kg_p-28000297"
+  },
+  {
+    "id": "bulgur-pilavlik-1kg-a101",
+    "category": "bread_cereals",
+    "name": "Yöremce Pilavlık Bulgur 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/yoremce-pilavlik-bulgur-1-kg_p-14001908"
+  },
+  {
+    "id": "pilic-bonfile-1kg-a101",
+    "category": "meat",
+    "name": "Hastavuk Piliç Bonfile Dondurulmuş 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/et-tavuk-sarkuteri/hastavuk-pilic-bonfile-dondurulmus-1-kg_p-11001793"
+  },
+  {
+    "id": "dana-kiyma-1kg-a101",
+    "category": "meat",
+    "name": "Ettat Dana Kıyma Dondurulmuş 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/et-tavuk-sarkuteri/ettat-kiyma-dana-dondurulmus-1-kg-_p-11003240"
+  },
+  {
+    "id": "sucuk-450g-a101",
+    "category": "meat",
+    "name": "Torku Dana Kangal Sucuk 450 g",
+    "unit": "PIECE",
+    "net_amount": 450,
+    "url": "https://www.a101.com.tr/kapida/et-tavuk-sarkuteri/torku-dana-kangal-sucuk-450-g_p-11002886"
+  },
+  {
+    "id": "sut-pinar-1l-a101",
+    "category": "dairy_eggs",
+    "name": "Pınar %1 Yağlı Süt 1 L",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/pinar-1-yagli-sut_p-12003704"
+  },
+  {
+    "id": "peynir-beyaz-1kg-a101",
+    "category": "dairy_eggs",
+    "name": "Ahır Tam Yağlı Taze Beyaz Peynir 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/ahir-tam-yagli-taze-beyaz-peynir-1-kg_p-12002642"
+  },
+  {
+    "id": "yogurt-1kg-a101",
+    "category": "dairy_eggs",
+    "name": "Torku Yarım Yağlı Yoğurt 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/torku-yarim-yagli-yogurt-1-kg_p-12003151"
+  },
+  {
+    "id": "yumurta-15li-a101",
+    "category": "dairy_eggs",
+    "name": "Yumurta L Boy 15'li",
+    "unit": "PIECE",
+    "url": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/yumurta-l-boy-15li-_p-11002425"
+  },
+  {
+    "id": "tereyagi-1kg-a101",
+    "category": "oils_fats",
+    "name": "Milkten Tereyağı 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/milkten-tereyagi-1-kg_p-12002655"
+  },
+  {
+    "id": "zeytinyagi-1l-a101",
+    "category": "oils_fats",
+    "name": "Yudum Egemden Riviera Zeytinyağı 1 L",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/yudum-egemden-riviera-zeytinyagi-1-l_p-19001044"
+  },
+  {
+    "id": "margarin-250g-a101",
+    "category": "oils_fats",
+    "name": "Vera Margarin Paket 250 g",
+    "unit": "PIECE",
+    "net_amount": 250,
+    "url": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/vera-margarin-paket-250-g_p-19000988"
+  },
+  {
+    "id": "muz-a101",
+    "category": "fruit_nuts",
+    "name": "İthal Muz kg",
+    "unit": "GRAM",
+    "url": "https://www.a101.com.tr/kapida/meyve-sebze/ithal-muz-kg_p-20000802"
+  },
+  {
+    "id": "portakal-a101",
+    "category": "fruit_nuts",
+    "name": "Portakal kg",
+    "unit": "GRAM",
+    "url": "https://www.a101.com.tr/kapida/meyve-sebze/portakal-kg_p-20000816"
+  },
+  {
+    "id": "ceviz-ici-150g-a101",
+    "category": "fruit_nuts",
+    "name": "Çerezya Ceviz İçi 150 g",
+    "unit": "PIECE",
+    "net_amount": 150,
+    "url": "https://www.a101.com.tr/kapida/atistirmalik/cerezya-kuruyemis-ceviz-ici-150-g_p-15000501"
+  },
+  {
+    "id": "domates-a101",
+    "category": "vegetables_pulses",
+    "name": "Domates kg",
+    "unit": "GRAM",
+    "url": "https://www.a101.com.tr/kapida/meyve-sebze/domates-kg_p-20000761"
+  },
+  {
+    "id": "patates-a101",
+    "category": "vegetables_pulses",
+    "name": "Patates kg",
+    "unit": "GRAM",
+    "url": "https://www.a101.com.tr/kapida/meyve-sebze/patates-kg_p-20000794"
+  },
+  {
+    "id": "sogan-a101",
+    "category": "vegetables_pulses",
+    "name": "Soğan kg",
+    "unit": "GRAM",
+    "url": "https://www.a101.com.tr/kapida/meyve-sebze/sogan-kg_p-20000796"
+  },
+  {
+    "id": "mercimek-yesil-1kg-a101",
+    "category": "vegetables_pulses",
+    "name": "Yöremce Yeşil Mercimek 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/yoremce-yesil-mercimek-1-kg_p-14001928"
+  },
+  {
+    "id": "nohut-1kg-a101",
+    "category": "vegetables_pulses",
+    "name": "Yöremce Yerli Koçbaşı Nohut 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/yoremce-yerli-kocbasi-nohut-1-kg_p-14001922"
+  },
+  {
+    "id": "seker-5kg-a101",
+    "category": "sugar_sweets",
+    "name": "Petek Toz Şeker 5 kg",
+    "unit": "PIECE",
+    "net_amount": 5000,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/petek-toz-seker-5000-g_p-14001721"
+  },
+  {
+    "id": "bal-850g-a101",
+    "category": "sugar_sweets",
+    "name": "Kozan Kooperatif Süzme Çiçek Balı 850 g",
+    "unit": "PIECE",
+    "net_amount": 850,
+    "url": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/kozan-kooperatif-suzme-cicek-bali-850-g_p-16002280"
+  },
+  {
+    "id": "cikolata-sutlu-60g-a101",
+    "category": "sugar_sweets",
+    "name": "Ülker Sütlü Çikolata 60 g",
+    "unit": "PIECE",
+    "net_amount": 60,
+    "url": "https://www.a101.com.tr/kapida/atistirmalik/ulker-sutlu-cikolata-60-g_p-27000755"
+  },
+  {
+    "id": "salca-830g-a101",
+    "category": "other_food",
+    "name": "Çokça Domates Salçası 830 g",
+    "unit": "PIECE",
+    "net_amount": 830,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/cokca-domates-salcasi-830-g_p-18002057"
+  },
+  {
+    "id": "tuz-750g-a101",
+    "category": "other_food",
+    "name": "Billur İyotlu Tuz 750 g",
+    "unit": "PIECE",
+    "net_amount": 750,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/billur-iyotlu-tuz-750-g_p-18002391"
+  },
+  {
+    "id": "karabiber-75g-a101",
+    "category": "other_food",
+    "name": "Diyar Baharat Karabiber 75 g",
+    "unit": "PIECE",
+    "net_amount": 75,
+    "url": "https://www.a101.com.tr/kapida/temel-gida/diyar-baharat-karabiber-75-g-_p-18002376"
+  },
+  {
+    "id": "cay-1kg-a101",
+    "category": "tea_coffee",
+    "name": "Çaykur Tiryaki Siyah Çay 1 kg",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/su-icecek/caykur-tiryaki-siyah-cay-1-kg_p-13000056"
+  },
+  {
+    "id": "turk-kahvesi-100g-a101",
+    "category": "tea_coffee",
+    "name": "Kurukahveci Mehmet Efendi Türk Kahvesi 100 g",
+    "unit": "PIECE",
+    "net_amount": 100,
+    "url": "https://www.a101.com.tr/kapida/su-icecek/kurukahveci-mehmet-efendi-turk-kahvesi-100-g_p-13000067"
+  },
+  {
+    "id": "su-5l-a101",
+    "category": "drinks",
+    "name": "Su 5 L",
+    "unit": "PIECE",
+    "net_amount": 5000,
+    "url": "https://www.a101.com.tr/kapida/su-icecek/su-5-l_p-13000090"
+  },
+  {
+    "id": "maden-suyu-6li-a101",
+    "category": "drinks",
+    "name": "Beypazarı Sade Maden Suyu 6x200 ml",
+    "unit": "PIECE",
+    "net_amount": 1200,
+    "url": "https://www.a101.com.tr/kapida/su-icecek/beypazari-sade-maden-suyu-6x200-ml_p-13001084"
+  },
+  {
+    "id": "meyve-suyu-1l-a101",
+    "category": "drinks",
+    "name": "Dimes %100 Karışık Meyve Suyu 1 L",
+    "unit": "PIECE",
+    "net_amount": 1000,
+    "url": "https://www.a101.com.tr/kapida/su-icecek/dimes-100-karisik-meyve-suyu-1-l_p-13001176"
+  },
+  {
+    "id": "kola-zero-6li-a101",
+    "category": "drinks",
+    "name": "Coca-Cola Zero 6x250 ml",
+    "unit": "PIECE",
+    "net_amount": 1500,
+    "url": "https://www.a101.com.tr/kapida/su-icecek/coca-cola-zero-gazli-icecek-6x250-ml_p-13000258"
+  },
+  {
+    "id": "bulasik-deterjani-1500ml-a101",
+    "category": "household",
+    "name": "Bingo Premium Lime Bulaşık Deterjanı 1500 ml",
+    "unit": "PIECE",
+    "net_amount": 1500,
+    "url": "https://www.a101.com.tr/kapida/temizlik-urunleri/bingo-premium-lime-bulasik-deterjani-1500-ml_p-22002879"
+  },
+  {
+    "id": "camasir-deterjani-1500ml-a101",
+    "category": "household",
+    "name": "Omo Beyaz & Renkliler Sıvı Deterjan 1500 ml",
+    "unit": "PIECE",
+    "net_amount": 1500,
+    "url": "https://www.a101.com.tr/kapida/temizlik-urunleri/omo-beyaz-renkliler-sivi-deterjan-1500-ml_p-22002779"
+  },
+  {
+    "id": "tuvalet-kagidi-32li-a101",
+    "category": "household",
+    "name": "Logi Tuvalet Kağıdı 3 Katlı 32'li",
+    "unit": "PIECE",
+    "url": "https://www.a101.com.tr/kapida/kagit-urunleri/logi-tuvalet-kagidi-3-katli-32li_p-23001492"
+  },
+  {
+    "id": "sampuan-400ml-a101",
+    "category": "personal_care",
+    "name": "Elidor Onarıcı Şampuan 400 ml",
+    "unit": "PIECE",
+    "net_amount": 400,
+    "url": "https://www.a101.com.tr/kapida/kisisel-bakim/elidor-onarici-sampuan-400-ml_p-24004330"
+  },
+  {
+    "id": "dis-macunu-75ml-a101",
+    "category": "personal_care",
+    "name": "Sensodyne Diş Macunu 75 ml",
+    "unit": "PIECE",
+    "net_amount": 75,
+    "url": "https://www.a101.com.tr/kapida/kisisel-bakim/sensodyne-dis-macunu-75-ml_p-24006170"
+  }
 ]

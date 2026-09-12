@@ -8,7 +8,7 @@ from tracker import ROOT
 from tracker.scrapers import get_scraper
 
 TURKEY = timezone(timedelta(hours=3))
-EXPECTED_STORE_IDS = {"migros": 20000000000607}
+EXPECTED_STORE_IDS = {"migros": 20000000000607, "a101": "VS032"}
 FIELDS = ["date", "product_id", "category", "store", "sku", "name", "store_id",
           "regular_price", "sale_price", "loyalty_price", "unit", "net_amount", "in_stock"]
 

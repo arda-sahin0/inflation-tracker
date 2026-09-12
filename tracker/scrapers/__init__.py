@@ -1,9 +1,10 @@
 from urllib.parse import urlparse
 
-from . import migros
+from . import a101, migros
 
 SCRAPERS = {
     "www.migros.com.tr": migros.scrape,
+    "www.a101.com.tr": a101.scrape,
 }
 
 

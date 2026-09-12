@@ -1,0 +1,12 @@
+{
+  "product": {
+    "price": {
+      "normal": 6500,
+      "normalStr": "₺65,00",
+      "discounted": 6500,
+      "discountedStr": "₺65,00"
+    },
+    "stock": "HIGH",
+    "quantity": 100
+  }
+}
