@@ -1,0 +1,42 @@
+date,product_id,category,store,sku,name,store_id,regular_price,sale_price,loyalty_price,unit,net_amount,in_stock
+2026-09-12,ekmek-sofra-adet,bread_cereals,migros,05120000,Sofra Ekmek Adet,20000000000607,2000,2000,2000,PIECE,,True
+2026-09-12,pirinc-baldo-hasata-2kg,bread_cereals,migros,01011909,Hasata Gönen Baldo Pirinç 2 Kg,20000000000607,33195,33195,33195,PIECE,2000.0,True
+2026-09-12,un-soke-2kg,bread_cereals,migros,05010402,Söke Un 2 Kg,20000000000607,9995,9995,9995,PIECE,2000.0,True
+2026-09-12,bulgur-reis-pilavlik-1kg,bread_cereals,migros,01070038,Reis Pilavlık Bulgur 1 Kg,20000000000607,7995,7995,7995,PIECE,1000.0,True
+2026-09-12,pilic-bonfile-banvit-kg,meat,migros,46040139,Banvit Piliç Bonfile Kg,20000000000607,23995,23995,23995,GRAM,,True
+2026-09-12,dana-kiyma-kg,meat,migros,25010073,Dana Kıymalık Kg,20000000000607,86995,86995,86995,GRAM,,True
+2026-09-12,sucuk-cumhuriyet-kg,meat,migros,14206002,Cumhuriyet Parmak Sucuk Kg,20000000000607,219900,219900,219900,GRAM,,True
+2026-09-12,sut-sek-1l,dairy_eggs,migros,11019550,Sek Yeni Nesil Pastörize Günlük Süt 1 L,20000000000607,9995,9995,9995,PIECE,1000.0,True
+2026-09-12,peynir-beyaz-ekici-kg,dairy_eggs,migros,10017209,Ekici Beyaz Peynir Kg,20000000000607,41190,41190,41190,GRAM,,True
+2026-09-12,yogurt-sutas-1kg,dairy_eggs,migros,12500986,Sütaş Tava Yoğurt 1000 G,20000000000607,12995,12995,12995,PIECE,1000.0,True
+2026-09-12,yumurta-naturakoy-15li,dairy_eggs,migros,46054277,Naturaköy Gezen 15'li Yumurta M Orta Boy (53-62) G,20000000000607,16995,16995,12995,PIECE,,True
+2026-09-12,tereyagi-migros-1kg,oils_fats,migros,12017028,Migros Tereyağı 1 Kg,20000000000607,47900,47900,47900,PIECE,1000.0,True
+2026-09-12,aycicek-yagi-migros-5l,oils_fats,migros,04112441,Migros Ayçiçek Yağı 5 L,20000000000607,41900,41900,41900,PIECE,5000.0,True
+2026-09-12,zeytinyagi-yudum-1l,oils_fats,migros,04130057,Yudum Egemden Sızma Zeytinyağı Yumuşak Lezzet 1 L,20000000000607,52495,52495,52495,PIECE,1000.0,True
+2026-09-12,margarin-sana-500g,oils_fats,migros,04205115,Sana Kase Margarin Tereyağı Lezzeti 500 G,20000000000607,9990,9990,3990,PIECE,500.0,True
+2026-09-12,muz-yerli-kg,fruit_nuts,migros,27270000,Muz Yerli Kg,20000000000607,10495,10495,10495,GRAM,,True
+2026-09-12,elma-gala-kg,fruit_nuts,migros,27136000,Elma Gala Kg,20000000000607,5995,5995,5995,GRAM,,True
+2026-09-12,portakal-kg,fruit_nuts,migros,27304007,Portakal Kg,20000000000607,4995,4995,4995,GRAM,,True
+2026-09-12,ceviz-masterfarm-150g,fruit_nuts,migros,08079757,Master Farm Yerli Ceviz İçi 150 G,20000000000607,16495,16495,16495,PIECE,150.0,True
+2026-09-12,domates-kg,vegetables_pulses,migros,28080000,Domates Kg,20000000000607,4195,4195,4195,GRAM,,True
+2026-09-12,patates-kg,vegetables_pulses,migros,28293387,Patates Yeni Mahsul Kg,20000000000607,4195,4195,4195,GRAM,,True
+2026-09-12,sogan-kuru-kg,vegetables_pulses,migros,28390007,Soğan Kuru (Yeni Mahsul) Kg,20000000000607,3695,3695,3695,GRAM,,True
+2026-09-12,mercimek-yesil-migros-1kg,vegetables_pulses,migros,01050013,Migros Yerli Yeşil Mercimek 1 Kg,20000000000607,6695,6695,6695,PIECE,1000.0,True
+2026-09-12,nohut-reis-1kg,vegetables_pulses,migros,01040018,Reis Koçbaşı Nohut 1 Kg,20000000000607,20695,20695,20695,PIECE,1000.0,True
+2026-09-12,seker-toz-migros-5kg,sugar_sweets,migros,03310006,Migros Toz Şeker 5 Kg,20000000000607,19900,19900,19900,PIECE,5000.0,True
+2026-09-12,bal-balparmak-850g,sugar_sweets,migros,07079692,Balparmak Yayla ve Ova Çiçek Balı 850 G,20000000000607,69950,69950,52450,PIECE,850.0,True
+2026-09-12,cikolata-ulker-sutlu-60g,sugar_sweets,migros,07038030,Ülker Bol Sütlü Kare Çikolata 60 G,20000000000607,6995,6995,6995,PIECE,60.0,True
+2026-09-12,salca-domates-migros-830g,other_food,migros,09011332,Migros Domates Salçası 830 G,20000000000607,5595,5595,5595,PIECE,830.0,True
+2026-09-12,tuz-billur-750g,other_food,migros,06021102,Billur Tuz Rafine İyotlu Sofra Tuzu 750 G,20000000000607,3850,3850,3850,PIECE,750.0,True
+2026-09-12,karabiber-knorr-60g,other_food,migros,06010084,Knorr Baharat Serisi Karabiber 60 G,20000000000607,11995,11995,11995,PIECE,60.0,True
+2026-09-12,cay-caykur-tiryaki-1kg,tea_coffee,migros,03111315,Çaykur Tiryaki Çayı 1 Kg,20000000000607,38995,38995,38995,PIECE,1000.0,True
+2026-09-12,kahve-mehmet-efendi-100g,tea_coffee,migros,03211601,Kurukahveci Mehmet Efendi Türk Kahvesi 100 G,20000000000607,9750,9750,9750,PIECE,100.0,True
+2026-09-12,su-hamidiye-5l,drinks,migros,08028231,Hamidiye Kaynak Suyu Pet  5 L,20000000000607,3650,3650,3650,PIECE,5000.0,True
+2026-09-12,maden-suyu-kizilay-6x200ml,drinks,migros,08900069,Kızılay Erzincan Doğal Maden Suyu 6 x 200 Ml,20000000000607,6670,6670,6670,PIECE,1200.0,True
+2026-09-12,meyve-suyu-tamek-1l,drinks,migros,08059121,Tamek %100 Karışık Meyve Suyu 1 Lt,20000000000607,9995,9995,7495,PIECE,1000.0,True
+2026-09-12,kola-cocacola-zero-6x250ml,drinks,migros,08019112,Coca-Cola Zero Sugar Kutu 6 x 250 Ml,20000000000607,30000,30000,30000,PIECE,1500.0,True
+2026-09-12,bulasik-deterjani-fairy-1350ml,household,migros,30610382,Fairy Sıvı Bulaşık Deterjanı Limon 1350 Ml,20000000000607,16995,16995,16995,PIECE,,True
+2026-09-12,camasir-deterjani-mroxy-1480ml,household,migros,30530456,Mr.Oxy Arap Sabunu Soda Katkılı Çamaşır Deterjanı Beyazlar 1.480 Ml,20000000000607,12995,12995,12995,PIECE,,True
+2026-09-12,tuvalet-kagidi-familia-32li,household,migros,31010063,Familia Plus Natural Tuvalet Kağıdı 32'li,20000000000607,48995,48995,48995,PIECE,,True
+2026-09-12,sampuan-gliss-400ml,personal_care,migros,34243085,Gliss Full Hair Wonder Şampuan 400 Ml,20000000000607,19995,19995,19995,PIECE,,True
+2026-09-12,dis-macunu-signal-75ml,personal_care,migros,34014848,Signal White System Diş Macunu 75 Ml,20000000000607,6995,6995,6995,PIECE,,True
