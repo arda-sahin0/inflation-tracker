@@ -3,7 +3,7 @@ import math
 import pandas as pd
 import pytest
 
-from index import build_index, chained_jevons
+from index import build_index, build_store_index, chained_jevons, load_weights
 
 
 def rows(data):
@@ -24,38 +24,69 @@ def test_one_product_up_10_percent_other_flat():
 
 def test_new_product_does_not_jump_the_index():
     df = rows([
-        ("2026-09-11", "a", "dairy", 100),
-        ("2026-09-12", "a", "dairy", 100),
-        ("2026-09-12", "b", "dairy", 999),
-        ("2026-09-13", "a", "dairy", 100),
-        ("2026-09-13", "b", "dairy", 999),
+        ("2026-09-11", "a", "dairy_eggs", 100),
+        ("2026-09-12", "a", "dairy_eggs", 100),
+        ("2026-09-12", "b", "dairy_eggs", 999),
+        ("2026-09-13", "a", "dairy_eggs", 100),
+        ("2026-09-13", "b", "dairy_eggs", 999),
     ])
-    assert build_index(df, {"dairy": 1})["dairy"].tolist() == pytest.approx([100, 100, 100])
+    assert build_index(df, {"dairy_eggs": 1})["dairy_eggs"].tolist() == pytest.approx([100, 100, 100])
 
 
 def test_missing_day_is_carried_forward():
     df = rows([
-        ("2026-09-11", "a", "dairy", 100),
+        ("2026-09-11", "a", "dairy_eggs", 100),
         # 09-12 missing
-        ("2026-09-13", "a", "dairy", 120),
+        ("2026-09-13", "a", "dairy_eggs", 120),
     ])
-    assert build_index(df, {"dairy": 1})["dairy"].tolist() == pytest.approx([100, 100, 120])
+    assert build_index(df, {"dairy_eggs": 1})["dairy_eggs"].tolist() == pytest.approx([100, 100, 120])
 
 
 def test_overall_is_weighted_average_of_categories():
     df = rows([
-        ("2026-09-11", "a", "dairy", 100), ("2026-09-11", "b", "meat", 100),
-        ("2026-09-12", "a", "dairy", 110), ("2026-09-12", "b", "meat", 100),
+        ("2026-09-11", "a", "dairy_eggs", 100), ("2026-09-11", "b", "meat", 100),
+        ("2026-09-12", "a", "dairy_eggs", 110), ("2026-09-12", "b", "meat", 100),
     ])
-    index = build_index(df, {"dairy": 3, "meat": 1})
+    index = build_index(df, {"dairy_eggs": 3, "meat": 1})
     assert index["overall"].iloc[-1] == pytest.approx((110 * 3 + 100 * 1) / 4)
 
 
 def test_shrinkflation_counts_as_a_price_rise():
     df = rows([
-        ("2026-09-11", "a", "snacks", 100),
-        ("2026-09-12", "a", "snacks", 100),
+        ("2026-09-11", "a", "sugar_sweets", 100),
+        ("2026-09-12", "a", "sugar_sweets", 100),
     ])
     df["net_amount"] = [100.0, 80.0]
-    index = build_index(df, {"snacks": 1})
-    assert index["snacks"].iloc[-1] == pytest.approx(125)
+    index = build_index(df, {"sugar_sweets": 1})
+    assert index["sugar_sweets"].iloc[-1] == pytest.approx(125)
+
+
+def test_weights_split_division_equally_and_cover_the_basket():
+    weights = load_weights()
+    food = ["bread_cereals", "meat", "dairy_eggs", "oils_fats", "fruit_nuts",
+            "vegetables_pulses", "sugar_sweets", "other_food", "tea_coffee", "drinks"]
+    assert sum(weights[c] for c in food) == pytest.approx(24.44)      # TurkStat 2026 food weight
+    assert weights["household"] == pytest.approx(7.92)
+    assert weights["personal_care"] == pytest.approx(4.49)
+    assert all(weights[c] == pytest.approx(24.44 / 10) for c in food)
+
+
+def test_food_headline_ignores_non_food_categories():
+    df = rows([
+        ("2026-09-11", "a", "dairy_eggs", 100), ("2026-09-11", "b", "personal_care", 100),
+        ("2026-09-12", "a", "dairy_eggs", 100), ("2026-09-12", "b", "personal_care", 200),
+    ])
+    index = build_index(df)
+    assert index["food"].iloc[-1] == pytest.approx(100)       # food unchanged
+    assert index["overall"].iloc[-1] > 100                    # whole basket moved
+
+
+def test_store_index_is_computed_per_store():
+    df = rows([
+        ("2026-09-11", "a", "dairy_eggs", 100), ("2026-09-11", "b", "dairy_eggs", 100),
+        ("2026-09-12", "a", "dairy_eggs", 150), ("2026-09-12", "b", "dairy_eggs", 100),
+    ])
+    df["store"] = ["migros", "a101", "migros", "a101"]
+    stores = build_store_index(df)
+    assert stores["migros"].iloc[-1] == pytest.approx(150)
+    assert stores["a101"].iloc[-1] == pytest.approx(100)
