@@ -16,7 +16,7 @@ import requests
 
 from tracker import ROOT, sweep
 from tracker.naming import parse_size, suggest_id
-from tracker.scrapers import migros
+from tracker.scrapers import a101, migros
 
 SEARCH_URL = "https://www.migros.com.tr/rest/search/screens/products"
 PRODUCTS = ROOT / "products.json"
@@ -165,7 +165,7 @@ def check_sweeps() -> int:
         return 1
     problems = 0
     for rule in rules:
-        name = rule.get("name") or rule.get("query") or rule.get("shop_category")
+        name = sweep.label(rule)
         draft = "" if rule.get("enabled", True) else "  [draft]"
         try:
             if not (rule.get("shop_category") or rule.get("include_categories") or rule.get("match_category")
@@ -179,11 +179,15 @@ def check_sweeps() -> int:
                 print(f'{"":<18}   suggested: "include_categories": {suggestion}')
                 continue
 
-            pages = sweep.fetch_pages(rule, max_pages=1)
-            rows = sweep.collect(pages, rule)
-            total = pages[0].get("hitCount", "?")
-            print(f"{name:<18} {len(rows):>4} of {len(pages[0].get('storeProductInfos', [])):>3} on page 1 "
-                  f"({total} hits overall) -> {rule['category']}{draft}")
+            if rule.get("store") == "a101":
+                rows = a101.sweep_rows(rule)                 # the whole shelf; aisles are cached
+                print(f"{name:<18} {len(rows):>4} products on the shelf -> {rule['category']}{draft}")
+            else:
+                pages = sweep.fetch_pages(rule, max_pages=1)
+                rows = sweep.collect(pages, rule)
+                total = pages[0].get("hitCount", "?")
+                print(f"{name:<18} {len(rows):>4} of {len(pages[0].get('storeProductInfos', [])):>3} on page 1 "
+                      f"({total} hits overall) -> {rule['category']}{draft}")
             for row in rows[:3]:
                 print(f"{'':<18}   · {row['name'][:56]}")
             if not rows:

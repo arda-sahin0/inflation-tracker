@@ -14,6 +14,24 @@ FIELDS = ["date", "product_id", "category", "store", "sku", "name", "store_id",
           "regular_price", "sale_price", "loyalty_price", "unit", "net_amount", "in_stock", "group"]
 
 
+def run_sweeps(today: str, rows: list[dict], failures: list[str], rules: list[dict] | None = None) -> None:
+    """Add every sweep's products to rows. A failing sweep is reported and skipped, never fatal."""
+    tracked = {(r["store"], r["sku"]) for r in rows}
+    for rule in sweep.load_rules() if rules is None else rules:
+        name = sweep.label(rule)
+        try:
+            swept = [r for r in sweep.run(rule) if (r["store"], r["sku"]) not in tracked]
+        except Exception as e:
+            failures.append(f"sweep:{name}")
+            print(f"FAIL sweep {name}: {e!r}")
+            continue
+        for row in swept:
+            row["date"] = today
+            tracked.add((row["store"], row["sku"]))
+        rows += swept
+        print(f"SWEEP {name}: {len(swept)} products -> {rule['category']}")
+
+
 def main() -> int:
     today = datetime.now(TURKEY).date().isoformat()
     products = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
@@ -36,19 +54,7 @@ def main() -> int:
             print(f"FAIL {product['id']}: {e!r}")
         time.sleep(2)
 
-    # category sweeps: one request brings ~35 products, so a whole category is cheap
-    tracked = {(r["store"], r["sku"]) for r in rows}
-    for rule in sweep.load_rules():
-        try:
-            swept = [r for r in sweep.run(rule) if (r["store"], r["sku"]) not in tracked]
-            for row in swept:
-                row["date"] = today
-                tracked.add((row["store"], row["sku"]))
-            rows += swept
-            print(f"SWEEP {rule['query']!r} -> {len(swept)} products into {rule['category']}")
-        except Exception as e:
-            failures.append(f"sweep:{rule.get('query', '?')}")
-            print(f"FAIL sweep {rule.get('query', '?')!r}: {e!r}")
+    run_sweeps(today, rows, failures)
 
     if rows:
         folder = "raw" if os.getenv("GITHUB_ACTIONS") == "true" else "local"

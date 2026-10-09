@@ -22,11 +22,16 @@ MAX_PAGES = 20
 SLEEP_SECONDS = 1.0
 
 
+def label(rule: dict) -> str:
+    """What to call a rule in logs: search rules have a query, shelf rules a shop category."""
+    return rule.get("name") or rule.get("query") or rule.get("shop_category") or "?"
+
+
 def collect(pages: list[dict], rule: dict) -> list[dict]:
     """Price rows from already-fetched listing pages. Pure, so it is testable offline."""
     excluded = {str(sku).zfill(8) for sku in rule.get("exclude_skus", [])}
     leaf_map = rule.get("leaf_map")          # shop leaf -> index category, for whole-shelf rules
-    name = rule.get("name") or rule.get("query") or rule.get("shop_category")
+    name = label(rule)
     rows, seen = [], set()
     for page in pages:
         for product in migros.usable_listing_products(page, rule):
@@ -70,7 +75,7 @@ def check_rule(rule: dict) -> None:
     # a category page is its own filter; a search needs one
     if not (rule.get("shop_category") or rule.get("include_categories") or rule.get("match_category")
             or rule.get("leaf_map") or rule.get("allow_all")):
-        raise ValueError(f"sweep {rule.get('name', rule.get('query'))!r} has no include_categories; "
+        raise ValueError(f"sweep {label(rule)!r} has no include_categories; "
                          f"run discover.py <query> --categories to find them")
 
 
@@ -82,7 +87,7 @@ def run(rule: dict) -> list[dict]:
         rows = collect(fetch_pages(rule), rule)
     minimum = rule.get("min_products", 0)
     if len(rows) < minimum:
-        raise RuntimeError(f"sweep {rule['query']!r} returned {len(rows)} products, expected >= {minimum}")
+        raise RuntimeError(f"sweep {label(rule)!r} returned {len(rows)} products, expected >= {minimum}")
     return rows
 
 

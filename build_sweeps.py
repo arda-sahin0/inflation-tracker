@@ -66,7 +66,11 @@ def build(catalog: dict, mapping: dict) -> list[dict]:
             continue
         group = entry.get("group", shelf["name"])
         if not entry.get("leaves"):
-            rules.append(rule_for(shelf, entry["category"], group, mapping["store"]))
+            rule = rule_for(shelf, entry["category"], group, mapping["store"])
+            for key in ("name", "name_pattern", "exclude_pattern"):    # one shelf split by product name
+                if key in entry:
+                    rule[key] = entry[key] if key != "name" else f"{mapping['store']}_{entry['name']}"
+            rules.append(rule)
             continue
         leaves = {leaf["name"]: leaf for leaf in shelf["leaves"]}
         for name in entry["leaves"]:

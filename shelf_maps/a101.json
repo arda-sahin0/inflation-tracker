@@ -1,7 +1,39 @@
 {
-  "_comment": "A101 shelves -> index categories. Only the dairy aisle is mapped so far; run python catalog.py https://www.a101.com.tr/ to see every aisle.",
+  "_comment": "A101 shelves -> index categories, mirroring shelf_maps/migros.json. name_pattern / exclude_pattern split a shelf by product name (A101 keeps rice and pulses together).",
   "store": "a101",
   "shelves": [
+    {
+      "category": "fruit_nuts",
+      "path": "Meyve, Sebze/Meyve"
+    },
+    {
+      "category": "vegetables_pulses",
+      "path": "Meyve, Sebze/Sebze"
+    },
+    {
+      "category": "vegetables_pulses",
+      "path": "Meyve, Sebze/Yeşillik"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Fırından/Ekmek"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Fırından/Unlu Mamüller"
+    },
+    {
+      "category": "meat",
+      "path": "Et, Tavuk, Şarküteri/Kırmızı Et"
+    },
+    {
+      "category": "meat",
+      "path": "Et, Tavuk, Şarküteri/Beyaz Et"
+    },
+    {
+      "category": "meat",
+      "path": "Et, Tavuk, Şarküteri/Şarküteri"
+    },
     {
       "category": "dairy_eggs",
       "path": "Süt Ürünleri, Kahvaltılık/Süt"
@@ -39,8 +71,16 @@
       "path": "Süt Ürünleri, Kahvaltılık/Kaymak, Krema"
     },
     {
+      "category": "dairy_eggs",
+      "path": "Su, İçecek/Ayran, Kefir"
+    },
+    {
       "category": "oils_fats",
       "path": "Süt Ürünleri, Kahvaltılık/Tereyağ, Margarin"
+    },
+    {
+      "category": "oils_fats",
+      "path": "Temel Gıda/Sıvı Yağlar"
     },
     {
       "category": "sugar_sweets",
@@ -55,12 +95,166 @@
       "path": "Süt Ürünleri, Kahvaltılık/Sürülebilir Ürünler"
     },
     {
+      "category": "sugar_sweets",
+      "path": "Temel Gıda/Şeker"
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Atıştırmalık/Çikolata"
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Atıştırmalık/Sakız, Şekerleme"
+    },
+    {
       "category": "bread_cereals",
       "path": "Süt Ürünleri, Kahvaltılık/Kahvaltılık Gevrek"
     },
     {
+      "category": "bread_cereals",
+      "path": "Atıştırmalık/Bisküvi, Kraker"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Temel Gıda/Un"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Temel Gıda/Makarna, Noodle"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Temel Gıda/Erişte, Mantı"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Temel Gıda/Bakliyat",
+      "group": "Pirinç, Bulgur",
+      "name": "pirinc_bulgur",
+      "name_pattern": "pirinç|pirinc|bulgur|buğday|bugday|firik|kinoa"
+    },
+    {
+      "category": "vegetables_pulses",
+      "path": "Temel Gıda/Bakliyat",
+      "group": "Bakliyat",
+      "name": "bakliyat",
+      "exclude_pattern": "pirinç|pirinc|bulgur|buğday|bugday|firik|kinoa"
+    },
+    {
+      "category": "vegetables_pulses",
+      "path": "Temel Gıda/Konserve"
+    },
+    {
       "category": "vegetables_pulses",
       "path": "Süt Ürünleri, Kahvaltılık/Zeytin"
+    },
+    {
+      "category": "fruit_nuts",
+      "path": "Atıştırmalık/Kuruyemiş, Kuru Meyve"
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Ketçap, Mayonez, Soslar, Sirkeler"
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Tuz, Baharat, Harç"
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Salça"
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Turşu"
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Bulyonlar"
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Hazır Çorbalar"
+    },
+    {
+      "category": "tea_coffee",
+      "path": "Su, İçecek/Çay"
+    },
+    {
+      "category": "tea_coffee",
+      "path": "Su, İçecek/Bitki Çayları"
+    },
+    {
+      "category": "tea_coffee",
+      "path": "Su, İçecek/Kahve"
+    },
+    {
+      "category": "drinks",
+      "path": "Su, İçecek/Su"
+    },
+    {
+      "category": "drinks",
+      "path": "Su, İçecek/Maden Suyu"
+    },
+    {
+      "category": "drinks",
+      "path": "Su, İçecek/Gazlı İçecekler"
+    },
+    {
+      "category": "drinks",
+      "path": "Su, İçecek/Gazsız İçecekler"
+    },
+    {
+      "category": "household",
+      "path": "Temizlik Ürünleri/Çamaşır"
+    },
+    {
+      "category": "household",
+      "path": "Temizlik Ürünleri/Bulaşık"
+    },
+    {
+      "category": "household",
+      "path": "Temizlik Ürünleri/Genel Temizlik"
+    },
+    {
+      "category": "household",
+      "path": "Kağıt Ürünleri/Tuvalet Kağıdı"
+    },
+    {
+      "category": "household",
+      "path": "Kağıt Ürünleri/Kağıt Havlu"
+    },
+    {
+      "category": "household",
+      "path": "Kağıt Ürünleri/Kağıt Peçete, Mendil"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kağıt Ürünleri/Islak Mendil"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım/Ağız Bakım Ürünleri"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım/Saç Bakım"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım/Duş, Banyo, Sabun"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım/Parfüm, Deodorant"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım/Hijyenik Ped"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım/Erkek Bakım"
     }
   ]
 }

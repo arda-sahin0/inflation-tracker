@@ -138,5 +138,12 @@ def sweep_rows(rule: dict) -> list[dict]:
     products = shelf_products(list_category(aisle_of(shelf_id)), shelf_id)
     excluded = {str(s) for s in rule.get("exclude_skus", [])}
     group = rule.get("group") or rule.get("name") or shelf_id
-    return [listing_row(p, rule["category"], group) for p in products
-            if sellable(p) and str(p["id"]) not in excluded]
+    keep = re.compile(rule["name_pattern"], re.IGNORECASE) if rule.get("name_pattern") else None
+    drop = re.compile(rule["exclude_pattern"], re.IGNORECASE) if rule.get("exclude_pattern") else None
+
+    def wanted(product: dict) -> bool:
+        name = product.get("attributes", {}).get("name", "")
+        return (sellable(product) and str(product["id"]) not in excluded
+                and (keep is None or keep.search(name)) and not (drop and drop.search(name)))
+
+    return [listing_row(p, rule["category"], group) for p in products if wanted(p)]

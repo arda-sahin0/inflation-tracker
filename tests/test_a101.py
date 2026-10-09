@@ -102,3 +102,11 @@ def test_a_shelf_belongs_to_the_aisle_in_its_id():
     from tracker.scrapers import a101
     assert a101.aisle_of("C0502") == "C05"
     assert [s["prettyName"] for s in a101.shelves(AISLE)] == ["C0502", "C0503"]
+
+
+def test_one_shelf_can_be_split_by_product_name():
+    base = {"category": "dairy_eggs", "store": "a101", "shop_category": "C0502"}
+    birsah = sweep({**base, "name": "a", "name_pattern": "birşah"})
+    rest = sweep({**base, "name": "b", "exclude_pattern": "birşah"})
+    assert sorted(r["sku"] for r in birsah) == ["12000244", "12000319"]
+    assert [r["sku"] for r in rest] == ["12003241"]

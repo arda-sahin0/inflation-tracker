@@ -73,3 +73,14 @@ def test_a101_shelves_are_one_request_per_aisle_and_grouped_per_store():
     assert [r["name"] for r in rules] == ["a101_beyaz_peynir", "a101_kasar_peyniri"]
     assert {r["group"] for r in rules} == {"a101:Peynir"}       # never pooled with migros:Peynir
     assert all(r["max_pages"] == 1 for r in rules)
+
+
+def test_a_shelf_split_by_name_gets_two_rules_with_their_own_names():
+    catalog = {"store": "a101", "crawled": "2026-10-09", "aisles": [
+        {"name": "Temel Gıda", "prettyName": "C07", "count": 651, "shelves": [
+            {"name": "Bakliyat", "prettyName": "C0702", "count": 130, "leaves": []}]}]}
+    rules = build(catalog, {"store": "a101", "shelves": [
+        {"category": "bread_cereals", "path": "Temel Gıda/Bakliyat", "group": "Pirinç", "name": "pirinc", "name_pattern": "pirinç"},
+        {"category": "vegetables_pulses", "path": "Temel Gıda/Bakliyat", "name": "bakliyat", "exclude_pattern": "pirinç"}]})
+    assert [(r["name"], r["category"]) for r in rules] == [("a101_pirinc", "bread_cereals"), ("a101_bakliyat", "vegetables_pulses")]
+    assert rules[0]["name_pattern"] == "pirinç" and rules[1]["exclude_pattern"] == "pirinç"

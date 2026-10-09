@@ -1,5 +1,556 @@
 [
   {
+    "name": "a101_meyve",
+    "group": "a101:Meyve",
+    "category": "fruit_nuts",
+    "store": "a101",
+    "shop_category": "C0101",
+    "max_pages": 1,
+    "min_products": 5
+  },
+  {
+    "name": "a101_sebze",
+    "group": "a101:Sebze",
+    "category": "vegetables_pulses",
+    "store": "a101",
+    "shop_category": "C0102",
+    "max_pages": 1,
+    "min_products": 11
+  },
+  {
+    "name": "a101_yesillik",
+    "group": "a101:Yeşillik",
+    "category": "vegetables_pulses",
+    "store": "a101",
+    "shop_category": "C0103",
+    "max_pages": 1,
+    "min_products": 5
+  },
+  {
+    "name": "a101_ekmek",
+    "group": "a101:Ekmek",
+    "category": "bread_cereals",
+    "store": "a101",
+    "shop_category": "C0201",
+    "max_pages": 1,
+    "min_products": 25
+  },
+  {
+    "name": "a101_unlu_mamuller",
+    "group": "a101:Unlu Mamüller",
+    "category": "bread_cereals",
+    "store": "a101",
+    "shop_category": "C0203",
+    "max_pages": 1,
+    "min_products": 24
+  },
+  {
+    "name": "a101_kirmizi_et",
+    "group": "a101:Kırmızı Et",
+    "category": "meat",
+    "store": "a101",
+    "shop_category": "C0401",
+    "max_pages": 1,
+    "min_products": 22
+  },
+  {
+    "name": "a101_beyaz_et",
+    "group": "a101:Beyaz Et",
+    "category": "meat",
+    "store": "a101",
+    "shop_category": "C0402",
+    "max_pages": 1,
+    "min_products": 119
+  },
+  {
+    "name": "a101_sarkuteri",
+    "group": "a101:Şarküteri",
+    "category": "meat",
+    "store": "a101",
+    "shop_category": "C0404",
+    "max_pages": 1,
+    "min_products": 72
+  },
+  {
+    "name": "a101_sut",
+    "group": "a101:Süt",
+    "category": "dairy_eggs",
+    "store": "a101",
+    "shop_category": "C0502",
+    "max_pages": 1,
+    "min_products": 49
+  },
+  {
+    "name": "a101_yumurta",
+    "group": "a101:Yumurta",
+    "category": "dairy_eggs",
+    "store": "a101",
+    "shop_category": "C0503",
+    "max_pages": 1,
+    "min_products": 12
+  },
+  {
+    "name": "a101_beyaz_peynir",
+    "group": "a101:Peynir",
+    "category": "dairy_eggs",
+    "store": "a101",
+    "shop_category": "C0501",
+    "max_pages": 1,
+    "min_products": 41
+  },
+  {
+    "name": "a101_kasar_peyniri",
+    "group": "a101:Peynir",
+    "category": "dairy_eggs",
+    "store": "a101",
+    "shop_category": "C0512",
+    "max_pages": 1,
+    "min_products": 29
+  },
+  {
+    "name": "a101_surulebilir_peynir",
+    "group": "a101:Peynir",
+    "category": "dairy_eggs",
+    "store": "a101",
+    "shop_category": "C0513",
+    "max_pages": 1,
+    "min_products": 32
+  },
+  {
+    "name": "a101_yoresel_peynir",
+    "group": "a101:Peynir",
+    "category": "dairy_eggs",
+    "store": "a101",
+    "shop_category": "C0514",
+    "max_pages": 1,
+    "min_products": 29
+  },
+  {
+    "name": "a101_yogurt",
+    "group": "a101:Yoğurt",
+    "category": "dairy_eggs",
+    "store": "a101",
+    "shop_category": "C0505",
+    "max_pages": 1,
+    "min_products": 40
+  },
+  {
+    "name": "a101_kaymak_krema",
+    "group": "a101:Kaymak, Krema",
+    "category": "dairy_eggs",
+    "store": "a101",
+    "shop_category": "C0506",
+    "max_pages": 1,
+    "min_products": 9
+  },
+  {
+    "name": "a101_ayran_kefir",
+    "group": "a101:Ayran, Kefir",
+    "category": "dairy_eggs",
+    "store": "a101",
+    "shop_category": "C0807",
+    "max_pages": 1,
+    "min_products": 33
+  },
+  {
+    "name": "a101_tereyag_margarin",
+    "group": "a101:Tereyağ, Margarin",
+    "category": "oils_fats",
+    "store": "a101",
+    "shop_category": "C0509",
+    "max_pages": 1,
+    "min_products": 19
+  },
+  {
+    "name": "a101_sivi_yaglar",
+    "group": "a101:Sıvı Yağlar",
+    "category": "oils_fats",
+    "store": "a101",
+    "shop_category": "C0701",
+    "max_pages": 1,
+    "min_products": 30
+  },
+  {
+    "name": "a101_bal_recel",
+    "group": "a101:Bal, Reçel",
+    "category": "sugar_sweets",
+    "store": "a101",
+    "shop_category": "C0510",
+    "max_pages": 1,
+    "min_products": 18
+  },
+  {
+    "name": "a101_helva_tahin_pekmez",
+    "group": "a101:Helva, Tahin, Pekmez",
+    "category": "sugar_sweets",
+    "store": "a101",
+    "shop_category": "C0511",
+    "max_pages": 1,
+    "min_products": 33
+  },
+  {
+    "name": "a101_surulebilir_urunler",
+    "group": "a101:Sürülebilir Ürünler",
+    "category": "sugar_sweets",
+    "store": "a101",
+    "shop_category": "C0507",
+    "max_pages": 1,
+    "min_products": 39
+  },
+  {
+    "name": "a101_seker",
+    "group": "a101:Şeker",
+    "category": "sugar_sweets",
+    "store": "a101",
+    "shop_category": "C0703",
+    "max_pages": 1,
+    "min_products": 19
+  },
+  {
+    "name": "a101_cikolata",
+    "group": "a101:Çikolata",
+    "category": "sugar_sweets",
+    "store": "a101",
+    "shop_category": "C0605",
+    "max_pages": 1,
+    "min_products": 208
+  },
+  {
+    "name": "a101_sakiz_sekerleme",
+    "group": "a101:Sakız, Şekerleme",
+    "category": "sugar_sweets",
+    "store": "a101",
+    "shop_category": "C0604",
+    "max_pages": 1,
+    "min_products": 148
+  },
+  {
+    "name": "a101_kahvaltilik_gevrek",
+    "group": "a101:Kahvaltılık Gevrek",
+    "category": "bread_cereals",
+    "store": "a101",
+    "shop_category": "C0508",
+    "max_pages": 1,
+    "min_products": 17
+  },
+  {
+    "name": "a101_biskuvi_kraker",
+    "group": "a101:Bisküvi, Kraker",
+    "category": "bread_cereals",
+    "store": "a101",
+    "shop_category": "C0601",
+    "max_pages": 1,
+    "min_products": 200
+  },
+  {
+    "name": "a101_un",
+    "group": "a101:Un",
+    "category": "bread_cereals",
+    "store": "a101",
+    "shop_category": "C0705",
+    "max_pages": 1,
+    "min_products": 9
+  },
+  {
+    "name": "a101_makarna_noodle",
+    "group": "a101:Makarna, Noodle",
+    "category": "bread_cereals",
+    "store": "a101",
+    "shop_category": "C0706",
+    "max_pages": 1,
+    "min_products": 61
+  },
+  {
+    "name": "a101_eriste_manti",
+    "group": "a101:Erişte, Mantı",
+    "category": "bread_cereals",
+    "store": "a101",
+    "shop_category": "C0713",
+    "max_pages": 1,
+    "min_products": 6
+  },
+  {
+    "name": "a101_pirinc_bulgur",
+    "group": "a101:Pirinç, Bulgur",
+    "category": "bread_cereals",
+    "store": "a101",
+    "shop_category": "C0702",
+    "max_pages": 1,
+    "min_products": 65,
+    "name_pattern": "pirinç|pirinc|bulgur|buğday|bugday|firik|kinoa"
+  },
+  {
+    "name": "a101_bakliyat",
+    "group": "a101:Bakliyat",
+    "category": "vegetables_pulses",
+    "store": "a101",
+    "shop_category": "C0702",
+    "max_pages": 1,
+    "min_products": 65,
+    "exclude_pattern": "pirinç|pirinc|bulgur|buğday|bugday|firik|kinoa"
+  },
+  {
+    "name": "a101_konserve",
+    "group": "a101:Konserve",
+    "category": "vegetables_pulses",
+    "store": "a101",
+    "shop_category": "C0704",
+    "max_pages": 1,
+    "min_products": 17
+  },
+  {
+    "name": "a101_zeytin",
+    "group": "a101:Zeytin",
+    "category": "vegetables_pulses",
+    "store": "a101",
+    "shop_category": "C0504",
+    "max_pages": 1,
+    "min_products": 27
+  },
+  {
+    "name": "a101_kuruyemis_kuru_meyve",
+    "group": "a101:Kuruyemiş, Kuru Meyve",
+    "category": "fruit_nuts",
+    "store": "a101",
+    "shop_category": "C0606",
+    "max_pages": 1,
+    "min_products": 88
+  },
+  {
+    "name": "a101_ketcap_mayonez_soslar_sirkeler",
+    "group": "a101:Ketçap, Mayonez, Soslar, Sirkeler",
+    "category": "other_food",
+    "store": "a101",
+    "shop_category": "C0707",
+    "max_pages": 1,
+    "min_products": 57
+  },
+  {
+    "name": "a101_tuz_baharat_harc",
+    "group": "a101:Tuz, Baharat, Harç",
+    "category": "other_food",
+    "store": "a101",
+    "shop_category": "C0709",
+    "max_pages": 1,
+    "min_products": 28
+  },
+  {
+    "name": "a101_salca",
+    "group": "a101:Salça",
+    "category": "other_food",
+    "store": "a101",
+    "shop_category": "C0708",
+    "max_pages": 1,
+    "min_products": 11
+  },
+  {
+    "name": "a101_tursu",
+    "group": "a101:Turşu",
+    "category": "other_food",
+    "store": "a101",
+    "shop_category": "C0711",
+    "max_pages": 1,
+    "min_products": 11
+  },
+  {
+    "name": "a101_bulyonlar",
+    "group": "a101:Bulyonlar",
+    "category": "other_food",
+    "store": "a101",
+    "shop_category": "C0712",
+    "max_pages": 1,
+    "min_products": 4
+  },
+  {
+    "name": "a101_hazir_corbalar",
+    "group": "a101:Hazır Çorbalar",
+    "category": "other_food",
+    "store": "a101",
+    "shop_category": "C0710",
+    "max_pages": 1,
+    "min_products": 5
+  },
+  {
+    "name": "a101_cay",
+    "group": "a101:Çay",
+    "category": "tea_coffee",
+    "store": "a101",
+    "shop_category": "C0803",
+    "max_pages": 1,
+    "min_products": 25
+  },
+  {
+    "name": "a101_bitki_caylari",
+    "group": "a101:Bitki Çayları",
+    "category": "tea_coffee",
+    "store": "a101",
+    "shop_category": "C0806",
+    "max_pages": 1,
+    "min_products": 15
+  },
+  {
+    "name": "a101_kahve",
+    "group": "a101:Kahve",
+    "category": "tea_coffee",
+    "store": "a101",
+    "shop_category": "C0809",
+    "max_pages": 1,
+    "min_products": 94
+  },
+  {
+    "name": "a101_su",
+    "group": "a101:Su",
+    "category": "drinks",
+    "store": "a101",
+    "shop_category": "C0805",
+    "max_pages": 1,
+    "min_products": 7
+  },
+  {
+    "name": "a101_maden_suyu",
+    "group": "a101:Maden Suyu",
+    "category": "drinks",
+    "store": "a101",
+    "shop_category": "C0804",
+    "max_pages": 1,
+    "min_products": 38
+  },
+  {
+    "name": "a101_gazli_icecekler",
+    "group": "a101:Gazlı İçecekler",
+    "category": "drinks",
+    "store": "a101",
+    "shop_category": "C0801",
+    "max_pages": 1,
+    "min_products": 79
+  },
+  {
+    "name": "a101_gazsiz_icecekler",
+    "group": "a101:Gazsız İçecekler",
+    "category": "drinks",
+    "store": "a101",
+    "shop_category": "C0802",
+    "max_pages": 1,
+    "min_products": 175
+  },
+  {
+    "name": "a101_camasir",
+    "group": "a101:Çamaşır",
+    "category": "household",
+    "store": "a101",
+    "shop_category": "C1101",
+    "max_pages": 1,
+    "min_products": 133
+  },
+  {
+    "name": "a101_bulasik",
+    "group": "a101:Bulaşık",
+    "category": "household",
+    "store": "a101",
+    "shop_category": "C1102",
+    "max_pages": 1,
+    "min_products": 53
+  },
+  {
+    "name": "a101_genel_temizlik",
+    "group": "a101:Genel Temizlik",
+    "category": "household",
+    "store": "a101",
+    "shop_category": "C1103",
+    "max_pages": 1,
+    "min_products": 81
+  },
+  {
+    "name": "a101_tuvalet_kagidi",
+    "group": "a101:Tuvalet Kağıdı",
+    "category": "household",
+    "store": "a101",
+    "shop_category": "C1301",
+    "max_pages": 1,
+    "min_products": 16
+  },
+  {
+    "name": "a101_kagit_havlu",
+    "group": "a101:Kağıt Havlu",
+    "category": "household",
+    "store": "a101",
+    "shop_category": "C1303",
+    "max_pages": 1,
+    "min_products": 16
+  },
+  {
+    "name": "a101_kagit_pecete_mendil",
+    "group": "a101:Kağıt Peçete, Mendil",
+    "category": "household",
+    "store": "a101",
+    "shop_category": "C1302",
+    "max_pages": 1,
+    "min_products": 6
+  },
+  {
+    "name": "a101_islak_mendil",
+    "group": "a101:Islak Mendil",
+    "category": "personal_care",
+    "store": "a101",
+    "shop_category": "C1304",
+    "max_pages": 1,
+    "min_products": 10
+  },
+  {
+    "name": "a101_agiz_bakim_urunleri",
+    "group": "a101:Ağız Bakım Ürünleri",
+    "category": "personal_care",
+    "store": "a101",
+    "shop_category": "C1201",
+    "max_pages": 1,
+    "min_products": 28
+  },
+  {
+    "name": "a101_sac_bakim",
+    "group": "a101:Saç Bakım",
+    "category": "personal_care",
+    "store": "a101",
+    "shop_category": "C1202",
+    "max_pages": 1,
+    "min_products": 78
+  },
+  {
+    "name": "a101_dus_banyo_sabun",
+    "group": "a101:Duş, Banyo, Sabun",
+    "category": "personal_care",
+    "store": "a101",
+    "shop_category": "C1203",
+    "max_pages": 1,
+    "min_products": 51
+  },
+  {
+    "name": "a101_parfum_deodorant",
+    "group": "a101:Parfüm, Deodorant",
+    "category": "personal_care",
+    "store": "a101",
+    "shop_category": "C1209",
+    "max_pages": 1,
+    "min_products": 34
+  },
+  {
+    "name": "a101_hijyenik_ped",
+    "group": "a101:Hijyenik Ped",
+    "category": "personal_care",
+    "store": "a101",
+    "shop_category": "C1204",
+    "max_pages": 1,
+    "min_products": 26
+  },
+  {
+    "name": "a101_erkek_bakim",
+    "group": "a101:Erkek Bakım",
+    "category": "personal_care",
+    "store": "a101",
+    "shop_category": "C1207",
+    "max_pages": 1,
+    "min_products": 11
+  },
+  {
     "name": "migros_ekmek",
     "group": "migros:Ekmek",
     "category": "bread_cereals",
