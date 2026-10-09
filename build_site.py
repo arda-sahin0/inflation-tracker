@@ -14,40 +14,96 @@ from tracker import ROOT
 
 TEMPLATE = ROOT / "site_template.html"
 OUT = ROOT / "docs" / "index.html"
+STORE_NAMES = {"migros": "Migros", "a101": "A101"}
+PERIODS = {"d1": 1, "w1": 7, "m1": 30}
+MOVERS = 15
+
+
+def values_on(series: pd.Series, dates: pd.DatetimeIndex) -> list:
+    return [None if pd.isna(v) else round(float(v), 3) for v in series.reindex(dates)]
+
+
+def change(series: pd.Series, days: int | None) -> float | None:
+    """Percent change over the last `days` days, or since the first value when days is None."""
+    s = series.dropna()
+    if len(s) < 2:
+        return None
+    if days is None:
+        base = s.iloc[0]
+    else:
+        start = s.index[-1] - pd.Timedelta(days=days)
+        if s.index[0] > start:
+            return None
+        base = s.loc[:start].iloc[-1]
+    return round(float((s.iloc[-1] / base - 1) * 100), 2)
+
+
+def stats(series: pd.Series) -> dict:
+    out = {key: change(series, days) for key, days in PERIODS.items()}
+    out["all"] = change(series, None)
+    out["level"] = round(float(series.dropna().iloc[-1]), 2)
+    return out
+
+
+def movers(df: pd.DataFrame) -> dict:
+    """Products with the largest unit-price moves over the last week and since first seen."""
+    changes = ix.product_changes(df, days=7)
+    shelf = df.sort_values("date").groupby("product_id")[["regular_price", "category"]].last()
+    changes = changes.join(shelf)
+
+    def rows(frame: pd.DataFrame, column: str) -> list[dict]:
+        return [{
+            "name": row["name"] if isinstance(row["name"], str) else product_id,
+            "store": row["store"],
+            "cat": row["category"],
+            "tl": round(float(row["regular_price"]) / 100, 2),
+            "pct": round(float(row[column]), 1),
+        } for product_id, row in frame.iterrows()]
+
+    out = {}
+    for key, column in (("w1", "last_7d_pct"), ("all", "since_start_pct")):
+        moved = changes.dropna(subset=[column])
+        moved = moved[moved[column].round(1) != 0].sort_values(column, ascending=False)
+        out[key] = {"up": rows(moved[moved[column] > 0].head(MOVERS), column),
+                    "down": rows(moved[moved[column] < 0].iloc[::-1].head(MOVERS), column)}
+    return out
 
 
 def dashboard_data() -> dict:
     df = ix.load_prices()
-    weights = ix.load_weights()
-    idx = ix.build_index(df, weights).round(3)
-    stores = ix.build_store_index(df, weights).round(3)
-    changes = ix.product_changes(df).round(2)
-    jumps = ix.big_jumps(df)
+    config = ix.load_config()
+    weights = ix.load_weights(config)
+    food = ix.food_categories(config)
+    idx = ix.build_index(df, weights)
+    stores = ix.build_store_index(df, weights)
+    dates = idx.index
     categories = [c for c in idx.columns if c not in ("food", "overall")]
 
-    def movers(frame: pd.DataFrame) -> list[dict]:
-        out = []
-        for product_id, row in frame.iterrows():
-            out.append({
-                "name": row["name"] if isinstance(row["name"], str) else product_id,
-                "store": {"migros": "Migros", "a101": "A101"}.get(row["store"], row["store"]),
-                "tl": float(row["latest_tl"]),
-                "pct": float(row["since_start_pct"]),
-            })
-        return out
+    today = df[df["date"] == df["date"].max()]
+    counts = today.groupby(["category", "store"])["product_id"].nunique()
+
+    series = {key: values_on(idx[key], dates) for key in idx.columns}
+    series.update({store: values_on(stores[store], dates) for store in stores.columns})
 
     return {
-        "generated": str(idx.index[-1].date()),
-        "dates": [d.strftime("%Y-%m-%d") for d in idx.index],
-        "food": idx["food"].tolist(),
-        "overall": idx["overall"].tolist(),
-        "stores": {s: stores[s].dropna().tolist() for s in stores.columns},
-        "categories": {c: round(float(idx[c].iloc[-1]), 2) for c in categories},
-        "n_products": int(df["product_id"].nunique()),
-        "n_products_store": {k: int(v) for k, v in df.groupby("store")["product_id"].nunique().items()},
-        "movers_up": movers(changes.head(6)),
-        "movers_down": movers(changes.tail(3)),
-        "jumps": int(len(jumps)),
+        "generated": str(dates[-1].date()),
+        "dates": [d.strftime("%Y-%m-%d") for d in dates],
+        "series": series,
+        "stats": {key: stats(idx[key]) for key in ("food", "overall")}
+                 | {store: stats(stores[store]) for store in stores.columns},
+        "stores": {store: STORE_NAMES.get(store, store) for store in stores.columns},
+        "store_start": str(stores.index[0].date()),
+        "categories": [{
+            "key": c,
+            "food": c in food,
+            "weight": round(weights.get(c, 0.0), 2),
+            "counts": {store: int(counts.get((c, store), 0)) for store in stores.columns},
+            **stats(idx[c]),
+        } for c in categories],
+        "movers": movers(df),
+        "n_today": int(today["product_id"].nunique()),
+        "n_today_store": {k: int(v) for k, v in today.groupby("store")["product_id"].nunique().items()},
+        "jumps": int(len(ix.big_jumps(df))),
     }
 
 
@@ -60,7 +116,7 @@ def main() -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(page, encoding="utf-8")
     print(f"Wrote {OUT.relative_to(ROOT)} — {len(page) // 1024} KB, "
-          f"{len(data['dates'])} days, {data['n_products']} products")
+          f"{len(data['dates'])} days, {data['n_today']} products today")
 
 
 if __name__ == "__main__":
