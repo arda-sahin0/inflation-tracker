@@ -120,3 +120,29 @@ def test_a_big_sweep_cannot_swamp_the_hand_picked_products():
     assert index["dairy_eggs"].iloc[-1] == pytest.approx(100 * math.sqrt(1.2))
     # without grouping the 50 swept products would have pulled it to nearly 120
     assert index["dairy_eggs"].iloc[-1] < 110
+
+
+def test_a_group_that_joins_later_never_rewrites_history():
+    picked = [("2026-09-11", "picked-a", "dairy_eggs", 100), ("2026-09-12", "picked-a", "dairy_eggs", 110),
+              ("2026-09-13", "picked-a", "dairy_eggs", 121)]
+    before = rows(picked).assign(group="picked")
+    after = rows(picked + [("2026-09-13", "swept-x", "dairy_eggs", 50),
+                           ("2026-09-14", "swept-x", "dairy_eggs", 50),
+                           ("2026-09-14", "picked-a", "dairy_eggs", 121)])
+    after["group"] = ["milk" if p == "swept-x" else "picked" for p in after["product_id"]]
+
+    old = build_index(before, {"dairy_eggs": 1})["dairy_eggs"].tolist()
+    new = build_index(after, {"dairy_eggs": 1})["dairy_eggs"].tolist()
+    assert new[:3] == pytest.approx(old)          # 100, 110, 121 untouched
+    assert new[3] == pytest.approx(121)           # both groups flat on day 4
+
+
+def test_a_group_that_leaves_does_not_drag_the_index():
+    data = [("2026-09-11", "a", "dairy_eggs", 100), ("2026-09-11", "b", "dairy_eggs", 100),
+            ("2026-09-12", "a", "dairy_eggs", 110), ("2026-09-12", "b", "dairy_eggs", 100),
+            ("2026-09-16", "a", "dairy_eggs", 121)]          # b gone for good after the 12th
+    df = rows(data)
+    df["group"] = ["picked" if p == "a" else "milk" for p in df["product_id"]]
+    index = build_index(df, {"dairy_eggs": 1})["dairy_eggs"]
+    assert index.iloc[1] == pytest.approx(100 * math.sqrt(1.1))   # both groups on day 2
+    assert index.iloc[-1] == pytest.approx(100 * math.sqrt(1.1) * 1.1)   # only a moves afterwards

@@ -77,13 +77,26 @@ def price_table(df: pd.DataFrame) -> pd.DataFrame:
     return table.reindex(all_days).ffill(limit=MAX_GAP_DAYS)
 
 
+def daily_links(prices: pd.DataFrame) -> pd.Series:
+    """Each day's price change: geometric mean of (today / yesterday) over products priced on both days.
+
+    NaN on days where no product has two consecutive prices, so callers can tell
+    "no change" apart from "nothing to compare".
+    """
+    relatives = prices / prices.shift(1)
+    return np.exp(np.log(relatives).mean(axis=1))
+
+
+def chain(links: pd.Series) -> pd.Series:
+    """Turn daily changes into an index that starts at 100."""
+    links = links.fillna(1.0)
+    links.iloc[0] = 1.0
+    return 100 * links.cumprod()
+
+
 def chained_jevons(prices: pd.DataFrame) -> pd.Series:
     """Index that starts at 100. prices: rows = dates, columns = products."""
-    relatives = prices / prices.shift(1)                   # NaN if missing on either day
-    daily_change = np.exp(np.log(relatives).mean(axis=1))  # geometric mean
-    daily_change = daily_change.fillna(1.0)                # no comparable products -> no change
-    daily_change.iloc[0] = 1.0
-    return 100 * daily_change.cumprod()
+    return chain(daily_links(prices))
 
 
 def weighted_overall(category_index: pd.DataFrame, weights: dict[str, float]) -> pd.Series:
@@ -108,16 +121,17 @@ def build_index(df: pd.DataFrame, weights: dict[str, float] | None = None) -> pd
 
     result = pd.DataFrame(index=prices.index)
     for category, members in groups_of(df).groupby("category"):
-        # Each group (hand-picked products, or one sweep) is an elementary index, and the
-        # category is their geometric mean. Without this a 136-product milk sweep would
-        # drown the four hand-picked dairy products.
-        elementary = {}
+        # Each group (hand-picked products, or one sweep) is an elementary aggregate. The category's
+        # daily change is the geometric mean of the changes of the groups active on both days, then
+        # chained. So a 136-product sweep counts once, and a group that joins later moves the index
+        # only from the day it joins — it never rewrites history.
+        links = {}
         for name, ids in members.groupby("group").groups.items():
             columns = [i for i in ids if i in prices.columns]
             if columns:
-                elementary[name] = chained_jevons(prices[columns])
-        elementary = pd.DataFrame(elementary)
-        result[category] = np.exp(np.log(elementary).mean(axis=1))
+                links[name] = daily_links(prices[columns])
+        category_link = np.exp(np.log(pd.DataFrame(links)).mean(axis=1))
+        result[category] = chain(category_link)
 
     overall = weighted_overall(result, weights)
     food = [c for c in food_categories() if c in result.columns]

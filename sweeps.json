@@ -1,35 +1,478 @@
 [
-  {"name": "milk", "category": "dairy_eggs", "store": "migros", "query": "süt",
-   "include_categories": ["Günlük Süt", "Uzun Ömürlü Süt"],
-   "max_pages": 3, "min_products": 15, "exclude_skus": []},
-
-  {"name": "cheese", "category": "dairy_eggs", "store": "migros", "query": "peynir",
-   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
-  {"name": "yoghurt", "category": "dairy_eggs", "store": "migros", "query": "yoğurt",
-   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
-  {"name": "eggs", "category": "dairy_eggs", "store": "migros", "query": "yumurta",
-   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
-
-  {"name": "rice", "category": "bread_cereals", "store": "migros", "query": "pirinç",
-   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
-  {"name": "chicken", "category": "meat", "store": "migros", "query": "tavuk",
-   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
-  {"name": "sunflower_oil", "category": "oils_fats", "store": "migros", "query": "ayçiçek yağı",
-   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
-  {"name": "apples", "category": "fruit_nuts", "store": "migros", "query": "elma",
-   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
-  {"name": "tomatoes", "category": "vegetables_pulses", "store": "migros", "query": "domates",
-   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
-  {"name": "chocolate", "category": "sugar_sweets", "store": "migros", "query": "çikolata",
-   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
-  {"name": "tomato_paste", "category": "other_food", "store": "migros", "query": "salça",
-   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
-  {"name": "tea", "category": "tea_coffee", "store": "migros", "query": "çay",
-   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
-  {"name": "water", "category": "drinks", "store": "migros", "query": "su",
-   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
-  {"name": "detergent", "category": "household", "store": "migros", "query": "deterjan",
-   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
-  {"name": "shampoo", "category": "personal_care", "store": "migros", "query": "şampuan",
-   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false}
+  {
+    "name": "milk",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "query": "süt",
+    "include_categories": [
+      "Günlük Süt",
+      "Uzun Ömürlü Süt"
+    ],
+    "max_pages": 12,
+    "min_products": 20
+  },
+  {
+    "name": "cheese",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "query": "peynir",
+    "include_categories": [
+      "İnek Peyniri",
+      "Yöresel Peynir",
+      "Süzme Peynir",
+      "Dünya Peynirleri"
+    ],
+    "max_pages": 10,
+    "min_products": 20
+  },
+  {
+    "name": "yoghurt",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "query": "yoğurt",
+    "include_categories": [
+      "Sade Yoğurt",
+      "Kaymaklı Yoğurt",
+      "Süzme Yoğurt",
+      "Fonksiyonel Yoğurt",
+      "Çeşnili Yoğurt"
+    ],
+    "max_pages": 10,
+    "min_products": 20
+  },
+  {
+    "name": "eggs",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "query": "yumurta",
+    "include_categories": [
+      "Yumurta"
+    ],
+    "max_pages": 10,
+    "min_products": 10
+  },
+  {
+    "name": "rice",
+    "category": "bread_cereals",
+    "store": "migros",
+    "query": "pirinç",
+    "include_categories": [
+      "Baldo Pirinç",
+      "Osmancık Pirinç",
+      "Pilavlık Pirinç",
+      "Basmati Pirinç",
+      "Yasemin Pirinç"
+    ],
+    "max_pages": 10,
+    "min_products": 15
+  },
+  {
+    "name": "chicken",
+    "category": "meat",
+    "store": "migros",
+    "query": "tavuk",
+    "include_categories": [
+      "Taze Piliç Eti",
+      "Donuk Piliç Eti"
+    ],
+    "max_pages": 10,
+    "min_products": 10
+  },
+  {
+    "name": "sunflower_oil",
+    "category": "oils_fats",
+    "store": "migros",
+    "query": "ayçiçek yağı",
+    "include_categories": [
+      "Ayçicek Yağı"
+    ],
+    "max_pages": 10,
+    "min_products": 8
+  },
+  {
+    "name": "hard_fruit",
+    "category": "fruit_nuts",
+    "store": "migros",
+    "query": "elma",
+    "include_categories": [
+      "Sert Meyveler"
+    ],
+    "max_pages": 10,
+    "min_products": 2
+  },
+  {
+    "name": "vegetables",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "query": "domates",
+    "include_categories": [
+      "Mevsim Sebzeleri"
+    ],
+    "max_pages": 10,
+    "min_products": 3
+  },
+  {
+    "name": "chocolate",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "query": "çikolata",
+    "include_categories": [
+      "Sütlü Çikolata",
+      "Bitter Çikolata",
+      "Beyaz Çikolata"
+    ],
+    "max_pages": 10,
+    "min_products": 15
+  },
+  {
+    "name": "tomato_paste",
+    "category": "other_food",
+    "store": "migros",
+    "query": "salça",
+    "include_categories": [
+      "Domates Salçası",
+      "Biber Salçası"
+    ],
+    "max_pages": 10,
+    "min_products": 15
+  },
+  {
+    "name": "tea",
+    "category": "tea_coffee",
+    "store": "migros",
+    "query": "çay",
+    "include_categories": [
+      "Dökme Çay",
+      "Demlik Poşet Çay",
+      "Bardak Poşet Çay"
+    ],
+    "max_pages": 10,
+    "min_products": 15
+  },
+  {
+    "name": "water",
+    "category": "drinks",
+    "store": "migros",
+    "query": "su",
+    "include_categories": [
+      "Su"
+    ],
+    "max_pages": 10,
+    "min_products": 20
+  },
+  {
+    "name": "detergent",
+    "category": "household",
+    "store": "migros",
+    "query": "deterjan",
+    "include_categories": [
+      "Sıvı Çamaşır Deterjanı",
+      "Toz Deterjan",
+      "Sıvı Bulaşık Deterjanı"
+    ],
+    "max_pages": 10,
+    "min_products": 20
+  },
+  {
+    "name": "shampoo",
+    "category": "personal_care",
+    "store": "migros",
+    "query": "şampuan",
+    "include_categories": [
+      "Şampuan",
+      "Erkek Şampuanı"
+    ],
+    "max_pages": 10,
+    "min_products": 15
+  },
+  {
+    "name": "bread",
+    "category": "bread_cereals",
+    "store": "migros",
+    "query": "ekmek",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "pasta",
+    "category": "bread_cereals",
+    "store": "migros",
+    "query": "makarna",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "flour",
+    "category": "bread_cereals",
+    "store": "migros",
+    "query": "buğday unu",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "bulgur",
+    "category": "bread_cereals",
+    "store": "migros",
+    "query": "bulgur",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "minced_beef",
+    "category": "meat",
+    "store": "migros",
+    "query": "kıyma",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "sucuk",
+    "category": "meat",
+    "store": "migros",
+    "query": "sucuk",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "butter",
+    "category": "oils_fats",
+    "store": "migros",
+    "query": "tereyağı",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "margarine",
+    "category": "oils_fats",
+    "store": "migros",
+    "query": "margarin",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "olive_oil",
+    "category": "oils_fats",
+    "store": "migros",
+    "query": "zeytinyağı",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "bananas",
+    "category": "fruit_nuts",
+    "store": "migros",
+    "query": "muz",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "citrus",
+    "category": "fruit_nuts",
+    "store": "migros",
+    "query": "portakal",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "nuts",
+    "category": "fruit_nuts",
+    "store": "migros",
+    "query": "ceviz",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "potatoes",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "query": "patates",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "onions",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "query": "soğan",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "lentils",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "query": "mercimek",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "chickpeas",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "query": "nohut",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "beans",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "query": "kuru fasulye",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "sugar",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "query": "toz şeker",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "honey",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "query": "bal",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "salt",
+    "category": "other_food",
+    "store": "migros",
+    "query": "tuz",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "spices",
+    "category": "other_food",
+    "store": "migros",
+    "query": "baharat",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "coffee",
+    "category": "tea_coffee",
+    "store": "migros",
+    "query": "kahve",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "juice",
+    "category": "drinks",
+    "store": "migros",
+    "query": "meyve suyu",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "soft_drinks",
+    "category": "drinks",
+    "store": "migros",
+    "query": "kola",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "mineral_water",
+    "category": "drinks",
+    "store": "migros",
+    "query": "maden suyu",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "toilet_paper",
+    "category": "household",
+    "store": "migros",
+    "query": "tuvalet kağıdı",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "dish_detergent",
+    "category": "household",
+    "store": "migros",
+    "query": "bulaşık",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "toothpaste",
+    "category": "personal_care",
+    "store": "migros",
+    "query": "diş macunu",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  },
+  {
+    "name": "soap",
+    "category": "personal_care",
+    "store": "migros",
+    "query": "sıvı sabun",
+    "include_categories": [],
+    "max_pages": 10,
+    "min_products": 10,
+    "enabled": false
+  }
 ]
