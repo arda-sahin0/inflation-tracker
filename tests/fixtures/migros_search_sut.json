@@ -36,7 +36,8 @@
           "regularPrice": 17995,
           "shownPrice": 12597,
           "discountRate": 30,
-          "sponsored": true
+          "sponsored": true,
+          "storeId": 20000000000607
         },
         {
           "sku": "11019915",
@@ -69,7 +70,8 @@
           "regularPrice": 17995,
           "shownPrice": 12597,
           "discountRate": 30,
-          "sponsored": true
+          "sponsored": true,
+          "storeId": 20000000000607
         },
         {
           "sku": "11011520",
@@ -102,7 +104,8 @@
           "regularPrice": 5275,
           "shownPrice": 5275,
           "discountRate": 0,
-          "sponsored": false
+          "sponsored": false,
+          "storeId": 20000000000607
         },
         {
           "sku": "11011501",
@@ -135,7 +138,8 @@
           "regularPrice": 4325,
           "shownPrice": 4325,
           "discountRate": 0,
-          "sponsored": false
+          "sponsored": false,
+          "storeId": 20000000000607
         },
         {
           "sku": "11010198",
@@ -168,7 +172,8 @@
           "regularPrice": 7650,
           "shownPrice": 7650,
           "discountRate": 0,
-          "sponsored": false
+          "sponsored": false,
+          "storeId": 20000000000607
         },
         {
           "sku": "11010167",
@@ -201,7 +206,8 @@
           "regularPrice": 6275,
           "shownPrice": 6275,
           "discountRate": 0,
-          "sponsored": false
+          "sponsored": false,
+          "storeId": 20000000000607
         },
         {
           "sku": "11010066",
@@ -234,7 +240,8 @@
           "regularPrice": 7950,
           "shownPrice": 7950,
           "discountRate": 0,
-          "sponsored": false
+          "sponsored": false,
+          "storeId": 20000000000607
         },
         {
           "sku": "11010267",
@@ -267,7 +274,8 @@
           "regularPrice": 7950,
           "shownPrice": 7950,
           "discountRate": 0,
-          "sponsored": false
+          "sponsored": false,
+          "storeId": 20000000000607
         }
       ]
     }

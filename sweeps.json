@@ -1,0 +1,4 @@
+[
+  {"category": "dairy_eggs", "store": "migros", "query": "süt", "match_category": "Süt",
+   "min_products": 15, "exclude_skus": []}
+]

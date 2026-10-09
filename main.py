@@ -5,7 +5,7 @@ import sys
 import time
 from datetime import datetime, timedelta, timezone
 
-from tracker import ROOT
+from tracker import ROOT, sweep
 from tracker.scrapers import get_scraper
 
 TURKEY = timezone(timedelta(hours=3))
@@ -34,6 +34,20 @@ def main() -> int:
             failures.append(product["id"])
             print(f"FAIL {product['id']}: {e!r}")
         time.sleep(2)
+
+    # category sweeps: one request brings ~35 products, so a whole category is cheap
+    tracked = {(r["store"], r["sku"]) for r in rows}
+    for rule in sweep.load_rules():
+        try:
+            swept = [r for r in sweep.run(rule) if (r["store"], r["sku"]) not in tracked]
+            for row in swept:
+                row["date"] = today
+                tracked.add((row["store"], row["sku"]))
+            rows += swept
+            print(f"SWEEP {rule['query']!r} -> {len(swept)} products into {rule['category']}")
+        except Exception as e:
+            failures.append(f"sweep:{rule.get('query', '?')}")
+            print(f"FAIL sweep {rule.get('query', '?')!r}: {e!r}")
 
     if rows:
         folder = "raw" if os.getenv("GITHUB_ACTIONS") == "true" else "local"

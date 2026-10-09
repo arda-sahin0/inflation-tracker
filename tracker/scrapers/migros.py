@@ -2,6 +2,9 @@ from urllib.parse import urlparse
 import requests
 
 URL = "https://www.migros.com.tr/rest/products/screens/{sku}"
+SEARCH_URL = "https://www.migros.com.tr/rest/search/screens/products"
+SITE = "https://www.migros.com.tr/"
+PAGE_PARAM_CANDIDATES = ("sayfa", "page", "pageNumber")
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/128.0 Safari/537.36",
@@ -58,3 +61,74 @@ def scrape(product: dict) -> dict:
     if raw["sku"] != sku:
         raise RuntimeError(f"SKU mismatch: asked for {sku}, got {raw['sku']}")
     return {"store": "migros", **parse(raw)}
+
+# ---------- listings: one request returns ~35 products with their prices ----------
+
+def search_page(query: str, page: int = 1, page_param: str = "sayfa") -> dict:
+    """One page of search results (the payload behind a category or search page)."""
+    params = {"q": query}
+    if page > 1:
+        params[page_param] = page
+    response = requests.get(SEARCH_URL, params=params, headers=HEADERS, timeout=20)
+    response.raise_for_status()
+    body = response.json()
+    if not body.get("successful"):
+        raise RuntimeError(f"Migros search failed for {query!r}")
+    return body["data"]["searchInfo"]
+
+
+def detect_page_param(query: str) -> str:
+    """Migros doesn't document its paging parameter — find the one that moves the results."""
+    first = search_page(query)["storeProductInfos"]
+    if not first:
+        return PAGE_PARAM_CANDIDATES[0]
+    for candidate in PAGE_PARAM_CANDIDATES:
+        try:
+            second = search_page(query, page=2, page_param=candidate)["storeProductInfos"]
+        except Exception:
+            continue
+        if second and second[0]["sku"] != first[0]["sku"]:
+            return candidate
+    raise RuntimeError("No paging parameter worked — only the first page is reachable")
+
+
+def category_names(product: dict) -> list[str]:
+    names = [a["name"] for a in reversed(product.get("categoryAscendants", []))]
+    if product.get("category"):
+        names.append(product["category"]["name"])
+    return names
+
+
+def listing_row(product: dict, category: str) -> dict:
+    """A price row built from a listing entry (no netKg here — the size comes from the name)."""
+    from tracker.naming import parse_size
+
+    unit, net_amount = parse_size(product["name"])
+    if product.get("unit") == "GRAM":          # the shop knows better than the name
+        unit, net_amount = "GRAM", None
+    return {
+        "store": "migros",
+        "sku": product["sku"].zfill(8),
+        "name": product["name"],
+        "store_id": product.get("storeId"),
+        "regular_price": int(product["regularPrice"]),
+        "sale_price": int(product.get("shownPrice", product["regularPrice"])),
+        "loyalty_price": None,
+        "unit": unit,
+        "net_amount": net_amount,
+        "in_stock": product.get("status") == "IN_SALE",
+        "product_id": f"migros-{product['sku'].zfill(8)}",
+        "category": category,
+    }
+
+
+def usable_listing_products(search_info: dict, match_category: str | None = None) -> list[dict]:
+    """In-sale, non-sponsored products, optionally only those under one shop category."""
+    out = []
+    for product in search_info.get("storeProductInfos", []):
+        if product.get("sponsored") or product.get("status") != "IN_SALE":
+            continue
+        if match_category and match_category not in category_names(product):
+            continue
+        out.append(product)
+    return out
