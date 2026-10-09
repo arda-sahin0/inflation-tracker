@@ -22,8 +22,26 @@ def _number(text: str) -> float:
     return float(text.replace(",", "."))
 
 
+EGG_SIZE = re.compile(r"(\d+)\s*-\s*(\d+)\s*g\b|(\d+)\s*g\b", re.IGNORECASE)
+
+
+def _eggs(name: str) -> float | None:
+    """Egg packs state the weight of ONE egg ("20'li XL 73 G", "30'lu 53-62 G"): count x egg weight,
+    using the middle of a size range. That is also how A101 computes its own netWeight."""
+    count = COUNTED.search(name)
+    size = EGG_SIZE.search(name)
+    if not (count and count.group(1) and size):
+        return None
+    low, high, single = size.groups()
+    per_egg = (int(low) + int(high)) / 2 if low else int(single)
+    return int(count.group(1)) * per_egg
+
+
 def parse_size(name: str) -> tuple[str, float | None]:
     """('GRAM', None) for goods priced per kg, else ('PIECE', net amount in g/ml or None)."""
+    if "yumurta" in name.lower():
+        return "PIECE", _eggs(name)
+
     match = MULTIPACK.search(name)
     if match:
         count, amount, unit = match.groups()

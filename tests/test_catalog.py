@@ -50,5 +50,24 @@ def test_crawl_walks_aisles_and_shelves_and_skips_what_it_should():
     assert [l["name"] for l in aisle["shelves"][0]["leaves"]] == ["Günlük Süt", "Uzun Ömürlü Süt", "Bitkisel İçecek"]
 
 
-def test_only_migros_can_be_crawled_for_now():
-    assert catalog.main(["https://www.a101.com.tr/"]) == 1
+def test_an_unknown_shop_is_refused():
+    assert catalog.main(["https://www.carrefoursa.com/"]) == 1
+
+
+def test_a101_crawl_probes_numbered_aisles_and_skips_gaps():
+    from tracker.scrapers import a101
+    aisle = json.loads((FIXTURES / "a101_aisle_C05.json").read_text(encoding="utf-8"))
+
+    def fake_list(aisle_id):
+        if aisle_id == "C05":
+            return aisle
+        raise RuntimeError("no such aisle")
+
+    original_list, original_ids = a101.list_category, a101.AISLE_IDS
+    a101.list_category, a101.AISLE_IDS = fake_list, ["C04", "C05", "C06"]
+    try:
+        result = catalog.crawl_a101(skip=set(), sleep=0, log=lambda *_: None)
+    finally:
+        a101.list_category, a101.AISLE_IDS = original_list, original_ids
+    assert [a["prettyName"] for a in result["aisles"]] == ["C05"]
+    assert [s["name"] for s in result["aisles"][0]["shelves"]] == ["Süt", "Yumurta"]

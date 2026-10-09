@@ -61,3 +61,82 @@ def parse(p: dict, product: dict) -> dict:
 def scrape(product: dict) -> dict:
     raw = fetch_product(to_sku(product["url"]))
     return {"store": "a101", **parse(raw, product)}
+
+# ---------- category listings: one request returns a whole aisle, every shelf, every product ----------
+
+LIST_URL = f"https://rio.a101.com.tr/{TOKEN}/CALL/Store/listCategoryProducts/{STORE}"
+AISLE_IDS = [f"C{n:02d}" for n in range(1, 31)]     # A101 numbers its aisles C01, C02, ...
+_aisles: dict[str, dict] = {}                         # one download per aisle per run (they're 1-3 MB)
+
+
+def list_category(aisle_id: str) -> dict:
+    if aisle_id not in _aisles:
+        response = requests.get(LIST_URL, params={**PARAMS, "categoryId": aisle_id, "v": 3},
+                                headers=HEADERS, timeout=60)
+        response.raise_for_status()
+        body = response.json()
+        if "children" not in body:
+            raise RuntimeError(f"A101 aisle {aisle_id}: no shelves in the response")
+        _aisles[aisle_id] = body
+    return _aisles[aisle_id]
+
+
+def aisle_of(shelf_id: str) -> str:
+    """C0502 (Süt) belongs to aisle C05."""
+    return shelf_id[:3]
+
+
+def shelves(aisle: dict) -> list[dict]:
+    return [{"name": c["name"], "prettyName": c["id"], "count": int(c.get("itemCount", 0)), "leaves": []}
+            for c in aisle.get("children", [])]
+
+
+def shelf_products(aisle: dict, shelf_id: str) -> list[dict]:
+    for child in aisle.get("children", []):
+        if child["id"] == shelf_id:
+            return child.get("products", [])
+    raise KeyError(f"A101 shelf {shelf_id} not found in aisle {aisle.get('id')}")
+
+
+def sellable(product: dict) -> bool:
+    return bool(product.get("isEnabled")) and (product.get("stock") or 0) > 0 \
+        and not product.get("isBlacklisted")
+
+
+def listing_row(product: dict, category: str, group: str) -> dict:
+    """A price row from a listing entry. A101 states net weight itself; the name is only a fallback."""
+    from tracker.naming import parse_size
+
+    attributes = product.get("attributes", {})
+    name = attributes.get("name", product["id"])
+    if str(attributes.get("salesUnitOfMeasure", "")).upper() == "KG":
+        unit, net_amount = "GRAM", None
+    else:
+        unit = "PIECE"
+        net_amount = float(attributes["netWeight"]) if attributes.get("netWeight") else parse_size(name)[1]
+    price = product["price"]
+    return {
+        "store": "a101",
+        "sku": str(product["id"]),
+        "name": name,
+        "store_id": STORE,
+        "regular_price": int(price["normal"]),
+        "sale_price": int(price.get("discounted", price["normal"])),
+        "loyalty_price": None,
+        "unit": unit,
+        "net_amount": net_amount,
+        "in_stock": sellable(product),
+        "product_id": f"a101-{product['id']}",
+        "category": category,
+        "group": group,
+    }
+
+
+def sweep_rows(rule: dict) -> list[dict]:
+    """All sellable products on one A101 shelf. The aisle is downloaded once and shared by its shelves."""
+    shelf_id = rule["shop_category"]
+    products = shelf_products(list_category(aisle_of(shelf_id)), shelf_id)
+    excluded = {str(s) for s in rule.get("exclude_skus", [])}
+    group = rule.get("group") or rule.get("name") or shelf_id
+    return [listing_row(p, rule["category"], group) for p in products
+            if sellable(p) and str(p["id"]) not in excluded]

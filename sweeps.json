@@ -1,7 +1,7 @@
 [
   {
-    "name": "ekmek",
-    "group": "Ekmek",
+    "name": "migros_ekmek",
+    "group": "migros:Ekmek",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "ekmek-c-455",
@@ -9,8 +9,8 @@
     "min_products": 52
   },
   {
-    "name": "makarnalar",
-    "group": "Makarnalar",
+    "name": "migros_makarnalar",
+    "group": "migros:Makarnalar",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "makarnalar-c-425",
@@ -18,8 +18,8 @@
     "min_products": 111
   },
   {
-    "name": "pirinc",
-    "group": "Pirinç",
+    "name": "migros_pirinc",
+    "group": "migros:Pirinç",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "pirinc-c-427",
@@ -27,8 +27,8 @@
     "min_products": 37
   },
   {
-    "name": "bulgur",
-    "group": "Bulgur, Buğday",
+    "name": "migros_bulgur",
+    "group": "migros:Bulgur, Buğday",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "bulgur-c-426",
@@ -36,8 +36,8 @@
     "min_products": 24
   },
   {
-    "name": "bugday",
-    "group": "Bulgur, Buğday",
+    "name": "migros_bugday",
+    "group": "migros:Bulgur, Buğday",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "bugday-c-2793",
@@ -45,8 +45,8 @@
     "min_products": 5
   },
   {
-    "name": "sade_un",
-    "group": "Un",
+    "name": "migros_sade_un",
+    "group": "migros:Un",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "sade-un-c-289b",
@@ -54,8 +54,8 @@
     "min_products": 4
   },
   {
-    "name": "yufka",
-    "group": "Yufka",
+    "name": "migros_yufka",
+    "group": "migros:Yufka",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "yufka-c-2872",
@@ -63,8 +63,8 @@
     "min_products": 5
   },
   {
-    "name": "kahvaltilik_gevrek",
-    "group": "Kahvaltılık Gevrek",
+    "name": "migros_kahvaltilik_gevrek",
+    "group": "migros:Kahvaltılık Gevrek",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "kahvaltilik-gevrek-c-422",
@@ -72,8 +72,8 @@
     "min_products": 58
   },
   {
-    "name": "biskuvi",
-    "group": "Bisküvi",
+    "name": "migros_biskuvi",
+    "group": "migros:Bisküvi",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "biskuvi-c-43c",
@@ -81,8 +81,8 @@
     "min_products": 115
   },
   {
-    "name": "kraker",
-    "group": "Kraker",
+    "name": "migros_kraker",
+    "group": "migros:Kraker",
     "category": "bread_cereals",
     "store": "migros",
     "shop_category": "kraker-c-27ea",
@@ -90,8 +90,8 @@
     "min_products": 41
   },
   {
-    "name": "dana_eti",
-    "group": "Kırmızı Et",
+    "name": "migros_dana_eti",
+    "group": "migros:Kırmızı Et",
     "category": "meat",
     "store": "migros",
     "shop_category": "dana-eti-c-3fa",
@@ -99,8 +99,8 @@
     "min_products": 17
   },
   {
-    "name": "kuzu_eti",
-    "group": "Kırmızı Et",
+    "name": "migros_kuzu_eti",
+    "group": "migros:Kırmızı Et",
     "category": "meat",
     "store": "migros",
     "shop_category": "kuzu-eti-c-3fb",
@@ -108,8 +108,8 @@
     "min_products": 6
   },
   {
-    "name": "sakatat",
-    "group": "Kırmızı Et",
+    "name": "migros_sakatat",
+    "group": "migros:Kırmızı Et",
     "category": "meat",
     "store": "migros",
     "shop_category": "sakatat-c-3fd",
@@ -117,8 +117,8 @@
     "min_products": 13
   },
   {
-    "name": "dondurulmus_kirmizi_et",
-    "group": "Kırmızı Et",
+    "name": "migros_dondurulmus_kirmizi_et",
+    "group": "migros:Kırmızı Et",
     "category": "meat",
     "store": "migros",
     "shop_category": "dondurulmus-kirmizi-et-c-282f",
@@ -126,8 +126,8 @@
     "min_products": 10
   },
   {
-    "name": "beyaz_et",
-    "group": "Beyaz Et",
+    "name": "migros_beyaz_et",
+    "group": "migros:Beyaz Et",
     "category": "meat",
     "store": "migros",
     "shop_category": "beyaz-et-c-69",
@@ -135,8 +135,8 @@
     "min_products": 44
   },
   {
-    "name": "et_sarkuteri",
-    "group": "Et Şarküteri",
+    "name": "migros_et_sarkuteri",
+    "group": "migros:Et Şarküteri",
     "category": "meat",
     "store": "migros",
     "shop_category": "et-sarkuteri-c-6b",
@@ -144,8 +144,8 @@
     "min_products": 118
   },
   {
-    "name": "sut",
-    "group": "Süt",
+    "name": "migros_sut",
+    "group": "migros:Süt",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "sut-c-6c",
@@ -153,8 +153,8 @@
     "min_products": 70
   },
   {
-    "name": "peynir",
-    "group": "Peynir",
+    "name": "migros_peynir",
+    "group": "migros:Peynir",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "peynir-c-6d",
@@ -162,8 +162,8 @@
     "min_products": 201
   },
   {
-    "name": "kaymakli_yogurt",
-    "group": "Yoğurt",
+    "name": "migros_kaymakli_yogurt",
+    "group": "migros:Yoğurt",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "kaymakli-yogurt-c-40f",
@@ -171,8 +171,8 @@
     "min_products": 7
   },
   {
-    "name": "sade_yogurt",
-    "group": "Yoğurt",
+    "name": "migros_sade_yogurt",
+    "group": "migros:Yoğurt",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "sade-yogurt-c-410",
@@ -180,8 +180,8 @@
     "min_products": 17
   },
   {
-    "name": "suzme_cesnili_yogurt",
-    "group": "Yoğurt",
+    "name": "migros_suzme_cesnili_yogurt",
+    "group": "migros:Yoğurt",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "suzme-cesnili-yogurt-c-411",
@@ -189,8 +189,8 @@
     "min_products": 6
   },
   {
-    "name": "meyveli_yogurt",
-    "group": "Yoğurt",
+    "name": "migros_meyveli_yogurt",
+    "group": "migros:Yoğurt",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "meyveli-yogurt-c-2748",
@@ -198,8 +198,8 @@
     "min_products": 9
   },
   {
-    "name": "diger_yogurtlar",
-    "group": "Yoğurt",
+    "name": "migros_diger_yogurtlar",
+    "group": "migros:Yoğurt",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "diger-yogurtlar-c-2749",
@@ -207,8 +207,8 @@
     "min_products": 27
   },
   {
-    "name": "yumurta",
-    "group": "Yumurta",
+    "name": "migros_yumurta",
+    "group": "migros:Yumurta",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "yumurta-c-70",
@@ -216,8 +216,8 @@
     "min_products": 13
   },
   {
-    "name": "ayran",
-    "group": "Ayran, Kefir",
+    "name": "migros_ayran",
+    "group": "migros:Ayran, Kefir",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "ayran-c-47a",
@@ -225,8 +225,8 @@
     "min_products": 13
   },
   {
-    "name": "kefir",
-    "group": "Ayran, Kefir",
+    "name": "migros_kefir",
+    "group": "migros:Ayran, Kefir",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "kefir-c-47b",
@@ -234,8 +234,8 @@
     "min_products": 22
   },
   {
-    "name": "kaymak",
-    "group": "Kaymak, Krema",
+    "name": "migros_kaymak",
+    "group": "migros:Kaymak, Krema",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "kaymak-c-41e",
@@ -243,8 +243,8 @@
     "min_products": 3
   },
   {
-    "name": "krema_ve_sos",
-    "group": "Kaymak, Krema",
+    "name": "migros_krema_ve_sos",
+    "group": "migros:Kaymak, Krema",
     "category": "dairy_eggs",
     "store": "migros",
     "shop_category": "krema-ve-sos-c-41f",
@@ -252,8 +252,8 @@
     "min_products": 14
   },
   {
-    "name": "tereyagi",
-    "group": "Tereyağı",
+    "name": "migros_tereyagi",
+    "group": "migros:Tereyağı",
     "category": "oils_fats",
     "store": "migros",
     "shop_category": "tereyagi-c-413",
@@ -261,8 +261,8 @@
     "min_products": 23
   },
   {
-    "name": "margarin",
-    "group": "Margarin",
+    "name": "migros_margarin",
+    "group": "migros:Margarin",
     "category": "oils_fats",
     "store": "migros",
     "shop_category": "margarin-c-414",
@@ -270,8 +270,8 @@
     "min_products": 14
   },
   {
-    "name": "sivi_yag",
-    "group": "Sıvı Yağ",
+    "name": "migros_sivi_yag",
+    "group": "migros:Sıvı Yağ",
     "category": "oils_fats",
     "store": "migros",
     "shop_category": "sivi-yag-c-76",
@@ -279,8 +279,8 @@
     "min_products": 48
   },
   {
-    "name": "meyve",
-    "group": "Meyve",
+    "name": "migros_meyve",
+    "group": "migros:Meyve",
     "category": "fruit_nuts",
     "store": "migros",
     "shop_category": "meyve-c-65",
@@ -288,8 +288,8 @@
     "min_products": 33
   },
   {
-    "name": "kuru_meyve",
-    "group": "Kuru Meyve",
+    "name": "migros_kuru_meyve",
+    "group": "migros:Kuru Meyve",
     "category": "fruit_nuts",
     "store": "migros",
     "shop_category": "kuru-meyve-c-441",
@@ -297,8 +297,8 @@
     "min_products": 56
   },
   {
-    "name": "kuruyemis",
-    "group": "Kuruyemiş",
+    "name": "migros_kuruyemis",
+    "group": "migros:Kuruyemiş",
     "category": "fruit_nuts",
     "store": "migros",
     "shop_category": "kuruyemis-c-442",
@@ -306,8 +306,8 @@
     "min_products": 94
   },
   {
-    "name": "sebze",
-    "group": "Sebze",
+    "name": "migros_sebze",
+    "group": "migros:Sebze",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "sebze-c-66",
@@ -315,8 +315,8 @@
     "min_products": 71
   },
   {
-    "name": "fasulye",
-    "group": "Bakliyat",
+    "name": "migros_fasulye",
+    "group": "migros:Bakliyat",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "fasulye-c-2794",
@@ -324,8 +324,8 @@
     "min_products": 11
   },
   {
-    "name": "mercimek",
-    "group": "Bakliyat",
+    "name": "migros_mercimek",
+    "group": "migros:Bakliyat",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "mercimek-c-113c9",
@@ -333,8 +333,8 @@
     "min_products": 12
   },
   {
-    "name": "nohut",
-    "group": "Bakliyat",
+    "name": "migros_nohut",
+    "group": "migros:Bakliyat",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "nohut-c-2798",
@@ -342,8 +342,8 @@
     "min_products": 5
   },
   {
-    "name": "barbunya",
-    "group": "Bakliyat",
+    "name": "migros_barbunya",
+    "group": "migros:Bakliyat",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "barbunya-c-2791",
@@ -351,8 +351,8 @@
     "min_products": 2
   },
   {
-    "name": "borulce",
-    "group": "Bakliyat",
+    "name": "migros_borulce",
+    "group": "migros:Bakliyat",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "borulce-c-2792",
@@ -360,8 +360,8 @@
     "min_products": 1
   },
   {
-    "name": "bakla",
-    "group": "Bakliyat",
+    "name": "migros_bakla",
+    "group": "migros:Bakliyat",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "bakla-c-2790",
@@ -369,8 +369,8 @@
     "min_products": 1
   },
   {
-    "name": "haslanmis",
-    "group": "Konserve Sebze",
+    "name": "migros_haslanmis",
+    "group": "migros:Konserve Sebze",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "haslanmis-c-2855",
@@ -378,8 +378,8 @@
     "min_products": 12
   },
   {
-    "name": "kozlenmis",
-    "group": "Konserve Sebze",
+    "name": "migros_kozlenmis",
+    "group": "migros:Konserve Sebze",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "kozlenmis-c-2840",
@@ -387,8 +387,8 @@
     "min_products": 6
   },
   {
-    "name": "konserve_misir",
-    "group": "Konserve Sebze",
+    "name": "migros_konserve_misir",
+    "group": "migros:Konserve Sebze",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "konserve-misir-c-2858",
@@ -396,8 +396,8 @@
     "min_products": 5
   },
   {
-    "name": "konserve_bezelye",
-    "group": "Konserve Sebze",
+    "name": "migros_konserve_bezelye",
+    "group": "migros:Konserve Sebze",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "konserve-bezelye-c-12251",
@@ -405,8 +405,8 @@
     "min_products": 2
   },
   {
-    "name": "konserve_sebze",
-    "group": "Konserve Sebze",
+    "name": "migros_konserve_sebze",
+    "group": "migros:Konserve Sebze",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "konserve-sebze-c-2852",
@@ -414,8 +414,8 @@
     "min_products": 2
   },
   {
-    "name": "konserve_fasulye",
-    "group": "Konserve Sebze",
+    "name": "migros_konserve_fasulye",
+    "group": "migros:Konserve Sebze",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "konserve-fasulye-c-12252",
@@ -423,8 +423,8 @@
     "min_products": 1
   },
   {
-    "name": "zeytin",
-    "group": "Zeytin",
+    "name": "migros_zeytin",
+    "group": "migros:Zeytin",
     "category": "vegetables_pulses",
     "store": "migros",
     "shop_category": "zeytin-c-71",
@@ -432,8 +432,8 @@
     "min_products": 58
   },
   {
-    "name": "seker",
-    "group": "Şeker",
+    "name": "migros_seker",
+    "group": "migros:Şeker",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "seker-c-ac",
@@ -441,8 +441,8 @@
     "min_products": 12
   },
   {
-    "name": "bal",
-    "group": "Bal",
+    "name": "migros_bal",
+    "group": "migros:Bal",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "bal-c-420",
@@ -450,8 +450,8 @@
     "min_products": 34
   },
   {
-    "name": "recel_marmelat",
-    "group": "Reçel, Marmelat",
+    "name": "migros_recel_marmelat",
+    "group": "migros:Reçel, Marmelat",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "recel-marmelat-c-424",
@@ -459,8 +459,8 @@
     "min_products": 56
   },
   {
-    "name": "krem_cikolata_ezmeler",
-    "group": "Krem Çikolata, Ezmeler",
+    "name": "migros_krem_cikolata_ezmeler",
+    "group": "migros:Krem Çikolata, Ezmeler",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "krem-cikolata-ezmeler-c-423",
@@ -468,8 +468,8 @@
     "min_products": 48
   },
   {
-    "name": "helva_tahin_pekmez",
-    "group": "Helva, Tahin, Pekmez",
+    "name": "migros_helva_tahin_pekmez",
+    "group": "migros:Helva, Tahin, Pekmez",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "helva-tahin-pekmez-c-421",
@@ -477,8 +477,8 @@
     "min_products": 57
   },
   {
-    "name": "bitter_cikolata",
-    "group": "Çikolata",
+    "name": "migros_bitter_cikolata",
+    "group": "migros:Çikolata",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "bitter-cikolata-c-113f6",
@@ -486,8 +486,8 @@
     "min_products": 25
   },
   {
-    "name": "sutlu_cikolata",
-    "group": "Çikolata",
+    "name": "migros_sutlu_cikolata",
+    "group": "migros:Çikolata",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "sutlu-cikolata-c-113f7",
@@ -495,8 +495,8 @@
     "min_products": 64
   },
   {
-    "name": "beyaz_cikolata",
-    "group": "Çikolata",
+    "name": "migros_beyaz_cikolata",
+    "group": "migros:Çikolata",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "beyaz-cikolata-c-113f8",
@@ -504,8 +504,8 @@
     "min_products": 8
   },
   {
-    "name": "draje_cikolata",
-    "group": "Çikolata",
+    "name": "migros_draje_cikolata",
+    "group": "migros:Çikolata",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "draje-cikolata-c-27d7",
@@ -513,8 +513,8 @@
     "min_products": 15
   },
   {
-    "name": "sekerleme",
-    "group": "Şekerleme",
+    "name": "migros_sekerleme",
+    "group": "migros:Şekerleme",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "sekerleme-c-444",
@@ -522,8 +522,8 @@
     "min_products": 119
   },
   {
-    "name": "sutlu_tatlilar",
-    "group": "Sütlü Tatlı",
+    "name": "migros_sutlu_tatlilar",
+    "group": "migros:Sütlü Tatlı",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "sutlu-tatlilar-c-41c",
@@ -531,8 +531,8 @@
     "min_products": 14
   },
   {
-    "name": "puding",
-    "group": "Sütlü Tatlı",
+    "name": "migros_puding",
+    "group": "migros:Sütlü Tatlı",
     "category": "sugar_sweets",
     "store": "migros",
     "shop_category": "puding-c-41d",
@@ -540,8 +540,8 @@
     "min_products": 8
   },
   {
-    "name": "tuz_baharat_harc",
-    "group": "Tuz, Baharat, Harç",
+    "name": "migros_tuz_baharat_harc",
+    "group": "migros:Tuz, Baharat, Harç",
     "category": "other_food",
     "store": "migros",
     "shop_category": "tuz-baharat-harc-c-77",
@@ -549,8 +549,8 @@
     "min_products": 132
   },
   {
-    "name": "salca",
-    "group": "Salça",
+    "name": "migros_salca",
+    "group": "migros:Salça",
     "category": "other_food",
     "store": "migros",
     "shop_category": "salca-c-453",
@@ -558,8 +558,8 @@
     "min_products": 27
   },
   {
-    "name": "tursu",
-    "group": "Turşu",
+    "name": "migros_tursu",
+    "group": "migros:Turşu",
     "category": "other_food",
     "store": "migros",
     "shop_category": "tursu-c-454",
@@ -567,8 +567,8 @@
     "min_products": 36
   },
   {
-    "name": "sos",
-    "group": "Sos",
+    "name": "migros_sos",
+    "group": "migros:Sos",
     "category": "other_food",
     "store": "migros",
     "shop_category": "sos-c-113fc",
@@ -576,8 +576,8 @@
     "min_products": 145
   },
   {
-    "name": "bulyon",
-    "group": "Bulyon",
+    "name": "migros_bulyon",
+    "group": "migros:Bulyon",
     "category": "other_food",
     "store": "migros",
     "shop_category": "bulyon-c-42c",
@@ -585,8 +585,8 @@
     "min_products": 5
   },
   {
-    "name": "dokme_cay",
-    "group": "Siyah Çay",
+    "name": "migros_dokme_cay",
+    "group": "migros:Siyah Çay",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "dokme-cay-c-28c1",
@@ -594,8 +594,8 @@
     "min_products": 33
   },
   {
-    "name": "demlik_poset_cay",
-    "group": "Siyah Çay",
+    "name": "migros_demlik_poset_cay",
+    "group": "migros:Siyah Çay",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "demlik-poset-cay-c-1121e",
@@ -603,8 +603,8 @@
     "min_products": 15
   },
   {
-    "name": "bardak_poset_cay",
-    "group": "Siyah Çay",
+    "name": "migros_bardak_poset_cay",
+    "group": "migros:Siyah Çay",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "bardak-poset-cay-c-1121f",
@@ -612,8 +612,8 @@
     "min_products": 15
   },
   {
-    "name": "bitki_cayi",
-    "group": "Bitki Çayı",
+    "name": "migros_bitki_cayi",
+    "group": "migros:Bitki Çayı",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "bitki-cayi-c-28c0",
@@ -621,8 +621,8 @@
     "min_products": 50
   },
   {
-    "name": "form_cayi",
-    "group": "Bitki Çayı",
+    "name": "migros_form_cayi",
+    "group": "migros:Bitki Çayı",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "form-cayi-c-28c2",
@@ -630,8 +630,8 @@
     "min_products": 5
   },
   {
-    "name": "turk_kahvesi",
-    "group": "Kahve",
+    "name": "migros_turk_kahvesi",
+    "group": "migros:Kahve",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "turk-kahvesi-c-28c4",
@@ -639,8 +639,8 @@
     "min_products": 17
   },
   {
-    "name": "hazir_kahve",
-    "group": "Kahve",
+    "name": "migros_hazir_kahve",
+    "group": "migros:Kahve",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "hazir-kahve-c-11222",
@@ -648,8 +648,8 @@
     "min_products": 52
   },
   {
-    "name": "filtre_kahve",
-    "group": "Kahve",
+    "name": "migros_filtre_kahve",
+    "group": "migros:Kahve",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "filtre-kahve-c-11223",
@@ -657,8 +657,8 @@
     "min_products": 30
   },
   {
-    "name": "kapsul_kahve",
-    "group": "Kahve",
+    "name": "migros_kapsul_kahve",
+    "group": "migros:Kahve",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "kapsul-kahve-c-11224",
@@ -666,8 +666,8 @@
     "min_products": 24
   },
   {
-    "name": "cekirdek_kahve",
-    "group": "Kahve",
+    "name": "migros_cekirdek_kahve",
+    "group": "migros:Kahve",
     "category": "tea_coffee",
     "store": "migros",
     "shop_category": "cekirdek-kahve-c-11225",
@@ -675,8 +675,8 @@
     "min_products": 23
   },
   {
-    "name": "su",
-    "group": "Su",
+    "name": "migros_su",
+    "group": "migros:Su",
     "category": "drinks",
     "store": "migros",
     "shop_category": "su-c-84",
@@ -684,8 +684,8 @@
     "min_products": 33
   },
   {
-    "name": "maden_suyu",
-    "group": "Maden Suyu",
+    "name": "migros_maden_suyu",
+    "group": "migros:Maden Suyu",
     "category": "drinks",
     "store": "migros",
     "shop_category": "maden-suyu-c-85",
@@ -693,8 +693,8 @@
     "min_products": 42
   },
   {
-    "name": "gazli_icecek",
-    "group": "Gazlı İçecek",
+    "name": "migros_gazli_icecek",
+    "group": "migros:Gazlı İçecek",
     "category": "drinks",
     "store": "migros",
     "shop_category": "gazli-icecek-c-80",
@@ -702,8 +702,8 @@
     "min_products": 98
   },
   {
-    "name": "meyve_suyu",
-    "group": "Meyve Suyu",
+    "name": "migros_meyve_suyu",
+    "group": "migros:Meyve Suyu",
     "category": "drinks",
     "store": "migros",
     "shop_category": "meyve-suyu-c-46c",
@@ -711,8 +711,8 @@
     "min_products": 94
   },
   {
-    "name": "salgam_suyu",
-    "group": "Meyve Suyu",
+    "name": "migros_salgam_suyu",
+    "group": "migros:Meyve Suyu",
     "category": "drinks",
     "store": "migros",
     "shop_category": "salgam-suyu-c-46e",
@@ -720,8 +720,8 @@
     "min_products": 5
   },
   {
-    "name": "limonata",
-    "group": "Meyve Suyu",
+    "name": "migros_limonata",
+    "group": "migros:Meyve Suyu",
     "category": "drinks",
     "store": "migros",
     "shop_category": "limonata-c-46f",
@@ -729,8 +729,8 @@
     "min_products": 10
   },
   {
-    "name": "soguk_cay",
-    "group": "Soğuk Çay, Kahve",
+    "name": "migros_soguk_cay",
+    "group": "migros:Soğuk Çay, Kahve",
     "category": "drinks",
     "store": "migros",
     "shop_category": "soguk-cay-c-28be",
@@ -738,8 +738,8 @@
     "min_products": 49
   },
   {
-    "name": "soguk_kahve",
-    "group": "Soğuk Çay, Kahve",
+    "name": "migros_soguk_kahve",
+    "group": "migros:Soğuk Çay, Kahve",
     "category": "drinks",
     "store": "migros",
     "shop_category": "soguk-kahve-c-28bd",
@@ -747,8 +747,8 @@
     "min_products": 23
   },
   {
-    "name": "camasir_yikama",
-    "group": "Çamaşır Yıkama",
+    "name": "migros_camasir_yikama",
+    "group": "migros:Çamaşır Yıkama",
     "category": "household",
     "store": "migros",
     "shop_category": "camasir-yikama-c-86",
@@ -756,8 +756,8 @@
     "min_products": 169
   },
   {
-    "name": "bulasik_yikama",
-    "group": "Bulaşık Yıkama",
+    "name": "migros_bulasik_yikama",
+    "group": "migros:Bulaşık Yıkama",
     "category": "household",
     "store": "migros",
     "shop_category": "bulasik-yikama-c-87",
@@ -765,8 +765,8 @@
     "min_products": 52
   },
   {
-    "name": "yuzey_temizleyiciler",
-    "group": "Temizlik Ürünleri",
+    "name": "migros_yuzey_temizleyiciler",
+    "group": "migros:Temizlik Ürünleri",
     "category": "household",
     "store": "migros",
     "shop_category": "yuzey-temizleyiciler-c-492",
@@ -774,8 +774,8 @@
     "min_products": 17
   },
   {
-    "name": "tuvalet_temizleyiciler",
-    "group": "Temizlik Ürünleri",
+    "name": "migros_tuvalet_temizleyiciler",
+    "group": "migros:Temizlik Ürünleri",
     "category": "household",
     "store": "migros",
     "shop_category": "tuvalet-temizleyiciler-c-490",
@@ -783,8 +783,8 @@
     "min_products": 24
   },
   {
-    "name": "mutfak_ve_banyo_temizleyiciler",
-    "group": "Temizlik Ürünleri",
+    "name": "migros_mutfak_ve_banyo_temizleyiciler",
+    "group": "migros:Temizlik Ürünleri",
     "category": "household",
     "store": "migros",
     "shop_category": "mutfak-ve-banyo-temizleyiciler-c-491",
@@ -792,8 +792,8 @@
     "min_products": 19
   },
   {
-    "name": "cam_temizleyiciler",
-    "group": "Temizlik Ürünleri",
+    "name": "migros_cam_temizleyiciler",
+    "group": "migros:Temizlik Ürünleri",
     "category": "household",
     "store": "migros",
     "shop_category": "cam-temizleyiciler-c-48b",
@@ -801,8 +801,8 @@
     "min_products": 5
   },
   {
-    "name": "cop_poseti",
-    "group": "Çöp Poşeti",
+    "name": "migros_cop_poseti",
+    "group": "migros:Çöp Poşeti",
     "category": "household",
     "store": "migros",
     "shop_category": "cop-poseti-c-11359",
@@ -810,8 +810,8 @@
     "min_products": 24
   },
   {
-    "name": "tuvalet_kagidi",
-    "group": "Tuvalet Kağıdı",
+    "name": "migros_tuvalet_kagidi",
+    "group": "migros:Tuvalet Kağıdı",
     "category": "household",
     "store": "migros",
     "shop_category": "tuvalet-kagidi-c-49c",
@@ -819,8 +819,8 @@
     "min_products": 11
   },
   {
-    "name": "kagit_havlu",
-    "group": "Kağıt Havlu",
+    "name": "migros_kagit_havlu",
+    "group": "migros:Kağıt Havlu",
     "category": "household",
     "store": "migros",
     "shop_category": "kagit-havlu-c-49d",
@@ -828,8 +828,8 @@
     "min_products": 14
   },
   {
-    "name": "pecete",
-    "group": "Peçete",
+    "name": "migros_pecete",
+    "group": "migros:Peçete",
     "category": "household",
     "store": "migros",
     "shop_category": "pecete-c-49f",
@@ -837,8 +837,8 @@
     "min_products": 7
   },
   {
-    "name": "dis_macunu",
-    "group": "Ağız Bakım",
+    "name": "migros_dis_macunu",
+    "group": "migros:Ağız Bakım",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "dis-macunu-c-4a1",
@@ -846,8 +846,8 @@
     "min_products": 51
   },
   {
-    "name": "dis_fircasi",
-    "group": "Ağız Bakım",
+    "name": "migros_dis_fircasi",
+    "group": "migros:Ağız Bakım",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "dis-fircasi-c-4a0",
@@ -855,8 +855,8 @@
     "min_products": 58
   },
   {
-    "name": "sampuan",
-    "group": "Şampuan, Saç Kremi",
+    "name": "migros_sampuan",
+    "group": "migros:Şampuan, Saç Kremi",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "sampuan-c-4a4",
@@ -864,8 +864,8 @@
     "min_products": 92
   },
   {
-    "name": "sac_kremi",
-    "group": "Şampuan, Saç Kremi",
+    "name": "migros_sac_kremi",
+    "group": "migros:Şampuan, Saç Kremi",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "sac-kremi-c-2939",
@@ -873,8 +873,8 @@
     "min_products": 50
   },
   {
-    "name": "dus_jeli",
-    "group": "Sabun, Duş Jeli",
+    "name": "migros_dus_jeli",
+    "group": "migros:Sabun, Duş Jeli",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "dus-jeli-c-4b9",
@@ -882,8 +882,8 @@
     "min_products": 67
   },
   {
-    "name": "sabun",
-    "group": "Sabun, Duş Jeli",
+    "name": "migros_sabun",
+    "group": "migros:Sabun, Duş Jeli",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "sabun-c-4bb",
@@ -891,8 +891,8 @@
     "min_products": 83
   },
   {
-    "name": "deodorant",
-    "group": "Deodorant",
+    "name": "migros_deodorant",
+    "group": "migros:Deodorant",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "deodorant-c-4cd",
@@ -900,8 +900,8 @@
     "min_products": 104
   },
   {
-    "name": "hijyenik_ped",
-    "group": "Hijyenik Ped",
+    "name": "migros_hijyenik_ped",
+    "group": "migros:Hijyenik Ped",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "hijyenik-ped-c-96",
@@ -909,8 +909,8 @@
     "min_products": 67
   },
   {
-    "name": "tiras_malzemeleri",
-    "group": "Tıraş Malzemeleri",
+    "name": "migros_tiras_malzemeleri",
+    "group": "migros:Tıraş Malzemeleri",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "tiras-malzemeleri-c-90",
@@ -918,8 +918,8 @@
     "min_products": 45
   },
   {
-    "name": "kagit_mendil",
-    "group": "Mendil",
+    "name": "migros_kagit_mendil",
+    "group": "migros:Mendil",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "kagit-mendil-c-11444",
@@ -927,8 +927,8 @@
     "min_products": 12
   },
   {
-    "name": "islak_mendil",
-    "group": "Mendil",
+    "name": "migros_islak_mendil",
+    "group": "migros:Mendil",
     "category": "personal_care",
     "store": "migros",
     "shop_category": "islak-mendil-c-49e",

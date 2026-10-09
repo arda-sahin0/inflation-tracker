@@ -1,0 +1,66 @@
+{
+  "_comment": "A101 shelves -> index categories. Only the dairy aisle is mapped so far; run python catalog.py https://www.a101.com.tr/ to see every aisle.",
+  "store": "a101",
+  "shelves": [
+    {
+      "category": "dairy_eggs",
+      "path": "Süt Ürünleri, Kahvaltılık/Süt"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt Ürünleri, Kahvaltılık/Yumurta"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt Ürünleri, Kahvaltılık/Beyaz Peynir",
+      "group": "Peynir"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt Ürünleri, Kahvaltılık/Kaşar Peyniri",
+      "group": "Peynir"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt Ürünleri, Kahvaltılık/Sürülebilir Peynir",
+      "group": "Peynir"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt Ürünleri, Kahvaltılık/Yöresel Peynir",
+      "group": "Peynir"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt Ürünleri, Kahvaltılık/Yoğurt"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt Ürünleri, Kahvaltılık/Kaymak, Krema"
+    },
+    {
+      "category": "oils_fats",
+      "path": "Süt Ürünleri, Kahvaltılık/Tereyağ, Margarin"
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Süt Ürünleri, Kahvaltılık/Bal, Reçel"
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Süt Ürünleri, Kahvaltılık/Helva, Tahin, Pekmez"
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Süt Ürünleri, Kahvaltılık/Sürülebilir Ürünler"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Süt Ürünleri, Kahvaltılık/Kahvaltılık Gevrek"
+    },
+    {
+      "category": "vegetables_pulses",
+      "path": "Süt Ürünleri, Kahvaltılık/Zeytin"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "C05",
+  "parentId": "master",
+  "name": "Süt Ürünleri, Kahvaltılık",
+  "itemCount": 795,
+  "children": [
+    {
+      "id": "C0502",
+      "parentId": "C05",
+      "name": "Süt",
+      "itemCount": 98,
+      "products": [
+        {
+          "id": "12003241",
+          "isEnabled": true,
+          "attributes": {
+            "brand": "TORKU",
+            "netWeight": 4000,
+            "name": "Torku %0,5 Yağlı Süt 4x1 L",
+            "salesUnitOfMeasure": "ADT",
+            "seoUrl": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/torku-05-yagli-sut-4x1-l_p-12003241"
+          },
+          "categories": [
+            {
+              "parentId": "master",
+              "id": "C05",
+              "name": "Süt Ürünleri, Kahvaltılık"
+            },
+            {
+              "parentId": "master",
+              "id": "C0502",
+              "name": "Süt"
+            }
+          ],
+          "price": {
+            "normal": 25500,
+            "normalStr": "₺255,00",
+            "discounted": 17000,
+            "discountedStr": "₺170,00",
+            "discountRate": 33,
+            "discountRateStr": "%33 İNDİRİM"
+          },
+          "stock": 100,
+          "isBlacklisted": false
+        },
+        {
+          "id": "12000244",
+          "isEnabled": true,
+          "attributes": {
+            "brand": "BİRŞAH",
+            "netWeight": 1000,
+            "name": "Birşah Tam Yağlı Süt 1 L",
+            "salesUnitOfMeasure": "ADT",
+            "seoUrl": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/birsah-tam-yagli-sut-1-l_p-12000244"
+          },
+          "categories": [
+            {
+              "parentId": "master",
+              "id": "C05",
+              "name": "Süt Ürünleri, Kahvaltılık"
+            },
+            {
+              "parentId": "master",
+              "id": "C0502",
+              "name": "Süt"
+            }
+          ],
+          "price": {
+            "normal": 6250,
+            "normalStr": "₺62,50",
+            "discounted": 5450,
+            "discountedStr": "₺54,50",
+            "discountRate": 13,
+            "discountRateStr": "%13 İNDİRİM"
+          },
+          "stock": 100,
+          "isBlacklisted": false
+        },
+        {
+          "id": "12000319",
+          "isEnabled": true,
+          "attributes": {
+            "brand": "BİRŞAH",
+            "netWeight": 1000,
+            "name": "Birşah Yağsız Süt 1 L",
+            "salesUnitOfMeasure": "ADT",
+            "seoUrl": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/birsah-yagsiz-sut-1-l_p-12000319"
+          },
+          "categories": [
+            {
+              "parentId": "master",
+              "id": "C05",
+              "name": "Süt Ürünleri, Kahvaltılık"
+            },
+            {
+              "parentId": "master",
+              "id": "C0502",
+              "name": "Süt"
+            }
+          ],
+          "price": {
+            "normal": 3600,
+            "normalStr": "₺36,00",
+            "discounted": 3600,
+            "discountedStr": "₺36,00"
+          },
+          "stock": 100,
+          "isBlacklisted": false
+        }
+      ]
+    },
+    {
+      "id": "C0503",
+      "parentId": "C05",
+      "name": "Yumurta",
+      "itemCount": 24,
+      "products": [
+        {
+          "id": "11001218",
+          "isEnabled": true,
+          "attributes": {
+            "brand": "ABALI ÇİFTLİĞİ",
+            "netWeight": 1725,
+            "name": "Abalı Çiftliği Yumurta M Boy 30'lu 53-62 G",
+            "salesUnitOfMeasure": "ADT",
+            "seoUrl": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/abali-ciftligi-yumurta-m-boy-30lu-53-62-g_p-11001218"
+          },
+          "categories": [
+            {
+              "parentId": "master",
+              "id": "C05",
+              "name": "Süt Ürünleri, Kahvaltılık"
+            },
+            {
+              "parentId": "master",
+              "id": "C0503",
+              "name": "Yumurta"
+            }
+          ],
+          "price": {
+            "normal": 16900,
+            "normalStr": "₺169,00",
+            "discounted": 14500,
+            "discountedStr": "₺145,00",
+            "discountRate": 14,
+            "discountRateStr": "%14 İNDİRİM"
+          },
+          "stock": 100,
+          "isBlacklisted": false
+        },
+        {
+          "id": "11002502",
+          "isEnabled": true,
+          "attributes": {
+            "brand": "B O Ş",
+            "netWeight": 610,
+            "name": "Gezen Tavuk Yumurtası M Boy 10'lu",
+            "salesUnitOfMeasure": "ADT",
+            "seoUrl": "https://www.a101.com.tr/kapida/sut-urunleri-kahvaltilik/gezen-tavuk-yumurtasi-m-boy-10lu_p-11002502"
+          },
+          "categories": [
+            {
+              "parentId": "master",
+              "id": "C05",
+              "name": "Süt Ürünleri, Kahvaltılık"
+            },
+            {
+              "parentId": "master",
+              "id": "C0503",
+              "name": "Yumurta"
+            }
+          ],
+          "price": {
+            "normal": 10500,
+            "normalStr": "₺105,00",
+            "discounted": 10500,
+            "discountedStr": "₺105,00"
+          },
+          "stock": 0,
+          "isBlacklisted": false
+        }
+      ]
+    }
+  ]
+}

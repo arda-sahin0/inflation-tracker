@@ -22,7 +22,7 @@ def test_a_whole_shelf_becomes_one_rule_on_its_category_page():
     rules = build(CATALOG, {"store": "migros", "shelves": [
         {"category": "dairy_eggs", "path": "Süt, Kahvaltılık/Peynir"}]})
     assert rules == [{
-        "name": "peynir", "group": "Peynir", "category": "dairy_eggs", "store": "migros",
+        "name": "migros_peynir", "group": "migros:Peynir", "category": "dairy_eggs", "store": "migros",
         "shop_category": "peynir-c-6d", "max_pages": 15, "min_products": 201,
     }]
     check_rule(rules[0])               # a category page is its own filter
@@ -33,7 +33,7 @@ def test_chosen_sub_shelves_share_one_group():
         {"category": "dairy_eggs", "path": "Süt, Kahvaltılık/Yoğurt", "group": "Yoğurt",
          "leaves": ["Sade Yoğurt", "Kaymaklı Yoğurt"]}]})
     assert [r["shop_category"] for r in rules] == ["sade-yogurt-c-411", "kaymakli-yogurt-c-410"]
-    assert {r["group"] for r in rules} == {"Yoğurt"}
+    assert {r["group"] for r in rules} == {"migros:Yoğurt"}
     assert "yogurt-mayasi-c-415" not in {r["shop_category"] for r in rules}
 
 
@@ -55,8 +55,21 @@ def test_the_real_mapping_builds_against_the_real_catalogue():
     catalog_file = ROOT / "catalog" / "migros.json"
     if not catalog_file.exists():
         pytest.skip("run catalog.py first")
-    mapping = json.loads((ROOT / "shelf_map.json").read_text(encoding="utf-8"))
+    mapping = json.loads((ROOT / "shelf_maps" / "migros.json").read_text(encoding="utf-8"))
     rules = build(json.loads(catalog_file.read_text(encoding="utf-8")), mapping)
     divisions = json.loads((ROOT / "weights.json").read_text(encoding="utf-8"))["divisions"]
     every_category = {c for d in divisions.values() for c in d["categories"]}
     assert {r["category"] for r in rules} == every_category      # nothing left uncovered
+
+
+def test_a101_shelves_are_one_request_per_aisle_and_grouped_per_store():
+    catalog = {"store": "a101", "crawled": "2026-10-09", "aisles": [
+        {"name": "Süt Ürünleri, Kahvaltılık", "prettyName": "C05", "count": 795, "shelves": [
+            {"name": "Beyaz Peynir", "prettyName": "C0501", "count": 82, "leaves": []},
+            {"name": "Kaşar Peyniri", "prettyName": "C0512", "count": 58, "leaves": []}]}]}
+    rules = build(catalog, {"store": "a101", "shelves": [
+        {"category": "dairy_eggs", "path": "Süt Ürünleri, Kahvaltılık/Beyaz Peynir", "group": "Peynir"},
+        {"category": "dairy_eggs", "path": "Süt Ürünleri, Kahvaltılık/Kaşar Peyniri", "group": "Peynir"}]})
+    assert [r["name"] for r in rules] == ["a101_beyaz_peynir", "a101_kasar_peyniri"]
+    assert {r["group"] for r in rules} == {"a101:Peynir"}       # never pooled with migros:Peynir
+    assert all(r["max_pages"] == 1 for r in rules)

@@ -16,7 +16,7 @@ import json
 import time
 
 from tracker import ROOT
-from tracker.scrapers import migros
+from tracker.scrapers import a101, migros
 
 MAX_PAGES = 20
 SLEEP_SECONDS = 1.0
@@ -76,7 +76,10 @@ def check_rule(rule: dict) -> None:
 
 def run(rule: dict) -> list[dict]:
     check_rule(rule)
-    rows = collect(fetch_pages(rule), rule)
+    if rule.get("store") == "a101":
+        rows = a101.sweep_rows(rule)                  # A101 sends a whole aisle at once, no paging
+    else:
+        rows = collect(fetch_pages(rule), rule)
     minimum = rule.get("min_products", 0)
     if len(rows) < minimum:
         raise RuntimeError(f"sweep {rule['query']!r} returned {len(rows)} products, expected >= {minimum}")

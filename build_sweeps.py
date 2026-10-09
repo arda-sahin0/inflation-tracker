@@ -1,8 +1,9 @@
 """
 Turn the crawled catalogue plus your shelf mapping into sweeps.json.
 
-    python catalog.py https://www.migros.com.tr/    # 1. map the shop (now and then)
-    python build_sweeps.py                          # 2. rebuild the sweep rules from shelf_map.json
+    python catalog.py https://www.migros.com.tr/    # 1. map each shop (now and then)
+    python catalog.py https://www.a101.com.tr/
+    python build_sweeps.py                          # 2. rebuild sweeps.json from shelf_maps/*.json
 
 Each mapped shelf (or sub-shelf) becomes one rule that reads that category page,
 so no search terms and no name matching are involved: the page is the filter.
@@ -40,14 +41,17 @@ def find_shelf(catalog: dict, path: str) -> dict:
 
 
 def rule_for(node: dict, category: str, group: str, store: str) -> dict:
+    """One rule per shop shelf. Groups are per store ("migros:Peynir", "a101:Peynir"), so each
+    chain's cheese is one elementary group and the two chains count equally within a category."""
     count = int(node.get("count", 0))
+    label = node["prettyName"].rsplit("-c-", 1)[0] if store == "migros" else node["name"]
     return {
-        "name": slug(node["prettyName"].rsplit("-c-", 1)[0]),
-        "group": group,
+        "name": f"{store}_{slug(label)}",
+        "group": f"{store}:{group}",
         "category": category,
         "store": store,
         "shop_category": node["prettyName"],
-        "max_pages": max(1, math.ceil(count / PAGE_SIZE) + 1),
+        "max_pages": max(1, math.ceil(count / PAGE_SIZE) + 1) if store == "migros" else 1,
         "min_products": max(1, int(count * MIN_SHARE)),
     }
 
@@ -80,23 +84,31 @@ def build(catalog: dict, mapping: dict) -> list[dict]:
 
 
 def main() -> int:
-    mapping = json.loads((ROOT / "shelf_map.json").read_text(encoding="utf-8"))
-    catalog = json.loads((ROOT / "catalog" / f"{mapping['store']}.json").read_text(encoding="utf-8"))
-    try:
-        rules = build(catalog, mapping)
-    except ValueError as e:
-        print(e)
-        return 1
+    rules = []
+    for map_file in sorted((ROOT / "shelf_maps").glob("*.json")):
+        mapping = json.loads(map_file.read_text(encoding="utf-8"))
+        catalog_file = ROOT / "catalog" / f"{mapping['store']}.json"
+        if not catalog_file.exists():
+            print(f"{mapping['store']}: no catalogue yet, skipped — run catalog.py on its homepage")
+            continue
+        catalog = json.loads(catalog_file.read_text(encoding="utf-8"))
+        try:
+            store_rules = build(catalog, mapping)
+        except ValueError as e:
+            print(f"{mapping['store']}: {e}")
+            return 1
+        print(f"{mapping['store']}: {len(store_rules)} rules (catalogue crawled {catalog['crawled']})")
+        rules += store_rules
     (ROOT / "sweeps.json").write_text(json.dumps(rules, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    print(f"{len(rules)} rules -> sweeps.json (catalogue crawled {catalog['crawled']})\n")
-    print(f"{'category':<18} {'groups':>6} {'products':>9} {'pages':>6}")
+    print(f"\n{len(rules)} rules -> sweeps.json\n")
+    print(f"{'category':<18} {'groups':>6} {'products':>9} {'requests':>9}")
     for category in sorted({r["category"] for r in rules}):
         mine = [r for r in rules if r["category"] == category]
         products = sum(r["min_products"] for r in mine) * 2
-        print(f"{category:<18} {len({r['group'] for r in mine}):>6} {products:>9} {sum(r['max_pages'] for r in mine):>6}")
-    pages = sum(r["max_pages"] for r in rules)
-    print(f"\nat most {pages} page requests a day (~{pages * 2 // 60} min)")
+        requests_ = sum(r["max_pages"] for r in mine if r["store"] == "migros") \
+            + len({r["shop_category"][:3] for r in mine if r["store"] == "a101"})
+        print(f"{category:<18} {len({r['group'] for r in mine}):>6} {products:>9} {requests_:>9}")
     return 0
 
 
