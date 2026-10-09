@@ -18,7 +18,7 @@ import time
 from tracker import ROOT
 from tracker.scrapers import migros
 
-MAX_PAGES = 20        # a stop so a paging bug can't loop forever
+MAX_PAGES = 20
 SLEEP_SECONDS = 1.0
 
 
@@ -27,12 +27,14 @@ def collect(pages: list[dict], rule: dict) -> list[dict]:
     excluded = {str(sku).zfill(8) for sku in rule.get("exclude_skus", [])}
     rows, seen = [], set()
     for page in pages:
-        for product in migros.usable_listing_products(page, rule.get("match_category")):
+        for product in migros.usable_listing_products(page, rule):
             sku = product["sku"].zfill(8)
             if sku in seen or sku in excluded:
                 continue
             seen.add(sku)
-            rows.append(migros.listing_row(product, rule["category"]))
+            row = migros.listing_row(product, rule["category"])
+            row["group"] = rule.get("name", rule["query"])     # its own elementary group
+            rows.append(row)
     return rows
 
 

@@ -104,3 +104,19 @@ def test_store_index_rebases_to_a_shared_start_day():
     assert stores.iloc[0].tolist() == pytest.approx([100.0, 100.0])
     assert stores["migros"].iloc[-1] == pytest.approx(150)    # 200 -> 300
     assert stores["a101"].iloc[-1] == pytest.approx(200)      # 50 -> 100
+
+
+def test_a_big_sweep_cannot_swamp_the_hand_picked_products():
+    """Two hand-picked products flat, a 50-product sweep up 20%: the category gains ~10%."""
+    data = []
+    for day, factor in (("2026-09-11", 1.0), ("2026-09-12", 1.2)):
+        data += [(day, "picked-a", "dairy_eggs", 100), (day, "picked-b", "dairy_eggs", 100)]
+        data += [(day, f"swept-{i}", "dairy_eggs", 100 * factor) for i in range(50)]
+    df = rows(data)
+    df["group"] = ["picked" if p.startswith("picked") else "milk" for p in df["product_id"]]
+
+    index = build_index(df)
+    # geometric mean of the two groups: sqrt(1.0 * 1.2)
+    assert index["dairy_eggs"].iloc[-1] == pytest.approx(100 * math.sqrt(1.2))
+    # without grouping the 50 swept products would have pulled it to nearly 120
+    assert index["dairy_eggs"].iloc[-1] < 110

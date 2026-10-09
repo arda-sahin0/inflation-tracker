@@ -51,3 +51,32 @@ def test_shop_unit_wins_over_the_name():
     ]}
     row = migros.listing_row(page["storeProductInfos"][0], "dairy_eggs")
     assert (row["unit"], row["net_amount"]) == ("GRAM", None)
+
+
+PLANT_DRINK = {"sku": "11019914", "name": "Nilky Yulaflı İçecek 1 L", "status": "IN_SALE",
+               "regularPrice": 17995, "prettyName": "nilky-yulafli-icecek-1-l-p-1",
+               "category": {"name": "Bitkisel İçecek"},
+               "categoryAscendants": [{"name": "Süt"}, {"name": "Süt, Kahvaltılık"}]}
+
+
+def test_leaf_category_filter_keeps_plant_drinks_out_of_milk():
+    """A search for "süt" returns oat and almond drinks filed under the Süt branch."""
+    page = {"storeProductInfos": PAGE["storeProductInfos"] + [PLANT_DRINK]}
+    loose = collect([page], {**RULE, "match_category": "Süt"})
+    strict = collect([page], {"category": "dairy_eggs", "query": "süt",
+                              "include_categories": ["Günlük Süt", "Uzun Ömürlü Süt"]})
+    assert "11019914" in {r["sku"] for r in loose}       # the old, too-wide rule
+    assert "11019914" not in {r["sku"] for r in strict}
+    assert len(strict) == 5
+
+
+def test_excluded_shop_categories_are_dropped():
+    page = {"storeProductInfos": [PLANT_DRINK]}
+    rule = {"category": "dairy_eggs", "query": "süt", "exclude_categories": ["Bitkisel İçecek"]}
+    assert collect([page], rule) == []
+
+
+def test_swept_rows_carry_their_group_name():
+    rows = collect([PAGE], {**RULE, "name": "milk"})
+    assert {r["group"] for r in rows} == {"milk"}
+    assert {r["group"] for r in collect([PAGE], RULE)} == {"süt"}   # falls back to the query

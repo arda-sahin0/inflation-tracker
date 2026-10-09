@@ -122,13 +122,30 @@ def listing_row(product: dict, category: str) -> dict:
     }
 
 
-def usable_listing_products(search_info: dict, match_category: str | None = None) -> list[dict]:
-    """In-sale, non-sponsored products, optionally only those under one shop category."""
-    out = []
-    for product in search_info.get("storeProductInfos", []):
-        if product.get("sponsored") or product.get("status") != "IN_SALE":
-            continue
-        if match_category and match_category not in category_names(product):
-            continue
-        out.append(product)
-    return out
+def wanted(product: dict, rule: dict) -> bool:
+    """Does this listing entry belong in the sweep?
+
+    include_categories matches the shop's own leaf category ("Günlük Süt"), which is
+    what keeps plant drinks and milkshakes out of a milk sweep. match_category is the
+    looser form: any category in the product's path.
+    """
+    if product.get("sponsored") or product.get("status") != "IN_SALE":
+        return False
+
+    path = category_names(product)
+    leaf = path[-1] if path else ""
+    include = rule.get("include_categories")
+    if include and leaf not in include:
+        return False
+    if rule.get("match_category") and rule["match_category"] not in path:
+        return False
+    if set(rule.get("exclude_categories", [])) & set(path):
+        return False
+    return True
+
+
+def usable_listing_products(search_info: dict, rule: dict | str | None = None) -> list[dict]:
+    """In-sale, non-sponsored products that match the sweep rule."""
+    if isinstance(rule, str) or rule is None:
+        rule = {"match_category": rule}
+    return [p for p in search_info.get("storeProductInfos", []) if wanted(p, rule)]

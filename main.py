@@ -11,7 +11,7 @@ from tracker.scrapers import get_scraper
 TURKEY = timezone(timedelta(hours=3))
 EXPECTED_STORE_IDS = {"migros": 20000000000607, "a101": "VS032"}
 FIELDS = ["date", "product_id", "category", "store", "sku", "name", "store_id",
-          "regular_price", "sale_price", "loyalty_price", "unit", "net_amount", "in_stock"]
+          "regular_price", "sale_price", "loyalty_price", "unit", "net_amount", "in_stock", "group"]
 
 
 def main() -> int:
@@ -23,7 +23,8 @@ def main() -> int:
         try:
             scrape = get_scraper(product["url"])
             row = scrape(product)
-            row.update(date=today, product_id=product["id"], category=product["category"])
+            row.update(date=today, product_id=product["id"], category=product["category"],
+                       group=product.get("group", "picked"))
             rows.append(row)
             print(f"OK   {product['id']}: {row['regular_price'] / 100:.2f} TL")
 

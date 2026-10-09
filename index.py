@@ -54,6 +54,9 @@ def load_prices() -> pd.DataFrame:
         raise SystemExit(f"No CSV files in {RAW}")
     df = pd.concat((pd.read_csv(f, dtype={"sku": str}) for f in files), ignore_index=True)
     df["date"] = pd.to_datetime(df["date"])
+    if "group" not in df.columns:               # CSVs written before sweeps existed
+        df["group"] = "picked"
+    df["group"] = df["group"].fillna("picked")
     return df
 
 
@@ -90,15 +93,31 @@ def weighted_overall(category_index: pd.DataFrame, weights: dict[str, float]) ->
     return (category_index * w).sum(axis=1) / w.sum()
 
 
+def groups_of(df: pd.DataFrame) -> pd.DataFrame:
+    """product_id -> its category and its elementary group."""
+    out = df.groupby("product_id")[["category", "group"]].last()
+    return out.reset_index().set_index("product_id")
+
+
 def build_index(df: pd.DataFrame, weights: dict[str, float] | None = None) -> pd.DataFrame:
     weights = load_weights() if weights is None else weights
+    if "group" not in df.columns:
+        df = df.assign(group="picked")
     df = add_unit_price(df)
     prices = price_table(df)
-    category_of = df.groupby("product_id")["category"].last()
 
     result = pd.DataFrame(index=prices.index)
-    for category, products in category_of.groupby(category_of).groups.items():
-        result[category] = chained_jevons(prices[list(products)])
+    for category, members in groups_of(df).groupby("category"):
+        # Each group (hand-picked products, or one sweep) is an elementary index, and the
+        # category is their geometric mean. Without this a 136-product milk sweep would
+        # drown the four hand-picked dairy products.
+        elementary = {}
+        for name, ids in members.groupby("group").groups.items():
+            columns = [i for i in ids if i in prices.columns]
+            if columns:
+                elementary[name] = chained_jevons(prices[columns])
+        elementary = pd.DataFrame(elementary)
+        result[category] = np.exp(np.log(elementary).mean(axis=1))
 
     overall = weighted_overall(result, weights)
     food = [c for c in food_categories() if c in result.columns]
