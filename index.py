@@ -24,9 +24,9 @@ from tracker import ROOT
 RAW = ROOT / "data" / "raw"
 OUT = ROOT / "data" / ("index" if os.getenv("GITHUB_ACTIONS") == "true" else "local")
 
-MAX_GAP_DAYS = 3     # a missing price is carried forward for at most this many days
+MAX_GAP_DAYS = 3
 FOOD_DIVISION = "food_and_non_alcoholic_beverages"
-JUMP_PCT = 25        # a one-day price move this large is flagged for review
+JUMP_PCT = 25
 
 
 def load_config() -> dict:
@@ -54,7 +54,7 @@ def load_prices() -> pd.DataFrame:
         raise SystemExit(f"No CSV files in {RAW}")
     df = pd.concat((pd.read_csv(f, dtype={"sku": str}) for f in files), ignore_index=True)
     df["date"] = pd.to_datetime(df["date"])
-    if "group" not in df.columns:               # CSVs written before sweeps existed
+    if "group" not in df.columns:
         df["group"] = "picked"
     df["group"] = df["group"].fillna("picked")
     return df
@@ -121,10 +121,6 @@ def build_index(df: pd.DataFrame, weights: dict[str, float] | None = None) -> pd
 
     result = pd.DataFrame(index=prices.index)
     for category, members in groups_of(df).groupby("category"):
-        # Each group (hand-picked products, or one sweep) is an elementary aggregate. The category's
-        # daily change is the geometric mean of the changes of the groups active on both days, then
-        # chained. So a 136-product sweep counts once, and a group that joins later moves the index
-        # only from the day it joins — it never rewrites history.
         links = {}
         for name, ids in members.groupby("group").groups.items():
             columns = [i for i in ids if i in prices.columns]
@@ -135,7 +131,6 @@ def build_index(df: pd.DataFrame, weights: dict[str, float] | None = None) -> pd
 
     overall = weighted_overall(result, weights)
     food = [c for c in food_categories() if c in result.columns]
-    # headline: food has the best coverage; with no food category present it equals overall
     result["food"] = weighted_overall(result[food], weights) if food else overall
     result["overall"] = overall
     result.index.name = "date"
@@ -151,7 +146,7 @@ def build_store_index(df: pd.DataFrame, weights: dict[str, float] | None = None)
     """
     weights = load_weights() if weights is None else weights
     series = {store: build_index(rows, weights)["food"] for store, rows in df.groupby("store")}
-    frame = pd.DataFrame(series)                      # union of all dates
+    frame = pd.DataFrame(series)
     complete = frame.dropna(how="any")
     if complete.empty:
         raise SystemExit("No single day has prices from every store")

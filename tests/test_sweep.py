@@ -13,17 +13,17 @@ RULE = {"category": "dairy_eggs", "query": "süt", "match_category": "Süt"}
 
 def test_sweep_keeps_only_real_in_sale_products():
     rows = collect([PAGE], RULE)
-    assert len(rows) == 5                                   # 8 items − 2 ads − 1 delisted
+    assert len(rows) == 5
     assert all(row["in_stock"] for row in rows)
     assert all(row["category"] == "dairy_eggs" for row in rows)
 
 
 def test_sweep_rows_have_everything_the_csv_needs():
     row = next(r for r in collect([PAGE], RULE) if r["sku"] == "11011520")
-    assert row["product_id"] == "migros-11011520"           # stable id, no hand-written entry
+    assert row["product_id"] == "migros-11011520"
     assert row["store"] == "migros"
     assert row["regular_price"] == 5275
-    assert (row["unit"], row["net_amount"]) == ("PIECE", 1000)   # size read from the name
+    assert (row["unit"], row["net_amount"]) == ("PIECE", 1000)
     assert row["store_id"] == 20000000000607
 
 
@@ -67,7 +67,7 @@ def test_leaf_category_filter_keeps_plant_drinks_out_of_milk():
     loose = collect([page], {**RULE, "match_category": "Süt"})
     strict = collect([page], {"category": "dairy_eggs", "query": "süt",
                               "include_categories": ["Günlük Süt", "Uzun Ömürlü Süt"]})
-    assert "11019914" in {r["sku"] for r in loose}       # the old, too-wide rule
+    assert "11019914" in {r["sku"] for r in loose}
     assert "11019914" not in {r["sku"] for r in strict}
     assert len(strict) == 5
 
@@ -81,14 +81,14 @@ def test_excluded_shop_categories_are_dropped():
 def test_swept_rows_carry_their_group_name():
     rows = collect([PAGE], {**RULE, "name": "milk"})
     assert {r["group"] for r in rows} == {"milk"}
-    assert {r["group"] for r in collect([PAGE], RULE)} == {"süt"}   # falls back to the query
+    assert {r["group"] for r in collect([PAGE], RULE)} == {"süt"}
 
 
 def test_a_rule_without_a_category_filter_is_refused():
     with pytest.raises(ValueError, match="include_categories"):
         check_rule({"name": "everything", "query": "süt", "category": "dairy_eggs"})
-    check_rule({"query": "süt", "include_categories": ["Günlük Süt"]})      # fine
-    check_rule({"query": "süt", "allow_all": True})                         # deliberate
+    check_rule({"query": "süt", "include_categories": ["Günlük Süt"]})
+    check_rule({"query": "süt", "allow_all": True})
 
 
 def test_draft_rules_do_not_run(tmp_path):
@@ -105,7 +105,7 @@ def test_every_live_rule_is_configured():
     divisions = json.loads((ROOT / "weights.json").read_text(encoding="utf-8"))["divisions"]
     ALLOWED_CATEGORIES = {c for d in divisions.values() for c in d["categories"]}
     for rule in load_rules():
-        check_rule(rule)                                  # raises if a rule has no category filter
+        check_rule(rule)
         assert rule["category"] in ALLOWED_CATEGORIES, rule["name"]
     names = [r["name"] for r in load_rules(include_disabled=True)]
     assert len(names) == len(set(names)), "sweep names must be unique (they are the group ids)"
@@ -114,12 +114,12 @@ def test_every_live_rule_is_configured():
 def test_a_whole_shelf_rule_sorts_products_by_leaf_into_index_categories():
     page = {"storeProductInfos": PAGE["storeProductInfos"] + [PLANT_DRINK]}
     rule = {"name": "milk_shelf", "shop_category": "sut-c-6c",
-            "leaf_map": {"Uzun Ömürlü Süt": "dairy_eggs"}}       # plant drinks: not mapped, so left out
+            "leaf_map": {"Uzun Ömürlü Süt": "dairy_eggs"}}
     rows = collect([page], rule)
     assert {r["category"] for r in rows} == {"dairy_eggs"}
     assert "11019914" not in {r["sku"] for r in rows}
     assert {r["group"] for r in rows} == {"milk_shelf"}
-    check_rule(rule)                                             # a leaf_map counts as a category filter
+    check_rule(rule)
 
 
 def test_listing_needs_exactly_one_target():

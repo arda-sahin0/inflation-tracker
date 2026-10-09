@@ -25,7 +25,7 @@ def test_a_whole_shelf_becomes_one_rule_on_its_category_page():
         "name": "migros_peynir", "group": "migros:Peynir", "category": "dairy_eggs", "store": "migros",
         "shop_category": "peynir-c-6d", "max_pages": 15, "min_products": 201,
     }]
-    check_rule(rules[0])               # a category page is its own filter
+    check_rule(rules[0])
 
 
 def test_chosen_sub_shelves_share_one_group():
@@ -59,7 +59,7 @@ def test_the_real_mapping_builds_against_the_real_catalogue():
     rules = build(json.loads(catalog_file.read_text(encoding="utf-8")), mapping)
     divisions = json.loads((ROOT / "weights.json").read_text(encoding="utf-8"))["divisions"]
     every_category = {c for d in divisions.values() for c in d["categories"]}
-    assert {r["category"] for r in rules} == every_category      # nothing left uncovered
+    assert {r["category"] for r in rules} == every_category
 
 
 def test_a101_shelves_are_one_request_per_aisle_and_grouped_per_store():
@@ -71,7 +71,7 @@ def test_a101_shelves_are_one_request_per_aisle_and_grouped_per_store():
         {"category": "dairy_eggs", "path": "Süt Ürünleri, Kahvaltılık/Beyaz Peynir", "group": "Peynir"},
         {"category": "dairy_eggs", "path": "Süt Ürünleri, Kahvaltılık/Kaşar Peyniri", "group": "Peynir"}]})
     assert [r["name"] for r in rules] == ["a101_beyaz_peynir", "a101_kasar_peyniri"]
-    assert {r["group"] for r in rules} == {"a101:Peynir"}       # never pooled with migros:Peynir
+    assert {r["group"] for r in rules} == {"a101:Peynir"}
     assert all(r["max_pages"] == 1 for r in rules)
 
 
@@ -84,5 +84,4 @@ def test_a_shelf_split_by_name_gets_two_rules_with_their_own_names():
         {"category": "vegetables_pulses", "path": "Temel Gıda/Bakliyat", "name": "bakliyat", "exclude_pattern": "pirinç"}]})
     assert [(r["name"], r["category"]) for r in rules] == [("a101_pirinc", "bread_cereals"), ("a101_bakliyat", "vegetables_pulses")]
     assert rules[0]["name_pattern"] == "pirinç" and rules[1]["exclude_pattern"] == "pirinç"
-    # each part only holds some of the shelf's 130 products, so neither may demand half of them
     assert [r["min_products"] for r in rules] == [19, 19]

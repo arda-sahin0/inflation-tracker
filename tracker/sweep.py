@@ -30,7 +30,7 @@ def label(rule: dict) -> str:
 def collect(pages: list[dict], rule: dict) -> list[dict]:
     """Price rows from already-fetched listing pages. Pure, so it is testable offline."""
     excluded = {str(sku).zfill(8) for sku in rule.get("exclude_skus", [])}
-    leaf_map = rule.get("leaf_map")          # shop leaf -> index category, for whole-shelf rules
+    leaf_map = rule.get("leaf_map")
     name = label(rule)
     rows, seen = [], set()
     for page in pages:
@@ -41,13 +41,13 @@ def collect(pages: list[dict], rule: dict) -> list[dict]:
             if leaf_map is not None:
                 leaf = (migros.category_names(product) or [""])[-1]
                 category = leaf_map.get(leaf)
-                if category is None:                 # a shelf we don't track (e.g. olives)
+                if category is None:
                     continue
             else:
                 category = rule["category"]
             seen.add(sku)
             row = migros.listing_row(product, category)
-            row["group"] = rule.get("group") or name   # its elementary group within the category
+            row["group"] = rule.get("group") or name
             rows.append(row)
     return rows
 
@@ -72,7 +72,6 @@ def fetch_pages(rule: dict, max_pages: int | None = None, sleep: float = SLEEP_S
 
 def check_rule(rule: dict) -> None:
     """A rule with no category filter would sweep up everything the query returns."""
-    # a category page is its own filter; a search needs one
     if not (rule.get("shop_category") or rule.get("include_categories") or rule.get("match_category")
             or rule.get("leaf_map") or rule.get("allow_all")):
         raise ValueError(f"sweep {label(rule)!r} has no include_categories; "
@@ -82,7 +81,7 @@ def check_rule(rule: dict) -> None:
 def run(rule: dict) -> list[dict]:
     check_rule(rule)
     if rule.get("store") == "a101":
-        rows = a101.sweep_rows(rule)                  # A101 sends a whole aisle at once, no paging
+        rows = a101.sweep_rows(rule)
     else:
         rows = collect(fetch_pages(rule), rule)
     minimum = rule.get("min_products", 0)

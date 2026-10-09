@@ -72,7 +72,7 @@ AISLE = json.loads((FIXTURES / "a101_aisle_C05.json").read_text(encoding="utf-8"
 
 def sweep(rule):
     from tracker.scrapers import a101
-    a101._aisles["C05"] = AISLE            # the cached download, so no network is touched
+    a101._aisles["C05"] = AISLE
     try:
         return a101.sweep_rows(rule)
     finally:
@@ -84,8 +84,8 @@ def test_listing_rows_use_a101s_own_net_weight_and_shelf_price():
                   "shop_category": "C0502"})
     torku = next(r for r in rows if r["sku"] == "12003241")
     assert torku["name"] == "Torku %0,5 Yağlı Süt 4x1 L"
-    assert torku["net_amount"] == 4000                 # from netWeight, not the name
-    assert torku["regular_price"] == 25500             # shelf price, not the 17000 campaign price
+    assert torku["net_amount"] == 4000
+    assert torku["regular_price"] == 25500
     assert torku["sale_price"] == 17000
     assert torku["product_id"] == "a101-12003241"
     assert torku["group"] == "a101:Süt" and torku["store_id"] == "VS032"
@@ -94,8 +94,8 @@ def test_listing_rows_use_a101s_own_net_weight_and_shelf_price():
 
 def test_out_of_stock_products_are_left_out_of_a_sweep():
     rows = sweep({"name": "a101_yumurta", "category": "dairy_eggs", "store": "a101", "shop_category": "C0503"})
-    assert [r["sku"] for r in rows] == ["11001218"]     # the second egg pack has stock 0
-    assert rows[0]["net_amount"] == 1725                # 30 eggs x 57.5 g
+    assert [r["sku"] for r in rows] == ["11001218"]
+    assert rows[0]["net_amount"] == 1725
 
 
 def test_a_shelf_belongs_to_the_aisle_in_its_id():

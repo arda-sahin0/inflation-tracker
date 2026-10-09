@@ -1,5 +1,4 @@
 {
-  "_comment": "A101 shelves -> index categories, mirroring shelf_maps/migros.json. name_pattern / exclude_pattern split a shelf by product name (A101 keeps rice and pulses together).",
   "store": "a101",
   "shelves": [
     {

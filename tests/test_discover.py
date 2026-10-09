@@ -13,23 +13,23 @@ INFO = SEARCH["data"]["searchInfo"]
 def test_ads_and_delisted_products_are_dropped():
     rows = candidates(INFO)
     skus = [r["sku"] for r in rows]
-    assert "11019917" not in skus          # sponsored
-    assert "11010267" not in skus          # NOT_IN_SALE
+    assert "11019917" not in skus
+    assert "11010267" not in skus
     assert "11011520" in skus
     assert len(rows) == 5
 
 
 def test_sponsored_can_be_shown_on_request():
-    assert len(candidates(INFO, include_sponsored=True)) == 7   # 8 items, one delisted
+    assert len(candidates(INFO, include_sponsored=True)) == 7
 
 
 def test_candidate_carries_size_price_and_a_usable_url():
     row = next(r for r in candidates(INFO) if r["sku"] == "11011520")
     assert row["name"] == "Migros %3 Yağlı Uht Süt 1 L"
     assert (row["unit"], row["net_amount"]) == ("PIECE", 1000)
-    assert row["price"] == 5275                      # kuruş
-    assert row["per_kg"] == 5275                     # 1 L pack: same per litre
-    assert migros.to_sku(row["url"]) == "11011520"   # the url the scraper will use
+    assert row["price"] == 5275
+    assert row["per_kg"] == 5275
+    assert migros.to_sku(row["url"]) == "11011520"
     assert row["category_path"].startswith("Süt, Kahvaltılık / Süt")
 
 
@@ -70,7 +70,7 @@ def test_category_path_reads_oldest_ancestor_first():
 def test_leaf_counts_ignore_ads_and_rank_by_size():
     leaves = leaf_counts([INFO])
     assert leaves[0]["leaf"] == "Uzun Ömürlü Süt"
-    assert leaves[0]["count"] == 5                       # 2 ads and 1 delisted item left out
+    assert leaves[0]["count"] == 5
     assert "Bitkisel İçecek" not in {l["leaf"] for l in leaves}
 
 

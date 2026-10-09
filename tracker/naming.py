@@ -2,17 +2,13 @@
 import re
 import unicodedata
 
-# 6 x 250 ml  /  6x250ml  /  6 × 200 ML
 MULTIPACK = re.compile(r"(\d+)\s*[x×]\s*(\d+(?:[.,]\d+)?)\s*(ml|lt|l|gr|g|kg)\b", re.IGNORECASE)
-# 750 g  /  1,5 L  /  100 G
 SINGLE = re.compile(r"(?<![\d,.])(\d{1,3}(?:\.\d{3})+|\d+(?:[,.]\d+)?)\s*(ml|lt|l|gr|g|kg)\b", re.IGNORECASE)
-# sold by weight: a trailing "kg" with no number before it ("Muz Yerli Kg")
 BY_WEIGHT = re.compile(r"(?<![\d,.])\s*\bkg\s*$", re.IGNORECASE)
-# counted packs: 15'li, 32li, 6 lı, adet
 COUNTED = re.compile(r"(\d+)\s*['’]?\s*(li|lı|lu|lü)\b|(\badet\b)", re.IGNORECASE)
 
 TO_BASE = {"ml": 1, "lt": 1000, "l": 1000, "gr": 1, "g": 1, "kg": 1000}
-THOUSANDS = re.compile(r"^\d{1,3}(\.\d{3})+$")      # Turkish thousands separator: 1.480 ml
+THOUSANDS = re.compile(r"^\d{1,3}(\.\d{3})+$")
 
 
 def _number(text: str) -> float:
@@ -49,12 +45,12 @@ def parse_size(name: str) -> tuple[str, float | None]:
 
     sizes = [_number(a) * TO_BASE[u.lower()] for a, u in SINGLE.findall(name)]
     if sizes:
-        return "PIECE", max(sizes)      # a stated size always means a package
+        return "PIECE", max(sizes)
 
-    if BY_WEIGHT.search(name):          # "kg" with no number at all -> sold by weight
+    if BY_WEIGHT.search(name):
         return "GRAM", None
 
-    return "PIECE", None                # counted packs (eggs, rolls) and unlabelled items
+    return "PIECE", None
 
 
 def slugify(text: str) -> str:

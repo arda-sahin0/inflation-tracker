@@ -14,9 +14,9 @@ def load_fixture(name: str) -> dict:
 
 @pytest.mark.parametrize("value, expected", [
     ("https://www.migros.com.tr/sek-yeni-nesil-pastorize-gunluk-sut-1-l-p-a8251e", "11019550"),
-    ("https://www.migros.com.tr/master-farm-yerli-ceviz-ici-150-g-p-7b498d", "08079757"),  # zero-padding
-    ("https://www.migros.com.tr/muz-yerli-kg-p-1a01b70?utm_source=x", "27270000"),         # query string
-    ("  https://www.migros.com.tr/muz-yerli-kg-p-1a01b70/  ", "27270000"),                 # spaces, slash
+    ("https://www.migros.com.tr/master-farm-yerli-ceviz-ici-150-g-p-7b498d", "08079757"),
+    ("https://www.migros.com.tr/muz-yerli-kg-p-1a01b70?utm_source=x", "27270000"),
+    ("  https://www.migros.com.tr/muz-yerli-kg-p-1a01b70/  ", "27270000"),
     ("11019550", "11019550"),
     ("8079757", "08079757"),
 ])
@@ -25,7 +25,7 @@ def test_to_sku(value, expected):
 
 
 @pytest.mark.parametrize("bad", [
-    "https://www.migros.com.tr/sut-p-xyz",   # not hex
+    "https://www.migros.com.tr/sut-p-xyz",
     "not a url",
     "",
 ])

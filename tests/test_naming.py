@@ -7,16 +7,16 @@ from tracker.naming import parse_size, suggest_id
     ("Sek Yeni Nesil Pastörize Günlük Süt 1 L", "PIECE", 1000),
     ("Migros Ayçiçek Yağı 5 L", "PIECE", 5000),
     ("Master Farm Yerli Ceviz İçi 150 G", "PIECE", 150),
-    ("Reis Pilavlık Bulgur 1 Kg", "PIECE", 1000),          # a stated size means a package
-    ("Muz Yerli Kg", "GRAM", None),                        # "kg" with no number: sold by weight
+    ("Reis Pilavlık Bulgur 1 Kg", "PIECE", 1000),
+    ("Muz Yerli Kg", "GRAM", None),
     ("Domates Kg", "GRAM", None),
     ("Kızılay Erzincan Doğal Maden Suyu 6 x 200 ml", "PIECE", 1200),
     ("Coca-Cola Zero Sugar Kutu 6x250 ml", "PIECE", 1500),
-    ("Mr.Oxy Çamaşır Deterjanı 1.480 ml", "PIECE", 1480),  # Turkish thousands separator
-    ("Sütaş Yarım Yağlı Süt 1,5 L", "PIECE", 1500),        # Turkish decimal comma
-    ("Yumurta L Boy 15'li", "PIECE", None),                # counted, no egg weight given
-    ("Yumurta 20'li XL 73 G", "PIECE", 1460),               # 73 g is ONE egg: 20 x 73
-    ("Abalı Çiftliği Yumurta M Boy 30'lu 53-62 G", "PIECE", 1725),   # middle of the range, as A101 does
+    ("Mr.Oxy Çamaşır Deterjanı 1.480 ml", "PIECE", 1480),
+    ("Sütaş Yarım Yağlı Süt 1,5 L", "PIECE", 1500),
+    ("Yumurta L Boy 15'li", "PIECE", None),
+    ("Yumurta 20'li XL 73 G", "PIECE", 1460),
+    ("Abalı Çiftliği Yumurta M Boy 30'lu 53-62 G", "PIECE", 1725),
     ("Keskinoglu 15'li L Büyük Boy  Yumurta (63-72 G)", "PIECE", 1012.5),
     ("Sofra Ekmek Adet", "PIECE", None),
 ])

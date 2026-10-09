@@ -36,7 +36,6 @@ def test_new_product_does_not_jump_the_index():
 def test_missing_day_is_carried_forward():
     df = rows([
         ("2026-09-11", "a", "dairy_eggs", 100),
-        # 09-12 missing
         ("2026-09-13", "a", "dairy_eggs", 120),
     ])
     assert build_index(df, {"dairy_eggs": 1})["dairy_eggs"].tolist() == pytest.approx([100, 100, 120])
@@ -65,7 +64,7 @@ def test_weights_split_division_equally_and_cover_the_basket():
     weights = load_weights()
     food = ["bread_cereals", "meat", "dairy_eggs", "oils_fats", "fruit_nuts",
             "vegetables_pulses", "sugar_sweets", "other_food", "tea_coffee", "drinks"]
-    assert sum(weights[c] for c in food) == pytest.approx(24.44)      # TurkStat 2026 food weight
+    assert sum(weights[c] for c in food) == pytest.approx(24.44)
     assert weights["household"] == pytest.approx(7.92)
     assert weights["personal_care"] == pytest.approx(4.49)
     assert all(weights[c] == pytest.approx(24.44 / 10) for c in food)
@@ -77,8 +76,8 @@ def test_food_headline_ignores_non_food_categories():
         ("2026-09-12", "a", "dairy_eggs", 100), ("2026-09-12", "b", "personal_care", 200),
     ])
     index = build_index(df)
-    assert index["food"].iloc[-1] == pytest.approx(100)       # food unchanged
-    assert index["overall"].iloc[-1] > 100                    # whole basket moved
+    assert index["food"].iloc[-1] == pytest.approx(100)
+    assert index["overall"].iloc[-1] > 100
 
 
 def test_store_index_is_computed_per_store():
@@ -94,16 +93,16 @@ def test_store_index_is_computed_per_store():
 
 def test_store_index_rebases_to_a_shared_start_day():
     df = rows([
-        ("2026-09-11", "a", "dairy_eggs", 100),                                   # only migros
+        ("2026-09-11", "a", "dairy_eggs", 100),
         ("2026-09-12", "a", "dairy_eggs", 200), ("2026-09-12", "b", "dairy_eggs", 50),
         ("2026-09-13", "a", "dairy_eggs", 300), ("2026-09-13", "b", "dairy_eggs", 100),
     ])
     df["store"] = ["migros", "migros", "a101", "migros", "a101"]
     stores = build_store_index(df)
-    assert stores.index[0] == pd.Timestamp("2026-09-12")      # first day both stores have
+    assert stores.index[0] == pd.Timestamp("2026-09-12")
     assert stores.iloc[0].tolist() == pytest.approx([100.0, 100.0])
-    assert stores["migros"].iloc[-1] == pytest.approx(150)    # 200 -> 300
-    assert stores["a101"].iloc[-1] == pytest.approx(200)      # 50 -> 100
+    assert stores["migros"].iloc[-1] == pytest.approx(150)
+    assert stores["a101"].iloc[-1] == pytest.approx(200)
 
 
 def test_a_big_sweep_cannot_swamp_the_hand_picked_products():
@@ -116,9 +115,7 @@ def test_a_big_sweep_cannot_swamp_the_hand_picked_products():
     df["group"] = ["picked" if p.startswith("picked") else "milk" for p in df["product_id"]]
 
     index = build_index(df)
-    # geometric mean of the two groups: sqrt(1.0 * 1.2)
     assert index["dairy_eggs"].iloc[-1] == pytest.approx(100 * math.sqrt(1.2))
-    # without grouping the 50 swept products would have pulled it to nearly 120
     assert index["dairy_eggs"].iloc[-1] < 110
 
 
@@ -133,16 +130,16 @@ def test_a_group_that_joins_later_never_rewrites_history():
 
     old = build_index(before, {"dairy_eggs": 1})["dairy_eggs"].tolist()
     new = build_index(after, {"dairy_eggs": 1})["dairy_eggs"].tolist()
-    assert new[:3] == pytest.approx(old)          # 100, 110, 121 untouched
-    assert new[3] == pytest.approx(121)           # both groups flat on day 4
+    assert new[:3] == pytest.approx(old)
+    assert new[3] == pytest.approx(121)
 
 
 def test_a_group_that_leaves_does_not_drag_the_index():
     data = [("2026-09-11", "a", "dairy_eggs", 100), ("2026-09-11", "b", "dairy_eggs", 100),
             ("2026-09-12", "a", "dairy_eggs", 110), ("2026-09-12", "b", "dairy_eggs", 100),
-            ("2026-09-16", "a", "dairy_eggs", 121)]          # b gone for good after the 12th
+            ("2026-09-16", "a", "dairy_eggs", 121)]
     df = rows(data)
     df["group"] = ["picked" if p == "a" else "milk" for p in df["product_id"]]
     index = build_index(df, {"dairy_eggs": 1})["dairy_eggs"]
-    assert index.iloc[1] == pytest.approx(100 * math.sqrt(1.1))   # both groups on day 2
-    assert index.iloc[-1] == pytest.approx(100 * math.sqrt(1.1) * 1.1)   # only a moves afterwards
+    assert index.iloc[1] == pytest.approx(100 * math.sqrt(1.1))
+    assert index.iloc[-1] == pytest.approx(100 * math.sqrt(1.1) * 1.1)

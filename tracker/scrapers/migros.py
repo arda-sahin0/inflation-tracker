@@ -54,7 +54,6 @@ def parse(p: dict) -> dict:
     }
 
 
-
 def scrape(product: dict) -> dict:
     sku = to_sku(product["url"])
     raw = fetch_product(sku)
@@ -62,11 +61,10 @@ def scrape(product: dict) -> dict:
         raise RuntimeError(f"SKU mismatch: asked for {sku}, got {raw['sku']}")
     return {"store": "migros", **parse(raw)}
 
-# ---------- listings: one request returns ~35 products with their prices ----------
 
 SCREEN_URL = "https://www.migros.com.tr/rest/search/screens/{path}"
 TOP_LEVEL_URL = "https://www.migros.com.tr/rest/categories/top-level"
-_page_param: str | None = None             # the same for every Migros listing, so detect it once per run
+_page_param: str | None = None
 
 
 def _get_json(url: str, params: dict | None = None) -> dict:
@@ -149,7 +147,7 @@ def listing_row(product: dict, category: str) -> dict:
     from tracker.naming import parse_size
 
     unit, net_amount = parse_size(product["name"])
-    if product.get("unit") == "GRAM":          # the shop knows better than the name
+    if product.get("unit") == "GRAM":
         unit, net_amount = "GRAM", None
     return {
         "store": "migros",

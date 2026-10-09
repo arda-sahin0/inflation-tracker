@@ -1,18 +1,31 @@
 {
-  "_comment": "Category weights for the overall index. Division weights are TurkStat's published 2026 CPI main-group weights (%). Within a division the categories are weighted equally, pending TurkStat's sub-group weights.",
   "divisions": {
     "food_and_non_alcoholic_beverages": {
       "weight": 24.44,
-      "categories": ["bread_cereals", "meat", "dairy_eggs", "oils_fats", "fruit_nuts",
-                     "vegetables_pulses", "sugar_sweets", "other_food", "tea_coffee", "drinks"]
+      "categories": [
+        "bread_cereals",
+        "meat",
+        "dairy_eggs",
+        "oils_fats",
+        "fruit_nuts",
+        "vegetables_pulses",
+        "sugar_sweets",
+        "other_food",
+        "tea_coffee",
+        "drinks"
+      ]
     },
     "household_goods_and_maintenance": {
       "weight": 7.92,
-      "categories": ["household"]
+      "categories": [
+        "household"
+      ]
     },
     "personal_care": {
       "weight": 4.49,
-      "categories": ["personal_care"]
+      "categories": [
+        "personal_care"
+      ]
     }
   }
 }

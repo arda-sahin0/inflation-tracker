@@ -7,7 +7,6 @@
 <title>Market Basket Türkiye</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
 <style>
-/* Layout: one column — headline tiles, index chart, category bars, movers, method note. */
 :root {
   --bg: #fbfaf7;
   --surface: #ffffff;
@@ -16,9 +15,9 @@
   --ink-2: #55534a;
   --ink-3: #7d7a6e;
   --accent: #1c5cab;
-  --s1: #2a78d6;   /* basket */
-  --s2: #eb6834;   /* Migros */
-  --s3: #1baf7a;   /* A101 */
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --s3: #1baf7a;
   --down: #1baf7a;
   --grid: #ece9e1;
   --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
@@ -165,7 +164,6 @@ const foodChange = D.food.at(-1) / D.food[0] - 1;
 const basketChange = D.overall.at(-1) / D.overall[0] - 1;
 const annual = Math.pow(1 + foodChange, 365 / days) - 1;
 
-// ---- stat tiles
 const tiles = [
   {k:"Food basket", v:D.food.at(-1).toFixed(2), n:fmtPct(foodChange*100) + " over " + days + " days", lead:true},
   {k:"Same pace, one year", v:(annual*100).toFixed(0) + "%", n:"if these " + days + " days repeated"},
@@ -175,7 +173,6 @@ const tiles = [
 document.getElementById("tiles").innerHTML = tiles.map(t =>
   `<div class="tile"><span class="k">${t.k}</span><span class="v${t.lead ? " lead" : ""}">${t.v}</span><span class="n">${t.n}</span></div>`).join("");
 
-// ---- line chart
 (function () {
   const svg = document.getElementById("chart");
   const W = 760, H = 300, L = 44, R = 12, T = 14, B = 30;
@@ -230,7 +227,6 @@ document.getElementById("tiles").innerHTML = tiles.map(t =>
   box.addEventListener("mouseleave", () => { tip.style.opacity = "0"; cross.setAttribute("opacity", "0"); });
 })();
 
-// ---- category bars
 (function () {
   const rows = Object.entries(D.categories)
     .map(([k, v]) => ({k, label:CAT_NAMES[k] || k, pct:v - 100, food:FOOD.includes(k)}))
@@ -246,12 +242,10 @@ document.getElementById("tiles").innerHTML = tiles.map(t =>
   }).join("");
 })();
 
-// ---- movers
 document.getElementById("movers").innerHTML = [...D.movers_up, ...D.movers_down].map(m =>
   `<tr><td class="p">${m.name}</td><td>${m.store}</td><td class="r">${m.tl.toFixed(2)} TL</td>
    <td class="r ${m.pct >= 0 ? "up" : "dn"}">${(m.pct >= 0 ? "+" : "") + m.pct.toFixed(1)}%</td></tr>`).join("");
 
-// ---- method note
 document.getElementById("note").innerHTML = `
 <p><strong>The method.</strong> Each product is compared only with itself, per kilo or litre where a package size is known, so a smaller pack at the same price registers as a price rise. Within a category the daily changes are combined as a geometric mean, and the categories are combined using TurkStat's 2026 CPI division weights.</p>
 <p><strong>Why two headline numbers.</strong> The food basket covers ten categories and ${FOOD.length ? D.n_products : ""} tracked items at two chains, so it is the number to quote. The whole basket adds household cleaning and personal care, where only a handful of products stand in for a large slice of the official weights — one toothpaste moving 121% is enough to tilt it.</p>

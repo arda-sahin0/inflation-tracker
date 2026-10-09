@@ -1,5 +1,4 @@
 {
-  "_comment": "Which shop shelves feed which index category. path = 'Aisle/Shelf' as in catalog/migros.json; leaves narrows it to some sub-shelves; group decides what counts as one elementary group (default: the shelf). Rebuild sweeps.json with: python build_sweeps.py (reads every file in shelf_maps/)",
   "store": "migros",
   "shelves": [
     {

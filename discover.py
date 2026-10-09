@@ -23,8 +23,6 @@ PRODUCTS = ROOT / "products.json"
 PAGE_PARAM_CANDIDATES = ("sayfa", "page", "pageNumber")
 
 
-# ---------- the shop ----------
-
 def search_page(query: str, page: int = 1, page_param: str = "sayfa") -> dict:
     params = {"q": query}
     if page > 1:
@@ -51,8 +49,6 @@ def detect_page_param(query: str) -> str:
             return candidate
     raise RuntimeError("No paging parameter worked — only the first page is reachable")
 
-
-# ---------- reading results (pure, so it can be tested offline) ----------
 
 def candidates(search_info: dict, include_sponsored: bool = False) -> list[dict]:
     """Turn a search response into basket candidates, ads and dead products removed."""
@@ -109,8 +105,6 @@ def category_path(product: dict) -> str:
     return " / ".join(names)
 
 
-# ---------- writing the basket ----------
-
 def load_basket() -> list[dict]:
     return json.loads(PRODUCTS.read_text(encoding="utf-8"))
 
@@ -137,8 +131,6 @@ def build_entry(dto: dict, category: str, product_id: str | None = None) -> dict
         "url": "https://www.migros.com.tr/" + dto["prettyName"],
     }
 
-
-# ---------- command line ----------
 
 def print_table(rows: list[dict], basket: list[dict]) -> None:
     tracked = {migros.to_sku(p["url"]) for p in basket if "migros.com.tr" in p["url"]}
@@ -180,7 +172,7 @@ def check_sweeps() -> int:
                 continue
 
             if rule.get("store") == "a101":
-                rows = a101.sweep_rows(rule)                 # the whole shelf; aisles are cached
+                rows = a101.sweep_rows(rule)
                 print(f"{name:<18} {len(rows):>4} products on the shelf -> {rule['category']}{draft}")
             else:
                 pages = sweep.fetch_pages(rule, max_pages=1)

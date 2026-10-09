@@ -62,11 +62,10 @@ def scrape(product: dict) -> dict:
     raw = fetch_product(to_sku(product["url"]))
     return {"store": "a101", **parse(raw, product)}
 
-# ---------- category listings: one request returns a whole aisle, every shelf, every product ----------
 
 LIST_URL = f"https://rio.a101.com.tr/{TOKEN}/CALL/Store/listCategoryProducts/{STORE}"
-AISLE_IDS = [f"C{n:02d}" for n in range(1, 31)]     # A101 numbers its aisles C01, C02, ...
-_aisles: dict[str, dict] = {}                         # one download per aisle per run (they're 1-3 MB)
+AISLE_IDS = [f"C{n:02d}" for n in range(1, 31)]
+_aisles: dict[str, dict] = {}
 
 
 def list_category(aisle_id: str) -> dict:
