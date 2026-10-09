@@ -84,3 +84,5 @@ def test_a_shelf_split_by_name_gets_two_rules_with_their_own_names():
         {"category": "vegetables_pulses", "path": "Temel Gıda/Bakliyat", "name": "bakliyat", "exclude_pattern": "pirinç"}]})
     assert [(r["name"], r["category"]) for r in rules] == [("a101_pirinc", "bread_cereals"), ("a101_bakliyat", "vegetables_pulses")]
     assert rules[0]["name_pattern"] == "pirinç" and rules[1]["exclude_pattern"] == "pirinç"
+    # each part only holds some of the shelf's 130 products, so neither may demand half of them
+    assert [r["min_products"] for r in rules] == [19, 19]

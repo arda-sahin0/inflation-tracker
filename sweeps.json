@@ -276,7 +276,7 @@
     "store": "a101",
     "shop_category": "C0702",
     "max_pages": 1,
-    "min_products": 65,
+    "min_products": 19,
     "name_pattern": "pirinç|pirinc|bulgur|buğday|bugday|firik|kinoa"
   },
   {
@@ -286,7 +286,7 @@
     "store": "a101",
     "shop_category": "C0702",
     "max_pages": 1,
-    "min_products": 65,
+    "min_products": 19,
     "exclude_pattern": "pirinç|pirinc|bulgur|buğday|bugday|firik|kinoa"
   },
   {

@@ -18,6 +18,7 @@ from tracker import ROOT
 
 PAGE_SIZE = 30          # Migros shows ~30-36 products per page; err on the side of one page more
 MIN_SHARE = 0.5         # a rule fails if it returns less than half of what the crawl saw
+SPLIT_MIN_SHARE = 0.15  # ...but a rule that takes only part of a shelf by name gets a lower bar
 
 
 def slug(text: str) -> str:
@@ -70,6 +71,11 @@ def build(catalog: dict, mapping: dict) -> list[dict]:
             for key in ("name", "name_pattern", "exclude_pattern"):    # one shelf split by product name
                 if key in entry:
                     rule[key] = entry[key] if key != "name" else f"{mapping['store']}_{entry['name']}"
+            if "name_pattern" in entry or "exclude_pattern" in entry:
+                # the crawl only knows the whole shelf's count, not each part's
+                rule["min_products"] = max(1, int(int(shelf.get("count", 0)) * SPLIT_MIN_SHARE))
+            if "min_products" in entry:
+                rule["min_products"] = entry["min_products"]
             rules.append(rule)
             continue
         leaves = {leaf["name"]: leaf for leaf in shelf["leaves"]}
