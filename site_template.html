@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Daily price index for an 80-product basket scraped from Migros and A101.">
+<meta name="description" content="Daily supermarket price index built from Migros and A101 shelf prices.">
 <title>Market Basket Türkiye</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
 <style>
@@ -108,12 +108,12 @@ footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--line);
   <header>
     <div class="eyebrow">Daily supermarket prices · Migros &amp; A101</div>
     <h1>Market Basket Türkiye</h1>
-    <p class="sub">An 80-product basket scraped every morning at 06:00 Turkish time and turned into a price index. Food and non-alcoholic beverages is the headline series; it has the widest coverage.</p>
+    <p class="sub" id="sub">Every product on the tracked shelves of Migros and A101, collected each morning at 06:00 Turkish time and turned into a price index. Food and non-alcoholic beverages is the headline series; it has the widest coverage.</p>
   </header>
 
   <div class="tiles" id="tiles"></div>
 
-  <h2>Index since 11 September (start = 100)</h2>
+  <h2 id="chart-title">Index (start = 100)</h2>
   <div class="card">
     <div class="legend">
       <span><i class="swatch" style="background:var(--s1)"></i> Food basket, both stores</span>
@@ -121,7 +121,7 @@ footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--line);
       <span><i class="swatch" style="background:var(--s3)"></i> A101</span>
     </div>
     <div class="chartbox" id="chartbox">
-      <svg id="chart" viewBox="0 0 760 300" role="img" aria-label="Daily price index for the food basket and for each store since 11 September 2026"></svg>
+      <svg id="chart" viewBox="0 0 760 300" role="img" aria-label="Daily price index for the food basket and for each store"></svg>
       <div class="tip" id="tip"></div>
     </div>
   </div>
@@ -257,6 +257,11 @@ document.getElementById("note").innerHTML = `
 <p><strong>Why two headline numbers.</strong> The food basket covers ten categories and ${FOOD.length ? D.n_products : ""} tracked items at two chains, so it is the number to quote. The whole basket adds household cleaning and personal care, where only a handful of products stand in for a large slice of the official weights — one toothpaste moving 121% is enough to tilt it.</p>
 <p><strong>Promotions are in here.</strong> Both chains sometimes put a campaign price in the field that should hold the shelf price. ${D.jumps} one-day moves above 25% show up in the period, and short dips that snap back are usually that, not inflation. ${days} days is also still a short window: read the direction, not the annualised figure.</p>`;
 
+const startLabel = new Date(D.dates[0] + "T00:00:00").toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric"});
+document.getElementById("chart-title").textContent = "Index since " + startLabel + " (start = 100)";
+document.getElementById("sub").textContent = "Every product on the tracked shelves of Migros and A101 — "
+  + D.n_products.toLocaleString("en-GB") + " today — collected each morning at 06:00 Turkish time and turned into a "
+  + "price index. Food and non-alcoholic beverages is the headline series; it has the widest coverage.";
 document.getElementById("foot-gen").textContent = "Updated " + fmtDate(D.generated) + " " + D.generated.slice(0, 4) + " · " + D.dates.length + " days of data";
 </script>
 </body>
