@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Daily price index for an 80-product basket scraped from Migros and A101.">
+<title>Market Basket Türkiye</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<style>
+/* Layout: one column — headline tiles, index chart, category bars, movers, method note. */
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --line: #e4e1d9;
+  --ink: #15140f;
+  --ink-2: #55534a;
+  --ink-3: #7d7a6e;
+  --accent: #1c5cab;
+  --s1: #2a78d6;   /* basket */
+  --s2: #eb6834;   /* Migros */
+  --s3: #1baf7a;   /* A101 */
+  --down: #1baf7a;
+  --grid: #ece9e1;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14140f;
+    --surface: #1c1c17;
+    --line: #322f27;
+    --ink: #f7f5ef;
+    --ink-2: #c0bdb0;
+    --ink-3: #8e8b7e;
+    --accent: #86b6ef;
+    --s1: #3987e5;
+    --s2: #d95926;
+    --s3: #199e70;
+    --down: #199e70;
+    --grid: #2a2823;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14140f;
+  --surface: #1c1c17;
+  --line: #322f27;
+  --ink: #f7f5ef;
+  --ink-2: #c0bdb0;
+  --ink-3: #8e8b7e;
+  --accent: #86b6ef;
+  --s1: #3987e5;
+  --s2: #d95926;
+  --s3: #199e70;
+  --down: #199e70;
+  --grid: #2a2823;
+  color-scheme: dark;
+}
+html, body { margin: 0 }
+body { background: var(--bg); color: var(--ink); font-family: var(--display); }
+.wrap { max-width: 920px; margin: 0 auto; padding-block: 36px 56px; padding-left: 20px; padding-right: 20px; }
+header { display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+.eyebrow { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.05; margin: 0; font-weight: 700; letter-spacing: -.02em; text-wrap: balance; }
+.sub { font-family: var(--serif); font-size: 16px; color: var(--ink-2); max-width: 62ch; line-height: 1.5; margin: 4px 0 0; }
+h2 { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; margin: 40px 0 14px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: 24px; }
+.tile { background: var(--surface); padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.tile .k { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+.tile .v { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.tile .n { font-size: 12px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.lead { color: var(--accent); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 18px 10px; }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 0 0 10px; font-size: 12px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { width: 12px; height: 3px; border-radius: 2px; display: inline-block; }
+.chartbox { position: relative; }
+svg { display: block; width: 100%; height: auto; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 12px; color: var(--ink); box-shadow: 0 6px 18px rgba(0,0,0,.12); opacity: 0; transition: opacity .1s; font-variant-numeric: tabular-nums; min-width: 132px; }
+.tip b { display: block; font-size: 11px; color: var(--ink-3); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 4px; }
+.tip div { display: flex; justify-content: space-between; gap: 12px; }
+.bars { display: flex; flex-direction: column; gap: 9px; }
+.bar { display: grid; grid-template-columns: 150px 1fr 62px; gap: 10px; align-items: center; font-size: 13px; }
+.bar .lbl { color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track { background: var(--grid); border-radius: 3px; height: 14px; position: relative; }
+.fill { position: absolute; top: 0; bottom: 0; border-radius: 0 4px 4px 0; background: var(--s1); }
+.fill.neg { border-radius: 4px 0 0 4px; background: var(--down); }
+.bar .num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; font-size: 13px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; padding: 0 10px 8px 0; }
+td { padding: 9px 10px 9px 0; border-top: 1px solid var(--line); color: var(--ink-2); }
+td.p { color: var(--ink); font-weight: 500; }
+td.r { text-align: right; font-variant-numeric: tabular-nums; }
+.pill { display: inline-block; font-size: 11px; padding: 2px 7px; border-radius: 99px; border: 1px solid var(--line); color: var(--ink-3); }
+.up { color: var(--s2); font-weight: 600; }
+.dn { color: var(--down); font-weight: 600; }
+.scroll { overflow-x: auto; }
+.note { font-family: var(--serif); font-size: 14.5px; line-height: 1.6; color: var(--ink-2); max-width: 70ch; }
+.note p { margin: 0 0 10px; }
+.note strong { color: var(--ink); font-family: var(--display); font-size: 13.5px; }
+footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-3); display: flex; flex-wrap: wrap; gap: 8px 20px; }
+@media (max-width: 520px) { .bar { grid-template-columns: 112px 1fr 56px; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Daily supermarket prices · Migros &amp; A101</div>
+    <h1>Market Basket Türkiye</h1>
+    <p class="sub">An 80-product basket scraped every morning at 06:00 Turkish time and turned into a price index. Food and non-alcoholic beverages is the headline series; it has the widest coverage.</p>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <h2>Index since 11 September (start = 100)</h2>
+  <div class="card">
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--s1)"></i> Food basket, both stores</span>
+      <span><i class="swatch" style="background:var(--s2)"></i> Migros</span>
+      <span><i class="swatch" style="background:var(--s3)"></i> A101</span>
+    </div>
+    <div class="chartbox" id="chartbox">
+      <svg id="chart" viewBox="0 0 760 300" role="img" aria-label="Daily price index for the food basket and for each store since 11 September 2026"></svg>
+      <div class="tip" id="tip"></div>
+    </div>
+  </div>
+
+  <h2>By category, change over the period</h2>
+  <div class="card" style="padding-bottom:18px">
+    <div class="bars" id="bars"></div>
+  </div>
+
+  <h2>Biggest movers</h2>
+  <div class="card scroll">
+    <table>
+      <thead><tr><th>Product</th><th>Store</th><th class="r">Now</th><th class="r">Change</th></tr></thead>
+      <tbody id="movers"></tbody>
+    </table>
+  </div>
+
+  <h2>How to read this</h2>
+  <div class="note" id="note"></div>
+
+  <footer>
+    <span id="foot-gen"></span>
+    <span>Shelf prices (<em>regularPrice</em>), not loyalty-card prices</span>
+    <span>Chained Jevons index, TurkStat 2026 division weights</span>
+  </footer>
+</div>
+
+<script>
+const D = {"generated":"2026-10-09","dates":["2026-09-11","2026-09-12","2026-09-13","2026-09-14","2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23","2026-09-24","2026-09-25","2026-09-26","2026-09-27","2026-09-28","2026-09-29","2026-09-30","2026-10-01","2026-10-02","2026-10-03","2026-10-04","2026-10-05","2026-10-06","2026-10-07","2026-10-08","2026-10-09"],"food":[100.0,100.0,100.0,100.281,99.881,100.929,101.122,101.15,101.509,101.325,101.677,101.696,103.208,102.611,100.848,99.8,99.8,101.035,101.035,103.706,103.844,103.338,103.338,103.338,103.799,103.244,103.631,104.253,103.796],"overall":[100.0,100.0,100.0,100.187,99.921,100.931,102.593,102.612,102.85,102.728,102.962,105.34,106.343,105.947,104.778,104.083,104.083,104.902,104.902,106.673,106.765,106.429,106.429,106.429,106.735,106.367,106.821,107.234,106.931],"stores":{"a101":[100.0,100.162,100.162,100.342,100.342,100.342,101.038,101.038,101.038,101.038,102.86,102.86,102.86,102.86,102.86,102.86,102.86,102.993,102.993,102.993,102.993,102.993,102.993,102.993,103.411,103.411,103.411],"migros":[100.0,100.379,99.624,101.395,101.796,101.925,101.925,101.554,102.265,102.304,103.401,102.334,99.015,97.0,97.0,99.355,99.355,104.349,104.621,103.707,103.707,103.707,104.598,103.538,103.798,104.887,104.051]},"categories":{"bread_cereals":103.9,"dairy_eggs":102.65,"drinks":101.77,"fruit_nuts":108.16,"household":108.06,"meat":107.2,"oils_fats":101.44,"other_food":108.14,"personal_care":122.0,"sugar_sweets":102.44,"tea_coffee":102.97,"vegetables_pulses":99.28},"n_products":80,"n_products_store":{"a101":39,"migros":41},"movers_up":[{"name":"Signal White System Diş Macunu 75 Ml","store":"Migros","tl":154.95,"pct":121.52},{"name":"Banvit Piliç Bonfile Kg","store":"Migros","tl":359.95,"pct":50.01},{"name":"Portakal Kg","store":"Migros","tl":73.5,"pct":47.15},{"name":"Fairy Sıvı Bulaşık Deterjanı Limon 1350 Ml","store":"Migros","tl":239.95,"pct":41.19},{"name":"Çokça Domates Salçası 830 g","store":"A101","tl":81.33,"pct":29.81},{"name":"Migros Domates Salçası 830 G","store":"Migros","tl":83.07,"pct":23.24}],"movers_down":[{"name":"Reis Koçbaşı Nohut 1 Kg","store":"Migros","tl":194.95,"pct":-5.8},{"name":"Kurukahveci Mehmet Efendi Türk Kahvesi 100 G","store":"Migros","tl":799.5,"pct":-18.0},{"name":"Migros Yerli Yeşil Mercimek 1 Kg","store":"Migros","tl":54.0,"pct":-19.34}],"jumps":27};
+
+const CAT_NAMES = {bread_cereals:"Bread & cereals", meat:"Meat", dairy_eggs:"Dairy & eggs", oils_fats:"Oils & fats",
+  fruit_nuts:"Fruit & nuts", vegetables_pulses:"Vegetables & pulses", sugar_sweets:"Sugar & sweets",
+  other_food:"Other food", tea_coffee:"Tea & coffee", drinks:"Drinks", household:"Household", personal_care:"Personal care"};
+const FOOD = ["bread_cereals","meat","dairy_eggs","oils_fats","fruit_nuts","vegetables_pulses","sugar_sweets","other_food","tea_coffee","drinks"];
+
+const fmtPct = v => (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+const fmtDate = s => new Date(s + "T00:00:00").toLocaleDateString("en-GB", {day:"numeric", month:"short"});
+const days = (new Date(D.dates.at(-1)) - new Date(D.dates[0])) / 86400000;
+
+const foodChange = D.food.at(-1) / D.food[0] - 1;
+const basketChange = D.overall.at(-1) / D.overall[0] - 1;
+const annual = Math.pow(1 + foodChange, 365 / days) - 1;
+
+// ---- stat tiles
+const tiles = [
+  {k:"Food basket", v:D.food.at(-1).toFixed(2), n:fmtPct(foodChange*100) + " over " + days + " days", lead:true},
+  {k:"Same pace, one year", v:(annual*100).toFixed(0) + "%", n:"if these " + days + " days repeated"},
+  {k:"Whole basket", v:D.overall.at(-1).toFixed(2), n:fmtPct(basketChange*100) + " · incl. household & care"},
+  {k:"Products tracked", v:D.n_products, n:D.n_products_store.migros + " Migros · " + D.n_products_store.a101 + " A101"},
+];
+document.getElementById("tiles").innerHTML = tiles.map(t =>
+  `<div class="tile"><span class="k">${t.k}</span><span class="v${t.lead ? " lead" : ""}">${t.v}</span><span class="n">${t.n}</span></div>`).join("");
+
+// ---- line chart
+(function () {
+  const svg = document.getElementById("chart");
+  const W = 760, H = 300, L = 44, R = 12, T = 14, B = 30;
+  const series = [
+    {key:"food", values:D.food, color:"var(--s1)", label:"Food basket", width:2.5},
+    {key:"migros", values:D.stores.migros, color:"var(--s2)", label:"Migros", width:2},
+    {key:"a101", values:D.stores.a101, color:"var(--s3)", label:"A101", width:2},
+  ].map(s => ({...s, offset: D.dates.length - s.values.length}));
+
+  const all = series.flatMap(s => s.values);
+  const lo = Math.floor(Math.min(...all) - 1), hi = Math.ceil(Math.max(...all) + 1);
+  const x = i => L + (W - L - R) * (D.dates.length === 1 ? 0 : i / (D.dates.length - 1));
+  const y = v => T + (H - T - B) * (1 - (v - lo) / (hi - lo));
+
+  let out = "";
+  for (let v = lo; v <= hi; v += 2) {
+    out += `<line x1="${L}" x2="${W - R}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="var(--grid)" stroke-width="1"/>`;
+    out += `<text x="${L - 8}" y="${(y(v) + 4).toFixed(1)}" fill="var(--ink-3)" font-size="11" text-anchor="end" font-family="Archivo, sans-serif">${v}</text>`;
+  }
+  D.dates.forEach((d, i) => {
+    if (i % 7 !== 0 && i !== D.dates.length - 1) return;
+    out += `<text x="${x(i).toFixed(1)}" y="${H - 10}" fill="var(--ink-3)" font-size="11" text-anchor="middle" font-family="Archivo, sans-serif">${fmtDate(d)}</text>`;
+  });
+  series.forEach(s => {
+    const pts = s.values.map((v, i) => `${x(i + s.offset).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+    out += `<polyline points="${pts}" fill="none" stroke="${s.color}" stroke-width="${s.width}" stroke-linejoin="round" stroke-linecap="round"/>`;
+    const last = s.values.length - 1;
+    out += `<circle cx="${x(last + s.offset).toFixed(1)}" cy="${y(s.values[last]).toFixed(1)}" r="4" fill="${s.color}" stroke="var(--surface)" stroke-width="2"/>`;
+  });
+  out += `<line id="cross" x1="0" x2="0" y1="${T}" y2="${H - B}" stroke="var(--ink-3)" stroke-width="1" stroke-dasharray="3 3" opacity="0"/>`;
+  svg.innerHTML = out;
+
+  const tip = document.getElementById("tip"), box = document.getElementById("chartbox"), cross = svg.querySelector("#cross");
+  function move(ev) {
+    const r = svg.getBoundingClientRect();
+    const px = ((ev.touches ? ev.touches[0].clientX : ev.clientX) - r.left) / r.width * W;
+    let i = Math.round((px - L) / (W - L - R) * (D.dates.length - 1));
+    i = Math.max(0, Math.min(D.dates.length - 1, i));
+    cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("opacity", "1");
+    tip.innerHTML = `<b>${fmtDate(D.dates[i])}</b>` + series.map(s => {
+      const j = i - s.offset;
+      const v = j >= 0 && j < s.values.length ? s.values[j].toFixed(2) : "—";
+      return `<div><span style="color:${s.color}">■</span> ${s.label} <span>${v}</span></div>`;
+    }).join("");
+    tip.style.opacity = "1";
+    const left = Math.min(Math.max(x(i) / W * r.width - 66, 0), r.width - 150);
+    tip.style.left = left + "px";
+    tip.style.top = "6px";
+  }
+  svg.addEventListener("mousemove", move);
+  svg.addEventListener("touchmove", ev => { move(ev); ev.preventDefault(); }, {passive:false});
+  box.addEventListener("mouseleave", () => { tip.style.opacity = "0"; cross.setAttribute("opacity", "0"); });
+})();
+
+// ---- category bars
+(function () {
+  const rows = Object.entries(D.categories)
+    .map(([k, v]) => ({k, label:CAT_NAMES[k] || k, pct:v - 100, food:FOOD.includes(k)}))
+    .sort((a, b) => b.pct - a.pct);
+  const max = Math.max(...rows.map(r => Math.abs(r.pct)));
+  const zero = 100 * (max === 0 ? 0 : Math.max(0, -Math.min(...rows.map(r => r.pct))) / (2 * max));
+  document.getElementById("bars").innerHTML = rows.map(r => {
+    const w = Math.abs(r.pct) / (2 * max) * 100;
+    const style = r.pct >= 0 ? `left:${zero}%;width:${w}%` : `left:${zero - w}%;width:${w}%`;
+    return `<div class="bar"><span class="lbl">${r.label}${r.food ? "" : ' <span class="pill">non-food</span>'}</span>
+      <span class="track"><span class="fill${r.pct < 0 ? " neg" : ""}" style="${style}"></span></span>
+      <span class="num ${r.pct >= 0 ? "up" : "dn"}">${(r.pct >= 0 ? "+" : "") + r.pct.toFixed(1)}%</span></div>`;
+  }).join("");
+})();
+
+// ---- movers
+document.getElementById("movers").innerHTML = [...D.movers_up, ...D.movers_down].map(m =>
+  `<tr><td class="p">${m.name}</td><td>${m.store}</td><td class="r">${m.tl.toFixed(2)} TL</td>
+   <td class="r ${m.pct >= 0 ? "up" : "dn"}">${(m.pct >= 0 ? "+" : "") + m.pct.toFixed(1)}%</td></tr>`).join("");
+
+// ---- method note
+document.getElementById("note").innerHTML = `
+<p><strong>The method.</strong> Each product is compared only with itself, per kilo or litre where a package size is known, so a smaller pack at the same price registers as a price rise. Within a category the daily changes are combined as a geometric mean, and the categories are combined using TurkStat's 2026 CPI division weights.</p>
+<p><strong>Why two headline numbers.</strong> The food basket covers ten categories and ${FOOD.length ? D.n_products : ""} tracked items at two chains, so it is the number to quote. The whole basket adds household cleaning and personal care, where only a handful of products stand in for a large slice of the official weights — one toothpaste moving 121% is enough to tilt it.</p>
+<p><strong>Promotions are in here.</strong> Both chains sometimes put a campaign price in the field that should hold the shelf price. ${D.jumps} one-day moves above 25% show up in the period, and short dips that snap back are usually that, not inflation. ${days} days is also still a short window: read the direction, not the annualised figure.</p>`;
+
+document.getElementById("foot-gen").textContent = "Updated " + fmtDate(D.generated) + " " + D.generated.slice(0, 4) + " · " + D.dates.length + " days of data";
+</script>
+</body>
+</html>

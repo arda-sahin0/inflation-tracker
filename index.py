@@ -110,11 +110,20 @@ def build_index(df: pd.DataFrame, weights: dict[str, float] | None = None) -> pd
 
 
 def build_store_index(df: pd.DataFrame, weights: dict[str, float] | None = None) -> pd.DataFrame:
-    """One overall index per store, each on its own products."""
+    """Food index per store, each on its own products, all rebased to a shared start day.
+
+    A store added later (A101 started on 13 Sep) has no earlier prices, so the
+    common start is the first day every store has data. Without the rebase the
+    stores would sit on different base days and not be comparable.
+    """
     weights = load_weights() if weights is None else weights
-    out = pd.DataFrame()
-    for store, rows in df.groupby("store"):
-        out[store] = build_index(rows, weights)["food"]
+    series = {store: build_index(rows, weights)["food"] for store, rows in df.groupby("store")}
+    frame = pd.DataFrame(series)                      # union of all dates
+    complete = frame.dropna(how="any")
+    if complete.empty:
+        raise SystemExit("No single day has prices from every store")
+    start = complete.index.min()
+    out = frame.loc[start:] / frame.loc[start] * 100
     out.index.name = "date"
     return out
 

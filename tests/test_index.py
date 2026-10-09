@@ -90,3 +90,17 @@ def test_store_index_is_computed_per_store():
     stores = build_store_index(df)
     assert stores["migros"].iloc[-1] == pytest.approx(150)
     assert stores["a101"].iloc[-1] == pytest.approx(100)
+
+
+def test_store_index_rebases_to_a_shared_start_day():
+    df = rows([
+        ("2026-09-11", "a", "dairy_eggs", 100),                                   # only migros
+        ("2026-09-12", "a", "dairy_eggs", 200), ("2026-09-12", "b", "dairy_eggs", 50),
+        ("2026-09-13", "a", "dairy_eggs", 300), ("2026-09-13", "b", "dairy_eggs", 100),
+    ])
+    df["store"] = ["migros", "migros", "a101", "migros", "a101"]
+    stores = build_store_index(df)
+    assert stores.index[0] == pd.Timestamp("2026-09-12")      # first day both stores have
+    assert stores.iloc[0].tolist() == pytest.approx([100.0, 100.0])
+    assert stores["migros"].iloc[-1] == pytest.approx(150)    # 200 -> 300
+    assert stores["a101"].iloc[-1] == pytest.approx(200)      # 50 -> 100
