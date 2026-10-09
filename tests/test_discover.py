@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from discover import add_to_basket, build_entry, candidates, category_path
+from discover import add_to_basket, build_entry, candidates, category_path, leaf_counts, suggest_include
 from tracker import ROOT
 from tracker.scrapers import migros
 
@@ -65,3 +65,17 @@ def test_category_path_reads_oldest_ancestor_first():
     product = {"categoryAscendants": [{"name": "Süt"}, {"name": "Süt, Kahvaltılık"}],
                "category": {"name": "Uzun Ömürlü Süt"}}
     assert category_path(product) == "Süt, Kahvaltılık / Süt / Uzun Ömürlü Süt"
+
+
+def test_leaf_counts_ignore_ads_and_rank_by_size():
+    leaves = leaf_counts([INFO])
+    assert leaves[0]["leaf"] == "Uzun Ömürlü Süt"
+    assert leaves[0]["count"] == 5                       # 2 ads and 1 delisted item left out
+    assert "Bitkisel İçecek" not in {l["leaf"] for l in leaves}
+
+
+def test_suggestion_keeps_the_big_categories_only():
+    leaves = [{"leaf": "Beyaz Peynir", "count": 28}, {"leaf": "Kaşar Peyniri", "count": 19},
+              {"leaf": "Krem Peynir", "count": 6}, {"leaf": "Pizza", "count": 2}]
+    assert suggest_include(leaves) == ["Beyaz Peynir", "Kaşar Peyniri"]
+    assert suggest_include([]) == []

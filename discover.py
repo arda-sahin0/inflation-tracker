@@ -94,6 +94,14 @@ def leaf_counts(pages: list[dict]) -> list[dict]:
     return sorted(counts.values(), key=lambda c: -c["count"])
 
 
+def suggest_include(leaves: list[dict], share: float = 0.3, limit: int = 3) -> list[str]:
+    """The shop categories that carry most of a query's products — a starting point, not a verdict."""
+    if not leaves:
+        return []
+    top = leaves[0]["count"]
+    return [leaf["leaf"] for leaf in leaves if leaf["count"] >= share * top][:limit]
+
+
 def category_path(product: dict) -> str:
     names = [a["name"] for a in reversed(product.get("categoryAscendants", []))]
     if product.get("category"):
@@ -145,7 +153,12 @@ def print_table(rows: list[dict], basket: list[dict]) -> None:
 
 
 def check_sweeps() -> int:
-    """Fetch one page per rule and report what it would collect. Writes nothing."""
+    """Dry-run every rule in sweeps.json. Writes nothing.
+
+    A configured rule shows what one page would collect. A draft without
+    include_categories shows the shop categories its query lands in, with a
+    suggested line to paste into sweeps.json.
+    """
     rules = sweep.load_rules(include_disabled=True)
     if not rules:
         print("sweeps.json has no rules")
@@ -155,7 +168,16 @@ def check_sweeps() -> int:
         name = rule.get("name", rule["query"])
         draft = "" if rule.get("enabled", True) else "  [draft]"
         try:
-            sweep.check_rule(rule)
+            if not (rule.get("include_categories") or rule.get("match_category") or rule.get("allow_all")):
+                pages = sweep.fetch_pages(rule, max_pages=2)
+                leaves = leaf_counts(pages)
+                print(f"{name:<18} not configured yet — {rule['query']!r} lands in:{draft}")
+                for leaf in leaves[:6]:
+                    print(f"{'':<18}   {leaf['count']:>3}  {leaf['leaf']:<26} e.g. {leaf['example'][:38]}")
+                suggestion = json.dumps(suggest_include(leaves), ensure_ascii=False)
+                print(f'{"":<18}   suggested: "include_categories": {suggestion}')
+                continue
+
             pages = sweep.fetch_pages(rule, max_pages=1)
             rows = sweep.collect(pages, rule)
             total = pages[0].get("hitCount", "?")
@@ -165,10 +187,11 @@ def check_sweeps() -> int:
                 print(f"{'':<18}   · {row['name'][:56]}")
             if not rows:
                 problems += 1
-                print(f"{'':<18}   nothing matched — check include_categories against --categories")
+                print(f"{'':<18}   nothing matched — compare include_categories with --categories")
         except Exception as e:
             problems += 1
             print(f"{name:<18} FAILED: {e!r}")
+    print("\nPaste a suggestion into sweeps.json, set \"enabled\": true, and run --check-sweeps again.")
     return 1 if problems else 0
 
 
