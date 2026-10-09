@@ -1,0 +1,275 @@
+{
+  "successful": true,
+  "data": {
+    "searchInfo": {
+      "pageCount": 13,
+      "hitCount": 381,
+      "storeProductInfos": [
+        {
+          "sku": "11019917",
+          "name": "Nilky Hindistan Cevizli İçecek 1 L",
+          "brand": {
+            "name": "Nilky",
+            "id": 7109,
+            "prettyName": "nilky-b-1bc5"
+          },
+          "category": {
+            "name": "Bitkisel İçecek",
+            "id": 20000000001034,
+            "prettyName": "bitkisel-icecek-c-40a"
+          },
+          "categoryAscendants": [
+            {
+              "name": "Süt",
+              "id": 20000000000108,
+              "prettyName": "sut-c-6c"
+            },
+            {
+              "name": "Süt, Kahvaltılık",
+              "id": 20000000000004,
+              "prettyName": "sut-kahvaltilik-c-4"
+            }
+          ],
+          "prettyName": "nilky-hindistan-cevizli-icecek-1-l-p-a8268d",
+          "status": "IN_SALE",
+          "unit": "PIECE",
+          "regularPrice": 17995,
+          "shownPrice": 12597,
+          "discountRate": 30,
+          "sponsored": true
+        },
+        {
+          "sku": "11019915",
+          "name": "Nilky Bademli Şekersiz İçecek 1L",
+          "brand": {
+            "name": "Nilky",
+            "id": 7109,
+            "prettyName": "nilky-b-1bc5"
+          },
+          "category": {
+            "name": "Bitkisel İçecek",
+            "id": 20000000001034,
+            "prettyName": "bitkisel-icecek-c-40a"
+          },
+          "categoryAscendants": [
+            {
+              "name": "Süt",
+              "id": 20000000000108,
+              "prettyName": "sut-c-6c"
+            },
+            {
+              "name": "Süt, Kahvaltılık",
+              "id": 20000000000004,
+              "prettyName": "sut-kahvaltilik-c-4"
+            }
+          ],
+          "prettyName": "nilky-bademli-sekersiz-icecek-1l-p-a8268b",
+          "status": "IN_SALE",
+          "unit": "PIECE",
+          "regularPrice": 17995,
+          "shownPrice": 12597,
+          "discountRate": 30,
+          "sponsored": true
+        },
+        {
+          "sku": "11011520",
+          "name": "Migros %3 Yağlı Uht Süt 1 L",
+          "brand": {
+            "name": "Migros",
+            "id": 425,
+            "prettyName": "migros-b-1a9"
+          },
+          "category": {
+            "name": "Uzun Ömürlü Süt",
+            "id": 20000000001034,
+            "prettyName": "uzun-omurlu-sut-c-40a"
+          },
+          "categoryAscendants": [
+            {
+              "name": "Süt",
+              "id": 20000000000108,
+              "prettyName": "sut-c-6c"
+            },
+            {
+              "name": "Süt, Kahvaltılık",
+              "id": 20000000000004,
+              "prettyName": "sut-kahvaltilik-c-4"
+            }
+          ],
+          "prettyName": "migros-3-yagli-uht-sut-1-l-p-a805c0",
+          "status": "IN_SALE",
+          "unit": "PIECE",
+          "regularPrice": 5275,
+          "shownPrice": 5275,
+          "discountRate": 0,
+          "sponsored": false
+        },
+        {
+          "sku": "11011501",
+          "name": "Migros Yarım Yağlı Uht Süt 1 L",
+          "brand": {
+            "name": "Migros",
+            "id": 425,
+            "prettyName": "migros-b-1a9"
+          },
+          "category": {
+            "name": "Uzun Ömürlü Süt",
+            "id": 20000000001034,
+            "prettyName": "uzun-omurlu-sut-c-40a"
+          },
+          "categoryAscendants": [
+            {
+              "name": "Süt",
+              "id": 20000000000108,
+              "prettyName": "sut-c-6c"
+            },
+            {
+              "name": "Süt, Kahvaltılık",
+              "id": 20000000000004,
+              "prettyName": "sut-kahvaltilik-c-4"
+            }
+          ],
+          "prettyName": "migros-yarim-yagli-uht-sut-1-l-p-a805ad",
+          "status": "IN_SALE",
+          "unit": "PIECE",
+          "regularPrice": 4325,
+          "shownPrice": 4325,
+          "discountRate": 0,
+          "sponsored": false
+        },
+        {
+          "sku": "11010198",
+          "name": "Pınar Süt %2,5 Yağlı 1 L",
+          "brand": {
+            "name": "Pınar",
+            "id": 170,
+            "prettyName": "pinar-b-aa"
+          },
+          "category": {
+            "name": "Uzun Ömürlü Süt",
+            "id": 20000000001034,
+            "prettyName": "uzun-omurlu-sut-c-40a"
+          },
+          "categoryAscendants": [
+            {
+              "name": "Süt",
+              "id": 20000000000108,
+              "prettyName": "sut-c-6c"
+            },
+            {
+              "name": "Süt, Kahvaltılık",
+              "id": 20000000000004,
+              "prettyName": "sut-kahvaltilik-c-4"
+            }
+          ],
+          "prettyName": "pinar-sut-25-yagli-1-l-p-a80096",
+          "status": "IN_SALE",
+          "unit": "PIECE",
+          "regularPrice": 7650,
+          "shownPrice": 7650,
+          "discountRate": 0,
+          "sponsored": false
+        },
+        {
+          "sku": "11010167",
+          "name": "Migros Yarım Yağlı Laktozsuz Uht Süt 1 L",
+          "brand": {
+            "name": "Migros",
+            "id": 425,
+            "prettyName": "migros-b-1a9"
+          },
+          "category": {
+            "name": "Uzun Ömürlü Süt",
+            "id": 20000000001034,
+            "prettyName": "uzun-omurlu-sut-c-40a"
+          },
+          "categoryAscendants": [
+            {
+              "name": "Süt",
+              "id": 20000000000108,
+              "prettyName": "sut-c-6c"
+            },
+            {
+              "name": "Süt, Kahvaltılık",
+              "id": 20000000000004,
+              "prettyName": "sut-kahvaltilik-c-4"
+            }
+          ],
+          "prettyName": "migros-yarim-yagli-laktozsuz-uht-sut-1-l-p-a80077",
+          "status": "IN_SALE",
+          "unit": "PIECE",
+          "regularPrice": 6275,
+          "shownPrice": 6275,
+          "discountRate": 0,
+          "sponsored": false
+        },
+        {
+          "sku": "11010066",
+          "name": "İçim Rahat Laktozsuz Süt 1 L",
+          "brand": {
+            "name": "İçim",
+            "id": 731,
+            "prettyName": "icim-b-2db"
+          },
+          "category": {
+            "name": "Uzun Ömürlü Süt",
+            "id": 20000000001034,
+            "prettyName": "uzun-omurlu-sut-c-40a"
+          },
+          "categoryAscendants": [
+            {
+              "name": "Süt",
+              "id": 20000000000108,
+              "prettyName": "sut-c-6c"
+            },
+            {
+              "name": "Süt, Kahvaltılık",
+              "id": 20000000000004,
+              "prettyName": "sut-kahvaltilik-c-4"
+            }
+          ],
+          "prettyName": "icim-rahat-laktozsuz-sut-1-l-p-a80012",
+          "status": "IN_SALE",
+          "unit": "PIECE",
+          "regularPrice": 7950,
+          "shownPrice": 7950,
+          "discountRate": 0,
+          "sponsored": false
+        },
+        {
+          "sku": "11010267",
+          "name": "Torku Laktozsuz Süt 1 L",
+          "brand": {
+            "name": "Torku",
+            "id": 434,
+            "prettyName": "torku-b-1b2"
+          },
+          "category": {
+            "name": "Uzun Ömürlü Süt",
+            "id": 20000000001034,
+            "prettyName": "uzun-omurlu-sut-c-40a"
+          },
+          "categoryAscendants": [
+            {
+              "name": "Süt",
+              "id": 20000000000108,
+              "prettyName": "sut-c-6c"
+            },
+            {
+              "name": "Süt, Kahvaltılık",
+              "id": 20000000000004,
+              "prettyName": "sut-kahvaltilik-c-4"
+            }
+          ],
+          "prettyName": "torku-laktozsuz-sut-1-l-p-a800db",
+          "status": "NOT_IN_SALE",
+          "unit": "PIECE",
+          "regularPrice": 7950,
+          "shownPrice": 7950,
+          "discountRate": 0,
+          "sponsored": false
+        }
+      ]
+    }
+  }
+}
