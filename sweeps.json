@@ -1,538 +1,938 @@
 [
   {
-    "name": "milk",
-    "category": "dairy_eggs",
-    "store": "migros",
-    "query": "süt",
-    "include_categories": [
-      "Günlük Süt",
-      "Uzun Ömürlü Süt"
-    ],
-    "max_pages": 12,
-    "min_products": 20
-  },
-  {
-    "name": "cheese",
-    "category": "dairy_eggs",
-    "store": "migros",
-    "query": "peynir",
-    "include_categories": [
-      "İnek Peyniri",
-      "Yöresel Peynir",
-      "Süzme Peynir",
-      "Dünya Peynirleri"
-    ],
-    "max_pages": 10,
-    "min_products": 20
-  },
-  {
-    "name": "yoghurt",
-    "category": "dairy_eggs",
-    "store": "migros",
-    "query": "yoğurt",
-    "include_categories": [
-      "Sade Yoğurt",
-      "Kaymaklı Yoğurt",
-      "Süzme Yoğurt",
-      "Fonksiyonel Yoğurt",
-      "Çeşnili Yoğurt"
-    ],
-    "max_pages": 6,
-    "min_products": 20
-  },
-  {
-    "name": "eggs",
-    "category": "dairy_eggs",
-    "store": "migros",
-    "query": "yumurta",
-    "include_categories": [
-      "Yumurta"
-    ],
-    "max_pages": 3,
-    "min_products": 10
-  },
-  {
-    "name": "bread",
+    "name": "ekmek",
+    "group": "Ekmek",
     "category": "bread_cereals",
     "store": "migros",
-    "query": "ekmek",
-    "include_categories": [
-      "Çeşit Ekmekler",
-      "Sandviç Ekmeği",
-      "Tost Ekmeği",
-      "Lavaş",
-      "Baget Ekmeği"
-    ],
-    "max_pages": 6,
-    "min_products": 15
+    "shop_category": "ekmek-c-455",
+    "max_pages": 5,
+    "min_products": 52
   },
   {
-    "name": "rice",
+    "name": "makarnalar",
+    "group": "Makarnalar",
     "category": "bread_cereals",
     "store": "migros",
-    "query": "pirinç",
-    "include_categories": [
-      "Baldo Pirinç",
-      "Osmancık Pirinç",
-      "Pilavlık Pirinç",
-      "Basmati Pirinç",
-      "Yasemin Pirinç"
-    ],
-    "max_pages": 6,
-    "min_products": 15
+    "shop_category": "makarnalar-c-425",
+    "max_pages": 9,
+    "min_products": 111
   },
   {
-    "name": "pasta",
+    "name": "pirinc",
+    "group": "Pirinç",
     "category": "bread_cereals",
     "store": "migros",
-    "query": "makarna",
-    "include_categories": [
-      "Makarna",
-      "Arpa Şehriye"
-    ],
-    "max_pages": 6,
-    "min_products": 20
-  },
-  {
-    "name": "flour",
-    "category": "bread_cereals",
-    "store": "migros",
-    "query": "buğday unu",
-    "include_categories": [
-      "Tam Buğday Unu",
-      "Ekmek Unu",
-      "Buğday Unu"
-    ],
-    "max_pages": 3,
-    "min_products": 3
+    "shop_category": "pirinc-c-427",
+    "max_pages": 4,
+    "min_products": 37
   },
   {
     "name": "bulgur",
+    "group": "Bulgur, Buğday",
     "category": "bread_cereals",
     "store": "migros",
-    "query": "bulgur",
-    "include_categories": [
-      "Pilavlık Bulgur",
-      "Köftelik Bulgur",
-      "Katkılı Bulgur"
-    ],
+    "shop_category": "bulgur-c-426",
     "max_pages": 3,
-    "min_products": 15
+    "min_products": 24
   },
   {
-    "name": "chicken",
-    "category": "meat",
+    "name": "bugday",
+    "group": "Bulgur, Buğday",
+    "category": "bread_cereals",
     "store": "migros",
-    "query": "tavuk",
-    "include_categories": [
-      "Taze Piliç Eti",
-      "Donuk Piliç Eti"
-    ],
-    "max_pages": 6,
-    "min_products": 10
-  },
-  {
-    "name": "red_meat",
-    "category": "meat",
-    "store": "migros",
-    "query": "dana eti",
-    "include_categories": [
-      "Taze Dana Eti"
-    ],
-    "max_pages": 3,
-    "min_products": 3
-  },
-  {
-    "name": "sucuk",
-    "category": "meat",
-    "store": "migros",
-    "query": "sucuk",
-    "include_categories": [
-      "Dana Sucuk",
-      "Hindi Sucuk",
-      "Piliç Sucuk"
-    ],
-    "max_pages": 3,
-    "min_products": 20
-  },
-  {
-    "name": "sunflower_oil",
-    "category": "oils_fats",
-    "store": "migros",
-    "query": "ayçiçek yağı",
-    "include_categories": [
-      "Ayçicek Yağı"
-    ],
+    "shop_category": "bugday-c-2793",
     "max_pages": 2,
-    "min_products": 8
-  },
-  {
-    "name": "olive_oil",
-    "category": "oils_fats",
-    "store": "migros",
-    "query": "zeytinyağı",
-    "include_categories": [
-      "Sızma Zeytinyağı",
-      "Riviera Zeytinyağı"
-    ],
-    "max_pages": 3,
-    "min_products": 20
-  },
-  {
-    "name": "butter",
-    "category": "oils_fats",
-    "store": "migros",
-    "query": "tereyağı",
-    "include_categories": [
-      "Tereyağı"
-    ],
-    "max_pages": 3,
-    "min_products": 15
-  },
-  {
-    "name": "margarine",
-    "category": "oils_fats",
-    "store": "migros",
-    "query": "margarin",
-    "include_categories": [
-      "Kase Margarin",
-      "Paket Margarin"
-    ],
-    "max_pages": 2,
-    "min_products": 10
-  },
-  {
-    "name": "hard_fruit",
-    "category": "fruit_nuts",
-    "store": "migros",
-    "query": "elma",
-    "include_categories": [
-      "Sert Meyveler"
-    ],
-    "max_pages": 3,
-    "min_products": 2
-  },
-  {
-    "name": "citrus",
-    "category": "fruit_nuts",
-    "store": "migros",
-    "query": "portakal",
-    "include_categories": [
-      "Narenciye"
-    ],
-    "max_pages": 3,
-    "min_products": 2
-  },
-  {
-    "name": "exotic_fruit",
-    "category": "fruit_nuts",
-    "store": "migros",
-    "query": "muz",
-    "include_categories": [
-      "Egzotik Meyveler"
-    ],
-    "max_pages": 3,
-    "min_products": 2
-  },
-  {
-    "name": "nuts",
-    "category": "fruit_nuts",
-    "store": "migros",
-    "query": "ceviz",
-    "include_categories": [
-      "Ceviz İçi"
-    ],
-    "max_pages": 3,
-    "min_products": 3
-  },
-  {
-    "name": "vegetables",
-    "category": "vegetables_pulses",
-    "store": "migros",
-    "query": "domates",
-    "include_categories": [
-      "Mevsim Sebzeleri"
-    ],
-    "max_pages": 3,
-    "min_products": 3
-  },
-  {
-    "name": "potatoes",
-    "category": "vegetables_pulses",
-    "store": "migros",
-    "query": "patates",
-    "include_categories": [
-      "Patates, Soğan, Sarımsak"
-    ],
-    "max_pages": 3,
-    "min_products": 2
-  },
-  {
-    "name": "onions",
-    "category": "vegetables_pulses",
-    "store": "migros",
-    "query": "soğan",
-    "include_categories": [
-      "Patates, Soğan, Sarımsak"
-    ],
-    "max_pages": 3,
-    "min_products": 2
-  },
-  {
-    "name": "lentils",
-    "category": "vegetables_pulses",
-    "store": "migros",
-    "query": "mercimek",
-    "include_categories": [
-      "Kırmızı Mercimek",
-      "Yeşil Mercimek",
-      "Sarı Mercimek"
-    ],
-    "max_pages": 3,
-    "min_products": 10
-  },
-  {
-    "name": "chickpeas",
-    "category": "vegetables_pulses",
-    "store": "migros",
-    "query": "nohut",
-    "include_categories": [
-      "Nohut"
-    ],
-    "max_pages": 3,
     "min_products": 5
   },
   {
-    "name": "beans",
-    "category": "vegetables_pulses",
+    "name": "sade_un",
+    "group": "Un",
+    "category": "bread_cereals",
     "store": "migros",
-    "query": "kuru fasulye",
-    "include_categories": [
-      "Fasulye"
-    ],
+    "shop_category": "sade-un-c-289b",
+    "max_pages": 2,
+    "min_products": 4
+  },
+  {
+    "name": "yufka",
+    "group": "Yufka",
+    "category": "bread_cereals",
+    "store": "migros",
+    "shop_category": "yufka-c-2872",
+    "max_pages": 2,
+    "min_products": 5
+  },
+  {
+    "name": "kahvaltilik_gevrek",
+    "group": "Kahvaltılık Gevrek",
+    "category": "bread_cereals",
+    "store": "migros",
+    "shop_category": "kahvaltilik-gevrek-c-422",
+    "max_pages": 5,
+    "min_products": 58
+  },
+  {
+    "name": "biskuvi",
+    "group": "Bisküvi",
+    "category": "bread_cereals",
+    "store": "migros",
+    "shop_category": "biskuvi-c-43c",
+    "max_pages": 9,
+    "min_products": 115
+  },
+  {
+    "name": "kraker",
+    "group": "Kraker",
+    "category": "bread_cereals",
+    "store": "migros",
+    "shop_category": "kraker-c-27ea",
+    "max_pages": 4,
+    "min_products": 41
+  },
+  {
+    "name": "dana_eti",
+    "group": "Kırmızı Et",
+    "category": "meat",
+    "store": "migros",
+    "shop_category": "dana-eti-c-3fa",
+    "max_pages": 3,
+    "min_products": 17
+  },
+  {
+    "name": "kuzu_eti",
+    "group": "Kırmızı Et",
+    "category": "meat",
+    "store": "migros",
+    "shop_category": "kuzu-eti-c-3fb",
+    "max_pages": 2,
+    "min_products": 6
+  },
+  {
+    "name": "sakatat",
+    "group": "Kırmızı Et",
+    "category": "meat",
+    "store": "migros",
+    "shop_category": "sakatat-c-3fd",
+    "max_pages": 2,
+    "min_products": 13
+  },
+  {
+    "name": "dondurulmus_kirmizi_et",
+    "group": "Kırmızı Et",
+    "category": "meat",
+    "store": "migros",
+    "shop_category": "dondurulmus-kirmizi-et-c-282f",
+    "max_pages": 2,
+    "min_products": 10
+  },
+  {
+    "name": "beyaz_et",
+    "group": "Beyaz Et",
+    "category": "meat",
+    "store": "migros",
+    "shop_category": "beyaz-et-c-69",
+    "max_pages": 4,
+    "min_products": 44
+  },
+  {
+    "name": "et_sarkuteri",
+    "group": "Et Şarküteri",
+    "category": "meat",
+    "store": "migros",
+    "shop_category": "et-sarkuteri-c-6b",
+    "max_pages": 9,
+    "min_products": 118
+  },
+  {
+    "name": "sut",
+    "group": "Süt",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "sut-c-6c",
+    "max_pages": 6,
+    "min_products": 70
+  },
+  {
+    "name": "peynir",
+    "group": "Peynir",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "peynir-c-6d",
+    "max_pages": 15,
+    "min_products": 201
+  },
+  {
+    "name": "kaymakli_yogurt",
+    "group": "Yoğurt",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "kaymakli-yogurt-c-40f",
+    "max_pages": 2,
+    "min_products": 7
+  },
+  {
+    "name": "sade_yogurt",
+    "group": "Yoğurt",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "sade-yogurt-c-410",
+    "max_pages": 3,
+    "min_products": 17
+  },
+  {
+    "name": "suzme_cesnili_yogurt",
+    "group": "Yoğurt",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "suzme-cesnili-yogurt-c-411",
+    "max_pages": 2,
+    "min_products": 6
+  },
+  {
+    "name": "meyveli_yogurt",
+    "group": "Yoğurt",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "meyveli-yogurt-c-2748",
+    "max_pages": 2,
+    "min_products": 9
+  },
+  {
+    "name": "diger_yogurtlar",
+    "group": "Yoğurt",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "diger-yogurtlar-c-2749",
+    "max_pages": 3,
+    "min_products": 27
+  },
+  {
+    "name": "yumurta",
+    "group": "Yumurta",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "yumurta-c-70",
+    "max_pages": 2,
+    "min_products": 13
+  },
+  {
+    "name": "ayran",
+    "group": "Ayran, Kefir",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "ayran-c-47a",
+    "max_pages": 2,
+    "min_products": 13
+  },
+  {
+    "name": "kefir",
+    "group": "Ayran, Kefir",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "kefir-c-47b",
+    "max_pages": 3,
+    "min_products": 22
+  },
+  {
+    "name": "kaymak",
+    "group": "Kaymak, Krema",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "kaymak-c-41e",
     "max_pages": 2,
     "min_products": 3
   },
   {
-    "name": "sugar",
+    "name": "krema_ve_sos",
+    "group": "Kaymak, Krema",
+    "category": "dairy_eggs",
+    "store": "migros",
+    "shop_category": "krema-ve-sos-c-41f",
+    "max_pages": 2,
+    "min_products": 14
+  },
+  {
+    "name": "tereyagi",
+    "group": "Tereyağı",
+    "category": "oils_fats",
+    "store": "migros",
+    "shop_category": "tereyagi-c-413",
+    "max_pages": 3,
+    "min_products": 23
+  },
+  {
+    "name": "margarin",
+    "group": "Margarin",
+    "category": "oils_fats",
+    "store": "migros",
+    "shop_category": "margarin-c-414",
+    "max_pages": 2,
+    "min_products": 14
+  },
+  {
+    "name": "sivi_yag",
+    "group": "Sıvı Yağ",
+    "category": "oils_fats",
+    "store": "migros",
+    "shop_category": "sivi-yag-c-76",
+    "max_pages": 5,
+    "min_products": 48
+  },
+  {
+    "name": "meyve",
+    "group": "Meyve",
+    "category": "fruit_nuts",
+    "store": "migros",
+    "shop_category": "meyve-c-65",
+    "max_pages": 4,
+    "min_products": 33
+  },
+  {
+    "name": "kuru_meyve",
+    "group": "Kuru Meyve",
+    "category": "fruit_nuts",
+    "store": "migros",
+    "shop_category": "kuru-meyve-c-441",
+    "max_pages": 5,
+    "min_products": 56
+  },
+  {
+    "name": "kuruyemis",
+    "group": "Kuruyemiş",
+    "category": "fruit_nuts",
+    "store": "migros",
+    "shop_category": "kuruyemis-c-442",
+    "max_pages": 8,
+    "min_products": 94
+  },
+  {
+    "name": "sebze",
+    "group": "Sebze",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "sebze-c-66",
+    "max_pages": 6,
+    "min_products": 71
+  },
+  {
+    "name": "fasulye",
+    "group": "Bakliyat",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "fasulye-c-2794",
+    "max_pages": 2,
+    "min_products": 11
+  },
+  {
+    "name": "mercimek",
+    "group": "Bakliyat",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "mercimek-c-113c9",
+    "max_pages": 2,
+    "min_products": 12
+  },
+  {
+    "name": "nohut",
+    "group": "Bakliyat",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "nohut-c-2798",
+    "max_pages": 2,
+    "min_products": 5
+  },
+  {
+    "name": "barbunya",
+    "group": "Bakliyat",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "barbunya-c-2791",
+    "max_pages": 2,
+    "min_products": 2
+  },
+  {
+    "name": "borulce",
+    "group": "Bakliyat",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "borulce-c-2792",
+    "max_pages": 2,
+    "min_products": 1
+  },
+  {
+    "name": "bakla",
+    "group": "Bakliyat",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "bakla-c-2790",
+    "max_pages": 2,
+    "min_products": 1
+  },
+  {
+    "name": "haslanmis",
+    "group": "Konserve Sebze",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "haslanmis-c-2855",
+    "max_pages": 2,
+    "min_products": 12
+  },
+  {
+    "name": "kozlenmis",
+    "group": "Konserve Sebze",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "kozlenmis-c-2840",
+    "max_pages": 2,
+    "min_products": 6
+  },
+  {
+    "name": "konserve_misir",
+    "group": "Konserve Sebze",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "konserve-misir-c-2858",
+    "max_pages": 2,
+    "min_products": 5
+  },
+  {
+    "name": "konserve_bezelye",
+    "group": "Konserve Sebze",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "konserve-bezelye-c-12251",
+    "max_pages": 2,
+    "min_products": 2
+  },
+  {
+    "name": "konserve_sebze",
+    "group": "Konserve Sebze",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "konserve-sebze-c-2852",
+    "max_pages": 2,
+    "min_products": 2
+  },
+  {
+    "name": "konserve_fasulye",
+    "group": "Konserve Sebze",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "konserve-fasulye-c-12252",
+    "max_pages": 2,
+    "min_products": 1
+  },
+  {
+    "name": "zeytin",
+    "group": "Zeytin",
+    "category": "vegetables_pulses",
+    "store": "migros",
+    "shop_category": "zeytin-c-71",
+    "max_pages": 5,
+    "min_products": 58
+  },
+  {
+    "name": "seker",
+    "group": "Şeker",
     "category": "sugar_sweets",
     "store": "migros",
-    "query": "toz şeker",
-    "include_categories": [
-      "Toz Şeker",
-      "Esmer Şeker"
-    ],
+    "shop_category": "seker-c-ac",
+    "max_pages": 2,
+    "min_products": 12
+  },
+  {
+    "name": "bal",
+    "group": "Bal",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "shop_category": "bal-c-420",
+    "max_pages": 4,
+    "min_products": 34
+  },
+  {
+    "name": "recel_marmelat",
+    "group": "Reçel, Marmelat",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "shop_category": "recel-marmelat-c-424",
+    "max_pages": 5,
+    "min_products": 56
+  },
+  {
+    "name": "krem_cikolata_ezmeler",
+    "group": "Krem Çikolata, Ezmeler",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "shop_category": "krem-cikolata-ezmeler-c-423",
+    "max_pages": 5,
+    "min_products": 48
+  },
+  {
+    "name": "helva_tahin_pekmez",
+    "group": "Helva, Tahin, Pekmez",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "shop_category": "helva-tahin-pekmez-c-421",
+    "max_pages": 5,
+    "min_products": 57
+  },
+  {
+    "name": "bitter_cikolata",
+    "group": "Çikolata",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "shop_category": "bitter-cikolata-c-113f6",
+    "max_pages": 3,
+    "min_products": 25
+  },
+  {
+    "name": "sutlu_cikolata",
+    "group": "Çikolata",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "shop_category": "sutlu-cikolata-c-113f7",
+    "max_pages": 6,
+    "min_products": 64
+  },
+  {
+    "name": "beyaz_cikolata",
+    "group": "Çikolata",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "shop_category": "beyaz-cikolata-c-113f8",
     "max_pages": 2,
     "min_products": 8
   },
   {
-    "name": "honey",
+    "name": "draje_cikolata",
+    "group": "Çikolata",
     "category": "sugar_sweets",
     "store": "migros",
-    "query": "bal",
-    "include_categories": [
-      "Çiçek Balı",
-      "Çam Balı",
-      "Kestane Balı",
-      "Karışım Bal",
-      "Kekik Balı"
-    ],
-    "max_pages": 3,
-    "min_products": 20
+    "shop_category": "draje-cikolata-c-27d7",
+    "max_pages": 2,
+    "min_products": 15
   },
   {
-    "name": "chocolate",
+    "name": "sekerleme",
+    "group": "Şekerleme",
     "category": "sugar_sweets",
     "store": "migros",
-    "query": "çikolata",
-    "include_categories": [
-      "Sütlü Çikolata",
-      "Bitter Çikolata",
-      "Beyaz Çikolata"
-    ],
-    "max_pages": 8,
-    "min_products": 15
+    "shop_category": "sekerleme-c-444",
+    "max_pages": 9,
+    "min_products": 119
   },
   {
-    "name": "tomato_paste",
+    "name": "sutlu_tatlilar",
+    "group": "Sütlü Tatlı",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "shop_category": "sutlu-tatlilar-c-41c",
+    "max_pages": 2,
+    "min_products": 14
+  },
+  {
+    "name": "puding",
+    "group": "Sütlü Tatlı",
+    "category": "sugar_sweets",
+    "store": "migros",
+    "shop_category": "puding-c-41d",
+    "max_pages": 2,
+    "min_products": 8
+  },
+  {
+    "name": "tuz_baharat_harc",
+    "group": "Tuz, Baharat, Harç",
     "category": "other_food",
     "store": "migros",
-    "query": "salça",
-    "include_categories": [
-      "Domates Salçası",
-      "Biber Salçası"
-    ],
-    "max_pages": 3,
-    "min_products": 15
-  },
-  {
-    "name": "salt",
-    "category": "other_food",
-    "store": "migros",
-    "query": "tuz",
-    "include_categories": [
-      "Tuz"
-    ],
-    "max_pages": 3,
-    "min_products": 20
-  },
-  {
-    "name": "spices",
-    "category": "other_food",
-    "store": "migros",
-    "query": "baharat",
-    "include_categories": [
-      "Karabiber",
-      "Acı Pul Biber",
-      "Kuru Nane",
-      "Kuru Kekik",
-      "Diğer Baharatlar",
-      "Baharat Karışımları"
-    ],
-    "max_pages": 4,
-    "min_products": 15
-  },
-  {
-    "name": "tea",
-    "category": "tea_coffee",
-    "store": "migros",
-    "query": "çay",
-    "include_categories": [
-      "Dökme Çay",
-      "Demlik Poşet Çay",
-      "Bardak Poşet Çay"
-    ],
-    "max_pages": 8,
-    "min_products": 15
-  },
-  {
-    "name": "coffee",
-    "category": "tea_coffee",
-    "store": "migros",
-    "query": "kahve",
-    "include_categories": [
-      "Türk Kahvesi",
-      "Filtre Kahve",
-      "Hazır Kahve",
-      "Çekirdek Kahve"
-    ],
-    "max_pages": 6,
-    "min_products": 20
-  },
-  {
-    "name": "water",
-    "category": "drinks",
-    "store": "migros",
-    "query": "su",
-    "include_categories": [
-      "Su"
-    ],
+    "shop_category": "tuz-baharat-harc-c-77",
     "max_pages": 10,
-    "min_products": 20
+    "min_products": 132
   },
   {
-    "name": "mineral_water",
-    "category": "drinks",
+    "name": "salca",
+    "group": "Salça",
+    "category": "other_food",
     "store": "migros",
-    "query": "maden suyu",
-    "include_categories": [
-      "Maden Suyu"
-    ],
+    "shop_category": "salca-c-453",
     "max_pages": 3,
-    "min_products": 20
+    "min_products": 27
   },
   {
-    "name": "juice",
-    "category": "drinks",
+    "name": "tursu",
+    "group": "Turşu",
+    "category": "other_food",
     "store": "migros",
-    "query": "meyve suyu",
-    "include_categories": [
-      "Meyve Suyu"
-    ],
-    "max_pages": 6,
-    "min_products": 20
+    "shop_category": "tursu-c-454",
+    "max_pages": 4,
+    "min_products": 36
   },
   {
-    "name": "soft_drinks",
-    "category": "drinks",
+    "name": "sos",
+    "group": "Sos",
+    "category": "other_food",
     "store": "migros",
-    "query": "kola",
-    "include_categories": [
-      "Kola",
-      "Gazoz"
-    ],
+    "shop_category": "sos-c-113fc",
+    "max_pages": 11,
+    "min_products": 145
+  },
+  {
+    "name": "bulyon",
+    "group": "Bulyon",
+    "category": "other_food",
+    "store": "migros",
+    "shop_category": "bulyon-c-42c",
+    "max_pages": 2,
+    "min_products": 5
+  },
+  {
+    "name": "dokme_cay",
+    "group": "Siyah Çay",
+    "category": "tea_coffee",
+    "store": "migros",
+    "shop_category": "dokme-cay-c-28c1",
+    "max_pages": 4,
+    "min_products": 33
+  },
+  {
+    "name": "demlik_poset_cay",
+    "group": "Siyah Çay",
+    "category": "tea_coffee",
+    "store": "migros",
+    "shop_category": "demlik-poset-cay-c-1121e",
     "max_pages": 3,
     "min_products": 15
   },
   {
-    "name": "laundry_detergent",
-    "category": "household",
+    "name": "bardak_poset_cay",
+    "group": "Siyah Çay",
+    "category": "tea_coffee",
     "store": "migros",
-    "query": "deterjan",
-    "include_categories": [
-      "Sıvı Çamaşır Deterjanı",
-      "Toz Deterjan"
-    ],
-    "max_pages": 8,
-    "min_products": 20
+    "shop_category": "bardak-poset-cay-c-1121f",
+    "max_pages": 2,
+    "min_products": 15
   },
   {
-    "name": "dish_detergent",
-    "category": "household",
+    "name": "bitki_cayi",
+    "group": "Bitki Çayı",
+    "category": "tea_coffee",
     "store": "migros",
-    "query": "bulaşık",
-    "include_categories": [
-      "Sıvı Bulaşık Deterjanı",
-      "Bulaşık Makinesi Tableti"
-    ],
+    "shop_category": "bitki-cayi-c-28c0",
+    "max_pages": 5,
+    "min_products": 50
+  },
+  {
+    "name": "form_cayi",
+    "group": "Bitki Çayı",
+    "category": "tea_coffee",
+    "store": "migros",
+    "shop_category": "form-cayi-c-28c2",
+    "max_pages": 2,
+    "min_products": 5
+  },
+  {
+    "name": "turk_kahvesi",
+    "group": "Kahve",
+    "category": "tea_coffee",
+    "store": "migros",
+    "shop_category": "turk-kahvesi-c-28c4",
+    "max_pages": 3,
+    "min_products": 17
+  },
+  {
+    "name": "hazir_kahve",
+    "group": "Kahve",
+    "category": "tea_coffee",
+    "store": "migros",
+    "shop_category": "hazir-kahve-c-11222",
+    "max_pages": 5,
+    "min_products": 52
+  },
+  {
+    "name": "filtre_kahve",
+    "group": "Kahve",
+    "category": "tea_coffee",
+    "store": "migros",
+    "shop_category": "filtre-kahve-c-11223",
+    "max_pages": 3,
+    "min_products": 30
+  },
+  {
+    "name": "kapsul_kahve",
+    "group": "Kahve",
+    "category": "tea_coffee",
+    "store": "migros",
+    "shop_category": "kapsul-kahve-c-11224",
+    "max_pages": 3,
+    "min_products": 24
+  },
+  {
+    "name": "cekirdek_kahve",
+    "group": "Kahve",
+    "category": "tea_coffee",
+    "store": "migros",
+    "shop_category": "cekirdek-kahve-c-11225",
+    "max_pages": 3,
+    "min_products": 23
+  },
+  {
+    "name": "su",
+    "group": "Su",
+    "category": "drinks",
+    "store": "migros",
+    "shop_category": "su-c-84",
     "max_pages": 4,
-    "min_products": 10
+    "min_products": 33
   },
   {
-    "name": "toilet_paper",
-    "category": "household",
+    "name": "maden_suyu",
+    "group": "Maden Suyu",
+    "category": "drinks",
     "store": "migros",
-    "query": "tuvalet kağıdı",
-    "include_categories": [
-      "Tuvalet Kağıdı"
-    ],
+    "shop_category": "maden-suyu-c-85",
+    "max_pages": 4,
+    "min_products": 42
+  },
+  {
+    "name": "gazli_icecek",
+    "group": "Gazlı İçecek",
+    "category": "drinks",
+    "store": "migros",
+    "shop_category": "gazli-icecek-c-80",
+    "max_pages": 8,
+    "min_products": 98
+  },
+  {
+    "name": "meyve_suyu",
+    "group": "Meyve Suyu",
+    "category": "drinks",
+    "store": "migros",
+    "shop_category": "meyve-suyu-c-46c",
+    "max_pages": 8,
+    "min_products": 94
+  },
+  {
+    "name": "salgam_suyu",
+    "group": "Meyve Suyu",
+    "category": "drinks",
+    "store": "migros",
+    "shop_category": "salgam-suyu-c-46e",
+    "max_pages": 2,
+    "min_products": 5
+  },
+  {
+    "name": "limonata",
+    "group": "Meyve Suyu",
+    "category": "drinks",
+    "store": "migros",
+    "shop_category": "limonata-c-46f",
     "max_pages": 2,
     "min_products": 10
   },
   {
-    "name": "shampoo",
+    "name": "soguk_cay",
+    "group": "Soğuk Çay, Kahve",
+    "category": "drinks",
+    "store": "migros",
+    "shop_category": "soguk-cay-c-28be",
+    "max_pages": 5,
+    "min_products": 49
+  },
+  {
+    "name": "soguk_kahve",
+    "group": "Soğuk Çay, Kahve",
+    "category": "drinks",
+    "store": "migros",
+    "shop_category": "soguk-kahve-c-28bd",
+    "max_pages": 3,
+    "min_products": 23
+  },
+  {
+    "name": "camasir_yikama",
+    "group": "Çamaşır Yıkama",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "camasir-yikama-c-86",
+    "max_pages": 13,
+    "min_products": 169
+  },
+  {
+    "name": "bulasik_yikama",
+    "group": "Bulaşık Yıkama",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "bulasik-yikama-c-87",
+    "max_pages": 5,
+    "min_products": 52
+  },
+  {
+    "name": "yuzey_temizleyiciler",
+    "group": "Temizlik Ürünleri",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "yuzey-temizleyiciler-c-492",
+    "max_pages": 3,
+    "min_products": 17
+  },
+  {
+    "name": "tuvalet_temizleyiciler",
+    "group": "Temizlik Ürünleri",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "tuvalet-temizleyiciler-c-490",
+    "max_pages": 3,
+    "min_products": 24
+  },
+  {
+    "name": "mutfak_ve_banyo_temizleyiciler",
+    "group": "Temizlik Ürünleri",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "mutfak-ve-banyo-temizleyiciler-c-491",
+    "max_pages": 3,
+    "min_products": 19
+  },
+  {
+    "name": "cam_temizleyiciler",
+    "group": "Temizlik Ürünleri",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "cam-temizleyiciler-c-48b",
+    "max_pages": 2,
+    "min_products": 5
+  },
+  {
+    "name": "cop_poseti",
+    "group": "Çöp Poşeti",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "cop-poseti-c-11359",
+    "max_pages": 3,
+    "min_products": 24
+  },
+  {
+    "name": "tuvalet_kagidi",
+    "group": "Tuvalet Kağıdı",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "tuvalet-kagidi-c-49c",
+    "max_pages": 2,
+    "min_products": 11
+  },
+  {
+    "name": "kagit_havlu",
+    "group": "Kağıt Havlu",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "kagit-havlu-c-49d",
+    "max_pages": 2,
+    "min_products": 14
+  },
+  {
+    "name": "pecete",
+    "group": "Peçete",
+    "category": "household",
+    "store": "migros",
+    "shop_category": "pecete-c-49f",
+    "max_pages": 2,
+    "min_products": 7
+  },
+  {
+    "name": "dis_macunu",
+    "group": "Ağız Bakım",
     "category": "personal_care",
     "store": "migros",
-    "query": "şampuan",
-    "include_categories": [
-      "Şampuan",
-      "Erkek Şampuanı"
-    ],
+    "shop_category": "dis-macunu-c-4a1",
+    "max_pages": 5,
+    "min_products": 51
+  },
+  {
+    "name": "dis_fircasi",
+    "group": "Ağız Bakım",
+    "category": "personal_care",
+    "store": "migros",
+    "shop_category": "dis-fircasi-c-4a0",
+    "max_pages": 5,
+    "min_products": 58
+  },
+  {
+    "name": "sampuan",
+    "group": "Şampuan, Saç Kremi",
+    "category": "personal_care",
+    "store": "migros",
+    "shop_category": "sampuan-c-4a4",
+    "max_pages": 8,
+    "min_products": 92
+  },
+  {
+    "name": "sac_kremi",
+    "group": "Şampuan, Saç Kremi",
+    "category": "personal_care",
+    "store": "migros",
+    "shop_category": "sac-kremi-c-2939",
+    "max_pages": 5,
+    "min_products": 50
+  },
+  {
+    "name": "dus_jeli",
+    "group": "Sabun, Duş Jeli",
+    "category": "personal_care",
+    "store": "migros",
+    "shop_category": "dus-jeli-c-4b9",
+    "max_pages": 6,
+    "min_products": 67
+  },
+  {
+    "name": "sabun",
+    "group": "Sabun, Duş Jeli",
+    "category": "personal_care",
+    "store": "migros",
+    "shop_category": "sabun-c-4bb",
     "max_pages": 7,
-    "min_products": 15
+    "min_products": 83
   },
   {
-    "name": "toothpaste",
+    "name": "deodorant",
+    "group": "Deodorant",
     "category": "personal_care",
     "store": "migros",
-    "query": "diş macunu",
-    "include_categories": [
-      "Diş Macunu",
-      "Çocuk Diş Macunu"
-    ],
-    "max_pages": 3,
-    "min_products": 20
+    "shop_category": "deodorant-c-4cd",
+    "max_pages": 8,
+    "min_products": 104
   },
   {
-    "name": "soap",
+    "name": "hijyenik_ped",
+    "group": "Hijyenik Ped",
     "category": "personal_care",
     "store": "migros",
-    "query": "sıvı sabun",
-    "include_categories": [
-      "Sıvı Sabun",
-      "Yedek Sıvı Sabun"
-    ],
+    "shop_category": "hijyenik-ped-c-96",
+    "max_pages": 6,
+    "min_products": 67
+  },
+  {
+    "name": "tiras_malzemeleri",
+    "group": "Tıraş Malzemeleri",
+    "category": "personal_care",
+    "store": "migros",
+    "shop_category": "tiras-malzemeleri-c-90",
+    "max_pages": 5,
+    "min_products": 45
+  },
+  {
+    "name": "kagit_mendil",
+    "group": "Mendil",
+    "category": "personal_care",
+    "store": "migros",
+    "shop_category": "kagit-mendil-c-11444",
+    "max_pages": 2,
+    "min_products": 12
+  },
+  {
+    "name": "islak_mendil",
+    "group": "Mendil",
+    "category": "personal_care",
+    "store": "migros",
+    "shop_category": "islak-mendil-c-49e",
     "max_pages": 3,
-    "min_products": 20
+    "min_products": 16
   }
 ]

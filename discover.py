@@ -165,10 +165,11 @@ def check_sweeps() -> int:
         return 1
     problems = 0
     for rule in rules:
-        name = rule.get("name", rule["query"])
+        name = rule.get("name") or rule.get("query") or rule.get("shop_category")
         draft = "" if rule.get("enabled", True) else "  [draft]"
         try:
-            if not (rule.get("include_categories") or rule.get("match_category") or rule.get("allow_all")):
+            if not (rule.get("shop_category") or rule.get("include_categories") or rule.get("match_category")
+                    or rule.get("allow_all")):
                 pages = sweep.fetch_pages(rule, max_pages=2)
                 leaves = leaf_counts(pages)
                 print(f"{name:<18} not configured yet — {rule['query']!r} lands in:{draft}")

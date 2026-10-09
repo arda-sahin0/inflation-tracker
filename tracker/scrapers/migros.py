@@ -66,7 +66,7 @@ def scrape(product: dict) -> dict:
 
 SCREEN_URL = "https://www.migros.com.tr/rest/search/screens/{path}"
 TOP_LEVEL_URL = "https://www.migros.com.tr/rest/categories/top-level"
-_page_params: dict[str, str] = {}          # remembered per listing, so detection runs once
+_page_param: str | None = None             # the same for every Migros listing, so detect it once per run
 
 
 def _get_json(url: str, params: dict | None = None) -> dict:
@@ -94,10 +94,13 @@ def search_page(query: str, page: int = 1, page_param: str = "sayfa") -> dict:
 
 
 def detect_page_param(query: str | None = None, shop_category: str | None = None) -> str:
-    """Migros doesn't document its paging parameter — find the one that moves the results."""
-    key = query or shop_category
-    if key in _page_params:
-        return _page_params[key]
+    """Migros doesn't document its paging parameter — find the one that moves the results.
+
+    The answer is the same for every listing on the site, so it is worked out once per run.
+    """
+    global _page_param
+    if _page_param:
+        return _page_param
     first = listing_page(query, shop_category)["storeProductInfos"]
     if not first:
         return PAGE_PARAM_CANDIDATES[0]
@@ -107,7 +110,7 @@ def detect_page_param(query: str | None = None, shop_category: str | None = None
         except Exception:
             continue
         if second and second[0]["sku"] != first[0]["sku"]:
-            _page_params[key] = candidate
+            _page_param = candidate
             return candidate
     raise RuntimeError("No paging parameter worked — only the first page is reachable")
 

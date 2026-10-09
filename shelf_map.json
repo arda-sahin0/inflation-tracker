@@ -1,0 +1,423 @@
+{
+  "_comment": "Which shop shelves feed which index category. path = 'Aisle/Shelf' as in catalog/migros.json; leaves narrows it to some sub-shelves; group decides what counts as one elementary group (default: the shelf). Rebuild sweeps.json with: python build_sweeps.py",
+  "store": "migros",
+  "shelves": [
+    {
+      "category": "bread_cereals",
+      "path": "Fırın, Pastane/Ekmek"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Temel Gıda/Makarnalar"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Temel Gıda/Bakliyat",
+      "group": "Pirinç",
+      "leaves": [
+        "Pirinç"
+      ]
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Temel Gıda/Bakliyat",
+      "group": "Bulgur, Buğday",
+      "leaves": [
+        "Bulgur",
+        "Buğday"
+      ]
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Temel Gıda/Un",
+      "group": "Un",
+      "leaves": [
+        "Sade Un"
+      ]
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Temel Gıda/Yufka"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Süt, Kahvaltılık/Kahvaltılıklar",
+      "group": "Kahvaltılık Gevrek",
+      "leaves": [
+        "Kahvaltılık Gevrek"
+      ]
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Atıştırmalık/Bisküvi"
+    },
+    {
+      "category": "bread_cereals",
+      "path": "Atıştırmalık/Kraker"
+    },
+    {
+      "category": "meat",
+      "path": "Et, Tavuk, Balık/Kırmızı Et",
+      "group": "Kırmızı Et",
+      "leaves": [
+        "Dana Eti",
+        "Kuzu Eti",
+        "Sakatat",
+        "Dondurulmuş Kırmızı Et"
+      ]
+    },
+    {
+      "category": "meat",
+      "path": "Et, Tavuk, Balık/Beyaz Et"
+    },
+    {
+      "category": "meat",
+      "path": "Et, Tavuk, Balık/Et Şarküteri"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt, Kahvaltılık/Süt"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt, Kahvaltılık/Peynir"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt, Kahvaltılık/Yoğurt",
+      "group": "Yoğurt",
+      "leaves": [
+        "Kaymaklı Yoğurt",
+        "Sade Yoğurt",
+        "Süzme, Çeşnili Yoğurt",
+        "Meyveli Yoğurt",
+        "Diğer Yoğurtlar"
+      ]
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt, Kahvaltılık/Yumurta"
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "İçecek/Gazsız İçecek",
+      "group": "Ayran, Kefir",
+      "leaves": [
+        "Ayran",
+        "Kefir"
+      ]
+    },
+    {
+      "category": "dairy_eggs",
+      "path": "Süt, Kahvaltılık/Sütlü Tatlı, Krema",
+      "group": "Kaymak, Krema",
+      "leaves": [
+        "Kaymak",
+        "Krema ve Sos"
+      ]
+    },
+    {
+      "category": "oils_fats",
+      "path": "Süt, Kahvaltılık/Tereyağı"
+    },
+    {
+      "category": "oils_fats",
+      "path": "Süt, Kahvaltılık/Margarin"
+    },
+    {
+      "category": "oils_fats",
+      "path": "Temel Gıda/Sıvı Yağ"
+    },
+    {
+      "category": "fruit_nuts",
+      "path": "Meyve, Sebze/Meyve"
+    },
+    {
+      "category": "fruit_nuts",
+      "path": "Atıştırmalık/Kuru Meyve"
+    },
+    {
+      "category": "fruit_nuts",
+      "path": "Atıştırmalık/Kuruyemiş"
+    },
+    {
+      "category": "vegetables_pulses",
+      "path": "Meyve, Sebze/Sebze"
+    },
+    {
+      "category": "vegetables_pulses",
+      "path": "Temel Gıda/Bakliyat",
+      "group": "Bakliyat",
+      "leaves": [
+        "Fasulye",
+        "Mercimek",
+        "Nohut",
+        "Barbunya",
+        "Börülce",
+        "Bakla"
+      ]
+    },
+    {
+      "category": "vegetables_pulses",
+      "path": "Temel Gıda/Konserve",
+      "group": "Konserve Sebze",
+      "leaves": [
+        "Haşlanmış",
+        "Közlenmiş",
+        "Konserve Mısır",
+        "Konserve Bezelye",
+        "Konserve Sebze",
+        "Konserve Fasulye"
+      ]
+    },
+    {
+      "category": "vegetables_pulses",
+      "path": "Süt, Kahvaltılık/Zeytin"
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Temel Gıda/Şeker"
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Süt, Kahvaltılık/Kahvaltılıklar",
+      "group": "Bal",
+      "leaves": [
+        "Bal"
+      ]
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Süt, Kahvaltılık/Kahvaltılıklar",
+      "group": "Reçel, Marmelat",
+      "leaves": [
+        "Reçel, Marmelat"
+      ]
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Süt, Kahvaltılık/Kahvaltılıklar",
+      "group": "Krem Çikolata, Ezmeler",
+      "leaves": [
+        "Krem Çikolata, Ezmeler"
+      ]
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Süt, Kahvaltılık/Kahvaltılıklar",
+      "group": "Helva, Tahin, Pekmez",
+      "leaves": [
+        "Helva, Tahin, Pekmez"
+      ]
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Atıştırmalık/Çikolata",
+      "group": "Çikolata",
+      "leaves": [
+        "Bitter Çikolata",
+        "Sütlü Çikolata",
+        "Beyaz Çikolata",
+        "Draje Çikolata"
+      ]
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Atıştırmalık/Şekerleme"
+    },
+    {
+      "category": "sugar_sweets",
+      "path": "Süt, Kahvaltılık/Sütlü Tatlı, Krema",
+      "group": "Sütlü Tatlı",
+      "leaves": [
+        "Sütlü Tatlılar",
+        "Puding"
+      ]
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Tuz, Baharat, Harç"
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Konserve",
+      "group": "Salça",
+      "leaves": [
+        "Salça"
+      ]
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Konserve",
+      "group": "Turşu",
+      "leaves": [
+        "Turşu"
+      ]
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Sos"
+    },
+    {
+      "category": "other_food",
+      "path": "Temel Gıda/Bulyon"
+    },
+    {
+      "category": "tea_coffee",
+      "path": "İçecek/Çay",
+      "group": "Siyah Çay",
+      "leaves": [
+        "Dökme Çay",
+        "Demlik Poşet Çay",
+        "Bardak Poşet Çay"
+      ]
+    },
+    {
+      "category": "tea_coffee",
+      "path": "İçecek/Çay",
+      "group": "Bitki Çayı",
+      "leaves": [
+        "Bitki Çayı",
+        "Form Çayı"
+      ]
+    },
+    {
+      "category": "tea_coffee",
+      "path": "İçecek/Kahve",
+      "group": "Kahve",
+      "leaves": [
+        "Türk Kahvesi",
+        "Hazır Kahve",
+        "Filtre Kahve",
+        "Kapsül Kahve",
+        "Çekirdek Kahve"
+      ]
+    },
+    {
+      "category": "drinks",
+      "path": "İçecek/Su"
+    },
+    {
+      "category": "drinks",
+      "path": "İçecek/Maden Suyu"
+    },
+    {
+      "category": "drinks",
+      "path": "İçecek/Gazlı İçecek"
+    },
+    {
+      "category": "drinks",
+      "path": "İçecek/Gazsız İçecek",
+      "group": "Meyve Suyu",
+      "leaves": [
+        "Meyve Suyu",
+        "Şalgam Suyu",
+        "Limonata"
+      ]
+    },
+    {
+      "category": "drinks",
+      "path": "İçecek/Çay",
+      "group": "Soğuk Çay, Kahve",
+      "leaves": [
+        "Soğuk Çay"
+      ]
+    },
+    {
+      "category": "drinks",
+      "path": "İçecek/Kahve",
+      "group": "Soğuk Çay, Kahve",
+      "leaves": [
+        "Soğuk Kahve"
+      ]
+    },
+    {
+      "category": "household",
+      "path": "Deterjan, Temizlik/Çamaşır Yıkama"
+    },
+    {
+      "category": "household",
+      "path": "Deterjan, Temizlik/Bulaşık Yıkama"
+    },
+    {
+      "category": "household",
+      "path": "Deterjan, Temizlik/Genel Temizlik",
+      "group": "Temizlik Ürünleri",
+      "leaves": [
+        "Yüzey Temizleyiciler",
+        "Tuvalet Temizleyiciler",
+        "Mutfak ve Banyo Temizleyiciler",
+        "Cam Temizleyiciler"
+      ]
+    },
+    {
+      "category": "household",
+      "path": "Deterjan, Temizlik/Çöp Poşeti"
+    },
+    {
+      "category": "household",
+      "path": "Kağıt, Islak Mendil/Tuvalet Kağıdı"
+    },
+    {
+      "category": "household",
+      "path": "Kağıt, Islak Mendil/Kağıt Havlu"
+    },
+    {
+      "category": "household",
+      "path": "Kağıt, Islak Mendil/Peçete"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım, Kozmetik, Sağlık/Ağız Bakım Ürünleri",
+      "group": "Ağız Bakım",
+      "leaves": [
+        "Diş Macunu",
+        "Diş Fırçası"
+      ]
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım, Kozmetik, Sağlık/Saç Bakım",
+      "group": "Şampuan, Saç Kremi",
+      "leaves": [
+        "Şampuan",
+        "Saç Kremi"
+      ]
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım, Kozmetik, Sağlık/Duş, Banyo, Sabun",
+      "group": "Sabun, Duş Jeli",
+      "leaves": [
+        "Duş Jeli",
+        "Sabun"
+      ]
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım, Kozmetik, Sağlık/Parfüm, Deodorant",
+      "group": "Deodorant",
+      "leaves": [
+        "Deodorant"
+      ]
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım, Kozmetik, Sağlık/Hijyenik Ped"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kişisel Bakım, Kozmetik, Sağlık/Tıraş Malzemeleri"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kağıt, Islak Mendil/Kağıt Mendil",
+      "group": "Mendil"
+    },
+    {
+      "category": "personal_care",
+      "path": "Kağıt, Islak Mendil/Islak Mendil",
+      "group": "Mendil"
+    }
+  ]
+}

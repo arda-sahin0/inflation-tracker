@@ -1,0 +1,2575 @@
+{
+  "store": "migros",
+  "crawled": "2026-10-09",
+  "aisles": [
+    {
+      "name": "Meyve, Sebze",
+      "prettyName": "meyve-sebze-c-2",
+      "count": 213,
+      "shelves": [
+        {
+          "name": "Meyve",
+          "prettyName": "meyve-c-65",
+          "count": 66,
+          "leaves": [
+            {
+              "name": "Egzotik Meyveler",
+              "prettyName": "egzotik-meyveler-c-3ea",
+              "count": 33
+            },
+            {
+              "name": "Kavun ve Karpuz",
+              "prettyName": "kavun-ve-karpuz-c-3eb",
+              "count": 2
+            },
+            {
+              "name": "Narenciye",
+              "prettyName": "narenciye-c-3ec",
+              "count": 7
+            },
+            {
+              "name": "Sert Meyveler",
+              "prettyName": "sert-meyveler-c-3ed",
+              "count": 9
+            },
+            {
+              "name": "Yumuşak Meyveler",
+              "prettyName": "yumusak-meyveler-c-3ee",
+              "count": 12
+            },
+            {
+              "name": "Kabuklu Kuruyemiş",
+              "prettyName": "kabuklu-kuruyemis-c-3ef",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "Sebze",
+          "prettyName": "sebze-c-66",
+          "count": 142,
+          "leaves": [
+            {
+              "name": "Doğranmış, Ayıklanmış Sebzeler",
+              "prettyName": "dogranmis-ayiklanmis-sebzeler-c-3f1",
+              "count": 27
+            },
+            {
+              "name": "Egzotik Sebzeler",
+              "prettyName": "egzotik-sebzeler-c-3f2",
+              "count": 7
+            },
+            {
+              "name": "Kuru Sebzeler",
+              "prettyName": "kuru-sebzeler-c-3f3",
+              "count": 14
+            },
+            {
+              "name": "Mevsim Sebzeleri",
+              "prettyName": "mevsim-sebzeleri-c-3f4",
+              "count": 56
+            },
+            {
+              "name": "Otlar, Yeşillikler",
+              "prettyName": "otlar-yesillikler-c-3f5",
+              "count": 26
+            },
+            {
+              "name": "Patates, Soğan, Sarımsak",
+              "prettyName": "patates-sogan-sarimsak-c-3f6",
+              "count": 12
+            }
+          ]
+        },
+        {
+          "name": "Yetiştirme Kiti",
+          "prettyName": "yetistirme-kiti-c-118b1",
+          "count": 5,
+          "leaves": []
+        }
+      ]
+    },
+    {
+      "name": "Et, Tavuk, Balık",
+      "prettyName": "et-tavuk-balik-c-3",
+      "count": 519,
+      "shelves": [
+        {
+          "name": "Kırmızı Et",
+          "prettyName": "kirmizi-et-c-68",
+          "count": 97,
+          "leaves": [
+            {
+              "name": "Dana Eti",
+              "prettyName": "dana-eti-c-3fa",
+              "count": 34
+            },
+            {
+              "name": "Kuzu Eti",
+              "prettyName": "kuzu-eti-c-3fb",
+              "count": 12
+            },
+            {
+              "name": "Sakatat",
+              "prettyName": "sakatat-c-3fd",
+              "count": 26
+            },
+            {
+              "name": "Dondurulmuş Kırmızı Et",
+              "prettyName": "dondurulmus-kirmizi-et-c-282f",
+              "count": 20
+            },
+            {
+              "name": "Pişmeye Hazır Kırmızı Et",
+              "prettyName": "pismeye-hazir-kirmizi-et-c-11fda",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "name": "Beyaz Et",
+          "prettyName": "beyaz-et-c-69",
+          "count": 89,
+          "leaves": [
+            {
+              "name": "Piliç",
+              "prettyName": "pilic-c-3fe",
+              "count": 82
+            },
+            {
+              "name": "Hindi",
+              "prettyName": "hindi-c-3ff",
+              "count": 6
+            },
+            {
+              "name": "Bıldırcın Eti",
+              "prettyName": "bildircin-eti-c-113fe",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "Balık, Deniz Ürünleri",
+          "prettyName": "balik-deniz-urunleri-c-6a",
+          "count": 97,
+          "leaves": [
+            {
+              "name": "Mevsim Balıkları",
+              "prettyName": "mevsim-baliklari-c-402",
+              "count": 25
+            },
+            {
+              "name": "Hazır Deniz Ürünleri",
+              "prettyName": "hazir-deniz-urunleri-c-403",
+              "count": 36
+            },
+            {
+              "name": "Dondurulmuş Deniz Ürünleri",
+              "prettyName": "dondurulmus-deniz-urunleri-c-2830",
+              "count": 36
+            }
+          ]
+        },
+        {
+          "name": "Et Şarküteri",
+          "prettyName": "et-sarkuteri-c-6b",
+          "count": 236,
+          "leaves": [
+            {
+              "name": "Sucuk",
+              "prettyName": "sucuk-c-404",
+              "count": 69
+            },
+            {
+              "name": "Salam",
+              "prettyName": "salam-c-112d6",
+              "count": 39
+            },
+            {
+              "name": "Sosis",
+              "prettyName": "sosis-c-405",
+              "count": 30
+            },
+            {
+              "name": "Jambon",
+              "prettyName": "jambon-c-112d7",
+              "count": 13
+            },
+            {
+              "name": "Pastırma",
+              "prettyName": "pastirma-c-407",
+              "count": 22
+            },
+            {
+              "name": "Hazır Ürünler",
+              "prettyName": "hazir-urunler-c-52c",
+              "count": 4
+            },
+            {
+              "name": "Füme Et",
+              "prettyName": "fume-et-c-112d8",
+              "count": 43
+            },
+            {
+              "name": "Kavurma",
+              "prettyName": "kavurma-c-52b",
+              "count": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Süt, Kahvaltılık",
+      "prettyName": "sut-kahvaltilik-c-4",
+      "count": 1499,
+      "shelves": [
+        {
+          "name": "Süt",
+          "prettyName": "sut-c-6c",
+          "count": 140,
+          "leaves": [
+            {
+              "name": "Günlük Süt",
+              "prettyName": "gunluk-sut-c-409",
+              "count": 17
+            },
+            {
+              "name": "Uzun Ömürlü Süt",
+              "prettyName": "uzun-omurlu-sut-c-40a",
+              "count": 123
+            }
+          ]
+        },
+        {
+          "name": "Peynir",
+          "prettyName": "peynir-c-6d",
+          "count": 402,
+          "leaves": [
+            {
+              "name": "Beyaz Peynir",
+              "prettyName": "beyaz-peynir-c-40b",
+              "count": 106
+            },
+            {
+              "name": "Kaşar Peyniri",
+              "prettyName": "kasar-peyniri-c-40d",
+              "count": 71
+            },
+            {
+              "name": "Krem Peynir",
+              "prettyName": "krem-peynir-c-2737",
+              "count": 50
+            },
+            {
+              "name": "Üçgen & Burger Peynir",
+              "prettyName": "ucgen-burger-peynir-c-2738",
+              "count": 15
+            },
+            {
+              "name": "Yabancı Yöresel Peynir",
+              "prettyName": "yabanci-yoresel-peynir-c-273d",
+              "count": 70
+            },
+            {
+              "name": "Yerli Yöresel Peynir",
+              "prettyName": "yerli-yoresel-peynir-c-273e",
+              "count": 82
+            },
+            {
+              "name": "Quark Peyniri",
+              "prettyName": "quark-peyniri-c-273f",
+              "count": 9
+            }
+          ]
+        },
+        {
+          "name": "Yoğurt",
+          "prettyName": "yogurt-c-6e",
+          "count": 138,
+          "leaves": [
+            {
+              "name": "Kaymaklı Yoğurt",
+              "prettyName": "kaymakli-yogurt-c-40f",
+              "count": 14
+            },
+            {
+              "name": "Sade Yoğurt",
+              "prettyName": "sade-yogurt-c-410",
+              "count": 35
+            },
+            {
+              "name": "Süzme, Çeşnili Yoğurt",
+              "prettyName": "suzme-cesnili-yogurt-c-411",
+              "count": 12
+            },
+            {
+              "name": "Yoğurt Mayası",
+              "prettyName": "yogurt-mayasi-c-11a78",
+              "count": 4
+            },
+            {
+              "name": "Meyveli Yoğurt",
+              "prettyName": "meyveli-yogurt-c-2748",
+              "count": 18
+            },
+            {
+              "name": "Diğer Yoğurtlar",
+              "prettyName": "diger-yogurtlar-c-2749",
+              "count": 55
+            }
+          ]
+        },
+        {
+          "name": "Tereyağı",
+          "prettyName": "tereyagi-c-413",
+          "count": 46,
+          "leaves": []
+        },
+        {
+          "name": "Margarin",
+          "prettyName": "margarin-c-414",
+          "count": 28,
+          "leaves": [
+            {
+              "name": "Kase Margarin",
+              "prettyName": "kase-margarin-c-274d",
+              "count": 15
+            },
+            {
+              "name": "Paket Margarin",
+              "prettyName": "paket-margarin-c-274e",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "name": "Yumurta",
+          "prettyName": "yumurta-c-70",
+          "count": 27,
+          "leaves": []
+        },
+        {
+          "name": "Zeytin",
+          "prettyName": "zeytin-c-71",
+          "count": 116,
+          "leaves": [
+            {
+              "name": "Siyah Zeytin",
+              "prettyName": "siyah-zeytin-c-418",
+              "count": 56
+            },
+            {
+              "name": "Yeşil Zeytin",
+              "prettyName": "yesil-zeytin-c-419",
+              "count": 50
+            },
+            {
+              "name": "Zeytin Ezmesi",
+              "prettyName": "zeytin-ezmesi-c-41a",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "name": "Sütlü Tatlı, Krema",
+          "prettyName": "sutlu-tatli-krema-c-72",
+          "count": 80,
+          "leaves": [
+            {
+              "name": "Sütlü Tatlılar",
+              "prettyName": "sutlu-tatlilar-c-41c",
+              "count": 29
+            },
+            {
+              "name": "Puding",
+              "prettyName": "puding-c-41d",
+              "count": 16
+            },
+            {
+              "name": "Kaymak",
+              "prettyName": "kaymak-c-41e",
+              "count": 7
+            },
+            {
+              "name": "Krema ve Sos",
+              "prettyName": "krema-ve-sos-c-41f",
+              "count": 28
+            }
+          ]
+        },
+        {
+          "name": "Kahvaltılıklar",
+          "prettyName": "kahvaltiliklar-c-73",
+          "count": 522,
+          "leaves": [
+            {
+              "name": "Bal",
+              "prettyName": "bal-c-420",
+              "count": 68
+            },
+            {
+              "name": "Helva, Tahin, Pekmez",
+              "prettyName": "helva-tahin-pekmez-c-421",
+              "count": 115
+            },
+            {
+              "name": "Kahvaltılık Gevrek",
+              "prettyName": "kahvaltilik-gevrek-c-422",
+              "count": 116
+            },
+            {
+              "name": "Krem Çikolata, Ezmeler",
+              "prettyName": "krem-cikolata-ezmeler-c-423",
+              "count": 97
+            },
+            {
+              "name": "Reçel, Marmelat",
+              "prettyName": "recel-marmelat-c-424",
+              "count": 112
+            },
+            {
+              "name": "Kahvaltılık Sos",
+              "prettyName": "kahvaltilik-sos-c-113d2",
+              "count": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Temel Gıda",
+      "prettyName": "temel-gida-c-5",
+      "count": 1634,
+      "shelves": [
+        {
+          "name": "Makarnalar",
+          "prettyName": "makarnalar-c-425",
+          "count": 223,
+          "leaves": [
+            {
+              "name": "Makarna",
+              "prettyName": "makarna-c-2780",
+              "count": 175
+            },
+            {
+              "name": "Erişte",
+              "prettyName": "eriste-c-277e",
+              "count": 32
+            },
+            {
+              "name": "Şehriye",
+              "prettyName": "sehriye-c-2782",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "name": "Bakliyat",
+          "prettyName": "bakliyat-c-428",
+          "count": 226,
+          "leaves": [
+            {
+              "name": "Pirinç",
+              "prettyName": "pirinc-c-427",
+              "count": 74
+            },
+            {
+              "name": "Bulgur",
+              "prettyName": "bulgur-c-426",
+              "count": 49
+            },
+            {
+              "name": "Buğday",
+              "prettyName": "bugday-c-2793",
+              "count": 10
+            },
+            {
+              "name": "Fasulye",
+              "prettyName": "fasulye-c-2794",
+              "count": 23
+            },
+            {
+              "name": "Mercimek",
+              "prettyName": "mercimek-c-113c9",
+              "count": 24
+            },
+            {
+              "name": "Nohut",
+              "prettyName": "nohut-c-2798",
+              "count": 10
+            },
+            {
+              "name": "Barbunya",
+              "prettyName": "barbunya-c-2791",
+              "count": 5
+            },
+            {
+              "name": "Börülce",
+              "prettyName": "borulce-c-2792",
+              "count": 2
+            },
+            {
+              "name": "Bakla",
+              "prettyName": "bakla-c-2790",
+              "count": 3
+            },
+            {
+              "name": "Süper Gıdalar",
+              "prettyName": "super-gidalar-c-429",
+              "count": 18
+            },
+            {
+              "name": "Cin Mısır",
+              "prettyName": "cin-misir-c-2797",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "name": "Sıvı Yağ",
+          "prettyName": "sivi-yag-c-76",
+          "count": 96,
+          "leaves": [
+            {
+              "name": "Ayçiçek Yağı",
+              "prettyName": "aycicek-yagi-c-42d",
+              "count": 18
+            },
+            {
+              "name": "Zeytinyağı",
+              "prettyName": "zeytinyagi-c-433",
+              "count": 64
+            },
+            {
+              "name": "Fındık Yağı",
+              "prettyName": "findik-yagi-c-42e",
+              "count": 3
+            },
+            {
+              "name": "Mısır Yağı",
+              "prettyName": "misir-yagi-c-430",
+              "count": 2
+            },
+            {
+              "name": "Kanola Yağı",
+              "prettyName": "kanola-yagi-c-432",
+              "count": 1
+            },
+            {
+              "name": "Diğer Yağlar",
+              "prettyName": "diger-yaglar-c-434",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "name": "Tuz, Baharat, Harç",
+          "prettyName": "tuz-baharat-harc-c-77",
+          "count": 265,
+          "leaves": [
+            {
+              "name": "Baharat",
+              "prettyName": "baharat-c-435",
+              "count": 190
+            },
+            {
+              "name": "Tuz",
+              "prettyName": "tuz-c-436",
+              "count": 51
+            },
+            {
+              "name": "Yemek Harçları",
+              "prettyName": "yemek-harclari-c-27cf",
+              "count": 23
+            }
+          ]
+        },
+        {
+          "name": "Bulyon",
+          "prettyName": "bulyon-c-42c",
+          "count": 10,
+          "leaves": []
+        },
+        {
+          "name": "Konserve",
+          "prettyName": "konserve-c-452",
+          "count": 257,
+          "leaves": [
+            {
+              "name": "Salça",
+              "prettyName": "salca-c-453",
+              "count": 55
+            },
+            {
+              "name": "Turşu",
+              "prettyName": "tursu-c-454",
+              "count": 73
+            },
+            {
+              "name": "Ton Balığı",
+              "prettyName": "ton-baligi-c-2859",
+              "count": 48
+            },
+            {
+              "name": "Garnitür",
+              "prettyName": "garnitur-c-2854",
+              "count": 7
+            },
+            {
+              "name": "Közlenmiş",
+              "prettyName": "kozlenmis-c-2840",
+              "count": 13
+            },
+            {
+              "name": "Haşlanmış",
+              "prettyName": "haslanmis-c-2855",
+              "count": 24
+            },
+            {
+              "name": "Konserve Mısır",
+              "prettyName": "konserve-misir-c-2858",
+              "count": 10
+            },
+            {
+              "name": "Konserve Mantar",
+              "prettyName": "konserve-mantar-c-2856",
+              "count": 2
+            },
+            {
+              "name": "Konserve Meyve",
+              "prettyName": "konserve-meyve-c-2857",
+              "count": 1
+            },
+            {
+              "name": "Konserve Deniz Ürünleri",
+              "prettyName": "konserve-deniz-urunleri-c-285a",
+              "count": 2
+            },
+            {
+              "name": "Konserve Bezelye",
+              "prettyName": "konserve-bezelye-c-12251",
+              "count": 5
+            },
+            {
+              "name": "Konserve Fasulye",
+              "prettyName": "konserve-fasulye-c-12252",
+              "count": 1
+            },
+            {
+              "name": "Konserve Hindi",
+              "prettyName": "konserve-hindi-c-12253",
+              "count": 11
+            },
+            {
+              "name": "Konserve Sebze",
+              "prettyName": "konserve-sebze-c-2852",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "name": "Sos",
+          "prettyName": "sos-c-113fc",
+          "count": 291,
+          "leaves": [
+            {
+              "name": "Ketçap",
+              "prettyName": "ketcap-c-2847",
+              "count": 34
+            },
+            {
+              "name": "Mayonez",
+              "prettyName": "mayonez-c-2848",
+              "count": 37
+            },
+            {
+              "name": "Hardal",
+              "prettyName": "hardal-c-2845",
+              "count": 23
+            },
+            {
+              "name": "Barbekü Sos",
+              "prettyName": "barbeku-sos-c-284a",
+              "count": 9
+            },
+            {
+              "name": "Acı Sos",
+              "prettyName": "aci-sos-c-2849",
+              "count": 25
+            },
+            {
+              "name": "Soya Sosu",
+              "prettyName": "soya-sosu-c-2844",
+              "count": 15
+            },
+            {
+              "name": "Makarna Sosu",
+              "prettyName": "makarna-sosu-c-2846",
+              "count": 34
+            },
+            {
+              "name": "Lezzetlendirici Sos",
+              "prettyName": "lezzetlendirici-sos-c-284b",
+              "count": 40
+            },
+            {
+              "name": "Sirke",
+              "prettyName": "sirke-c-284f",
+              "count": 53
+            },
+            {
+              "name": "Limon Suyu",
+              "prettyName": "limon-suyu-c-284d",
+              "count": 3
+            },
+            {
+              "name": "Nar Ekşisi",
+              "prettyName": "nar-eksisi-c-284e",
+              "count": 11
+            },
+            {
+              "name": "Özel Salata Sosu",
+              "prettyName": "ozel-salata-sosu-c-2850",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "name": "Yufka",
+          "prettyName": "yufka-c-2872",
+          "count": 11,
+          "leaves": []
+        },
+        {
+          "name": "Un",
+          "prettyName": "un-c-45f",
+          "count": 40,
+          "leaves": [
+            {
+              "name": "Sade Un",
+              "prettyName": "sade-un-c-289b",
+              "count": 8
+            },
+            {
+              "name": "Mısır Unu",
+              "prettyName": "misir-unu-c-289e",
+              "count": 3
+            },
+            {
+              "name": "Galeta Unu",
+              "prettyName": "galeta-unu-c-289f",
+              "count": 4
+            },
+            {
+              "name": "Un Karışımı",
+              "prettyName": "un-karisimi-c-289d",
+              "count": 25
+            }
+          ]
+        },
+        {
+          "name": "Hamur, Pasta Malzemeleri",
+          "prettyName": "hamur-pasta-malzemeleri-c-45e",
+          "count": 172,
+          "leaves": [
+            {
+              "name": "İrmik",
+              "prettyName": "irmik-c-288d",
+              "count": 5
+            },
+            {
+              "name": "Kek ve Pasta Un Karışımları",
+              "prettyName": "kek-ve-pasta-un-karisimlari-c-288e",
+              "count": 31
+            },
+            {
+              "name": "Pudra Şekeri",
+              "prettyName": "pudra-sekeri-c-54a",
+              "count": 4
+            },
+            {
+              "name": "Krem Şanti",
+              "prettyName": "krem-santi-c-2890",
+              "count": 10
+            },
+            {
+              "name": "Nişasta",
+              "prettyName": "nisasta-c-2891",
+              "count": 8
+            },
+            {
+              "name": "Pasta Yardımcıları",
+              "prettyName": "pasta-yardimcilari-c-2892",
+              "count": 69
+            },
+            {
+              "name": "Pasta Tabanı",
+              "prettyName": "pasta-tabani-c-2870",
+              "count": 7
+            },
+            {
+              "name": "Kabartma Tozu, Şekerli Vanilin",
+              "prettyName": "kabartma-tozu-sekerli-vanilin-c-2893",
+              "count": 14
+            },
+            {
+              "name": "Kakao",
+              "prettyName": "kakao-c-2894",
+              "count": 10
+            },
+            {
+              "name": "Pirinç Unu",
+              "prettyName": "pirinc-unu-c-2895",
+              "count": 4
+            },
+            {
+              "name": "Instant Maya",
+              "prettyName": "instant-maya-c-2898",
+              "count": 8
+            },
+            {
+              "name": "Yaş Maya",
+              "prettyName": "yas-maya-c-2899",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "Şeker",
+          "prettyName": "seker-c-ac",
+          "count": 25,
+          "leaves": [
+            {
+              "name": "Küp Şeker",
+              "prettyName": "kup-seker-c-543",
+              "count": 6
+            },
+            {
+              "name": "Toz Şeker",
+              "prettyName": "toz-seker-c-544",
+              "count": 14
+            },
+            {
+              "name": "Esmer Şeker",
+              "prettyName": "esmer-seker-c-547",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "name": "Özel Beslenme Ürünleri",
+          "prettyName": "ozel-beslenme-urunleri-c-7f",
+          "count": 18,
+          "leaves": []
+        }
+      ]
+    },
+    {
+      "name": "İçecek",
+      "prettyName": "icecek-c-6",
+      "count": 1366,
+      "shelves": [
+        {
+          "name": "Gazlı İçecek",
+          "prettyName": "gazli-icecek-c-80",
+          "count": 196,
+          "leaves": [
+            {
+              "name": "Kola",
+              "prettyName": "kola-c-465",
+              "count": 45
+            },
+            {
+              "name": "Gazoz",
+              "prettyName": "gazoz-c-467",
+              "count": 92
+            },
+            {
+              "name": "Tonik Suyu",
+              "prettyName": "tonik-suyu-c-469",
+              "count": 9
+            },
+            {
+              "name": "Malt İçeceği",
+              "prettyName": "malt-icecegi-c-46a",
+              "count": 8
+            },
+            {
+              "name": "Enerji İçeceği",
+              "prettyName": "enerji-icecegi-c-46b",
+              "count": 42
+            }
+          ]
+        },
+        {
+          "name": "Gazsız İçecek",
+          "prettyName": "gazsiz-icecek-c-81",
+          "count": 316,
+          "leaves": [
+            {
+              "name": "Meyve Suyu",
+              "prettyName": "meyve-suyu-c-46c",
+              "count": 188
+            },
+            {
+              "name": "Şalgam Suyu",
+              "prettyName": "salgam-suyu-c-46e",
+              "count": 10
+            },
+            {
+              "name": "Limonata",
+              "prettyName": "limonata-c-46f",
+              "count": 20
+            },
+            {
+              "name": "Aroma Şurupları",
+              "prettyName": "aroma-suruplari-c-472",
+              "count": 12
+            },
+            {
+              "name": "Toz İçecek",
+              "prettyName": "toz-icecek-c-474",
+              "count": 4
+            },
+            {
+              "name": "Ayran",
+              "prettyName": "ayran-c-47a",
+              "count": 27
+            },
+            {
+              "name": "Sporcu İçecekleri",
+              "prettyName": "sporcu-icecekleri-c-28a3",
+              "count": 1
+            },
+            {
+              "name": "Kefir",
+              "prettyName": "kefir-c-47b",
+              "count": 45
+            },
+            {
+              "name": "Boza",
+              "prettyName": "boza-c-47c",
+              "count": 2
+            },
+            {
+              "name": "Fonksiyonel İçecek",
+              "prettyName": "fonksiyonel-icecek-c-473",
+              "count": 4
+            },
+            {
+              "name": "Milkshake",
+              "prettyName": "milkshake-c-471",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "Çay",
+          "prettyName": "cay-c-475",
+          "count": 337,
+          "leaves": [
+            {
+              "name": "Dökme Çay",
+              "prettyName": "dokme-cay-c-28c1",
+              "count": 66
+            },
+            {
+              "name": "Demlik Poşet Çay",
+              "prettyName": "demlik-poset-cay-c-1121e",
+              "count": 31
+            },
+            {
+              "name": "Bardak Poşet Çay",
+              "prettyName": "bardak-poset-cay-c-1121f",
+              "count": 30
+            },
+            {
+              "name": "Bitki Çayı",
+              "prettyName": "bitki-cayi-c-28c0",
+              "count": 101
+            },
+            {
+              "name": "Form Çayı",
+              "prettyName": "form-cayi-c-28c2",
+              "count": 10
+            },
+            {
+              "name": "Soğuk Çay",
+              "prettyName": "soguk-cay-c-28be",
+              "count": 99
+            }
+          ]
+        },
+        {
+          "name": "Kahve",
+          "prettyName": "kahve-c-476",
+          "count": 365,
+          "leaves": [
+            {
+              "name": "Türk Kahvesi",
+              "prettyName": "turk-kahvesi-c-28c4",
+              "count": 35
+            },
+            {
+              "name": "Hazır Kahve",
+              "prettyName": "hazir-kahve-c-11222",
+              "count": 104
+            },
+            {
+              "name": "Filtre Kahve",
+              "prettyName": "filtre-kahve-c-11223",
+              "count": 60
+            },
+            {
+              "name": "Kapsül Kahve",
+              "prettyName": "kapsul-kahve-c-11224",
+              "count": 48
+            },
+            {
+              "name": "Çekirdek Kahve",
+              "prettyName": "cekirdek-kahve-c-11225",
+              "count": 46
+            },
+            {
+              "name": "Soğuk Kahve",
+              "prettyName": "soguk-kahve-c-28bd",
+              "count": 47
+            },
+            {
+              "name": "Kahve Şurubu",
+              "prettyName": "kahve-surubu-c-28c5",
+              "count": 3
+            },
+            {
+              "name": "Sıcak Çikolata ve Salep",
+              "prettyName": "sicak-cikolata-ve-salep-c-28c8",
+              "count": 5
+            },
+            {
+              "name": "Kahve Kreması",
+              "prettyName": "kahve-kremasi-c-28d1",
+              "count": 7
+            },
+            {
+              "name": "Süt Tozu",
+              "prettyName": "sut-tozu-c-2b1a",
+              "count": 7
+            },
+            {
+              "name": "Kahve Filtresi",
+              "prettyName": "kahve-filtresi-c-11227",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "Su",
+          "prettyName": "su-c-84",
+          "count": 67,
+          "leaves": []
+        },
+        {
+          "name": "Maden Suyu",
+          "prettyName": "maden-suyu-c-85",
+          "count": 85,
+          "leaves": []
+        }
+      ]
+    },
+    {
+      "name": "Atıştırmalık",
+      "prettyName": "atistirmalik-c-113fb",
+      "count": 1876,
+      "shelves": [
+        {
+          "name": "Kuru Meyve",
+          "prettyName": "kuru-meyve-c-441",
+          "count": 113,
+          "leaves": [
+            {
+              "name": "Kuru Üzüm",
+              "prettyName": "kuru-uzum-c-27fd",
+              "count": 11
+            },
+            {
+              "name": "Badem Çiğ",
+              "prettyName": "badem-cig-c-27fe",
+              "count": 6
+            },
+            {
+              "name": "Kuru Erik",
+              "prettyName": "kuru-erik-c-27ff",
+              "count": 5
+            },
+            {
+              "name": "Kuru Kayısı",
+              "prettyName": "kuru-kayisi-c-2800",
+              "count": 12
+            },
+            {
+              "name": "Kuru İncir",
+              "prettyName": "kuru-incir-c-2801",
+              "count": 8
+            },
+            {
+              "name": "Hurma",
+              "prettyName": "hurma-c-2802",
+              "count": 8
+            },
+            {
+              "name": "Ceviz İçi",
+              "prettyName": "ceviz-ici-c-2805",
+              "count": 10
+            },
+            {
+              "name": "Fındık Çiğ",
+              "prettyName": "findik-cig-c-2806",
+              "count": 7
+            },
+            {
+              "name": "Karışık Çiğ",
+              "prettyName": "karisik-cig-c-2807",
+              "count": 10
+            },
+            {
+              "name": "Diğer Kuru Meyve",
+              "prettyName": "diger-kuru-meyve-c-2803",
+              "count": 32
+            },
+            {
+              "name": "Dut Kurusu",
+              "prettyName": "dut-kurusu-c-11918",
+              "count": 1
+            },
+            {
+              "name": "Çiğ Kaju",
+              "prettyName": "cig-kaju-c-11919",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "Kuruyemiş",
+          "prettyName": "kuruyemis-c-442",
+          "count": 188,
+          "leaves": [
+            {
+              "name": "Karışık Kuruyemiş",
+              "prettyName": "karisik-kuruyemis-c-2809",
+              "count": 37
+            },
+            {
+              "name": "Kabak Çekirdeği",
+              "prettyName": "kabak-cekirdegi-c-280a",
+              "count": 11
+            },
+            {
+              "name": "Ayçekirdeği",
+              "prettyName": "aycekirdegi-c-280b",
+              "count": 18
+            },
+            {
+              "name": "Fıstık",
+              "prettyName": "fistik-c-280c",
+              "count": 38
+            },
+            {
+              "name": "Antep Fıstığı",
+              "prettyName": "antep-fistigi-c-280d",
+              "count": 8
+            },
+            {
+              "name": "Fındık",
+              "prettyName": "findik-c-280e",
+              "count": 12
+            },
+            {
+              "name": "Badem",
+              "prettyName": "badem-c-280f",
+              "count": 14
+            },
+            {
+              "name": "Leblebi",
+              "prettyName": "leblebi-c-2811",
+              "count": 17
+            },
+            {
+              "name": "Kaju",
+              "prettyName": "kaju-c-2812",
+              "count": 13
+            },
+            {
+              "name": "Soslu Mısır",
+              "prettyName": "soslu-misir-c-118c2",
+              "count": 5
+            },
+            {
+              "name": "İğde",
+              "prettyName": "igde-c-12c2e",
+              "count": 1
+            },
+            {
+              "name": "Diğer Kuruyemiş",
+              "prettyName": "diger-kuruyemis-c-2810",
+              "count": 10
+            },
+            {
+              "name": "Ceviz",
+              "prettyName": "ceviz-c-12142",
+              "count": 1
+            },
+            {
+              "name": "Siirt Fıstığı",
+              "prettyName": "siirt-fistigi-c-2813",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "Cips",
+          "prettyName": "cips-c-440",
+          "count": 190,
+          "leaves": [
+            {
+              "name": "Patates Cipsi",
+              "prettyName": "patates-cipsi-c-27f9",
+              "count": 59
+            },
+            {
+              "name": "Mısır Cipsi",
+              "prettyName": "misir-cipsi-c-27f8",
+              "count": 29
+            },
+            {
+              "name": "Meyve, Sebze Cipsi",
+              "prettyName": "meyve-sebze-cipsi-c-27fb",
+              "count": 6
+            },
+            {
+              "name": "Pelet, Nohut ve Diğer Cips",
+              "prettyName": "pelet-nohut-ve-diger-cips-c-27f6",
+              "count": 59
+            },
+            {
+              "name": "Mısır Çerezi",
+              "prettyName": "misir-cerezi-c-27f7",
+              "count": 26
+            },
+            {
+              "name": "Patlamış Mısır",
+              "prettyName": "patlamis-misir-c-27fa",
+              "count": 11
+            }
+          ]
+        },
+        {
+          "name": "Çikolata",
+          "prettyName": "cikolata-c-439",
+          "count": 290,
+          "leaves": [
+            {
+              "name": "Bitter Çikolata",
+              "prettyName": "bitter-cikolata-c-113f6",
+              "count": 51
+            },
+            {
+              "name": "Sütlü Çikolata",
+              "prettyName": "sutlu-cikolata-c-113f7",
+              "count": 129
+            },
+            {
+              "name": "Beyaz Çikolata",
+              "prettyName": "beyaz-cikolata-c-113f8",
+              "count": 16
+            },
+            {
+              "name": "Draje Çikolata",
+              "prettyName": "draje-cikolata-c-27d7",
+              "count": 30
+            },
+            {
+              "name": "Hediye Çikolata",
+              "prettyName": "hediye-cikolata-c-113f9",
+              "count": 29
+            },
+            {
+              "name": "Oyuncaklı Çikolata",
+              "prettyName": "oyuncakli-cikolata-c-27d9",
+              "count": 14
+            },
+            {
+              "name": "Çocuk Çikolata",
+              "prettyName": "cocuk-cikolata-c-27da",
+              "count": 21
+            }
+          ]
+        },
+        {
+          "name": "Gofret",
+          "prettyName": "gofret-c-43a",
+          "count": 130,
+          "leaves": [
+            {
+              "name": "Çikolatalı Gofret",
+              "prettyName": "cikolatali-gofret-c-27db",
+              "count": 76
+            },
+            {
+              "name": "Rulo Gofret",
+              "prettyName": "rulo-gofret-c-27dd",
+              "count": 12
+            },
+            {
+              "name": "Wafer Gofret",
+              "prettyName": "wafer-gofret-c-27de",
+              "count": 42
+            }
+          ]
+        },
+        {
+          "name": "Bar, Kaplamalılar",
+          "prettyName": "bar-kaplamalilar-c-43b",
+          "count": 219,
+          "leaves": [
+            {
+              "name": "Çikolata Bar",
+              "prettyName": "cikolata-bar-c-27e0",
+              "count": 41
+            },
+            {
+              "name": "Protein & Fonksiyonel Bar",
+              "prettyName": "protein-fonksiyonel-bar-c-27e1",
+              "count": 61
+            },
+            {
+              "name": "Tahıllı Bar",
+              "prettyName": "tahilli-bar-c-27e2",
+              "count": 51
+            },
+            {
+              "name": "Meyve Bar",
+              "prettyName": "meyve-bar-c-27e3",
+              "count": 57
+            },
+            {
+              "name": "Krokan",
+              "prettyName": "krokan-c-113cb",
+              "count": 9
+            }
+          ]
+        },
+        {
+          "name": "Bisküvi",
+          "prettyName": "biskuvi-c-43c",
+          "count": 230,
+          "leaves": [
+            {
+              "name": "Bisküvi Tatlı",
+              "prettyName": "biskuvi-tatli-c-27eb",
+              "count": 56
+            },
+            {
+              "name": "Petibör",
+              "prettyName": "petibor-c-27ec",
+              "count": 14
+            },
+            {
+              "name": "Kaplamalı Bisküvi",
+              "prettyName": "kaplamali-biskuvi-c-27e6",
+              "count": 49
+            },
+            {
+              "name": "Tahıllı Bisküvi",
+              "prettyName": "tahilli-biskuvi-c-27e7",
+              "count": 32
+            },
+            {
+              "name": "Kremalı Bisküvi",
+              "prettyName": "kremali-biskuvi-c-27e8",
+              "count": 58
+            },
+            {
+              "name": "Form Bisküvi",
+              "prettyName": "form-biskuvi-c-27e9",
+              "count": 12
+            },
+            {
+              "name": "Bebe Bisküvisi",
+              "prettyName": "bebe-biskuvisi-c-27ed",
+              "count": 9
+            }
+          ]
+        },
+        {
+          "name": "Kek",
+          "prettyName": "kek-c-43d",
+          "count": 102,
+          "leaves": [
+            {
+              "name": "Baton Kek",
+              "prettyName": "baton-kek-c-27ef",
+              "count": 12
+            },
+            {
+              "name": "Mini Kek",
+              "prettyName": "mini-kek-c-27f0",
+              "count": 84
+            },
+            {
+              "name": "Tart",
+              "prettyName": "tart-c-27f1",
+              "count": 2
+            },
+            {
+              "name": "Kruvasan",
+              "prettyName": "kruvasan-c-27f2",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "Kraker",
+          "prettyName": "kraker-c-27ea",
+          "count": 82,
+          "leaves": []
+        },
+        {
+          "name": "Mısır ve Pirinç Patlağı",
+          "prettyName": "misir-ve-pirinc-patlagi-c-1202e",
+          "count": 29,
+          "leaves": []
+        },
+        {
+          "name": "Şekerleme",
+          "prettyName": "sekerleme-c-444",
+          "count": 239,
+          "leaves": [
+            {
+              "name": "Draje Şekerleme",
+              "prettyName": "draje-sekerleme-c-2816",
+              "count": 59
+            },
+            {
+              "name": "Yumuşak Şeker",
+              "prettyName": "yumusak-seker-c-2818",
+              "count": 87
+            },
+            {
+              "name": "Geleneksel Şekerleme",
+              "prettyName": "geleneksel-sekerleme-c-2819",
+              "count": 22
+            },
+            {
+              "name": "Lokum",
+              "prettyName": "lokum-c-281c",
+              "count": 56
+            },
+            {
+              "name": "Lolipop",
+              "prettyName": "lolipop-c-12c30",
+              "count": 9
+            },
+            {
+              "name": "Sert Şeker",
+              "prettyName": "sert-seker-c-12c31",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "name": "Sakız",
+          "prettyName": "sakiz-c-443",
+          "count": 65,
+          "leaves": []
+        }
+      ]
+    },
+    {
+      "name": "Dondurma",
+      "prettyName": "dondurma-c-41b",
+      "count": 225,
+      "shelves": [
+        {
+          "name": "Kap Dondurma",
+          "prettyName": "kap-dondurma-c-2763",
+          "count": 113,
+          "leaves": []
+        },
+        {
+          "name": "Tek Dondurma",
+          "prettyName": "tek-dondurma-c-2764",
+          "count": 106,
+          "leaves": []
+        },
+        {
+          "name": "Buz",
+          "prettyName": "buz-c-2762",
+          "count": 6,
+          "leaves": []
+        }
+      ]
+    },
+    {
+      "name": "Fırın, Pastane",
+      "prettyName": "firin-pastane-c-7e",
+      "count": 315,
+      "shelves": [
+        {
+          "name": "Ekmek",
+          "prettyName": "ekmek-c-455",
+          "count": 104,
+          "leaves": [
+            {
+              "name": "Sofra Ekmek",
+              "prettyName": "sofra-ekmek-c-134f1",
+              "count": 1
+            },
+            {
+              "name": "Baget Ekmek",
+              "prettyName": "baget-ekmek-c-134f2",
+              "count": 2
+            },
+            {
+              "name": "Tost Ekmeği",
+              "prettyName": "tost-ekmegi-c-134f3",
+              "count": 10
+            },
+            {
+              "name": "Sandviç Ekmeği",
+              "prettyName": "sandvic-ekmegi-c-134f4",
+              "count": 16
+            },
+            {
+              "name": "Hamburger Ekmeği",
+              "prettyName": "hamburger-ekmegi-c-134f0",
+              "count": 7
+            },
+            {
+              "name": "Bazlama",
+              "prettyName": "bazlama-c-134f5",
+              "count": 1
+            },
+            {
+              "name": "Çeşit Ekmekler",
+              "prettyName": "cesit-ekmekler-c-134f6",
+              "count": 39
+            },
+            {
+              "name": "Gözleme",
+              "prettyName": "gozleme-c-134f7",
+              "count": 1
+            },
+            {
+              "name": "Katmer",
+              "prettyName": "katmer-c-134f8",
+              "count": 2
+            },
+            {
+              "name": "Lavaş",
+              "prettyName": "lavas-c-134f9",
+              "count": 25
+            }
+          ]
+        },
+        {
+          "name": "Sabah Sıcakları",
+          "prettyName": "sabah-sicaklari-c-456",
+          "count": 23,
+          "leaves": [
+            {
+              "name": "Simit",
+              "prettyName": "simit-c-2868",
+              "count": 1
+            },
+            {
+              "name": "Poğaça",
+              "prettyName": "pogaca-c-2869",
+              "count": 4
+            },
+            {
+              "name": "Açma",
+              "prettyName": "acma-c-286a",
+              "count": 3
+            },
+            {
+              "name": "Börek",
+              "prettyName": "borek-c-45c",
+              "count": 7
+            },
+            {
+              "name": "Diğer Sabah Sıcakları",
+              "prettyName": "diger-sabah-sicaklari-c-286c",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "name": "Kuru Pasta",
+          "prettyName": "kuru-pasta-c-457",
+          "count": 43,
+          "leaves": [
+            {
+              "name": "Tuzlu Kuru Pasta",
+              "prettyName": "tuzlu-kuru-pasta-c-286d",
+              "count": 9
+            },
+            {
+              "name": "Tatlı Kuru Pasta",
+              "prettyName": "tatli-kuru-pasta-c-286e",
+              "count": 32
+            },
+            {
+              "name": "Kek Çeşitleri",
+              "prettyName": "kek-cesitleri-c-286f",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "Pasta",
+          "prettyName": "pasta-c-459",
+          "count": 7,
+          "leaves": [
+            {
+              "name": "Yaş Pasta",
+              "prettyName": "yas-pasta-c-2876",
+              "count": 4
+            },
+            {
+              "name": "Cheesecake Tart",
+              "prettyName": "cheesecake-tart-c-2877",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "Galeta, Grissini, Gevrek",
+          "prettyName": "galeta-grissini-gevrek-c-45a",
+          "count": 52,
+          "leaves": [
+            {
+              "name": "Galeta, Grissini",
+              "prettyName": "galeta-grissini-c-2878",
+              "count": 44
+            },
+            {
+              "name": "Gevrek Ekmek",
+              "prettyName": "gevrek-ekmek-c-2879",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "name": "Tatlı",
+          "prettyName": "tatli-c-45b",
+          "count": 86,
+          "leaves": [
+            {
+              "name": "Pastane Tatlılar",
+              "prettyName": "pastane-tatlilar-c-287b",
+              "count": 15
+            },
+            {
+              "name": "Toz  Tatlılar",
+              "prettyName": "toz-tatlilar-c-287d",
+              "count": 71
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hazır Yemek, Meze",
+      "prettyName": "hazir-yemek-meze-c-7d",
+      "count": 289,
+      "shelves": [
+        {
+          "name": "Pratik Yemek",
+          "prettyName": "pratik-yemek-c-44f",
+          "count": 153,
+          "leaves": []
+        },
+        {
+          "name": "Meze",
+          "prettyName": "meze-c-44e",
+          "count": 63,
+          "leaves": [
+            {
+              "name": "Mezeler",
+              "prettyName": "mezeler-c-283f",
+              "count": 63
+            }
+          ]
+        },
+        {
+          "name": "Hazır Mantı",
+          "prettyName": "hazir-manti-c-2875",
+          "count": 12,
+          "leaves": []
+        },
+        {
+          "name": "Sushi",
+          "prettyName": "sushi-c-12c1d",
+          "count": 27,
+          "leaves": []
+        },
+        {
+          "name": "Paketli Sandviç",
+          "prettyName": "paketli-sandvic-c-2837",
+          "count": 25,
+          "leaves": []
+        },
+        {
+          "name": "Pişmeye Hazır Etler",
+          "prettyName": "pismeye-hazir-etler-c-11fd7",
+          "count": 6,
+          "leaves": [
+            {
+              "name": "Pişmeye Hazır Kırmızı Etler",
+              "prettyName": "pismeye-hazir-kirmizi-etler-c-11fd8",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "name": "Salatalar",
+          "prettyName": "salatalar-c-2839",
+          "count": 1,
+          "leaves": []
+        }
+      ]
+    },
+    {
+      "name": "Gurmepack Yemek",
+      "prettyName": "gurmepack-yemek-c-121f5",
+      "count": 15,
+      "shelves": [
+        {
+          "name": "Gurmepack Ürünleri",
+          "prettyName": "gurmepack-urunleri-c-121f6",
+          "count": 15,
+          "leaves": []
+        }
+      ]
+    },
+    {
+      "name": "Dondurulmuş Gıda",
+      "prettyName": "dondurulmus-gida-c-7c",
+      "count": 217,
+      "shelves": [
+        {
+          "name": "Dondurulmuş Pizza",
+          "prettyName": "dondurulmus-pizza-c-2829",
+          "count": 23,
+          "leaves": []
+        },
+        {
+          "name": "Dondurulmuş Patates",
+          "prettyName": "dondurulmus-patates-c-282c",
+          "count": 22,
+          "leaves": []
+        },
+        {
+          "name": "Dondurulmuş Sebze",
+          "prettyName": "dondurulmus-sebze-c-282d",
+          "count": 24,
+          "leaves": []
+        },
+        {
+          "name": "Dondurulmuş Sushi",
+          "prettyName": "dondurulmus-sushi-c-12c1e",
+          "count": 9,
+          "leaves": []
+        },
+        {
+          "name": "Dondurulmuş Meyve",
+          "prettyName": "dondurulmus-meyve-c-282b",
+          "count": 15,
+          "leaves": []
+        },
+        {
+          "name": "Milföy",
+          "prettyName": "milfoy-c-2828",
+          "count": 5,
+          "leaves": []
+        },
+        {
+          "name": "Dondurulmuş Börek",
+          "prettyName": "dondurulmus-borek-c-2826",
+          "count": 15,
+          "leaves": []
+        },
+        {
+          "name": "Dondurulmuş Mantı",
+          "prettyName": "dondurulmus-manti-c-2827",
+          "count": 11,
+          "leaves": []
+        },
+        {
+          "name": "Pide & Lahmacun",
+          "prettyName": "pide-lahmacun-c-1191d",
+          "count": 17,
+          "leaves": []
+        },
+        {
+          "name": "Dondurulmuş Tatlı",
+          "prettyName": "dondurulmus-tatli-c-282a",
+          "count": 31,
+          "leaves": []
+        },
+        {
+          "name": "Dondurulmuş Fırın Ürünleri",
+          "prettyName": "dondurulmus-firin-urunleri-c-44a",
+          "count": 13,
+          "leaves": []
+        },
+        {
+          "name": "Dondurulmuş Hazır Yemek",
+          "prettyName": "dondurulmus-hazir-yemek-c-2842",
+          "count": 32,
+          "leaves": []
+        }
+      ]
+    },
+    {
+      "name": "Deterjan, Temizlik",
+      "prettyName": "deterjan-temizlik-c-7",
+      "count": 1099,
+      "shelves": [
+        {
+          "name": "Genel Temizlik",
+          "prettyName": "genel-temizlik-c-88",
+          "count": 379,
+          "leaves": [
+            {
+              "name": "Yüzey Temizlik Havlusu",
+              "prettyName": "yuzey-temizlik-havlusu-c-1223c",
+              "count": 13
+            },
+            {
+              "name": "Cam Temizleyiciler",
+              "prettyName": "cam-temizleyiciler-c-48b",
+              "count": 10
+            },
+            {
+              "name": "Halı Şampuanları",
+              "prettyName": "hali-sampuanlari-c-48c",
+              "count": 4
+            },
+            {
+              "name": "Haşere Öldürücüler",
+              "prettyName": "hasere-olduruculer-c-48d",
+              "count": 49
+            },
+            {
+              "name": "Leke Çıkarıcı ve Koruyucular",
+              "prettyName": "leke-cikarici-ve-koruyucular-c-48e",
+              "count": 63
+            },
+            {
+              "name": "Hava Temizleyiciler",
+              "prettyName": "hava-temizleyiciler-c-48f",
+              "count": 99
+            },
+            {
+              "name": "Tuvalet Temizleyiciler",
+              "prettyName": "tuvalet-temizleyiciler-c-490",
+              "count": 48
+            },
+            {
+              "name": "Mutfak ve Banyo Temizleyiciler",
+              "prettyName": "mutfak-ve-banyo-temizleyiciler-c-491",
+              "count": 38
+            },
+            {
+              "name": "Yüzey Temizleyiciler",
+              "prettyName": "yuzey-temizleyiciler-c-492",
+              "count": 35
+            },
+            {
+              "name": "Ayakkabı Bakım",
+              "prettyName": "ayakkabi-bakim-c-2a40",
+              "count": 15
+            },
+            {
+              "name": "Ahşap Temizleyiciler",
+              "prettyName": "ahsap-temizleyiciler-c-48a",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "name": "Çamaşır Yıkama",
+          "prettyName": "camasir-yikama-c-86",
+          "count": 339,
+          "leaves": [
+            {
+              "name": "Çamaşır Deterjanı",
+              "prettyName": "camasir-deterjani-c-486",
+              "count": 180
+            },
+            {
+              "name": "Yumuşatıcı",
+              "prettyName": "yumusatici-c-484",
+              "count": 88
+            },
+            {
+              "name": "Kireç Önleyiciler",
+              "prettyName": "kirec-onleyiciler-c-28d5",
+              "count": 9
+            },
+            {
+              "name": "Çamaşır Suyu",
+              "prettyName": "camasir-suyu-c-483",
+              "count": 42
+            },
+            {
+              "name": "Renk Koruyucular",
+              "prettyName": "renk-koruyucular-c-485",
+              "count": 20
+            }
+          ]
+        },
+        {
+          "name": "Bulaşık Yıkama",
+          "prettyName": "bulasik-yikama-c-87",
+          "count": 104,
+          "leaves": [
+            {
+              "name": "Bulaşık Makinesi Ürünleri",
+              "prettyName": "bulasik-makinesi-urunleri-c-488",
+              "count": 68
+            },
+            {
+              "name": "Sıvı Bulaşık Deterjanı",
+              "prettyName": "sivi-bulasik-deterjani-c-489",
+              "count": 36
+            }
+          ]
+        },
+        {
+          "name": "Temizlik Malzemeleri",
+          "prettyName": "temizlik-malzemeleri-c-89",
+          "count": 95,
+          "leaves": [
+            {
+              "name": "Eldiven",
+              "prettyName": "eldiven-c-2914",
+              "count": 10
+            },
+            {
+              "name": "Temizlik Bezi",
+              "prettyName": "temizlik-bezi-c-495",
+              "count": 15
+            },
+            {
+              "name": "Temizlik Süngeri",
+              "prettyName": "temizlik-sungeri-c-496",
+              "count": 33
+            },
+            {
+              "name": "Temizlik Fırçası",
+              "prettyName": "temizlik-fircasi-c-2916",
+              "count": 9
+            },
+            {
+              "name": "Tüy Toplayıcı Rulo",
+              "prettyName": "tuy-toplayici-rulo-c-2919",
+              "count": 9
+            },
+            {
+              "name": "Mop, Paspas ve Yedekleri",
+              "prettyName": "mop-paspas-ve-yedekleri-c-2918",
+              "count": 7
+            },
+            {
+              "name": "Temizlik Seti",
+              "prettyName": "temizlik-seti-c-291b",
+              "count": 10
+            },
+            {
+              "name": "Cam Sileceği",
+              "prettyName": "cam-silecegi-c-12073",
+              "count": 1
+            },
+            {
+              "name": "Lavabo Pompası",
+              "prettyName": "lavabo-pompasi-c-12074",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "Banyo Gereçleri",
+          "prettyName": "banyo-gerecleri-c-8b",
+          "count": 69,
+          "leaves": [
+            {
+              "name": "Banyo Set ve Aksesuarları",
+              "prettyName": "banyo-set-ve-aksesuarlari-c-498",
+              "count": 61
+            },
+            {
+              "name": "Banyo Plastikleri",
+              "prettyName": "banyo-plastikleri-c-499",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "name": "Çamaşır Gereçleri",
+          "prettyName": "camasir-gerecleri-c-8a",
+          "count": 65,
+          "leaves": [
+            {
+              "name": "Askı",
+              "prettyName": "aski-c-2a09",
+              "count": 31
+            },
+            {
+              "name": "Çamaşır Kurutmalık",
+              "prettyName": "camasir-kurutmalik-c-49a",
+              "count": 6
+            },
+            {
+              "name": "Mandal",
+              "prettyName": "mandal-c-292d",
+              "count": 7
+            },
+            {
+              "name": "Çamaşır İpi",
+              "prettyName": "camasir-ipi-c-11627",
+              "count": 2
+            },
+            {
+              "name": "Çamaşır ve Kirli Sepeti",
+              "prettyName": "camasir-ve-kirli-sepeti-c-292b",
+              "count": 5
+            },
+            {
+              "name": "Ütü Masası",
+              "prettyName": "utu-masasi-c-49b",
+              "count": 9
+            },
+            {
+              "name": "Ütü Masası Kılıfı ve Askısı",
+              "prettyName": "utu-masasi-kilifi-ve-askisi-c-292f",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "name": "Çöp Poşeti",
+          "prettyName": "cop-poseti-c-11359",
+          "count": 48,
+          "leaves": []
+        }
+      ]
+    },
+    {
+      "name": "Kişisel Bakım, Kozmetik, Sağlık",
+      "prettyName": "kisisel-bakim-kozmetik-saglik-c-8",
+      "count": 2820,
+      "shelves": [
+        {
+          "name": "Güneş Bakım",
+          "prettyName": "gunes-bakim-c-94",
+          "count": 34,
+          "leaves": [
+            {
+              "name": "Güneş Kremi, Losyonu",
+              "prettyName": "gunes-kremi-losyonu-c-4be",
+              "count": 29
+            },
+            {
+              "name": "Güneş Sonrası Ürünler",
+              "prettyName": "gunes-sonrasi-urunler-c-4bf",
+              "count": 2
+            },
+            {
+              "name": "Güneşsiz Bronzlaştırıcılar",
+              "prettyName": "gunessiz-bronzlastiricilar-c-4c0",
+              "count": 1
+            },
+            {
+              "name": "Güneş Yağı",
+              "prettyName": "gunes-yagi-c-11871",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "Hijyenik Ped",
+          "prettyName": "hijyenik-ped-c-96",
+          "count": 135,
+          "leaves": [
+            {
+              "name": "Günlük Ped",
+              "prettyName": "gunluk-ped-c-533",
+              "count": 36
+            },
+            {
+              "name": "Ultra Ped",
+              "prettyName": "ultra-ped-c-534",
+              "count": 82
+            },
+            {
+              "name": "Tampon",
+              "prettyName": "tampon-c-536",
+              "count": 16
+            },
+            {
+              "name": "İntim Ürünleri",
+              "prettyName": "intim-urunleri-c-537",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "Ağız Bakım Ürünleri",
+          "prettyName": "agiz-bakim-urunleri-c-8e",
+          "count": 307,
+          "leaves": [
+            {
+              "name": "Diş Macunu",
+              "prettyName": "dis-macunu-c-4a1",
+              "count": 102
+            },
+            {
+              "name": "Diş Fırçası",
+              "prettyName": "dis-fircasi-c-4a0",
+              "count": 116
+            },
+            {
+              "name": "Ağız Bakım Suyu",
+              "prettyName": "agiz-bakim-suyu-c-2932",
+              "count": 34
+            },
+            {
+              "name": "Diş Parlatıcı, Beyazlatma",
+              "prettyName": "dis-parlatici-beyazlatma-c-2933",
+              "count": 5
+            },
+            {
+              "name": "Diş İpi",
+              "prettyName": "dis-ipi-c-1123a",
+              "count": 4
+            },
+            {
+              "name": "Dil Temizlik Ürünleri",
+              "prettyName": "dil-temizlik-urunleri-c-2b0f",
+              "count": 1
+            },
+            {
+              "name": "Çocuk Diş Bakımı",
+              "prettyName": "cocuk-dis-bakimi-c-1123b",
+              "count": 39
+            },
+            {
+              "name": "Kürdan",
+              "prettyName": "kurdan-c-2b0d",
+              "count": 4
+            },
+            {
+              "name": "Koruyucu, Saklama Kabı",
+              "prettyName": "koruyucu-saklama-kabi-c-4a3",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "Saç Bakım",
+          "prettyName": "sac-bakim-c-8f",
+          "count": 635,
+          "leaves": [
+            {
+              "name": "Şampuan",
+              "prettyName": "sampuan-c-4a4",
+              "count": 184
+            },
+            {
+              "name": "Saç Kremi",
+              "prettyName": "sac-kremi-c-2939",
+              "count": 101
+            },
+            {
+              "name": "Kuru Şampuan",
+              "prettyName": "kuru-sampuan-c-2937",
+              "count": 5
+            },
+            {
+              "name": "Saç Boyası",
+              "prettyName": "sac-boyasi-c-4a7",
+              "count": 181
+            },
+            {
+              "name": "Saç Onarıcılar",
+              "prettyName": "sac-onaricilar-c-2938",
+              "count": 83
+            },
+            {
+              "name": "Saç Şekillendiriciler",
+              "prettyName": "sac-sekillendiriciler-c-4a6",
+              "count": 54
+            },
+            {
+              "name": "Saç Tarayıcılar",
+              "prettyName": "sac-tarayicilar-c-4a9",
+              "count": 27
+            }
+          ]
+        },
+        {
+          "name": "Duş, Banyo, Sabun",
+          "prettyName": "dus-banyo-sabun-c-92",
+          "count": 326,
+          "leaves": [
+            {
+              "name": "Banyo Köpüğü",
+              "prettyName": "banyo-kopugu-c-113a0",
+              "count": 1
+            },
+            {
+              "name": "Duş Jeli",
+              "prettyName": "dus-jeli-c-4b9",
+              "count": 135
+            },
+            {
+              "name": "Lif, Sünger, Setler",
+              "prettyName": "lif-sunger-setler-c-4ba",
+              "count": 24
+            },
+            {
+              "name": "Sabun",
+              "prettyName": "sabun-c-4bb",
+              "count": 166
+            }
+          ]
+        },
+        {
+          "name": "Tıraş Malzemeleri",
+          "prettyName": "tiras-malzemeleri-c-90",
+          "count": 91,
+          "leaves": [
+            {
+              "name": "Kullan At Tıraş Bıçağı",
+              "prettyName": "kullan-at-tiras-bicagi-c-4aa",
+              "count": 33
+            },
+            {
+              "name": "Tıraş Bıçağı",
+              "prettyName": "tiras-bicagi-c-4ab",
+              "count": 10
+            },
+            {
+              "name": "Tıraş Makinaları",
+              "prettyName": "tiras-makinalari-c-4ac",
+              "count": 10
+            },
+            {
+              "name": "Tıraş Jeli",
+              "prettyName": "tiras-jeli-c-4ae",
+              "count": 10
+            },
+            {
+              "name": "Tıraş Köpüğü",
+              "prettyName": "tiras-kopugu-c-4af",
+              "count": 13
+            },
+            {
+              "name": "Tıraş Kremi",
+              "prettyName": "tiras-kremi-c-4b0",
+              "count": 1
+            },
+            {
+              "name": "Tıraş Sabunu",
+              "prettyName": "tiras-sabunu-c-4b1",
+              "count": 1
+            },
+            {
+              "name": "Tıraş Sonrası Ürünler",
+              "prettyName": "tiras-sonrasi-urunler-c-4b2",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "name": "Ağda, Epilasyon",
+          "prettyName": "agda-epilasyon-c-91",
+          "count": 83,
+          "leaves": [
+            {
+              "name": "Ağda",
+              "prettyName": "agda-c-4b3",
+              "count": 11
+            },
+            {
+              "name": "Ağda Malzemeleri",
+              "prettyName": "agda-malzemeleri-c-4b4",
+              "count": 18
+            },
+            {
+              "name": "Ağda Makinesi",
+              "prettyName": "agda-makinesi-c-4b5",
+              "count": 1
+            },
+            {
+              "name": "Ağda Sonrası Ürünler",
+              "prettyName": "agda-sonrasi-urunler-c-4b6",
+              "count": 1
+            },
+            {
+              "name": "Tüy Dökücü Ürünler",
+              "prettyName": "tuy-dokucu-urunler-c-4b7",
+              "count": 19
+            },
+            {
+              "name": "Kadın Tıraş Ürünleri",
+              "prettyName": "kadin-tiras-urunleri-c-4b8",
+              "count": 24
+            },
+            {
+              "name": "Cımbız",
+              "prettyName": "cimbiz-c-1145e",
+              "count": 9
+            }
+          ]
+        },
+        {
+          "name": "Cilt Bakımı",
+          "prettyName": "cilt-bakimi-c-93",
+          "count": 350,
+          "leaves": [
+            {
+              "name": "El ve Vücut Bakım",
+              "prettyName": "el-ve-vucut-bakim-c-4bc",
+              "count": 109
+            },
+            {
+              "name": "Yüz Bakım",
+              "prettyName": "yuz-bakim-c-4bd",
+              "count": 207
+            },
+            {
+              "name": "Dudak Kremi",
+              "prettyName": "dudak-kremi-c-11236",
+              "count": 34
+            }
+          ]
+        },
+        {
+          "name": "Kolonya",
+          "prettyName": "kolonya-c-4cf",
+          "count": 55,
+          "leaves": []
+        },
+        {
+          "name": "Parfüm, Deodorant",
+          "prettyName": "parfum-deodorant-c-97",
+          "count": 235,
+          "leaves": [
+            {
+              "name": "Deodorant",
+              "prettyName": "deodorant-c-4cd",
+              "count": 208
+            },
+            {
+              "name": "Parfüm",
+              "prettyName": "parfum-c-4ce",
+              "count": 13
+            },
+            {
+              "name": "Vücut Spreyi",
+              "prettyName": "vucut-spreyi-c-1191b",
+              "count": 14
+            }
+          ]
+        },
+        {
+          "name": "Makyaj",
+          "prettyName": "makyaj-c-95",
+          "count": 312,
+          "leaves": [
+            {
+              "name": "Yüz Makyajı",
+              "prettyName": "yuz-makyaji-c-4c2",
+              "count": 13
+            },
+            {
+              "name": "Göz Makyajı",
+              "prettyName": "goz-makyaji-c-4c3",
+              "count": 15
+            },
+            {
+              "name": "Dudak Ürünleri",
+              "prettyName": "dudak-urunleri-c-4c5",
+              "count": 21
+            },
+            {
+              "name": "Tırnak Ürünleri",
+              "prettyName": "tirnak-urunleri-c-4c6",
+              "count": 188
+            },
+            {
+              "name": "Makyaj Temizleme",
+              "prettyName": "makyaj-temizleme-c-11457",
+              "count": 34
+            },
+            {
+              "name": "Makyaj Fırçası",
+              "prettyName": "makyaj-fircasi-c-4c7",
+              "count": 21
+            },
+            {
+              "name": "Makyaj Seti",
+              "prettyName": "makyaj-seti-c-531",
+              "count": 1
+            },
+            {
+              "name": "Makyaj Aksesuarları",
+              "prettyName": "makyaj-aksesuarlari-c-530",
+              "count": 12
+            },
+            {
+              "name": "Takılar",
+              "prettyName": "takilar-c-4ca",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "name": "Sağlık Ürünleri",
+          "prettyName": "saglik-urunleri-c-98",
+          "count": 257,
+          "leaves": [
+            {
+              "name": "Pamuk",
+              "prettyName": "pamuk-c-11244",
+              "count": 6
+            },
+            {
+              "name": "Kulak Çubuğu",
+              "prettyName": "kulak-cubugu-c-11245",
+              "count": 7
+            },
+            {
+              "name": "Prezervatif, Jeller",
+              "prettyName": "prezervatif-jeller-c-4d4",
+              "count": 57
+            },
+            {
+              "name": "Ayak Bakım",
+              "prettyName": "ayak-bakim-c-4d3",
+              "count": 42
+            },
+            {
+              "name": "Isı Bandı",
+              "prettyName": "isi-bandi-c-11246",
+              "count": 5
+            },
+            {
+              "name": "Burun Bandı",
+              "prettyName": "burun-bandi-c-11247",
+              "count": 6
+            },
+            {
+              "name": "Takviye Edici Gıda",
+              "prettyName": "takviye-edici-gida-c-4d5",
+              "count": 56
+            },
+            {
+              "name": "Bitkisel Bakım Yağı",
+              "prettyName": "bitkisel-bakim-yagi-c-11868",
+              "count": 9
+            },
+            {
+              "name": "İlk Yardım",
+              "prettyName": "ilk-yardim-c-4d2",
+              "count": 9
+            },
+            {
+              "name": "Sporcu Takviyeleri",
+              "prettyName": "sporcu-takviyeleri-c-28a4",
+              "count": 14
+            },
+            {
+              "name": "Kişisel Bakım Aletleri",
+              "prettyName": "kisisel-bakim-aletleri-c-4cb",
+              "count": 2
+            },
+            {
+              "name": "Hasta Bakım Ürünleri",
+              "prettyName": "hasta-bakim-urunleri-c-4d6",
+              "count": 32
+            },
+            {
+              "name": "Diğer Sağlık Ürünleri",
+              "prettyName": "diger-saglik-urunleri-c-11249",
+              "count": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kağıt, Islak Mendil",
+      "prettyName": "kagit-islak-mendil-c-8d",
+      "count": 138,
+      "shelves": [
+        {
+          "name": "Islak Mendil",
+          "prettyName": "islak-mendil-c-49e",
+          "count": 33,
+          "leaves": []
+        },
+        {
+          "name": "Tuvalet Kağıdı",
+          "prettyName": "tuvalet-kagidi-c-49c",
+          "count": 22,
+          "leaves": []
+        },
+        {
+          "name": "Kağıt Havlu",
+          "prettyName": "kagit-havlu-c-49d",
+          "count": 28,
+          "leaves": [
+            {
+              "name": "Rulo Havlu Peçete",
+              "prettyName": "rulo-havlu-pecete-c-121fe",
+              "count": 14
+            },
+            {
+              "name": "Dev Rulo Peçete",
+              "prettyName": "dev-rulo-pecete-c-121fd",
+              "count": 8
+            },
+            {
+              "name": "El, Yüz Havlusu",
+              "prettyName": "el-yuz-havlusu-c-121fc",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "name": "Peçete",
+          "prettyName": "pecete-c-49f",
+          "count": 15,
+          "leaves": []
+        },
+        {
+          "name": "Kağıt Mendil",
+          "prettyName": "kagit-mendil-c-11444",
+          "count": 24,
+          "leaves": []
+        },
+        {
+          "name": "Temizlik Havlusu",
+          "prettyName": "temizlik-havlusu-c-12163",
+          "count": 16,
+          "leaves": []
+        }
+      ]
+    }
+  ]
+}

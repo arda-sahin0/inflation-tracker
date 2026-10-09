@@ -42,7 +42,7 @@ def collect(pages: list[dict], rule: dict) -> list[dict]:
                 category = rule["category"]
             seen.add(sku)
             row = migros.listing_row(product, category)
-            row["group"] = name                     # its own elementary group within each category
+            row["group"] = rule.get("group") or name   # its elementary group within the category
             rows.append(row)
     return rows
 
@@ -67,8 +67,9 @@ def fetch_pages(rule: dict, max_pages: int | None = None, sleep: float = SLEEP_S
 
 def check_rule(rule: dict) -> None:
     """A rule with no category filter would sweep up everything the query returns."""
-    if not (rule.get("include_categories") or rule.get("match_category") or rule.get("leaf_map")
-            or rule.get("allow_all")):
+    # a category page is its own filter; a search needs one
+    if not (rule.get("shop_category") or rule.get("include_categories") or rule.get("match_category")
+            or rule.get("leaf_map") or rule.get("allow_all")):
         raise ValueError(f"sweep {rule.get('name', rule.get('query'))!r} has no include_categories; "
                          f"run discover.py <query> --categories to find them")
 
