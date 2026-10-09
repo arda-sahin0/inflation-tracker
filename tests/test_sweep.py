@@ -109,3 +109,20 @@ def test_every_live_rule_is_configured():
         assert rule["category"] in ALLOWED_CATEGORIES, rule["name"]
     names = [r["name"] for r in load_rules(include_disabled=True)]
     assert len(names) == len(set(names)), "sweep names must be unique (they are the group ids)"
+
+
+def test_a_whole_shelf_rule_sorts_products_by_leaf_into_index_categories():
+    page = {"storeProductInfos": PAGE["storeProductInfos"] + [PLANT_DRINK]}
+    rule = {"name": "milk_shelf", "shop_category": "sut-c-6c",
+            "leaf_map": {"Uzun Ömürlü Süt": "dairy_eggs"}}       # plant drinks: not mapped, so left out
+    rows = collect([page], rule)
+    assert {r["category"] for r in rows} == {"dairy_eggs"}
+    assert "11019914" not in {r["sku"] for r in rows}
+    assert {r["group"] for r in rows} == {"milk_shelf"}
+    check_rule(rule)                                             # a leaf_map counts as a category filter
+
+
+def test_listing_needs_exactly_one_target():
+    for bad in ({}, {"query": "süt", "shop_category": "sut-c-6c"}):
+        with pytest.raises(ValueError):
+            migros.listing_page(**bad)

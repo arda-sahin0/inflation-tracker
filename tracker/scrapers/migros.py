@@ -64,32 +64,74 @@ def scrape(product: dict) -> dict:
 
 # ---------- listings: one request returns ~35 products with their prices ----------
 
-def search_page(query: str, page: int = 1, page_param: str = "sayfa") -> dict:
-    """One page of search results (the payload behind a category or search page)."""
-    params = {"q": query}
-    if page > 1:
-        params[page_param] = page
-    response = requests.get(SEARCH_URL, params=params, headers=HEADERS, timeout=20)
+SCREEN_URL = "https://www.migros.com.tr/rest/search/screens/{path}"
+TOP_LEVEL_URL = "https://www.migros.com.tr/rest/categories/top-level"
+_page_params: dict[str, str] = {}          # remembered per listing, so detection runs once
+
+
+def _get_json(url: str, params: dict | None = None) -> dict:
+    response = requests.get(url, params=params or {}, headers=HEADERS, timeout=20)
     response.raise_for_status()
     body = response.json()
     if not body.get("successful"):
-        raise RuntimeError(f"Migros search failed for {query!r}")
-    return body["data"]["searchInfo"]
+        raise RuntimeError(f"Migros returned successful=false for {url}")
+    return body["data"]
 
 
-def detect_page_param(query: str) -> str:
+def listing_page(query: str | None = None, shop_category: str | None = None,
+                 page: int = 1, page_param: str = "sayfa") -> dict:
+    """One page of a listing: either a search (query) or a category page (shop_category)."""
+    if bool(query) == bool(shop_category):
+        raise ValueError("give exactly one of query or shop_category")
+    params = {} if page == 1 else {page_param: page}
+    if query:
+        return _get_json(SEARCH_URL, {"q": query, **params})["searchInfo"]
+    return _get_json(SCREEN_URL.format(path=shop_category), params)["searchInfo"]
+
+
+def search_page(query: str, page: int = 1, page_param: str = "sayfa") -> dict:
+    return listing_page(query=query, page=page, page_param=page_param)
+
+
+def detect_page_param(query: str | None = None, shop_category: str | None = None) -> str:
     """Migros doesn't document its paging parameter — find the one that moves the results."""
-    first = search_page(query)["storeProductInfos"]
+    key = query or shop_category
+    if key in _page_params:
+        return _page_params[key]
+    first = listing_page(query, shop_category)["storeProductInfos"]
     if not first:
         return PAGE_PARAM_CANDIDATES[0]
     for candidate in PAGE_PARAM_CANDIDATES:
         try:
-            second = search_page(query, page=2, page_param=candidate)["storeProductInfos"]
+            second = listing_page(query, shop_category, page=2, page_param=candidate)["storeProductInfos"]
         except Exception:
             continue
         if second and second[0]["sku"] != first[0]["sku"]:
+            _page_params[key] = candidate
             return candidate
     raise RuntimeError("No paging parameter worked — only the first page is reachable")
+
+
+def top_level_categories() -> list[dict]:
+    return _get_json(TOP_LEVEL_URL)
+
+
+def real_aisles(top_level: list[dict]) -> list[dict]:
+    """The shop's own aisles. Drops special pages (discounts, "only at Migros") and the
+    brand or campaign pages (Lay's, Nescafé, Maç Özel...), which are flagged onboardingVisible=false."""
+    return [c for c in top_level
+            if not c.get("specialCategory")
+            and "-c-" in c.get("prettyName", "")
+            and c.get("onboardingVisible", True)]
+
+
+def child_categories(search_info: dict) -> list[dict]:
+    """The next level down, read from a category page's CATEGORY facet."""
+    for group in search_info.get("aggregationGroups", []):
+        if group.get("type") == "CATEGORY":
+            return [{"name": i["label"], "prettyName": i["prettyName"], "count": int(i.get("count", 0))}
+                    for i in group.get("aggregationInfos", [])]
+    return []
 
 
 def category_names(product: dict) -> list[str]:

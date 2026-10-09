@@ -1,0 +1,63 @@
+{
+  "successful": true,
+  "data": [
+    {
+      "depth": 1,
+      "id": 20000000072311,
+      "name": "Tüm İndirimli Ürünler",
+      "prettyName": "tum-indirimli-urunler-dt-0",
+      "topLevel": true,
+      "specialCategory": true
+    },
+    {
+      "depth": 1,
+      "id": 20000000074746,
+      "name": "Migros Ekstra",
+      "prettyName": "migros-ekstra-c-123fa",
+      "topLevel": true,
+      "specialCategory": false,
+      "onboardingVisible": false
+    },
+    {
+      "depth": 1,
+      "id": 20000000079109,
+      "name": "Lay's Hasat",
+      "prettyName": "lays-hasat-c-13505",
+      "topLevel": true,
+      "specialCategory": false,
+      "onboardingVisible": false
+    },
+    {
+      "depth": 1,
+      "id": 20000000000002,
+      "name": "Meyve, Sebze",
+      "prettyName": "meyve-sebze-c-2",
+      "topLevel": true,
+      "specialCategory": false
+    },
+    {
+      "depth": 1,
+      "id": 20000000000004,
+      "name": "Süt, Kahvaltılık",
+      "prettyName": "sut-kahvaltilik-c-4",
+      "topLevel": true,
+      "specialCategory": false
+    },
+    {
+      "depth": 1,
+      "id": 20000000070651,
+      "name": "Atıştırmalık",
+      "prettyName": "atistirmalik-c-113fb",
+      "topLevel": true,
+      "specialCategory": false
+    },
+    {
+      "depth": 1,
+      "id": 20000000000166,
+      "name": "Elektronik",
+      "prettyName": "elektronik-c-a6",
+      "topLevel": true,
+      "specialCategory": false
+    }
+  ]
+}

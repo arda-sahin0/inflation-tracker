@@ -1,0 +1,79 @@
+{
+  "successful": true,
+  "data": {
+    "searchInfo": {
+      "pageCount": 51,
+      "hitCount": 1501,
+      "storeProductInfos": [],
+      "aggregationGroups": [
+        {
+          "type": "CATEGORY",
+          "label": "Kategoriler",
+          "requestParamKey": "kategoriler",
+          "aggregationInfos": [
+            {
+              "label": "Süt",
+              "count": 140,
+              "prettyName": "sut-c-6c",
+              "checked": false
+            },
+            {
+              "label": "Peynir",
+              "count": 403,
+              "prettyName": "peynir-c-6d",
+              "checked": false
+            },
+            {
+              "label": "Yoğurt",
+              "count": 138,
+              "prettyName": "yogurt-c-6e",
+              "checked": false
+            },
+            {
+              "label": "Tereyağı",
+              "count": 46,
+              "prettyName": "tereyagi-c-413",
+              "checked": false
+            },
+            {
+              "label": "Margarin",
+              "count": 28,
+              "prettyName": "margarin-c-414",
+              "checked": false
+            },
+            {
+              "label": "Yumurta",
+              "count": 27,
+              "prettyName": "yumurta-c-70",
+              "checked": false
+            },
+            {
+              "label": "Zeytin",
+              "count": 116,
+              "prettyName": "zeytin-c-71",
+              "checked": false
+            },
+            {
+              "label": "Sütlü Tatlı, Krema",
+              "count": 80,
+              "prettyName": "sutlu-tatli-krema-c-72",
+              "checked": false
+            },
+            {
+              "label": "Kahvaltılıklar",
+              "count": 523,
+              "prettyName": "kahvaltiliklar-c-73",
+              "checked": false
+            }
+          ]
+        },
+        {
+          "type": "BRAND",
+          "label": "Markalar",
+          "requestParamKey": "markalar",
+          "aggregationInfos": []
+        }
+      ]
+    }
+  }
+}

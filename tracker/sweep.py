@@ -25,15 +25,24 @@ SLEEP_SECONDS = 1.0
 def collect(pages: list[dict], rule: dict) -> list[dict]:
     """Price rows from already-fetched listing pages. Pure, so it is testable offline."""
     excluded = {str(sku).zfill(8) for sku in rule.get("exclude_skus", [])}
+    leaf_map = rule.get("leaf_map")          # shop leaf -> index category, for whole-shelf rules
+    name = rule.get("name") or rule.get("query") or rule.get("shop_category")
     rows, seen = [], set()
     for page in pages:
         for product in migros.usable_listing_products(page, rule):
             sku = product["sku"].zfill(8)
             if sku in seen or sku in excluded:
                 continue
+            if leaf_map is not None:
+                leaf = (migros.category_names(product) or [""])[-1]
+                category = leaf_map.get(leaf)
+                if category is None:                 # a shelf we don't track (e.g. olives)
+                    continue
+            else:
+                category = rule["category"]
             seen.add(sku)
-            row = migros.listing_row(product, rule["category"])
-            row["group"] = rule.get("name", rule["query"])     # its own elementary group
+            row = migros.listing_row(product, category)
+            row["group"] = name                     # its own elementary group within each category
             rows.append(row)
     return rows
 
@@ -44,20 +53,22 @@ def fetch_pages(rule: dict, max_pages: int | None = None, sleep: float = SLEEP_S
     if store != "migros":
         raise ValueError(f"sweeps are only implemented for migros, not {store!r}")
 
-    first = migros.search_page(rule["query"])
+    where = {"query": rule.get("query"), "shop_category": rule.get("shop_category")}
+    first = migros.listing_page(**where)
     pages = [first]
     total = min(int(first.get("pageCount", 1)), max_pages)
     if total > 1:
-        page_param = migros.detect_page_param(rule["query"])
+        page_param = migros.detect_page_param(**where)
         for page in range(2, total + 1):
             time.sleep(sleep)
-            pages.append(migros.search_page(rule["query"], page, page_param))
+            pages.append(migros.listing_page(**where, page=page, page_param=page_param))
     return pages
 
 
 def check_rule(rule: dict) -> None:
     """A rule with no category filter would sweep up everything the query returns."""
-    if not (rule.get("include_categories") or rule.get("match_category") or rule.get("allow_all")):
+    if not (rule.get("include_categories") or rule.get("match_category") or rule.get("leaf_map")
+            or rule.get("allow_all")):
         raise ValueError(f"sweep {rule.get('name', rule.get('query'))!r} has no include_categories; "
                          f"run discover.py <query> --categories to find them")
 
