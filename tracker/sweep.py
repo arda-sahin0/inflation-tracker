@@ -71,8 +71,8 @@ def run(rule: dict) -> list[dict]:
     return rows
 
 
-def load_rules(include_disabled: bool = False) -> list[dict]:
+def load_rules(include_disabled: bool = False, path=None) -> list[dict]:
     """Rules from sweeps.json. A rule with "enabled": false is a draft and is skipped."""
-    path = ROOT / "sweeps.json"
+    path = path or ROOT / "sweeps.json"
     rules = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
     return rules if include_disabled else [r for r in rules if r.get("enabled", True)]

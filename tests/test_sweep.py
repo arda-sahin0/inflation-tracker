@@ -91,9 +91,21 @@ def test_a_rule_without_a_category_filter_is_refused():
     check_rule({"query": "süt", "allow_all": True})                         # deliberate
 
 
-def test_draft_rules_do_not_run():
-    enabled = {r["name"] for r in load_rules()}
-    everything = {r["name"] for r in load_rules(include_disabled=True)}
-    assert "milk" in enabled
-    assert everything - enabled                       # the drafts wait for include_categories
-    assert all(r.get("include_categories") or r.get("match_category") for r in load_rules())
+def test_draft_rules_do_not_run(tmp_path):
+    config = tmp_path / "sweeps.json"
+    config.write_text(json.dumps([
+        {"name": "milk", "query": "süt", "category": "dairy_eggs", "include_categories": ["Günlük Süt"]},
+        {"name": "cheese", "query": "peynir", "category": "dairy_eggs", "include_categories": [], "enabled": False},
+    ]), encoding="utf-8")
+    assert [r["name"] for r in load_rules(path=config)] == ["milk"]
+    assert [r["name"] for r in load_rules(include_disabled=True, path=config)] == ["milk", "cheese"]
+
+
+def test_every_live_rule_is_configured():
+    divisions = json.loads((ROOT / "weights.json").read_text(encoding="utf-8"))["divisions"]
+    ALLOWED_CATEGORIES = {c for d in divisions.values() for c in d["categories"]}
+    for rule in load_rules():
+        check_rule(rule)                                  # raises if a rule has no category filter
+        assert rule["category"] in ALLOWED_CATEGORIES, rule["name"]
+    names = [r["name"] for r in load_rules(include_disabled=True)]
+    assert len(names) == len(set(names)), "sweep names must be unique (they are the group ids)"
