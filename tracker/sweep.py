@@ -38,7 +38,8 @@ def collect(pages: list[dict], rule: dict) -> list[dict]:
     return rows
 
 
-def fetch_pages(rule: dict, max_pages: int = MAX_PAGES, sleep: float = SLEEP_SECONDS) -> list[dict]:
+def fetch_pages(rule: dict, max_pages: int | None = None, sleep: float = SLEEP_SECONDS) -> list[dict]:
+    max_pages = max_pages or int(rule.get("max_pages", MAX_PAGES))
     store = rule.get("store", "migros")
     if store != "migros":
         raise ValueError(f"sweeps are only implemented for migros, not {store!r}")
@@ -54,7 +55,15 @@ def fetch_pages(rule: dict, max_pages: int = MAX_PAGES, sleep: float = SLEEP_SEC
     return pages
 
 
+def check_rule(rule: dict) -> None:
+    """A rule with no category filter would sweep up everything the query returns."""
+    if not (rule.get("include_categories") or rule.get("match_category") or rule.get("allow_all")):
+        raise ValueError(f"sweep {rule.get('name', rule.get('query'))!r} has no include_categories; "
+                         f"run discover.py <query> --categories to find them")
+
+
 def run(rule: dict) -> list[dict]:
+    check_rule(rule)
     rows = collect(fetch_pages(rule), rule)
     minimum = rule.get("min_products", 0)
     if len(rows) < minimum:
@@ -62,6 +71,8 @@ def run(rule: dict) -> list[dict]:
     return rows
 
 
-def load_rules() -> list[dict]:
+def load_rules(include_disabled: bool = False) -> list[dict]:
+    """Rules from sweeps.json. A rule with "enabled": false is a draft and is skipped."""
     path = ROOT / "sweeps.json"
-    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    rules = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    return rules if include_disabled else [r for r in rules if r.get("enabled", True)]

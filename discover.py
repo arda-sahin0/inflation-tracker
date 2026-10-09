@@ -14,7 +14,7 @@ import sys
 
 import requests
 
-from tracker import ROOT
+from tracker import ROOT, sweep
 from tracker.naming import parse_size, suggest_id
 from tracker.scrapers import migros
 
@@ -79,6 +79,21 @@ def candidates(search_info: dict, include_sponsored: bool = False) -> list[dict]
     return rows
 
 
+def leaf_counts(pages: list[dict]) -> list[dict]:
+    """How many sellable products sit in each shop category — the input for include_categories."""
+    counts: dict[str, dict] = {}
+    for page in pages:
+        for product in page.get("storeProductInfos", []):
+            if product.get("sponsored") or product.get("status") != "IN_SALE":
+                continue
+            names = migros.category_names(product)
+            leaf = names[-1] if names else "—"
+            entry = counts.setdefault(leaf, {"leaf": leaf, "count": 0, "path": " / ".join(names[:-1]),
+                                             "example": product["name"]})
+            entry["count"] += 1
+    return sorted(counts.values(), key=lambda c: -c["count"])
+
+
 def category_path(product: dict) -> str:
     names = [a["name"] for a in reversed(product.get("categoryAscendants", []))]
     if product.get("category"):
@@ -129,6 +144,34 @@ def print_table(rows: list[dict], basket: list[dict]) -> None:
     print("\n* = already in your basket. Add one with:  --add <sku> --category <category>")
 
 
+def check_sweeps() -> int:
+    """Fetch one page per rule and report what it would collect. Writes nothing."""
+    rules = sweep.load_rules(include_disabled=True)
+    if not rules:
+        print("sweeps.json has no rules")
+        return 1
+    problems = 0
+    for rule in rules:
+        name = rule.get("name", rule["query"])
+        draft = "" if rule.get("enabled", True) else "  [draft]"
+        try:
+            sweep.check_rule(rule)
+            pages = sweep.fetch_pages(rule, max_pages=1)
+            rows = sweep.collect(pages, rule)
+            total = pages[0].get("hitCount", "?")
+            print(f"{name:<18} {len(rows):>4} of {len(pages[0].get('storeProductInfos', [])):>3} on page 1 "
+                  f"({total} hits overall) -> {rule['category']}{draft}")
+            for row in rows[:3]:
+                print(f"{'':<18}   · {row['name'][:56]}")
+            if not rows:
+                problems += 1
+                print(f"{'':<18}   nothing matched — check include_categories against --categories")
+        except Exception as e:
+            problems += 1
+            print(f"{name:<18} FAILED: {e!r}")
+    return 1 if problems else 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Search Migros and add products to the basket")
     parser.add_argument("query", nargs="?", help="what to search for, e.g. süt")
@@ -138,6 +181,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--id", help="override the generated product id")
     parser.add_argument("--replace", metavar="PRODUCT_ID", help="find a stand-in for a tracked product")
     parser.add_argument("--include-sponsored", action="store_true", help="also show advertised results")
+    parser.add_argument("--categories", action="store_true",
+                        help="list the shop categories in the results, for include_categories")
+    parser.add_argument("--check-sweeps", action="store_true",
+                        help="dry-run every rule in sweeps.json: what would each collect?")
     args = parser.parse_args(argv)
 
     basket = load_basket()
@@ -150,6 +197,21 @@ def main(argv: list[str] | None = None) -> int:
         detail = migros.fetch_product(migros.to_sku(entry["url"]))
         args.query = detail["name"]
         print(f"Looking for something like: {detail['name']}  (category {entry['category']})\n")
+
+    if args.check_sweeps:
+        return check_sweeps()
+
+    if args.categories:
+        if not args.query:
+            print("--categories needs a search term")
+            return 1
+        pages = sweep.fetch_pages({"query": args.query, "max_pages": max(args.pages, 2)})
+        print(f"shop categories for {args.query!r} (first {len(pages)} pages)\n")
+        print(f"{'count':>5}  {'category':<28} {'under':<34} example")
+        for row in leaf_counts(pages):
+            print(f"{row['count']:>5}  {row['leaf']:<28} {row['path'][:34]:<34} {row['example'][:40]}")
+        print("\nPut the ones you want into a sweeps.json rule as include_categories.")
+        return 0
 
     if args.add:
         if not args.category:

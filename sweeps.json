@@ -1,5 +1,35 @@
 [
   {"name": "milk", "category": "dairy_eggs", "store": "migros", "query": "süt",
    "include_categories": ["Günlük Süt", "Uzun Ömürlü Süt"],
-   "min_products": 15, "exclude_skus": []}
+   "max_pages": 3, "min_products": 15, "exclude_skus": []},
+
+  {"name": "cheese", "category": "dairy_eggs", "store": "migros", "query": "peynir",
+   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
+  {"name": "yoghurt", "category": "dairy_eggs", "store": "migros", "query": "yoğurt",
+   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
+  {"name": "eggs", "category": "dairy_eggs", "store": "migros", "query": "yumurta",
+   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
+
+  {"name": "rice", "category": "bread_cereals", "store": "migros", "query": "pirinç",
+   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
+  {"name": "chicken", "category": "meat", "store": "migros", "query": "tavuk",
+   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
+  {"name": "sunflower_oil", "category": "oils_fats", "store": "migros", "query": "ayçiçek yağı",
+   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
+  {"name": "apples", "category": "fruit_nuts", "store": "migros", "query": "elma",
+   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
+  {"name": "tomatoes", "category": "vegetables_pulses", "store": "migros", "query": "domates",
+   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
+  {"name": "chocolate", "category": "sugar_sweets", "store": "migros", "query": "çikolata",
+   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
+  {"name": "tomato_paste", "category": "other_food", "store": "migros", "query": "salça",
+   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
+  {"name": "tea", "category": "tea_coffee", "store": "migros", "query": "çay",
+   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
+  {"name": "water", "category": "drinks", "store": "migros", "query": "su",
+   "include_categories": [], "max_pages": 2, "min_products": 5, "enabled": false},
+  {"name": "detergent", "category": "household", "store": "migros", "query": "deterjan",
+   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false},
+  {"name": "shampoo", "category": "personal_care", "store": "migros", "query": "şampuan",
+   "include_categories": [], "max_pages": 3, "min_products": 10, "enabled": false}
 ]

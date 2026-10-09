@@ -2,7 +2,9 @@ import json
 
 from tracker import ROOT
 from tracker.scrapers import migros
-from tracker.sweep import collect
+import pytest
+
+from tracker.sweep import check_rule, collect, load_rules
 
 PAGE = json.loads((ROOT / "tests" / "fixtures" / "migros_search_sut.json")
                   .read_text(encoding="utf-8"))["data"]["searchInfo"]
@@ -80,3 +82,18 @@ def test_swept_rows_carry_their_group_name():
     rows = collect([PAGE], {**RULE, "name": "milk"})
     assert {r["group"] for r in rows} == {"milk"}
     assert {r["group"] for r in collect([PAGE], RULE)} == {"süt"}   # falls back to the query
+
+
+def test_a_rule_without_a_category_filter_is_refused():
+    with pytest.raises(ValueError, match="include_categories"):
+        check_rule({"name": "everything", "query": "süt", "category": "dairy_eggs"})
+    check_rule({"query": "süt", "include_categories": ["Günlük Süt"]})      # fine
+    check_rule({"query": "süt", "allow_all": True})                         # deliberate
+
+
+def test_draft_rules_do_not_run():
+    enabled = {r["name"] for r in load_rules()}
+    everything = {r["name"] for r in load_rules(include_disabled=True)}
+    assert "milk" in enabled
+    assert everything - enabled                       # the drafts wait for include_categories
+    assert all(r.get("include_categories") or r.get("match_category") for r in load_rules())
