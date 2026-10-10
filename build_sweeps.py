@@ -1,32 +1,21 @@
 """
-Turn the crawled catalogue plus your shelf mapping into sweeps.json.
+Turn each market's crawled catalogues plus its shelf maps into its sweeps.json.
 
     python catalog.py https://www.migros.com.tr/    # 1. map each shop (now and then)
-    python catalog.py https://www.a101.com.tr/
-    python build_sweeps.py                          # 2. rebuild sweeps.json from shelf_maps/*.json
+    python build_sweeps.py                          # 2. rebuild markets/<market>/sweeps.json
 
 Each mapped shelf (or sub-shelf) becomes one rule that reads that category page,
 so no search terms and no name matching are involved: the page is the filter.
 """
+import argparse
 import json
-import math
-import re
 import sys
-import unicodedata
 
-from tracker import ROOT
+from tracker.markets import MARKETS, STORES, Market, select
+from tracker.naming import slugify
 
-PAGE_SIZE = 30
 MIN_SHARE = 0.5
 SPLIT_MIN_SHARE = 0.15
-
-
-def slug(text: str) -> str:
-    for a, b in (("ı", "i"), ("İ", "i"), ("ş", "s"), ("Ş", "s"), ("ğ", "g"), ("Ğ", "g"),
-                 ("ç", "c"), ("Ç", "c"), ("ö", "o"), ("Ö", "o"), ("ü", "u"), ("Ü", "u")):
-        text = text.replace(a, b)
-    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
-    return re.sub(r"[^a-z0-9]+", "_", text).strip("_")
 
 
 def find_shelf(catalog: dict, path: str) -> dict:
@@ -43,21 +32,22 @@ def find_shelf(catalog: dict, path: str) -> dict:
 
 def rule_for(node: dict, category: str, group: str, store: str) -> dict:
     """One rule per shop shelf. Groups are per store ("migros:Peynir", "a101:Peynir"), so each
-    chain's cheese is one elementary group and the two chains count equally within a category."""
+    chain's cheese is one elementary group and the chains count equally within a category."""
+    scraper = STORES[store].scraper
     count = int(node.get("count", 0))
-    label = node["prettyName"].rsplit("-c-", 1)[0] if store == "migros" else node["name"]
     return {
-        "name": f"{store}_{slug(label)}",
+        "name": f"{store}_{slugify(scraper.shelf_label(node)).replace('-', '_')}",
         "group": f"{store}:{group}",
         "category": category,
         "store": store,
         "shop_category": node["prettyName"],
-        "max_pages": max(1, math.ceil(count / PAGE_SIZE) + 1) if store == "migros" else 1,
+        "max_pages": scraper.pages_for(count),
         "min_products": max(1, int(count * MIN_SHARE)),
     }
 
 
 def build(catalog: dict, mapping: dict) -> list[dict]:
+    store = mapping["store"]
     rules, problems = [], []
     for entry in mapping["shelves"]:
         try:
@@ -67,12 +57,13 @@ def build(catalog: dict, mapping: dict) -> list[dict]:
             continue
         group = entry.get("group", shelf["name"])
         if not entry.get("leaves"):
-            rule = rule_for(shelf, entry["category"], group, mapping["store"])
-            for key in ("name", "name_pattern", "exclude_pattern"):
+            rule = rule_for(shelf, entry["category"], group, store)
+            if "name" in entry:
+                rule["name"] = f"{store}_{entry['name']}"
+            for key in ("name_pattern", "exclude_pattern"):
                 if key in entry:
-                    rule[key] = entry[key] if key != "name" else f"{mapping['store']}_{entry['name']}"
-            if "name_pattern" in entry or "exclude_pattern" in entry:
-                rule["min_products"] = max(1, int(int(shelf.get("count", 0)) * SPLIT_MIN_SHARE))
+                    rule[key] = entry[key]
+                    rule["min_products"] = max(1, int(int(shelf.get("count", 0)) * SPLIT_MIN_SHARE))
             if "min_products" in entry:
                 rule["min_products"] = entry["min_products"]
             rules.append(rule)
@@ -82,9 +73,9 @@ def build(catalog: dict, mapping: dict) -> list[dict]:
             if name not in leaves:
                 problems.append(f"{entry['path']}: no sub-shelf {name!r}; there are: {', '.join(leaves)}")
                 continue
-            rules.append(rule_for(leaves[name], entry["category"], group, mapping["store"]))
+            rules.append(rule_for(leaves[name], entry["category"], group, store))
     if problems:
-        raise ValueError("shelf_map.json does not match the catalogue:\n  " + "\n  ".join(problems))
+        raise ValueError("the shelf map does not match the catalogue:\n  " + "\n  ".join(problems))
     names = [r["name"] for r in rules]
     duplicates = {n for n in names if names.count(n) > 1}
     if duplicates:
@@ -92,11 +83,12 @@ def build(catalog: dict, mapping: dict) -> list[dict]:
     return rules
 
 
-def main() -> int:
+def build_market(market: Market) -> int:
+    print(f"== {market.name}")
     rules = []
-    for map_file in sorted((ROOT / "shelf_maps").glob("*.json")):
+    for map_file in sorted((market.config / "shelf_maps").glob("*.json")):
         mapping = json.loads(map_file.read_text(encoding="utf-8"))
-        catalog_file = ROOT / "catalog" / f"{mapping['store']}.json"
+        catalog_file = market.config / "catalog" / f"{mapping['store']}.json"
         if not catalog_file.exists():
             print(f"{mapping['store']}: no catalogue yet, skipped — run catalog.py on its homepage")
             continue
@@ -108,17 +100,22 @@ def main() -> int:
             return 1
         print(f"{mapping['store']}: {len(store_rules)} rules (catalogue crawled {catalog['crawled']})")
         rules += store_rules
-    (ROOT / "sweeps.json").write_text(json.dumps(rules, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    out = market.config / "sweeps.json"
+    out.write_text(json.dumps(rules, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    print(f"\n{len(rules)} rules -> sweeps.json\n")
-    print(f"{'category':<18} {'groups':>6} {'products':>9} {'requests':>9}")
+    print(f"\n{len(rules)} rules -> {out.name}\n")
+    print(f"{'category':<18} {'groups':>6} {'rules':>6}")
     for category in sorted({r["category"] for r in rules}):
         mine = [r for r in rules if r["category"] == category]
-        products = sum(r["min_products"] for r in mine) * 2
-        requests_ = sum(r["max_pages"] for r in mine if r["store"] == "migros") \
-            + len({r["shop_category"][:3] for r in mine if r["store"] == "a101"})
-        print(f"{category:<18} {len({r['group'] for r in mine}):>6} {products:>9} {requests_:>9}")
+        print(f"{category:<18} {len({r['group'] for r in mine}):>6} {len(mine):>6}")
     return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Rebuild the sweep rules from the shelf maps")
+    parser.add_argument("--market", choices=MARKETS, help="only this market (default: all)")
+    args = parser.parse_args(argv)
+    return max(build_market(market) for market in select(args.market))
 
 
 if __name__ == "__main__":

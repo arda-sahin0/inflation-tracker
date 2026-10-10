@@ -1,5 +1,10 @@
 import re
+import time
+from datetime import date
+
 import requests
+
+from tracker.naming import parse_size
 
 TOKEN = "dbmk89vnr"
 STORE = "VS032"
@@ -65,6 +70,7 @@ def scrape(product: dict) -> dict:
 
 LIST_URL = f"https://rio.a101.com.tr/{TOKEN}/CALL/Store/listCategoryProducts/{STORE}"
 AISLE_IDS = [f"C{n:02d}" for n in range(1, 31)]
+SLEEP_SECONDS = 1.0
 _aisles: dict[str, dict] = {}
 
 
@@ -104,8 +110,6 @@ def sellable(product: dict) -> bool:
 
 def listing_row(product: dict, category: str, group: str) -> dict:
     """A price row from a listing entry. A101 states net weight itself; the name is only a fallback."""
-    from tracker.naming import parse_size
-
     attributes = product.get("attributes", {})
     name = attributes.get("name", product["id"])
     if str(attributes.get("salesUnitOfMeasure", "")).upper() == "KG":
@@ -132,17 +136,45 @@ def listing_row(product: dict, category: str, group: str) -> dict:
 
 
 def sweep_rows(rule: dict) -> list[dict]:
-    """All sellable products on one A101 shelf. The aisle is downloaded once and shared by its shelves."""
+    """All sellable products on one A101 shelf. The aisle is downloaded once and shared by its shelves.
+
+    name_pattern and exclude_pattern split one shelf by product name, e.g. rice out of pulses.
+    """
     shelf_id = rule["shop_category"]
     products = shelf_products(list_category(aisle_of(shelf_id)), shelf_id)
-    excluded = {str(s) for s in rule.get("exclude_skus", [])}
-    group = rule.get("group") or rule.get("name") or shelf_id
     keep = re.compile(rule["name_pattern"], re.IGNORECASE) if rule.get("name_pattern") else None
     drop = re.compile(rule["exclude_pattern"], re.IGNORECASE) if rule.get("exclude_pattern") else None
 
     def wanted(product: dict) -> bool:
         name = product.get("attributes", {}).get("name", "")
-        return (sellable(product) and str(product["id"]) not in excluded
-                and (keep is None or keep.search(name)) and not (drop and drop.search(name)))
+        return sellable(product) and (keep is None or keep.search(name)) and not (drop and drop.search(name))
 
-    return [listing_row(p, rule["category"], group) for p in products if wanted(p)]
+    return [listing_row(p, rule["category"], rule["group"]) for p in products if wanted(p)]
+
+
+def shelf_label(node: dict) -> str:
+    return node["name"]
+
+
+def pages_for(count: int) -> int:
+    """A whole aisle arrives in one response, so a shelf never needs a second page."""
+    return 1
+
+
+def crawl(skip: set[str], sleep: float = SLEEP_SECONDS, log=print) -> dict:
+    """A101 numbers its aisles C01, C02, ... and one request returns an aisle with all its shelves."""
+    aisles = []
+    for aisle_id in AISLE_IDS:
+        time.sleep(sleep)
+        try:
+            aisle = list_category(aisle_id)
+        except Exception as e:
+            log(f"      {aisle_id}: no aisle ({type(e).__name__})")
+            continue
+        if aisle.get("name") in skip:
+            log(f"skip  {aisle['name']}")
+            continue
+        aisles.append({"name": aisle["name"], "prettyName": aisle_id,
+                       "count": int(aisle.get("itemCount", 0)), "shelves": shelves(aisle)})
+        log(f"      {aisle_id} {aisle['name']}: {len(aisles[-1]['shelves'])} shelves")
+    return {"store": "a101", "crawled": date.today().isoformat(), "aisles": aisles}

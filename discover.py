@@ -1,10 +1,11 @@
 """
-Find products in a shop's catalogue and add them to products.json.
+Find products in Migros's catalogue and add them to products.json, or dry-run the sweeps.
 
     python discover.py süt                                  # list what the shop has
     python discover.py süt --pages 3                        # more result pages
     python discover.py süt --add 11011520 --category dairy_eggs
     python discover.py --replace sut-sek-1l                 # find a stand-in for a dead product
+    python discover.py --check-sweeps                       # what would every sweep collect?
 
 Nothing is added without --add: a search result is a suggestion, not a basket change.
 """
@@ -12,42 +13,14 @@ import argparse
 import json
 import sys
 
-import requests
-
-from tracker import ROOT, sweep
+import index
+from tracker import sweep
+from tracker.markets import MARKETS, STORES, market_of, select
 from tracker.naming import parse_size, suggest_id
-from tracker.scrapers import a101, migros
+from tracker.scrapers import migros
 
-SEARCH_URL = "https://www.migros.com.tr/rest/search/screens/products"
-PRODUCTS = ROOT / "products.json"
-PAGE_PARAM_CANDIDATES = ("sayfa", "page", "pageNumber")
-
-
-def search_page(query: str, page: int = 1, page_param: str = "sayfa") -> dict:
-    params = {"q": query}
-    if page > 1:
-        params[page_param] = page
-    response = requests.get(SEARCH_URL, params=params, headers=migros.HEADERS, timeout=20)
-    response.raise_for_status()
-    body = response.json()
-    if not body.get("successful"):
-        raise RuntimeError(f"Migros search failed for {query!r}")
-    return body["data"]["searchInfo"]
-
-
-def detect_page_param(query: str) -> str:
-    """Migros doesn't document the paging parameter — find the one that moves the results."""
-    first = search_page(query)["storeProductInfos"]
-    if not first:
-        return PAGE_PARAM_CANDIDATES[0]
-    for candidate in PAGE_PARAM_CANDIDATES:
-        try:
-            second = search_page(query, page=2, page_param=candidate)["storeProductInfos"]
-        except Exception:
-            continue
-        if second and second[0]["sku"] != first[0]["sku"]:
-            return candidate
-    raise RuntimeError("No paging parameter worked — only the first page is reachable")
+MARKET = market_of("migros")
+PRODUCTS = MARKET.config / "products.json"
 
 
 def candidates(search_info: dict, include_sponsored: bool = False) -> list[dict]:
@@ -68,41 +41,11 @@ def candidates(search_info: dict, include_sponsored: bool = False) -> list[dict]
             "price": price,
             "shown_price": product.get("shownPrice"),
             "on_offer": bool(product.get("discountRate")),
-            "category_path": category_path(product),
+            "category_path": " / ".join(migros.category_names(product)),
             "url": "https://www.migros.com.tr/" + product["prettyName"],
             "per_kg": round(price * 1000 / net_amount) if (price and net_amount) else price,
         })
     return rows
-
-
-def leaf_counts(pages: list[dict]) -> list[dict]:
-    """How many sellable products sit in each shop category — the input for include_categories."""
-    counts: dict[str, dict] = {}
-    for page in pages:
-        for product in page.get("storeProductInfos", []):
-            if product.get("sponsored") or product.get("status") != "IN_SALE":
-                continue
-            names = migros.category_names(product)
-            leaf = names[-1] if names else "—"
-            entry = counts.setdefault(leaf, {"leaf": leaf, "count": 0, "path": " / ".join(names[:-1]),
-                                             "example": product["name"]})
-            entry["count"] += 1
-    return sorted(counts.values(), key=lambda c: -c["count"])
-
-
-def suggest_include(leaves: list[dict], share: float = 0.3, limit: int = 3) -> list[str]:
-    """The shop categories that carry most of a query's products — a starting point, not a verdict."""
-    if not leaves:
-        return []
-    top = leaves[0]["count"]
-    return [leaf["leaf"] for leaf in leaves if leaf["count"] >= share * top][:limit]
-
-
-def category_path(product: dict) -> str:
-    names = [a["name"] for a in reversed(product.get("categoryAscendants", []))]
-    if product.get("category"):
-        names.append(product["category"]["name"])
-    return " / ".join(names)
 
 
 def load_basket() -> list[dict]:
@@ -144,51 +87,24 @@ def print_table(rows: list[dict], basket: list[dict]) -> None:
     print("\n* = already in your basket. Add one with:  --add <sku> --category <category>")
 
 
-def check_sweeps() -> int:
-    """Dry-run every rule in sweeps.json. Writes nothing.
-
-    A configured rule shows what one page would collect. A draft without
-    include_categories shows the shop categories its query lands in, with a
-    suggested line to paste into sweeps.json.
-    """
-    rules = sweep.load_rules(include_disabled=True)
-    if not rules:
-        print("sweeps.json has no rules")
-        return 1
+def check_sweeps(market_key: str | None) -> int:
+    """Dry-run every rule on its first page. Writes nothing."""
     problems = 0
-    for rule in rules:
-        name = sweep.label(rule)
-        draft = "" if rule.get("enabled", True) else "  [draft]"
-        try:
-            if not (rule.get("shop_category") or rule.get("include_categories") or rule.get("match_category")
-                    or rule.get("allow_all")):
-                pages = sweep.fetch_pages(rule, max_pages=2)
-                leaves = leaf_counts(pages)
-                print(f"{name:<18} not configured yet — {rule['query']!r} lands in:{draft}")
-                for leaf in leaves[:6]:
-                    print(f"{'':<18}   {leaf['count']:>3}  {leaf['leaf']:<26} e.g. {leaf['example'][:38]}")
-                suggestion = json.dumps(suggest_include(leaves), ensure_ascii=False)
-                print(f'{"":<18}   suggested: "include_categories": {suggestion}')
-                continue
-
-            if rule.get("store") == "a101":
-                rows = a101.sweep_rows(rule)
-                print(f"{name:<18} {len(rows):>4} products on the shelf -> {rule['category']}{draft}")
-            else:
-                pages = sweep.fetch_pages(rule, max_pages=1)
-                rows = sweep.collect(pages, rule)
-                total = pages[0].get("hitCount", "?")
-                print(f"{name:<18} {len(rows):>4} of {len(pages[0].get('storeProductInfos', [])):>3} on page 1 "
-                      f"({total} hits overall) -> {rule['category']}{draft}")
-            for row in rows[:3]:
-                print(f"{'':<18}   · {row['name'][:56]}")
-            if not rows:
+    for market in select(market_key):
+        print(f"== {market.name}")
+        for rule in sweep.load_rules(market):
+            name = rule["name"]
+            try:
+                rows = STORES[rule["store"]].scraper.sweep_rows({**rule, "max_pages": 1})
+                print(f"{name:<24} {len(rows):>4} products on the first page -> {rule['category']}")
+                for row in rows[:3]:
+                    print(f"{'':<24}   · {row['name'][:56]}")
+                if not rows:
+                    problems += 1
+                    print(f"{'':<24}   nothing on this shelf — has the shop moved it? Run catalog.py again")
+            except Exception as e:
                 problems += 1
-                print(f"{'':<18}   nothing matched — compare include_categories with --categories")
-        except Exception as e:
-            problems += 1
-            print(f"{name:<18} FAILED: {e!r}")
-    print("\nPaste a suggestion into sweeps.json, set \"enabled\": true, and run --check-sweeps again.")
+                print(f"{name:<24} FAILED: {e!r}")
     return 1 if problems else 0
 
 
@@ -201,11 +117,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--id", help="override the generated product id")
     parser.add_argument("--replace", metavar="PRODUCT_ID", help="find a stand-in for a tracked product")
     parser.add_argument("--include-sponsored", action="store_true", help="also show advertised results")
-    parser.add_argument("--categories", action="store_true",
-                        help="list the shop categories in the results, for include_categories")
-    parser.add_argument("--check-sweeps", action="store_true",
-                        help="dry-run every rule in sweeps.json: what would each collect?")
+    parser.add_argument("--check-sweeps", action="store_true", help="dry-run every sweep: what would each collect?")
+    parser.add_argument("--market", choices=MARKETS, help="with --check-sweeps: only this market")
     args = parser.parse_args(argv)
+
+    if args.check_sweeps:
+        return check_sweeps(args.market)
 
     basket = load_basket()
 
@@ -218,27 +135,11 @@ def main(argv: list[str] | None = None) -> int:
         args.query = detail["name"]
         print(f"Looking for something like: {detail['name']}  (category {entry['category']})\n")
 
-    if args.check_sweeps:
-        return check_sweeps()
-
-    if args.categories:
-        if not args.query:
-            print("--categories needs a search term")
-            return 1
-        pages = sweep.fetch_pages({"query": args.query, "max_pages": max(args.pages, 2)})
-        print(f"shop categories for {args.query!r} (first {len(pages)} pages)\n")
-        print(f"{'count':>5}  {'category':<28} {'under':<34} example")
-        for row in leaf_counts(pages):
-            print(f"{row['count']:>5}  {row['leaf']:<28} {row['path'][:34]:<34} {row['example'][:40]}")
-        print("\nPut the ones you want into a sweeps.json rule as include_categories.")
-        return 0
-
     if args.add:
         if not args.category:
             print("--add needs --category")
             return 1
-        divisions = json.loads((ROOT / "weights.json").read_text(encoding="utf-8"))["divisions"]
-        categories = {c for d in divisions.values() for c in d["categories"]}
+        categories = index.load_weights(index.load_config(MARKET))
         if args.category not in categories:
             print(f"unknown category {args.category!r}; known: {', '.join(sorted(categories))}")
             return 1
@@ -251,7 +152,7 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         save_basket(basket)
         unit, net = parse_size(detail["name"])
-        print(f"Added {entry['id']}  ({detail['name']}, {detail['regularPrice'] / 100:.2f} TL, "
+        print(f"Added {entry['id']}  ({detail['name']}, {detail['regularPrice'] / 100:.2f} {MARKET.currency}, "
               f"{unit.lower()}{'' if net is None else f' {net:g}'})")
         print(f"products.json now has {len(basket)} products. Commit it and the next run picks it up.")
         return 0
@@ -260,10 +161,10 @@ def main(argv: list[str] | None = None) -> int:
         parser.print_help()
         return 1
 
-    page_param = detect_page_param(args.query) if args.pages > 1 else "sayfa"
+    page_param = migros.detect_page_param(query=args.query) if args.pages > 1 else "sayfa"
     rows, info = [], None
     for page in range(1, args.pages + 1):
-        info = search_page(args.query, page, page_param)
+        info = migros.listing_page(query=args.query, page=page, page_param=page_param)
         rows += candidates(info, args.include_sponsored)
     print(f"{info.get('hitCount', '?')} hits, {info.get('pageCount', '?')} pages; "
           f"showing {len(rows)} after dropping ads and out-of-sale items\n")

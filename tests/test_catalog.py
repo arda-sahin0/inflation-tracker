@@ -2,7 +2,7 @@ import json
 
 import catalog
 from tracker import ROOT
-from tracker.scrapers import migros
+from tracker.scrapers import a101, migros
 
 FIXTURES = ROOT / "tests" / "fixtures"
 TOP = json.loads((FIXTURES / "migros_top_level.json").read_text(encoding="utf-8"))["data"]
@@ -39,7 +39,7 @@ def test_crawl_walks_aisles_and_shelves_and_skips_what_it_should():
     migros.top_level_categories = lambda: TOP
     migros.listing_page = fake_listing
     try:
-        result = catalog.crawl_migros(skip={"Elektronik", "Atıştırmalık", "Meyve, Sebze"}, sleep=0, log=lambda *_: None)
+        result = migros.crawl(skip={"Elektronik", "Atıştırmalık", "Meyve, Sebze"}, sleep=0, log=lambda *_: None)
     finally:
         migros.top_level_categories, migros.listing_page = originals
 
@@ -55,7 +55,6 @@ def test_an_unknown_shop_is_refused():
 
 
 def test_a101_crawl_probes_numbered_aisles_and_skips_gaps():
-    from tracker.scrapers import a101
     aisle = json.loads((FIXTURES / "a101_aisle_C05.json").read_text(encoding="utf-8"))
 
     def fake_list(aisle_id):
@@ -66,7 +65,7 @@ def test_a101_crawl_probes_numbered_aisles_and_skips_gaps():
     original_list, original_ids = a101.list_category, a101.AISLE_IDS
     a101.list_category, a101.AISLE_IDS = fake_list, ["C04", "C05", "C06"]
     try:
-        result = catalog.crawl_a101(skip=set(), sleep=0, log=lambda *_: None)
+        result = a101.crawl(skip=set(), sleep=0, log=lambda *_: None)
     finally:
         a101.list_category, a101.AISLE_IDS = original_list, original_ids
     assert [a["prettyName"] for a in result["aisles"]] == ["C05"]

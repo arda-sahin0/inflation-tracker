@@ -20,5 +20,4 @@ venv/
 .DS_Store
 Thumbs.db
 .idea/
-# local test runs (main.py / index.py outside GitHub Actions)
 data/local/

@@ -11,7 +11,7 @@ def run_with(results: dict, rules: list[dict], rows=None):
     original = sweep.run
 
     def fake_run(rule):
-        outcome = results[sweep.label(rule)]
+        outcome = results[rule["name"]]
         if isinstance(outcome, Exception):
             raise outcome
         return outcome
@@ -19,13 +19,13 @@ def run_with(results: dict, rules: list[dict], rows=None):
     sweep.run = fake_run
     rows, failures = (rows or []), []
     try:
-        run_sweeps("2026-10-09", rows, failures, rules)
+        run_sweeps(rules, "2026-10-09", rows, failures)
     finally:
         sweep.run = original
     return rows, failures
 
 
-def test_shelf_rules_without_a_search_term_run_and_are_logged(capsys=None):
+def test_every_rule_runs_and_rows_get_the_date():
     rules = [{"name": "migros_sut", "store": "migros", "shop_category": "sut-c-6c", "category": "dairy_eggs"},
              {"name": "a101_sut", "store": "a101", "shop_category": "C0502", "category": "dairy_eggs"}]
     rows, failures = run_with({"migros_sut": fake_rows("migros", "1", "2"), "a101_sut": fake_rows("a101", "9")}, rules)
@@ -47,7 +47,3 @@ def test_a_product_already_collected_is_not_added_twice():
     already = fake_rows("migros", "1")
     rows, _ = run_with({"a": fake_rows("migros", "1", "2"), "b": fake_rows("migros", "2", "3")}, rules, already)
     assert sorted(r["sku"] for r in rows) == ["1", "2", "3"]
-
-
-def test_every_live_rule_has_a_printable_label():
-    assert all(sweep.label(rule) != "?" for rule in sweep.load_rules())

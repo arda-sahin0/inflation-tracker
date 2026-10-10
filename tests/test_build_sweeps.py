@@ -3,8 +3,7 @@ import json
 import pytest
 
 from build_sweeps import build
-from tracker import ROOT
-from tracker.sweep import check_rule
+from tracker.markets import TURKEY
 
 CATALOG = {"store": "migros", "crawled": "2026-10-09", "aisles": [
     {"name": "Süt, Kahvaltılık", "prettyName": "sut-kahvaltilik-c-4", "count": 1499, "shelves": [
@@ -25,7 +24,6 @@ def test_a_whole_shelf_becomes_one_rule_on_its_category_page():
         "name": "migros_peynir", "group": "migros:Peynir", "category": "dairy_eggs", "store": "migros",
         "shop_category": "peynir-c-6d", "max_pages": 15, "min_products": 201,
     }]
-    check_rule(rules[0])
 
 
 def test_chosen_sub_shelves_share_one_group():
@@ -52,12 +50,12 @@ def test_mapping_the_same_shelf_twice_is_refused():
 
 
 def test_the_real_mapping_builds_against_the_real_catalogue():
-    catalog_file = ROOT / "catalog" / "migros.json"
+    catalog_file = TURKEY.config / "catalog" / "migros.json"
     if not catalog_file.exists():
         pytest.skip("run catalog.py first")
-    mapping = json.loads((ROOT / "shelf_maps" / "migros.json").read_text(encoding="utf-8"))
+    mapping = json.loads((TURKEY.config / "shelf_maps" / "migros.json").read_text(encoding="utf-8"))
     rules = build(json.loads(catalog_file.read_text(encoding="utf-8")), mapping)
-    divisions = json.loads((ROOT / "weights.json").read_text(encoding="utf-8"))["divisions"]
+    divisions = json.loads((TURKEY.config / "weights.json").read_text(encoding="utf-8"))["divisions"]
     every_category = {c for d in divisions.values() for c in d["categories"]}
     assert {r["category"] for r in rules} == every_category
 

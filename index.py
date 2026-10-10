@@ -1,41 +1,37 @@
 """
-Builds a daily price index from data/raw/*.csv.
+Builds a daily price index for each market from data/raw/<market>/*.csv.
 
 Method (the same idea statistics offices use):
   1. Unit price per product: per kg / L where possible, otherwise per pack.
   2. Per category: chained Jevons index = each day, the geometric mean of
      (today's price / yesterday's price) over products that exist on both days.
-  3. Overall: weighted average of the category indices, weights from weights.json
-     (TurkStat's 2026 CPI division weights, split equally inside each division).
+  3. Overall: weighted average of the category indices, weights from the market's
+     weights.json (the national CPI division weights, split equally inside each division).
 
-Outputs (data/index/ in CI, data/local/ when run by hand):
+Outputs (data/index/<market>/ in CI, data/local/<market>/ when run by hand):
   daily_index.csv   one row per day: every category + overall
   store_index.csv   one row per day: overall index per store
   summary.md        human-readable snapshot, also used for posting later
 """
+import argparse
 import json
-import os
 
 import numpy as np
 import pandas as pd
 
-from tracker import ROOT
-
-RAW = ROOT / "data" / "raw"
-OUT = ROOT / "data" / ("index" if os.getenv("GITHUB_ACTIONS") == "true" else "local")
+from tracker.markets import MARKETS, Market, select
 
 MAX_GAP_DAYS = 3
 FOOD_DIVISION = "food_and_non_alcoholic_beverages"
 JUMP_PCT = 25
 
 
-def load_config() -> dict:
-    return json.loads((ROOT / "weights.json").read_text(encoding="utf-8"))
+def load_config(market: Market) -> dict:
+    return json.loads((market.config / "weights.json").read_text(encoding="utf-8"))
 
 
-def load_weights(config: dict | None = None) -> dict[str, float]:
+def load_weights(config: dict) -> dict[str, float]:
     """category -> weight (division weight split equally inside the division)."""
-    config = load_config() if config is None else config
     weights = {}
     for division in config["divisions"].values():
         for category in division["categories"]:
@@ -43,15 +39,14 @@ def load_weights(config: dict | None = None) -> dict[str, float]:
     return weights
 
 
-def food_categories(config: dict | None = None) -> list[str]:
-    config = load_config() if config is None else config
+def food_categories(config: dict) -> list[str]:
     return list(config["divisions"][FOOD_DIVISION]["categories"])
 
 
-def load_prices() -> pd.DataFrame:
-    files = sorted(RAW.glob("*.csv"))
+def load_prices(market: Market) -> pd.DataFrame:
+    files = sorted(market.raw.glob("*.csv"))
     if not files:
-        raise SystemExit(f"No CSV files in {RAW}")
+        raise SystemExit(f"No CSV files in {market.raw}")
     df = pd.concat((pd.read_csv(f, dtype={"sku": str}) for f in files), ignore_index=True)
     df["date"] = pd.to_datetime(df["date"])
     if "group" not in df.columns:
@@ -61,7 +56,7 @@ def load_prices() -> pd.DataFrame:
 
 
 def add_unit_price(df: pd.DataFrame) -> pd.DataFrame:
-    """Kuruş per kg/L for packaged goods with a known size, else price as listed."""
+    """Price per kg/L in the smallest currency unit (kuruş, cent) where the size is known, else as listed."""
     df = df.copy()
     per_kg = df["regular_price"] * 1000 / df["net_amount"]
     use_listed = (df["unit"] == "GRAM") | df["net_amount"].isna()
@@ -94,11 +89,6 @@ def chain(links: pd.Series) -> pd.Series:
     return 100 * links.cumprod()
 
 
-def chained_jevons(prices: pd.DataFrame) -> pd.Series:
-    """Index that starts at 100. prices: rows = dates, columns = products."""
-    return chain(daily_links(prices))
-
-
 def weighted_overall(category_index: pd.DataFrame, weights: dict[str, float]) -> pd.Series:
     w = pd.Series({c: weights.get(c, 0.0) for c in category_index.columns}, dtype=float)
     if w.sum() == 0:
@@ -112,8 +102,8 @@ def groups_of(df: pd.DataFrame) -> pd.DataFrame:
     return out.reset_index().set_index("product_id")
 
 
-def build_index(df: pd.DataFrame, weights: dict[str, float] | None = None) -> pd.DataFrame:
-    weights = load_weights() if weights is None else weights
+def build_index(df: pd.DataFrame, weights: dict[str, float], food: list[str]) -> pd.DataFrame:
+    """Every category, the weighted overall basket and the food headline, all starting at 100."""
     if "group" not in df.columns:
         df = df.assign(group="picked")
     df = add_unit_price(df)
@@ -130,22 +120,21 @@ def build_index(df: pd.DataFrame, weights: dict[str, float] | None = None) -> pd
         result[category] = chain(category_link)
 
     overall = weighted_overall(result, weights)
-    food = [c for c in food_categories() if c in result.columns]
-    result["food"] = weighted_overall(result[food], weights) if food else overall
+    present = [c for c in food if c in result.columns]
+    result["food"] = weighted_overall(result[present], weights) if present else overall
     result["overall"] = overall
     result.index.name = "date"
     return result
 
 
-def build_store_index(df: pd.DataFrame, weights: dict[str, float] | None = None) -> pd.DataFrame:
+def build_store_index(df: pd.DataFrame, weights: dict[str, float], food: list[str]) -> pd.DataFrame:
     """Food index per store, each on its own products, all rebased to a shared start day.
 
     A store added later (A101 started on 13 Sep) has no earlier prices, so the
     common start is the first day every store has data. Without the rebase the
     stores would sit on different base days and not be comparable.
     """
-    weights = load_weights() if weights is None else weights
-    series = {store: build_index(rows, weights)["food"] for store, rows in df.groupby("store")}
+    series = {store: build_index(rows, weights, food)["food"] for store, rows in df.groupby("store")}
     frame = pd.DataFrame(series)
     complete = frame.dropna(how="any")
     if complete.empty:
@@ -194,7 +183,7 @@ def big_jumps(df: pd.DataFrame, pct: float = JUMP_PCT) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def write_summary(index: pd.DataFrame, stores: pd.DataFrame, changes: pd.DataFrame, path,
+def write_summary(index: pd.DataFrame, stores: pd.DataFrame, changes: pd.DataFrame, path, currency: str,
                   jumps: pd.DataFrame | None = None) -> str:
     latest, first = index.iloc[-1], index.iloc[0]
     days = (index.index[-1] - index.index[0]).days
@@ -225,7 +214,7 @@ def write_summary(index: pd.DataFrame, stores: pd.DataFrame, changes: pd.DataFra
         change = latest[category] / first[category] - 1
         lines.append(f"| {category} | {latest[category]:.2f} | {change * 100:+.2f}% |")
 
-    lines += ["", "## Biggest movers since the start", "", "| Product | Store | Now (TL) | Change |",
+    lines += ["", "## Biggest movers since the start", "", f"| Product | Store | Now ({currency}) | Change |",
               "| --- | --- | --- | --- |"]
     movers = pd.concat([changes.head(5), changes.tail(5)])
     for product_id, row in movers.iterrows():
@@ -234,7 +223,7 @@ def write_summary(index: pd.DataFrame, stores: pd.DataFrame, changes: pd.DataFra
 
     if jumps is not None and not jumps.empty:
         lines += ["", f"## One-day moves over {JUMP_PCT}% (worth a look)", "",
-                  "| Date | Product | From (TL) | To (TL) |", "| --- | --- | --- | --- |"]
+                  f"| Date | Product | From ({currency}) | To ({currency}) |", "| --- | --- | --- | --- |"]
         for _, row in jumps.iterrows():
             lines.append(f"| {row['date']:%Y-%m-%d} | {row['product_id']} | "
                          f"{row['from_tl']:.2f} | {row['to_tl']:.2f} |")
@@ -244,26 +233,36 @@ def write_summary(index: pd.DataFrame, stores: pd.DataFrame, changes: pd.DataFra
     return text
 
 
-def main() -> None:
-    df = load_prices()
-    weights = load_weights()
-    index = build_index(df, weights)
-    stores = build_store_index(df, weights)
+def run(market: Market) -> None:
+    df = load_prices(market)
+    config = load_config(market)
+    weights, food = load_weights(config), food_categories(config)
+    index = build_index(df, weights, food)
+    stores = build_store_index(df, weights, food)
     changes = product_changes(df)
     jumps = big_jumps(df)
 
-    OUT.mkdir(parents=True, exist_ok=True)
-    index.round(2).to_csv(OUT / "daily_index.csv")
-    stores.round(2).to_csv(OUT / "store_index.csv")
-    changes.round(2).to_csv(OUT / "product_changes.csv")
+    out = market.output
+    out.mkdir(parents=True, exist_ok=True)
+    index.round(2).to_csv(out / "daily_index.csv")
+    stores.round(2).to_csv(out / "store_index.csv")
+    changes.round(2).to_csv(out / "product_changes.csv")
     if not jumps.empty:
-        jumps.round(2).to_csv(OUT / "price_jumps.csv", index=False)
-    print(write_summary(index, stores, changes, OUT / "summary.md", jumps))
+        jumps.round(2).to_csv(out / "price_jumps.csv", index=False)
+    print(write_summary(index, stores, changes, out / "summary.md", market.currency, jumps))
 
     sizes = size_changes(df)
     if not sizes.empty:
         print("Package size changes:")
         print(sizes.to_string(index=False))
+
+
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(description="Build the price index")
+    parser.add_argument("--market", choices=MARKETS, help="only this market (default: all)")
+    args = parser.parse_args(argv)
+    for market in select(args.market):
+        run(market)
 
 
 if __name__ == "__main__":

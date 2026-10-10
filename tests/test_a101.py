@@ -93,7 +93,8 @@ def test_listing_rows_use_a101s_own_net_weight_and_shelf_price():
 
 
 def test_out_of_stock_products_are_left_out_of_a_sweep():
-    rows = sweep({"name": "a101_yumurta", "category": "dairy_eggs", "store": "a101", "shop_category": "C0503"})
+    rows = sweep({"name": "a101_yumurta", "group": "a101:Yumurta", "category": "dairy_eggs", "store": "a101",
+                  "shop_category": "C0503"})
     assert [r["sku"] for r in rows] == ["11001218"]
     assert rows[0]["net_amount"] == 1725
 
@@ -105,7 +106,7 @@ def test_a_shelf_belongs_to_the_aisle_in_its_id():
 
 
 def test_one_shelf_can_be_split_by_product_name():
-    base = {"category": "dairy_eggs", "store": "a101", "shop_category": "C0502"}
+    base = {"group": "a101:Süt", "category": "dairy_eggs", "store": "a101", "shop_category": "C0502"}
     birsah = sweep({**base, "name": "a", "name_pattern": "birşah"})
     rest = sweep({**base, "name": "b", "exclude_pattern": "birşah"})
     assert sorted(r["sku"] for r in birsah) == ["12000244", "12000319"]

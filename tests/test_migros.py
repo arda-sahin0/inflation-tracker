@@ -3,7 +3,7 @@ import json
 import pytest
 
 from tracker import ROOT
-from tracker.scrapers.migros import parse, to_sku
+from tracker.scrapers.migros import category_names, parse, to_sku
 
 FIXTURES = ROOT / "tests" / "fixtures"
 
@@ -48,3 +48,8 @@ def test_parse_weighed_product():
     assert row["unit"] == "GRAM"
     assert row["net_amount"] is None
     assert isinstance(row["regular_price"], int)
+
+def test_category_path_reads_oldest_ancestor_first():
+    product = {"categoryAscendants": [{"name": "Süt"}, {"name": "Süt, Kahvaltılık"}],
+               "category": {"name": "Uzun Ömürlü Süt"}}
+    assert category_names(product) == ["Süt, Kahvaltılık", "Süt", "Uzun Ömürlü Süt"]
