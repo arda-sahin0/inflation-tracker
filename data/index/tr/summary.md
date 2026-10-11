@@ -1,16 +1,16 @@
-# Market basket index — 10 October 2026
+# Market basket index — 11 October 2026
 
-- Period: 11 Sep 2026 to 10 Oct 2026 (29 days)
+- Period: 11 Sep 2026 to 11 Oct 2026 (30 days)
 - **Food & non-alcoholic beverages: 103.80** (+3.80%)
-- Whole basket (incl. household & personal care): 106.93 (+6.93%)
-- Food at the same pace for a year would be: +59.8%
+- Whole basket (incl. household & personal care): 106.98 (+6.98%)
+- Food at the same pace for a year would be: +57.5%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 103.41 | +3.41% |
-| migros | 104.05 | +4.05% |
+| migros | 104.06 | +4.06% |
 
 ## By category
 
@@ -18,13 +18,13 @@
 | --- | --- | --- |
 | bread_cereals | 103.90 | +3.90% |
 | dairy_eggs | 102.65 | +2.65% |
-| drinks | 101.77 | +1.77% |
+| drinks | 101.83 | +1.83% |
 | fruit_nuts | 108.16 | +8.16% |
 | household | 108.06 | +8.06% |
 | meat | 107.20 | +7.20% |
 | oils_fats | 101.45 | +1.45% |
 | other_food | 108.14 | +8.14% |
-| personal_care | 122.00 | +22.00% |
+| personal_care | 122.36 | +22.36% |
 | sugar_sweets | 102.44 | +2.44% |
 | tea_coffee | 102.97 | +2.97% |
 | vegetables_pulses | 99.28 | -0.72% |
@@ -34,12 +34,12 @@
 | Product | Store | Now (TL) | Change |
 | --- | --- | --- | --- |
 | Signal White System Diş Macunu 75 Ml | migros | 154.95 | +121.5% |
-| Banvit Piliç Bonfile Kg | migros | 359.95 | +50.0% |
-| Portakal Kg | migros | 73.50 | +47.1% |
-| Fairy Sıvı Bulaşık Deterjanı Limon 1350 Ml | migros | 239.95 | +41.2% |
-| Çokça Domates Salçası 830 g | a101 | 81.33 | +29.8% |
-| Oneo Karışık Meyve Aromalı Sakız 76 G  | a101 | 776.32 | +0.0% |
-| Eti Maximus Loading Yer Fıstıklı Bar Çikolata 50 G | a101 | 440.00 | +0.0% |
+| Sensodyne Klinik Onarım Derin Temizlik Diş Macunu 75 Ml | migros | 7666.00 | +53.3% |
+| Sensodyne Klinik Onarım Aktif Beyazlık Diş Macunu 75 Ml | migros | 7666.00 | +53.3% |
+| Sensodyne Klinik Beyazlık Güçlü Diş Minesi Diş Macunu 75ml | migros | 7666.00 | +53.3% |
+| Sensodyne Klinik Beyazlık Diş Lekelerine Karşı Macunu 75Ml | migros | 7666.00 | +53.3% |
+| Chocodan's Karamelli Fındıklı Çikolata 125 G | a101 | 552.00 | +0.0% |
+| Vince Draje Çikolatalı Badem Şekeri 150 G | a101 | 660.00 | +0.0% |
 | Reis Koçbaşı Nohut 1 Kg | migros | 194.95 | -5.8% |
 | Kurukahveci Mehmet Efendi Türk Kahvesi 100 G | migros | 799.50 | -18.0% |
 | Migros Yerli Yeşil Mercimek 1 Kg | migros | 54.00 | -19.3% |
@@ -75,3 +75,36 @@
 | 2026-10-07 | portakal-kg | 49.95 | 73.50 |
 | 2026-10-08 | elma-gala-kg | 59.95 | 83.95 |
 | 2026-10-09 | elma-gala-kg | 83.95 | 59.95 |
+| 2026-10-11 | migros-08050572 | 198.00 | 300.00 |
+| 2026-10-11 | migros-08050573 | 198.00 | 300.00 |
+| 2026-10-11 | migros-34010314 | 3759.33 | 5199.33 |
+| 2026-10-11 | migros-34010354 | 4106.00 | 5666.00 |
+| 2026-10-11 | migros-34010385 | 4106.00 | 5666.00 |
+| 2026-10-11 | migros-34010398 | 4999.33 | 7666.00 |
+| 2026-10-11 | migros-34010399 | 4999.33 | 7666.00 |
+| 2026-10-11 | migros-34013480 | 3652.67 | 4999.33 |
+| 2026-10-11 | migros-34013696 | 4999.33 | 7666.00 |
+| 2026-10-11 | migros-34013697 | 4999.33 | 7666.00 |
+| 2026-10-11 | migros-34013715 | 1649.50 | 2199.50 |
+| 2026-10-11 | migros-34013716 | 1649.50 | 2199.50 |
+| 2026-10-11 | migros-34013717 | 4399.33 | 5866.00 |
+| 2026-10-11 | migros-34013718 | 2199.33 | 2932.67 |
+| 2026-10-11 | migros-34013719 | 3506.00 | 4666.00 |
+| 2026-10-11 | migros-34013781 | 4306.00 | 5732.67 |
+| 2026-10-11 | migros-34013784 | 4559.33 | 6066.00 |
+| 2026-10-11 | migros-34013785 | 3506.00 | 4666.00 |
+| 2026-10-11 | migros-34013787 | 4399.33 | 5866.00 |
+| 2026-10-11 | migros-34013798 | 4399.33 | 5866.00 |
+| 2026-10-11 | migros-34013799 | 4759.33 | 6332.67 |
+| 2026-10-11 | migros-34015552 | 3506.00 | 4666.00 |
+| 2026-10-11 | migros-34018889 | 3159.33 | 4332.67 |
+| 2026-10-11 | migros-34040194 | 206.95 | 274.95 |
+| 2026-10-11 | migros-34040298 | 239.95 | 319.95 |
+| 2026-10-11 | migros-34043642 | 239.95 | 309.95 |
+| 2026-10-11 | migros-34049024 | 251.95 | 344.95 |
+| 2026-10-11 | migros-34049025 | 251.95 | 344.95 |
+| 2026-10-11 | migros-34049043 | 239.95 | 324.95 |
+| 2026-10-11 | migros-34049120 | 239.95 | 324.95 |
+| 2026-10-11 | migros-34049154 | 311.95 | 414.95 |
+| 2026-10-11 | migros-34049191 | 311.95 | 414.95 |
+| 2026-10-11 | migros-34049247 | 269.95 | 364.95 |
