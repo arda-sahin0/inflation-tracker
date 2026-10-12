@@ -1,16 +1,16 @@
-# Market basket index — 11 October 2026
+# Market basket index — 12 October 2026
 
-- Period: 11 Sep 2026 to 11 Oct 2026 (30 days)
-- **Food & non-alcoholic beverages: 103.80** (+3.80%)
-- Whole basket (incl. household & personal care): 106.98 (+6.98%)
-- Food at the same pace for a year would be: +57.5%
+- Period: 11 Sep 2026 to 12 Oct 2026 (31 days)
+- **Food & non-alcoholic beverages: 103.89** (+3.89%)
+- Whole basket (incl. household & personal care): 107.07 (+7.07%)
+- Food at the same pace for a year would be: +56.7%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 103.41 | +3.41% |
-| migros | 104.06 | +4.06% |
+| a101 | 103.50 | +3.50% |
+| migros | 104.14 | +4.14% |
 
 ## By category
 
@@ -19,30 +19,30 @@
 | bread_cereals | 103.90 | +3.90% |
 | dairy_eggs | 102.65 | +2.65% |
 | drinks | 101.83 | +1.83% |
-| fruit_nuts | 108.16 | +8.16% |
-| household | 108.06 | +8.06% |
-| meat | 107.20 | +7.20% |
+| fruit_nuts | 108.76 | +8.76% |
+| household | 108.16 | +8.16% |
+| meat | 107.44 | +7.44% |
 | oils_fats | 101.45 | +1.45% |
-| other_food | 108.14 | +8.14% |
-| personal_care | 122.36 | +22.36% |
+| other_food | 108.17 | +8.17% |
+| personal_care | 122.41 | +22.41% |
 | sugar_sweets | 102.44 | +2.44% |
 | tea_coffee | 102.97 | +2.97% |
-| vegetables_pulses | 99.28 | -0.72% |
+| vegetables_pulses | 99.30 | -0.70% |
 
 ## Biggest movers since the start
 
 | Product | Store | Now (TL) | Change |
 | --- | --- | --- | --- |
 | Signal White System Diş Macunu 75 Ml | migros | 154.95 | +121.5% |
-| Sensodyne Klinik Onarım Derin Temizlik Diş Macunu 75 Ml | migros | 7666.00 | +53.3% |
-| Sensodyne Klinik Onarım Aktif Beyazlık Diş Macunu 75 Ml | migros | 7666.00 | +53.3% |
-| Sensodyne Klinik Beyazlık Güçlü Diş Minesi Diş Macunu 75ml | migros | 7666.00 | +53.3% |
-| Sensodyne Klinik Beyazlık Diş Lekelerine Karşı Macunu 75Ml | migros | 7666.00 | +53.3% |
-| Chocodan's Karamelli Fındıklı Çikolata 125 G | a101 | 552.00 | +0.0% |
-| Vince Draje Çikolatalı Badem Şekeri 150 G | a101 | 660.00 | +0.0% |
-| Reis Koçbaşı Nohut 1 Kg | migros | 194.95 | -5.8% |
+| Fairy Platinum Fresh Tablet 30'lu 447 G | migros | 1498.77 | +103.0% |
+| Fairy Platinum 50'li 745 G | migros | 1053.62 | +96.3% |
+| Uzman Kasap Piliç Kanat Kg | migros | 359.95 | +80.1% |
+| Uzman Kasap Piliç Baget Kg | migros | 139.95 | +75.2% |
+| Avokado Adet | a101 | 279.50 | -6.1% |
 | Kurukahveci Mehmet Efendi Türk Kahvesi 100 G | migros | 799.50 | -18.0% |
 | Migros Yerli Yeşil Mercimek 1 Kg | migros | 54.00 | -19.3% |
+| Keskinoğlu Piliç Izgara Tava Kg | migros | 289.95 | -27.5% |
+| Banvit Poşetli Bütün Piliç Kg | migros | 109.95 | -31.3% |
 
 ## One-day moves over 25% (worth a look)
 
@@ -108,3 +108,19 @@
 | 2026-10-11 | migros-34049154 | 311.95 | 414.95 |
 | 2026-10-11 | migros-34049191 | 311.95 | 414.95 |
 | 2026-10-11 | migros-34049247 | 269.95 | 364.95 |
+| 2026-10-12 | a101-17000129 | 500.00 | 666.67 |
+| 2026-10-12 | a101-24005109 | 603.03 | 754.55 |
+| 2026-10-12 | a101-24005110 | 603.03 | 754.55 |
+| 2026-10-12 | a101-24005111 | 603.03 | 754.55 |
+| 2026-10-12 | a101-24005112 | 603.03 | 754.55 |
+| 2026-10-12 | migros-06016242 | 687.19 | 874.69 |
+| 2026-10-12 | migros-13000294 | 399.95 | 289.95 |
+| 2026-10-12 | migros-13000306 | 199.90 | 299.95 |
+| 2026-10-12 | migros-13000307 | 79.90 | 134.95 |
+| 2026-10-12 | migros-13000308 | 79.90 | 139.95 |
+| 2026-10-12 | migros-13000309 | 199.90 | 359.95 |
+| 2026-10-12 | migros-27134010 | 52.50 | 73.50 |
+| 2026-10-12 | migros-28150080 | 69.95 | 89.95 |
+| 2026-10-12 | migros-30980041 | 738.14 | 1498.77 |
+| 2026-10-12 | migros-30980060 | 536.85 | 1053.62 |
+| 2026-10-12 | migros-46040136 | 159.95 | 109.95 |
