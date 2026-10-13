@@ -1,47 +1,47 @@
-# Market basket index — 12 October 2026
+# Market basket index — 13 October 2026
 
-- Period: 11 Sep 2026 to 12 Oct 2026 (31 days)
-- **Food & non-alcoholic beverages: 103.89** (+3.89%)
-- Whole basket (incl. household & personal care): 107.07 (+7.07%)
-- Food at the same pace for a year would be: +56.7%
+- Period: 11 Sep 2026 to 13 Oct 2026 (32 days)
+- **Food & non-alcoholic beverages: 103.97** (+3.97%)
+- Whole basket (incl. household & personal care): 107.12 (+7.12%)
+- Food at the same pace for a year would be: +55.8%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 103.50 | +3.50% |
-| migros | 104.14 | +4.14% |
+| migros | 104.28 | +4.28% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
 | bread_cereals | 103.90 | +3.90% |
-| dairy_eggs | 102.65 | +2.65% |
+| dairy_eggs | 102.76 | +2.76% |
 | drinks | 101.83 | +1.83% |
-| fruit_nuts | 108.76 | +8.76% |
-| household | 108.16 | +8.16% |
-| meat | 107.44 | +7.44% |
-| oils_fats | 101.45 | +1.45% |
-| other_food | 108.17 | +8.17% |
-| personal_care | 122.41 | +22.41% |
-| sugar_sweets | 102.44 | +2.44% |
-| tea_coffee | 102.97 | +2.97% |
-| vegetables_pulses | 99.30 | -0.70% |
+| fruit_nuts | 109.11 | +9.11% |
+| household | 108.17 | +8.17% |
+| meat | 107.61 | +7.61% |
+| oils_fats | 101.47 | +1.47% |
+| other_food | 108.15 | +8.15% |
+| personal_care | 122.45 | +22.45% |
+| sugar_sweets | 102.47 | +2.47% |
+| tea_coffee | 102.99 | +2.99% |
+| vegetables_pulses | 99.37 | -0.63% |
 
 ## Biggest movers since the start
 
 | Product | Store | Now (TL) | Change |
 | --- | --- | --- | --- |
-| Signal White System Diş Macunu 75 Ml | migros | 154.95 | +121.5% |
 | Fairy Platinum Fresh Tablet 30'lu 447 G | migros | 1498.77 | +103.0% |
 | Fairy Platinum 50'li 745 G | migros | 1053.62 | +96.3% |
 | Uzman Kasap Piliç Kanat Kg | migros | 359.95 | +80.1% |
 | Uzman Kasap Piliç Baget Kg | migros | 139.95 | +75.2% |
-| Avokado Adet | a101 | 279.50 | -6.1% |
-| Kurukahveci Mehmet Efendi Türk Kahvesi 100 G | migros | 799.50 | -18.0% |
-| Migros Yerli Yeşil Mercimek 1 Kg | migros | 54.00 | -19.3% |
+| Uzman Kasap Piliç Kalçalı But Kg | migros | 134.95 | +68.9% |
+| Kühne Cüccü Kornişon Turşusu 340 G | migros | 523.38 | -11.0% |
+| Mayi İyotlu Öğütülmüş Doğal Kaynak Tuzu 250 G | migros | 387.80 | -15.7% |
 | Keskinoğlu Piliç Izgara Tava Kg | migros | 289.95 | -27.5% |
+| Tat Mayonez Cam 500 G | migros | 399.90 | -28.6% |
 | Banvit Poşetli Bütün Piliç Kg | migros | 109.95 | -31.3% |
 
 ## One-day moves over 25% (worth a look)
@@ -124,3 +124,10 @@
 | 2026-10-12 | migros-30980041 | 738.14 | 1498.77 |
 | 2026-10-12 | migros-30980060 | 536.85 | 1053.62 |
 | 2026-10-12 | migros-46040136 | 159.95 | 109.95 |
+| 2026-10-13 | migros-03270034 | 1999.75 | 2922.50 |
+| 2026-10-13 | migros-13000310 | 149.90 | 189.95 |
+| 2026-10-13 | migros-16300269 | 559.90 | 399.90 |
+| 2026-10-13 | migros-27300001 | 73.50 | 94.50 |
+| 2026-10-13 | migros-27304007 | 73.50 | 94.50 |
+| 2026-10-13 | migros-34370187 | 439.90 | 579.90 |
+| 2026-10-13 | migros-34374146 | 439.90 | 579.90 |
