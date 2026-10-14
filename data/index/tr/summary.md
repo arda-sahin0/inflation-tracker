@@ -1,33 +1,33 @@
-# Market basket index — 13 October 2026
+# Market basket index — 14 October 2026
 
-- Period: 11 Sep 2026 to 13 Oct 2026 (32 days)
-- **Food & non-alcoholic beverages: 103.97** (+3.97%)
-- Whole basket (incl. household & personal care): 107.12 (+7.12%)
-- Food at the same pace for a year would be: +55.8%
+- Period: 11 Sep 2026 to 14 Oct 2026 (33 days)
+- **Food & non-alcoholic beverages: 104.25** (+4.25%)
+- Whole basket (incl. household & personal care): 107.34 (+7.34%)
+- Food at the same pace for a year would be: +58.5%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 103.50 | +3.50% |
-| migros | 104.28 | +4.28% |
+| a101 | 103.77 | +3.77% |
+| migros | 104.54 | +4.54% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
 | bread_cereals | 103.90 | +3.90% |
-| dairy_eggs | 102.76 | +2.76% |
-| drinks | 101.83 | +1.83% |
-| fruit_nuts | 109.11 | +9.11% |
-| household | 108.17 | +8.17% |
-| meat | 107.61 | +7.61% |
-| oils_fats | 101.47 | +1.47% |
-| other_food | 108.15 | +8.15% |
-| personal_care | 122.45 | +22.45% |
-| sugar_sweets | 102.47 | +2.47% |
-| tea_coffee | 102.99 | +2.99% |
-| vegetables_pulses | 99.37 | -0.63% |
+| dairy_eggs | 102.97 | +2.97% |
+| drinks | 101.89 | +1.89% |
+| fruit_nuts | 110.43 | +10.43% |
+| household | 108.23 | +8.23% |
+| meat | 107.63 | +7.63% |
+| oils_fats | 101.42 | +1.42% |
+| other_food | 108.17 | +8.17% |
+| personal_care | 122.58 | +22.58% |
+| sugar_sweets | 102.51 | +2.51% |
+| tea_coffee | 103.22 | +3.22% |
+| vegetables_pulses | 100.38 | +0.38% |
 
 ## Biggest movers since the start
 
@@ -38,8 +38,8 @@
 | Uzman Kasap Piliç Kanat Kg | migros | 359.95 | +80.1% |
 | Uzman Kasap Piliç Baget Kg | migros | 139.95 | +75.2% |
 | Uzman Kasap Piliç Kalçalı But Kg | migros | 134.95 | +68.9% |
-| Kühne Cüccü Kornişon Turşusu 340 G | migros | 523.38 | -11.0% |
-| Mayi İyotlu Öğütülmüş Doğal Kaynak Tuzu 250 G | migros | 387.80 | -15.7% |
+| Migros Natürel Sızma Zeytinyağı 1 L | migros | 309.50 | -21.2% |
+| Limon Kg | migros | 39.50 | -24.8% |
 | Keskinoğlu Piliç Izgara Tava Kg | migros | 289.95 | -27.5% |
 | Tat Mayonez Cam 500 G | migros | 399.90 | -28.6% |
 | Banvit Poşetli Bütün Piliç Kg | migros | 109.95 | -31.3% |
@@ -131,3 +131,22 @@
 | 2026-10-13 | migros-27304007 | 73.50 | 94.50 |
 | 2026-10-13 | migros-34370187 | 439.90 | 579.90 |
 | 2026-10-13 | migros-34374146 | 439.90 | 579.90 |
+| 2026-10-14 | a101-18002388 | 430.00 | 600.00 |
+| 2026-10-14 | a101-20000026 | 116.33 | 153.00 |
+| 2026-10-14 | a101-20000761 | 49.50 | 69.50 |
+| 2026-10-14 | a101-20001428 | 111.80 | 149.80 |
+| 2026-10-14 | migros-27060000 | 199.95 | 262.50 |
+| 2026-10-14 | migros-27133000 | 99.95 | 125.95 |
+| 2026-10-14 | migros-27135000 | 79.95 | 104.95 |
+| 2026-10-14 | migros-27250000 | 139.95 | 178.50 |
+| 2026-10-14 | migros-27268051 | 133.17 | 175.00 |
+| 2026-10-14 | migros-27336011 | 69.95 | 94.50 |
+| 2026-10-14 | migros-27337000 | 69.95 | 94.50 |
+| 2026-10-14 | migros-27501003 | 119.95 | 157.50 |
+| 2026-10-14 | migros-27580003 | 79.95 | 104.95 |
+| 2026-10-14 | migros-27585012 | 879.60 | 1175.60 |
+| 2026-10-14 | migros-28015921 | 149.95 | 188.95 |
+| 2026-10-14 | migros-28080000 | 52.50 | 73.50 |
+| 2026-10-14 | migros-28190000 | 74.95 | 94.50 |
+| 2026-10-14 | migros-28270004 | 15.95 | 26.50 |
+| 2026-10-14 | migros-28290000 | 29.95 | 39.90 |
