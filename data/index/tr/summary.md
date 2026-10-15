@@ -1,48 +1,48 @@
-# Market basket index — 14 October 2026
+# Market basket index — 15 October 2026
 
-- Period: 11 Sep 2026 to 14 Oct 2026 (33 days)
-- **Food & non-alcoholic beverages: 104.25** (+4.25%)
-- Whole basket (incl. household & personal care): 107.34 (+7.34%)
-- Food at the same pace for a year would be: +58.5%
+- Period: 11 Sep 2026 to 15 Oct 2026 (34 days)
+- **Food & non-alcoholic beverages: 104.28** (+4.28%)
+- Whole basket (incl. household & personal care): 107.32 (+7.32%)
+- Food at the same pace for a year would be: +56.8%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 103.77 | +3.77% |
-| migros | 104.54 | +4.54% |
+| migros | 104.60 | +4.60% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
 | bread_cereals | 103.90 | +3.90% |
-| dairy_eggs | 102.97 | +2.97% |
-| drinks | 101.89 | +1.89% |
-| fruit_nuts | 110.43 | +10.43% |
-| household | 108.23 | +8.23% |
+| dairy_eggs | 102.94 | +2.94% |
+| drinks | 101.90 | +1.90% |
+| fruit_nuts | 110.51 | +10.51% |
+| household | 107.95 | +7.95% |
 | meat | 107.63 | +7.63% |
 | oils_fats | 101.42 | +1.42% |
-| other_food | 108.17 | +8.17% |
-| personal_care | 122.58 | +22.58% |
-| sugar_sweets | 102.51 | +2.51% |
+| other_food | 108.30 | +8.30% |
+| personal_care | 122.78 | +22.78% |
+| sugar_sweets | 102.55 | +2.55% |
 | tea_coffee | 103.22 | +3.22% |
-| vegetables_pulses | 100.38 | +0.38% |
+| vegetables_pulses | 100.42 | +0.42% |
 
 ## Biggest movers since the start
 
 | Product | Store | Now (TL) | Change |
 | --- | --- | --- | --- |
+| Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
+| Sensodyne Çok Yönlü Koruma Gelişmiş Beyazlık 50 Ml | migros | 5999.00 | +150.1% |
+| Le Petit Marseillais Şeftali Duş Jeli 2x400 Ml | migros | 674.94 | +116.0% |
 | Fairy Platinum Fresh Tablet 30'lu 447 G | migros | 1498.77 | +103.0% |
 | Fairy Platinum 50'li 745 G | migros | 1053.62 | +96.3% |
-| Uzman Kasap Piliç Kanat Kg | migros | 359.95 | +80.1% |
-| Uzman Kasap Piliç Baget Kg | migros | 139.95 | +75.2% |
-| Uzman Kasap Piliç Kalçalı But Kg | migros | 134.95 | +68.9% |
-| Migros Natürel Sızma Zeytinyağı 1 L | migros | 309.50 | -21.2% |
-| Limon Kg | migros | 39.50 | -24.8% |
-| Keskinoğlu Piliç Izgara Tava Kg | migros | 289.95 | -27.5% |
-| Tat Mayonez Cam 500 G | migros | 399.90 | -28.6% |
-| Banvit Poşetli Bütün Piliç Kg | migros | 109.95 | -31.3% |
+| Tursil Sıvı Bakım Deterjanı Renkliler 2.7 L | migros | 66.65 | -55.0% |
+| Tursil Sıvı Bakım Deterjanı Siyahlar 2.7 L | migros | 66.65 | -55.0% |
+| Omo Express Fresh Ultra Beyaz Sıvı Çamaşır Deterjanı 840 Ml | migros | 178.51 | -56.7% |
+| Omo Express Fresh  Renkliler ve Beyazlar Sıvı Deterjan 840 Ml | migros | 178.51 | -56.7% |
+| Omo Sıvı Deterjanı Cold Sık Yıkananlar 1.5 L | migros | 99.97 | -61.5% |
 
 ## One-day moves over 25% (worth a look)
 
@@ -150,3 +150,43 @@
 | 2026-10-14 | migros-28190000 | 74.95 | 94.50 |
 | 2026-10-14 | migros-28270004 | 15.95 | 26.50 |
 | 2026-10-14 | migros-28290000 | 29.95 | 39.90 |
+| 2026-10-15 | migros-08080259 | 1149.00 | 1449.90 |
+| 2026-10-15 | migros-09011368 | 127.24 | 169.67 |
+| 2026-10-15 | migros-09102031 | 238.50 | 314.21 |
+| 2026-10-15 | migros-09102032 | 378.50 | 499.93 |
+| 2026-10-15 | migros-28054104 | 104.95 | 146.95 |
+| 2026-10-15 | migros-29790041 | 166.63 | 79.97 |
+| 2026-10-15 | migros-30001488 | 259.97 | 99.97 |
+| 2026-10-15 | migros-30001490 | 411.85 | 178.51 |
+| 2026-10-15 | migros-30001491 | 411.85 | 178.51 |
+| 2026-10-15 | migros-30001492 | 148.13 | 66.65 |
+| 2026-10-15 | migros-30001495 | 148.13 | 66.65 |
+| 2026-10-15 | migros-30530087 | 94.99 | 57.25 |
+| 2026-10-15 | migros-30530088 | 94.99 | 57.25 |
+| 2026-10-15 | migros-30530448 | 162.13 | 108.07 |
+| 2026-10-15 | migros-30530451 | 162.13 | 108.07 |
+| 2026-10-15 | migros-30530458 | 236.45 | 135.10 |
+| 2026-10-15 | migros-30530459 | 236.45 | 135.10 |
+| 2026-10-15 | migros-30530552 | 109.97 | 69.97 |
+| 2026-10-15 | migros-30530554 | 472.94 | 236.45 |
+| 2026-10-15 | migros-30530555 | 472.94 | 236.45 |
+| 2026-10-15 | migros-30570191 | 177.03 | 93.70 |
+| 2026-10-15 | migros-30570193 | 177.03 | 93.70 |
+| 2026-10-15 | migros-30573022 | 555.51 | 272.77 |
+| 2026-10-15 | migros-30573023 | 555.51 | 272.77 |
+| 2026-10-15 | migros-31110193 | 59.95 | 99.95 |
+| 2026-10-15 | migros-31110194 | 59.95 | 99.95 |
+| 2026-10-15 | migros-31115819 | 59.95 | 99.95 |
+| 2026-10-15 | migros-34013768 | 2399.00 | 5999.00 |
+| 2026-10-15 | migros-34120403 | 2199.75 | 1149.75 |
+| 2026-10-15 | migros-34141388 | 119.95 | 219.95 |
+| 2026-10-15 | migros-34251284 | 399.88 | 724.88 |
+| 2026-10-15 | migros-34251306 | 399.88 | 724.88 |
+| 2026-10-15 | migros-34370146 | 312.44 | 674.94 |
+| 2026-10-15 | migros-34370152 | 674.88 | 474.88 |
+| 2026-10-15 | migros-34374173 | 674.88 | 474.88 |
+| 2026-10-15 | migros-34374226 | 674.88 | 474.88 |
+| 2026-10-15 | migros-34374232 | 139.90 | 399.90 |
+| 2026-10-15 | migros-34379349 | 674.88 | 474.88 |
+| 2026-10-15 | migros-34379353 | 674.88 | 474.88 |
+| 2026-10-15 | migros-34379354 | 674.88 | 474.88 |
