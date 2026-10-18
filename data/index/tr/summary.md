@@ -1,9 +1,9 @@
-# Market basket index — 17 October 2026
+# Market basket index — 18 October 2026
 
-- Period: 11 Sep 2026 to 17 Oct 2026 (36 days)
-- **Food & non-alcoholic beverages: 104.24** (+4.24%)
-- Whole basket (incl. household & personal care): 107.61 (+7.61%)
-- Food at the same pace for a year would be: +52.4%
+- Period: 11 Sep 2026 to 18 Oct 2026 (37 days)
+- **Food & non-alcoholic beverages: 104.25** (+4.25%)
+- Whole basket (incl. household & personal care): 107.60 (+7.60%)
+- Food at the same pace for a year would be: +50.7%
 
 ## By store (food index, each on its own products)
 
@@ -16,18 +16,18 @@
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 103.95 | +3.95% |
+| bread_cereals | 103.93 | +3.93% |
 | dairy_eggs | 103.30 | +3.30% |
 | drinks | 102.32 | +2.32% |
 | fruit_nuts | 109.45 | +9.45% |
-| household | 109.47 | +9.47% |
-| meat | 107.27 | +7.27% |
+| household | 109.42 | +9.42% |
+| meat | 107.28 | +7.28% |
 | oils_fats | 101.64 | +1.64% |
 | other_food | 108.48 | +8.48% |
-| personal_care | 122.62 | +22.62% |
+| personal_care | 122.63 | +22.63% |
 | sugar_sweets | 102.48 | +2.48% |
 | tea_coffee | 103.27 | +3.27% |
-| vegetables_pulses | 100.29 | +0.29% |
+| vegetables_pulses | 100.30 | +0.30% |
 
 ## Biggest movers since the start
 
@@ -38,9 +38,9 @@
 | Le Petit Marseillais Şeftali Duş Jeli 2x400 Ml | migros | 674.94 | +116.0% |
 | Bref WC Tuvalet Temizleyici Jel 700ml Çiçek Ferahlığı | migros | 292.79 | +105.1% |
 | Fairy Platinum Fresh Tablet 30'lu 447 G | migros | 1498.77 | +103.0% |
-| Tursil Sıvı Bakım Deterjanı Renkliler 2.7 L | migros | 66.65 | -55.0% |
-| Omo Express Fresh  Renkliler ve Beyazlar Sıvı Deterjan 840 Ml | migros | 178.51 | -56.7% |
+| Tursil Sıvı Bakım Deterjanı Siyahlar 2.7 L | migros | 66.65 | -55.0% |
 | Omo Express Fresh Ultra Beyaz Sıvı Çamaşır Deterjanı 840 Ml | migros | 178.51 | -56.7% |
+| Omo Express Fresh  Renkliler ve Beyazlar Sıvı Deterjan 840 Ml | migros | 178.51 | -56.7% |
 | Erüst Salata Karışık 150 G | migros | 666.33 | -58.6% |
 | Omo Sıvı Deterjanı Cold Sık Yıkananlar 1.5 L | migros | 99.97 | -61.5% |
 
@@ -292,3 +292,6 @@
 | 2026-10-17 | migros-35050402 | 5799.00 | 2999.00 |
 | 2026-10-17 | migros-35058107 | 5399.00 | 2999.00 |
 | 2026-10-17 | migros-35068092 | 8399.00 | 4999.00 |
+| 2026-10-18 | migros-05056370 | 239.58 | 155.21 |
+| 2026-10-18 | migros-30619806 | 211.30 | 132.67 |
+| 2026-10-18 | migros-35030084 | 1599.67 | 2199.67 |
