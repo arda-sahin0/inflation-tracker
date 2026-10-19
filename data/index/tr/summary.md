@@ -1,44 +1,44 @@
-# Market basket index — 18 October 2026
+# Market basket index — 19 October 2026
 
-- Period: 11 Sep 2026 to 18 Oct 2026 (37 days)
-- **Food & non-alcoholic beverages: 104.25** (+4.25%)
-- Whole basket (incl. household & personal care): 107.60 (+7.60%)
-- Food at the same pace for a year would be: +50.7%
+- Period: 11 Sep 2026 to 19 Oct 2026 (38 days)
+- **Food & non-alcoholic beverages: 104.30** (+4.30%)
+- Whole basket (incl. household & personal care): 107.66 (+7.66%)
+- Food at the same pace for a year would be: +49.9%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 103.93 | +3.93% |
-| migros | 104.39 | +4.39% |
+| a101 | 103.96 | +3.96% |
+| migros | 104.48 | +4.48% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 103.93 | +3.93% |
-| dairy_eggs | 103.30 | +3.30% |
+| bread_cereals | 103.84 | +3.84% |
+| dairy_eggs | 103.32 | +3.32% |
 | drinks | 102.32 | +2.32% |
-| fruit_nuts | 109.45 | +9.45% |
-| household | 109.42 | +9.42% |
-| meat | 107.28 | +7.28% |
-| oils_fats | 101.64 | +1.64% |
-| other_food | 108.48 | +8.48% |
-| personal_care | 122.63 | +22.63% |
+| fruit_nuts | 109.66 | +9.66% |
+| household | 109.46 | +9.46% |
+| meat | 107.71 | +7.71% |
+| oils_fats | 101.68 | +1.68% |
+| other_food | 108.50 | +8.50% |
+| personal_care | 122.78 | +22.78% |
 | sugar_sweets | 102.48 | +2.48% |
-| tea_coffee | 103.27 | +3.27% |
-| vegetables_pulses | 100.30 | +0.30% |
+| tea_coffee | 103.30 | +3.30% |
+| vegetables_pulses | 100.23 | +0.23% |
 
 ## Biggest movers since the start
 
 | Product | Store | Now (TL) | Change |
 | --- | --- | --- | --- |
 | Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
+| Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 116.65 | +180.1% |
 | Sensodyne Çok Yönlü Koruma Gelişmiş Beyazlık 50 Ml | migros | 5999.00 | +150.1% |
 | Le Petit Marseillais Şeftali Duş Jeli 2x400 Ml | migros | 674.94 | +116.0% |
 | Bref WC Tuvalet Temizleyici Jel 700ml Çiçek Ferahlığı | migros | 292.79 | +105.1% |
-| Fairy Platinum Fresh Tablet 30'lu 447 G | migros | 1498.77 | +103.0% |
-| Tursil Sıvı Bakım Deterjanı Siyahlar 2.7 L | migros | 66.65 | -55.0% |
+| Tursil Sıvı Bakım Deterjanı Renkliler 2.7 L | migros | 66.65 | -55.0% |
 | Omo Express Fresh Ultra Beyaz Sıvı Çamaşır Deterjanı 840 Ml | migros | 178.51 | -56.7% |
 | Omo Express Fresh  Renkliler ve Beyazlar Sıvı Deterjan 840 Ml | migros | 178.51 | -56.7% |
 | Erüst Salata Karışık 150 G | migros | 666.33 | -58.6% |
@@ -295,3 +295,30 @@
 | 2026-10-18 | migros-05056370 | 239.58 | 155.21 |
 | 2026-10-18 | migros-30619806 | 211.30 | 132.67 |
 | 2026-10-18 | migros-35030084 | 1599.67 | 2199.67 |
+| 2026-10-19 | migros-03271992 | 2498.75 | 3137.50 |
+| 2026-10-19 | migros-03272043 | 2498.75 | 3137.50 |
+| 2026-10-19 | migros-05030567 | 339.90 | 239.90 |
+| 2026-10-19 | migros-05031047 | 92.38 | 48.75 |
+| 2026-10-19 | migros-05039321 | 73.90 | 39.00 |
+| 2026-10-19 | migros-05039322 | 73.90 | 39.00 |
+| 2026-10-19 | migros-05039323 | 73.90 | 39.00 |
+| 2026-10-19 | migros-05039324 | 73.90 | 39.00 |
+| 2026-10-19 | migros-05056370 | 155.21 | 239.58 |
+| 2026-10-19 | migros-10404402 | 438.90 | 568.90 |
+| 2026-10-19 | migros-13000306 | 199.95 | 299.95 |
+| 2026-10-19 | migros-13000308 | 79.90 | 139.95 |
+| 2026-10-19 | migros-13000309 | 199.95 | 359.95 |
+| 2026-10-19 | migros-13000310 | 149.95 | 189.95 |
+| 2026-10-19 | migros-13025476 | 89.95 | 134.95 |
+| 2026-10-19 | migros-29750033 | 36.65 | 56.65 |
+| 2026-10-19 | migros-29753831 | 33.32 | 66.65 |
+| 2026-10-19 | migros-29758732 | 36.65 | 56.65 |
+| 2026-10-19 | migros-29758733 | 36.65 | 56.65 |
+| 2026-10-19 | migros-29790030 | 299.90 | 399.90 |
+| 2026-10-19 | migros-29790031 | 299.90 | 399.90 |
+| 2026-10-19 | migros-29799573 | 41.65 | 116.65 |
+| 2026-10-19 | migros-30530536 | 199.95 | 430.95 |
+| 2026-10-19 | migros-30530539 | 199.95 | 430.95 |
+| 2026-10-19 | migros-46022456 | 73.90 | 39.00 |
+| 2026-10-19 | migros-46040101 | 399.95 | 299.95 |
+| 2026-10-19 | migros-46040136 | 89.95 | 159.95 |
