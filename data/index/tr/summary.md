@@ -1,33 +1,33 @@
-# Market basket index — 20 October 2026
+# Market basket index — 21 October 2026
 
-- Period: 11 Sep 2026 to 20 Oct 2026 (39 days)
-- **Food & non-alcoholic beverages: 104.38** (+4.38%)
-- Whole basket (incl. household & personal care): 107.72 (+7.72%)
-- Food at the same pace for a year would be: +49.3%
+- Period: 11 Sep 2026 to 21 Oct 2026 (40 days)
+- **Food & non-alcoholic beverages: 104.48** (+4.48%)
+- Whole basket (incl. household & personal care): 107.78 (+7.78%)
+- Food at the same pace for a year would be: +49.1%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 103.97 | +3.97% |
-| migros | 104.62 | +4.62% |
+| a101 | 104.17 | +4.17% |
+| migros | 104.64 | +4.64% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 103.84 | +3.84% |
-| dairy_eggs | 103.31 | +3.31% |
-| drinks | 102.34 | +2.34% |
-| fruit_nuts | 110.06 | +10.06% |
-| household | 109.46 | +9.46% |
-| meat | 107.94 | +7.94% |
-| oils_fats | 101.68 | +1.68% |
-| other_food | 108.50 | +8.50% |
-| personal_care | 122.86 | +22.86% |
-| sugar_sweets | 102.48 | +2.48% |
-| tea_coffee | 103.31 | +3.31% |
-| vegetables_pulses | 100.31 | +0.31% |
+| bread_cereals | 103.86 | +3.86% |
+| dairy_eggs | 103.37 | +3.37% |
+| drinks | 102.35 | +2.35% |
+| fruit_nuts | 110.34 | +10.34% |
+| household | 109.47 | +9.47% |
+| meat | 107.70 | +7.70% |
+| oils_fats | 101.74 | +1.74% |
+| other_food | 108.49 | +8.49% |
+| personal_care | 122.79 | +22.79% |
+| sugar_sweets | 103.06 | +3.06% |
+| tea_coffee | 103.32 | +3.32% |
+| vegetables_pulses | 100.53 | +0.53% |
 
 ## Biggest movers since the start
 
@@ -39,9 +39,9 @@
 | Le Petit Marseillais Şeftali Duş Jeli 2x400 Ml | migros | 674.94 | +116.0% |
 | Bref WC Tuvalet Temizleyici Jel 700ml Çiçek Ferahlığı | migros | 292.79 | +105.1% |
 | Tursil Sıvı Bakım Deterjanı Renkliler 2.7 L | migros | 66.65 | -55.0% |
+| Tursil Sıvı Bakım Deterjanı Siyahlar 2.7 L | migros | 66.65 | -55.0% |
 | Omo Express Fresh Ultra Beyaz Sıvı Çamaşır Deterjanı 840 Ml | migros | 178.51 | -56.7% |
 | Omo Express Fresh  Renkliler ve Beyazlar Sıvı Deterjan 840 Ml | migros | 178.51 | -56.7% |
-| Erüst Salata Karışık 150 G | migros | 666.33 | -58.6% |
 | Omo Sıvı Deterjanı Cold Sık Yıkananlar 1.5 L | migros | 99.97 | -61.5% |
 
 ## One-day moves over 25% (worth a look)
@@ -328,3 +328,20 @@
 | 2026-10-20 | migros-13500033 | 229.88 | 296.25 |
 | 2026-10-20 | migros-13500631 | 229.88 | 296.25 |
 | 2026-10-20 | migros-16011995 | 535.00 | 699.00 |
+| 2026-10-21 | a101-12003646 | 158.00 | 238.00 |
+| 2026-10-21 | a101-14002131 | 48.33 | 63.17 |
+| 2026-10-21 | a101-17003485 | 236.95 | 301.20 |
+| 2026-10-21 | a101-17003548 | 234.38 | 296.88 |
+| 2026-10-21 | a101-27001884 | 928.57 | 1257.14 |
+| 2026-10-21 | a101-27001885 | 928.57 | 1257.14 |
+| 2026-10-21 | a101-27002764 | 928.57 | 1257.14 |
+| 2026-10-21 | a101-27002767 | 928.57 | 1257.14 |
+| 2026-10-21 | migros-01015865 | 132.47 | 79.97 |
+| 2026-10-21 | migros-13500027 | 618.33 | 343.17 |
+| 2026-10-21 | migros-13500028 | 618.33 | 343.17 |
+| 2026-10-21 | migros-27260002 | 39.50 | 52.50 |
+| 2026-10-21 | migros-28089121 | 419.80 | 630.00 |
+| 2026-10-21 | migros-28089127 | 454.00 | 630.00 |
+| 2026-10-21 | migros-28379117 | 666.33 | 1610.00 |
+| 2026-10-21 | migros-35070401 | 3999.33 | 1866.00 |
+| 2026-10-21 | migros-35080401 | 3999.33 | 1866.00 |
