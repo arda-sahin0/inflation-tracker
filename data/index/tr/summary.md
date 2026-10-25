@@ -1,16 +1,16 @@
-# Market basket index — 24 October 2026
+# Market basket index — 25 October 2026
 
-- Period: 11 Sep 2026 to 24 Oct 2026 (43 days)
-- **Food & non-alcoholic beverages: 104.27** (+4.27%)
-- Whole basket (incl. household & personal care): 107.27 (+7.27%)
-- Food at the same pace for a year would be: +42.6%
+- Period: 11 Sep 2026 to 25 Oct 2026 (44 days)
+- **Food & non-alcoholic beverages: 104.33** (+4.33%)
+- Whole basket (incl. household & personal care): 107.30 (+7.30%)
+- Food at the same pace for a year would be: +42.1%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 104.17 | +4.17% |
-| migros | 104.24 | +4.24% |
+| a101 | 104.19 | +4.19% |
+| migros | 104.32 | +4.32% |
 
 ## By category
 
@@ -18,16 +18,16 @@
 | --- | --- | --- |
 | bread_cereals | 103.88 | +3.88% |
 | dairy_eggs | 103.59 | +3.59% |
-| drinks | 101.65 | +1.65% |
+| drinks | 102.14 | +2.14% |
 | fruit_nuts | 110.20 | +10.20% |
-| household | 107.66 | +7.66% |
-| meat | 107.24 | +7.24% |
+| household | 107.64 | +7.64% |
+| meat | 107.25 | +7.25% |
 | oils_fats | 101.93 | +1.93% |
-| other_food | 108.67 | +8.67% |
+| other_food | 108.63 | +8.63% |
 | personal_care | 122.88 | +22.88% |
 | sugar_sweets | 103.50 | +3.50% |
-| tea_coffee | 101.66 | +1.66% |
-| vegetables_pulses | 100.36 | +0.36% |
+| tea_coffee | 101.69 | +1.69% |
+| vegetables_pulses | 100.45 | +0.45% |
 
 ## Biggest movers since the start
 
@@ -40,8 +40,8 @@
 | Sensodyne Çok Yönlü Koruma Gelişmiş Beyazlık 50 Ml | migros | 5999.00 | +150.1% |
 | NIVEA MEN Erkek Pump Sprey Deodorant Fresh Active 75 Ml | migros | 1866.00 | -53.3% |
 | NIVEA Kadın Pump Sprey Deodorant 48 Saat Ter Koruması 75 Ml | migros | 1866.00 | -53.3% |
-| Tursil Sıvı Bakım Deterjanı Renkliler 2.7 L | migros | 66.65 | -55.0% |
 | Tursil Sıvı Bakım Deterjanı Siyahlar 2.7 L | migros | 66.65 | -55.0% |
+| Tursil Sıvı Bakım Deterjanı Renkliler 2.7 L | migros | 66.65 | -55.0% |
 | Axe Premium Collection Cherry Spritz Sprey Deodorant 185 Ml | migros | 1242.97 | -55.8% |
 
 ## One-day moves over 25% (worth a look)
@@ -802,3 +802,16 @@
 | 2026-10-24 | migros-35050402 | 2999.00 | 5799.00 |
 | 2026-10-24 | migros-35058107 | 2999.00 | 5399.00 |
 | 2026-10-24 | migros-35068092 | 4999.00 | 8399.00 |
+| 2026-10-25 | a101-14002574 | 90.00 | 130.00 |
+| 2026-10-25 | migros-03220066 | 302.78 | 386.11 |
+| 2026-10-25 | migros-03220068 | 350.00 | 441.18 |
+| 2026-10-25 | migros-08060303 | 7.30 | 14.90 |
+| 2026-10-25 | migros-08061601 | 7.30 | 13.59 |
+| 2026-10-25 | migros-08062203 | 7.30 | 14.99 |
+| 2026-10-25 | migros-08062310 | 7.30 | 10.99 |
+| 2026-10-25 | migros-08063005 | 7.30 | 11.50 |
+| 2026-10-25 | migros-09024347 | 371.29 | 182.86 |
+| 2026-10-25 | migros-09024348 | 371.29 | 182.86 |
+| 2026-10-25 | migros-09024349 | 371.29 | 182.86 |
+| 2026-10-25 | migros-30010005 | 762.84 | 463.87 |
+| 2026-10-25 | migros-46040145 | 239.95 | 169.95 |
