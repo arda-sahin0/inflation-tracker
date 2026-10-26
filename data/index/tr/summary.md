@@ -1,33 +1,33 @@
-# Market basket index — 25 October 2026
+# Market basket index — 26 October 2026
 
-- Period: 11 Sep 2026 to 25 Oct 2026 (44 days)
-- **Food & non-alcoholic beverages: 104.33** (+4.33%)
-- Whole basket (incl. household & personal care): 107.30 (+7.30%)
-- Food at the same pace for a year would be: +42.1%
+- Period: 11 Sep 2026 to 26 Oct 2026 (45 days)
+- **Food & non-alcoholic beverages: 104.46** (+4.46%)
+- Whole basket (incl. household & personal care): 107.41 (+7.41%)
+- Food at the same pace for a year would be: +42.5%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 104.19 | +4.19% |
-| migros | 104.32 | +4.32% |
+| a101 | 104.24 | +4.24% |
+| migros | 104.56 | +4.56% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 103.88 | +3.88% |
+| bread_cereals | 103.89 | +3.89% |
 | dairy_eggs | 103.59 | +3.59% |
-| drinks | 102.14 | +2.14% |
-| fruit_nuts | 110.20 | +10.20% |
-| household | 107.64 | +7.64% |
-| meat | 107.25 | +7.25% |
+| drinks | 102.25 | +2.25% |
+| fruit_nuts | 110.46 | +10.46% |
+| household | 107.71 | +7.71% |
+| meat | 107.94 | +7.94% |
 | oils_fats | 101.93 | +1.93% |
-| other_food | 108.63 | +8.63% |
-| personal_care | 122.88 | +22.88% |
-| sugar_sweets | 103.50 | +3.50% |
+| other_food | 108.80 | +8.80% |
+| personal_care | 122.90 | +22.90% |
+| sugar_sweets | 103.60 | +3.60% |
 | tea_coffee | 101.69 | +1.69% |
-| vegetables_pulses | 100.45 | +0.45% |
+| vegetables_pulses | 100.46 | +0.46% |
 
 ## Biggest movers since the start
 
@@ -35,11 +35,11 @@
 | --- | --- | --- | --- |
 | Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
 | Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 116.65 | +180.1% |
-| Palmolive Smoothies Karpuz 450 Ml | migros | 399.89 | +157.3% |
 | Palmolive Smoothies Şeftali 450 Ml | migros | 399.89 | +157.3% |
+| Palmolive Smoothies Karpuz 450 Ml | migros | 399.89 | +157.3% |
 | Sensodyne Çok Yönlü Koruma Gelişmiş Beyazlık 50 Ml | migros | 5999.00 | +150.1% |
-| NIVEA MEN Erkek Pump Sprey Deodorant Fresh Active 75 Ml | migros | 1866.00 | -53.3% |
 | NIVEA Kadın Pump Sprey Deodorant 48 Saat Ter Koruması 75 Ml | migros | 1866.00 | -53.3% |
+| NIVEA MEN Erkek Pump Sprey Deodorant Fresh Active 75 Ml | migros | 1866.00 | -53.3% |
 | Tursil Sıvı Bakım Deterjanı Siyahlar 2.7 L | migros | 66.65 | -55.0% |
 | Tursil Sıvı Bakım Deterjanı Renkliler 2.7 L | migros | 66.65 | -55.0% |
 | Axe Premium Collection Cherry Spritz Sprey Deodorant 185 Ml | migros | 1242.97 | -55.8% |
@@ -815,3 +815,13 @@
 | 2026-10-25 | migros-09024349 | 371.29 | 182.86 |
 | 2026-10-25 | migros-30010005 | 762.84 | 463.87 |
 | 2026-10-25 | migros-46040145 | 239.95 | 169.95 |
+| 2026-10-26 | migros-08062217 | 7.30 | 14.75 |
+| 2026-10-26 | migros-13000306 | 199.90 | 299.95 |
+| 2026-10-26 | migros-13000307 | 79.90 | 134.95 |
+| 2026-10-26 | migros-13000308 | 79.90 | 139.95 |
+| 2026-10-26 | migros-13000309 | 199.90 | 359.95 |
+| 2026-10-26 | migros-13000314 | 49.90 | 69.95 |
+| 2026-10-26 | migros-13025476 | 89.90 | 134.95 |
+| 2026-10-26 | migros-13500027 | 343.17 | 618.33 |
+| 2026-10-26 | migros-13500028 | 343.17 | 618.33 |
+| 2026-10-26 | migros-27139143 | 62.95 | 78.95 |
