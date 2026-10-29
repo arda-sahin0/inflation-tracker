@@ -1,33 +1,33 @@
-# Market basket index — 28 October 2026
+# Market basket index — 29 October 2026
 
-- Period: 11 Sep 2026 to 28 Oct 2026 (47 days)
-- **Food & non-alcoholic beverages: 104.58** (+4.58%)
-- Whole basket (incl. household & personal care): 107.48 (+7.48%)
-- Food at the same pace for a year would be: +41.6%
+- Period: 11 Sep 2026 to 29 Oct 2026 (48 days)
+- **Food & non-alcoholic beverages: 104.63** (+4.63%)
+- Whole basket (incl. household & personal care): 107.51 (+7.51%)
+- Food at the same pace for a year would be: +41.1%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 104.30 | +4.30% |
-| migros | 104.74 | +4.74% |
+| migros | 104.83 | +4.83% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 104.19 | +4.19% |
+| bread_cereals | 104.40 | +4.40% |
 | dairy_eggs | 103.60 | +3.60% |
 | drinks | 102.38 | +2.38% |
-| fruit_nuts | 111.18 | +11.18% |
+| fruit_nuts | 111.26 | +11.26% |
 | household | 107.55 | +7.55% |
-| meat | 107.77 | +7.77% |
+| meat | 107.86 | +7.86% |
 | oils_fats | 101.73 | +1.73% |
-| other_food | 108.74 | +8.74% |
+| other_food | 108.79 | +8.79% |
 | personal_care | 123.13 | +23.13% |
 | sugar_sweets | 103.65 | +3.65% |
 | tea_coffee | 101.66 | +1.66% |
-| vegetables_pulses | 100.95 | +0.95% |
+| vegetables_pulses | 101.01 | +1.01% |
 
 ## Biggest movers since the start
 
@@ -887,3 +887,27 @@
 | 2026-10-28 | migros-35030020 | 1749.75 | 999.75 |
 | 2026-10-28 | migros-46040136 | 159.95 | 99.95 |
 | 2026-10-28 | migros-46040143 | 159.95 | 99.95 |
+| 2026-10-29 | migros-01070029 | 126.95 | 158.95 |
+| 2026-10-29 | migros-05030168 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030332 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030567 | 239.90 | 339.90 |
+| 2026-10-29 | migros-05030701 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030706 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030707 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030708 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030710 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030711 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030712 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030714 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030721 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030722 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030726 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030727 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05030742 | 79.00 | 105.90 |
+| 2026-10-29 | migros-05031047 | 48.75 | 92.38 |
+| 2026-10-29 | migros-05039321 | 39.00 | 73.90 |
+| 2026-10-29 | migros-05039322 | 39.00 | 73.90 |
+| 2026-10-29 | migros-16021235 | 290.00 | 390.00 |
+| 2026-10-29 | migros-24010213 | 92.95 | 123.95 |
+| 2026-10-29 | migros-28120489 | 249.75 | 349.75 |
+| 2026-10-29 | migros-28130000 | 68.50 | 41.95 |
