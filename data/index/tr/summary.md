@@ -1,45 +1,45 @@
-# Market basket index — 29 October 2026
+# Market basket index — 30 October 2026
 
-- Period: 11 Sep 2026 to 29 Oct 2026 (48 days)
-- **Food & non-alcoholic beverages: 104.63** (+4.63%)
-- Whole basket (incl. household & personal care): 107.51 (+7.51%)
-- Food at the same pace for a year would be: +41.1%
+- Period: 11 Sep 2026 to 30 Oct 2026 (49 days)
+- **Food & non-alcoholic beverages: 104.58** (+4.58%)
+- Whole basket (incl. household & personal care): 107.47 (+7.47%)
+- Food at the same pace for a year would be: +39.5%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 104.30 | +4.30% |
-| migros | 104.83 | +4.83% |
+| migros | 104.74 | +4.74% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 104.40 | +4.40% |
-| dairy_eggs | 103.60 | +3.60% |
+| bread_cereals | 104.43 | +4.43% |
+| dairy_eggs | 103.63 | +3.63% |
 | drinks | 102.38 | +2.38% |
-| fruit_nuts | 111.26 | +11.26% |
+| fruit_nuts | 110.48 | +10.48% |
 | household | 107.55 | +7.55% |
-| meat | 107.86 | +7.86% |
+| meat | 107.93 | +7.93% |
 | oils_fats | 101.73 | +1.73% |
 | other_food | 108.79 | +8.79% |
 | personal_care | 123.13 | +23.13% |
 | sugar_sweets | 103.65 | +3.65% |
 | tea_coffee | 101.66 | +1.66% |
-| vegetables_pulses | 101.01 | +1.01% |
+| vegetables_pulses | 101.06 | +1.06% |
 
 ## Biggest movers since the start
 
 | Product | Store | Now (TL) | Change |
 | --- | --- | --- | --- |
+| Beyaz Balkabağı Kg | migros | 59.95 | +762.6% |
 | Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
 | Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 116.65 | +180.1% |
-| Palmolive Smoothies Şeftali 450 Ml | migros | 399.89 | +157.3% |
 | Palmolive Smoothies Karpuz 450 Ml | migros | 399.89 | +157.3% |
-| Sensodyne Çok Yönlü Koruma Gelişmiş Beyazlık 50 Ml | migros | 5999.00 | +150.1% |
-| Tursil Sıvı Bakım Deterjanı Siyahlar 2.7 L | migros | 66.65 | -55.0% |
+| Palmolive Smoothies Şeftali 450 Ml | migros | 399.89 | +157.3% |
 | Axe Premium Collection Cherry Spritz Sprey Deodorant 185 Ml | migros | 1242.97 | -55.8% |
+| Erüst Salata Karışık 150 G | migros | 666.33 | -58.6% |
 | Oreo Choco 228 G | migros | 434.21 | -60.4% |
 | Oreo Strawberry 228 G | migros | 434.21 | -60.4% |
 | Omo Sıvı Deterjanı Cold Sık Yıkananlar 1.5 L | migros | 99.97 | -61.5% |
@@ -911,3 +911,19 @@
 | 2026-10-29 | migros-24010213 | 92.95 | 123.95 |
 | 2026-10-29 | migros-28120489 | 249.75 | 349.75 |
 | 2026-10-29 | migros-28130000 | 68.50 | 41.95 |
+| 2026-10-30 | migros-01020047 | 191.95 | 244.95 |
+| 2026-10-30 | migros-01020048 | 217.95 | 274.95 |
+| 2026-10-30 | migros-10403885 | 2221.67 | 2888.33 |
+| 2026-10-30 | migros-27058025 | 419.50 | 299.50 |
+| 2026-10-30 | migros-27135055 | 41.95 | 83.95 |
+| 2026-10-30 | migros-27162000 | 73.50 | 49.95 |
+| 2026-10-30 | migros-27336011 | 94.50 | 69.95 |
+| 2026-10-30 | migros-28129017 | 68.50 | 49.95 |
+| 2026-10-30 | migros-28169007 | 6.95 | 59.95 |
+| 2026-10-30 | migros-28180000 | 146.95 | 99.95 |
+| 2026-10-30 | migros-28190000 | 104.95 | 74.95 |
+| 2026-10-30 | migros-28210000 | 36.95 | 24.95 |
+| 2026-10-30 | migros-28330006 | 83.95 | 59.95 |
+| 2026-10-30 | migros-28379117 | 1050.00 | 666.33 |
+| 2026-10-30 | migros-28470009 | 59.95 | 44.95 |
+| 2026-10-30 | migros-46040145 | 169.95 | 239.95 |
