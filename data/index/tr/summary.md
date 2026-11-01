@@ -1,9 +1,9 @@
-# Market basket index — 31 October 2026
+# Market basket index — 01 November 2026
 
-- Period: 11 Sep 2026 to 31 Oct 2026 (50 days)
-- **Food & non-alcoholic beverages: 104.55** (+4.55%)
+- Period: 11 Sep 2026 to 01 Nov 2026 (51 days)
+- **Food & non-alcoholic beverages: 104.54** (+4.54%)
 - Whole basket (incl. household & personal care): 107.86 (+7.86%)
-- Food at the same pace for a year would be: +38.3%
+- Food at the same pace for a year would be: +37.4%
 
 ## By store (food index, each on its own products)
 
@@ -17,17 +17,17 @@
 | Category | Index | Change |
 | --- | --- | --- |
 | bread_cereals | 104.44 | +4.44% |
-| dairy_eggs | 103.73 | +3.73% |
+| dairy_eggs | 103.74 | +3.74% |
 | drinks | 102.39 | +2.39% |
 | fruit_nuts | 110.38 | +10.38% |
 | household | 109.62 | +9.62% |
 | meat | 107.51 | +7.51% |
 | oils_fats | 101.73 | +1.73% |
 | other_food | 108.79 | +8.79% |
-| personal_care | 122.79 | +22.79% |
+| personal_care | 122.76 | +22.76% |
 | sugar_sweets | 103.78 | +3.78% |
 | tea_coffee | 101.66 | +1.66% |
-| vegetables_pulses | 101.05 | +1.05% |
+| vegetables_pulses | 101.03 | +1.03% |
 
 ## Biggest movers since the start
 
@@ -40,8 +40,8 @@
 | Palmolive Smoothies Şeftali 450 Ml | migros | 399.89 | +157.3% |
 | Axe Premium Collection Cherry Spritz Sprey Deodorant 185 Ml | migros | 1242.97 | -55.8% |
 | Erüst Salata Karışık 150 G | migros | 666.33 | -58.6% |
-| Oreo Strawberry 228 G | migros | 434.21 | -60.4% |
 | Oreo Choco 228 G | migros | 434.21 | -60.4% |
+| Oreo Strawberry 228 G | migros | 434.21 | -60.4% |
 | Omo Sıvı Deterjanı Cold Sık Yıkananlar 1.5 L | migros | 99.97 | -61.5% |
 
 ## One-day moves over 25% (worth a look)
@@ -1017,3 +1017,5 @@
 | 2026-10-31 | migros-31315656 | 1099.50 | 2099.50 |
 | 2026-10-31 | migros-31315658 | 1299.00 | 1899.00 |
 | 2026-10-31 | migros-31315659 | 1299.00 | 1899.00 |
+| 2026-11-01 | migros-10404022 | 590.00 | 890.00 |
+| 2026-11-01 | migros-34046483 | 169.95 | 110.00 |
