@@ -1,32 +1,32 @@
-# Market basket index — 01 November 2026
+# Market basket index — 02 November 2026
 
-- Period: 11 Sep 2026 to 01 Nov 2026 (51 days)
-- **Food & non-alcoholic beverages: 104.54** (+4.54%)
-- Whole basket (incl. household & personal care): 107.86 (+7.86%)
-- Food at the same pace for a year would be: +37.4%
+- Period: 11 Sep 2026 to 02 Nov 2026 (52 days)
+- **Food & non-alcoholic beverages: 104.60** (+4.60%)
+- Whole basket (incl. household & personal care): 107.88 (+7.88%)
+- Food at the same pace for a year would be: +37.1%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 104.36 | +4.36% |
-| migros | 104.62 | +4.62% |
+| a101 | 104.33 | +4.33% |
+| migros | 104.74 | +4.74% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 104.44 | +4.44% |
-| dairy_eggs | 103.74 | +3.74% |
-| drinks | 102.39 | +2.39% |
-| fruit_nuts | 110.38 | +10.38% |
-| household | 109.62 | +9.62% |
-| meat | 107.51 | +7.51% |
-| oils_fats | 101.73 | +1.73% |
+| bread_cereals | 104.50 | +4.50% |
+| dairy_eggs | 103.77 | +3.77% |
+| drinks | 102.46 | +2.46% |
+| fruit_nuts | 110.22 | +10.22% |
+| household | 109.58 | +9.58% |
+| meat | 107.76 | +7.76% |
+| oils_fats | 101.92 | +1.92% |
 | other_food | 108.79 | +8.79% |
 | personal_care | 122.76 | +22.76% |
-| sugar_sweets | 103.78 | +3.78% |
-| tea_coffee | 101.66 | +1.66% |
+| sugar_sweets | 103.83 | +3.83% |
+| tea_coffee | 101.72 | +1.72% |
 | vegetables_pulses | 101.03 | +1.03% |
 
 ## Biggest movers since the start
@@ -38,11 +38,11 @@
 | Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 116.65 | +180.1% |
 | Palmolive Smoothies Karpuz 450 Ml | migros | 399.89 | +157.3% |
 | Palmolive Smoothies Şeftali 450 Ml | migros | 399.89 | +157.3% |
+| Keskinoğlu Piliç Izgara Kanat Kg | migros | 179.95 | -55.0% |
+| Tursil Sıvı Bakım Deterjanı Renkliler 2.7 L | migros | 66.65 | -55.0% |
+| Tursil Sıvı Bakım Deterjanı Siyahlar 2.7 L | migros | 66.65 | -55.0% |
 | Axe Premium Collection Cherry Spritz Sprey Deodorant 185 Ml | migros | 1242.97 | -55.8% |
 | Erüst Salata Karışık 150 G | migros | 666.33 | -58.6% |
-| Oreo Choco 228 G | migros | 434.21 | -60.4% |
-| Oreo Strawberry 228 G | migros | 434.21 | -60.4% |
-| Omo Sıvı Deterjanı Cold Sık Yıkananlar 1.5 L | migros | 99.97 | -61.5% |
 
 ## One-day moves over 25% (worth a look)
 
@@ -1019,3 +1019,36 @@
 | 2026-10-31 | migros-31315659 | 1299.00 | 1899.00 |
 | 2026-11-01 | migros-10404022 | 590.00 | 890.00 |
 | 2026-11-01 | migros-34046483 | 169.95 | 110.00 |
+| 2026-11-02 | a101-11003515 | 49.45 | 62.93 |
+| 2026-11-02 | a101-11003516 | 68.75 | 87.50 |
+| 2026-11-02 | a101-11003518 | 116.00 | 160.00 |
+| 2026-11-02 | a101-11003521 | 245.78 | 339.00 |
+| 2026-11-02 | a101-11003523 | 108.03 | 149.00 |
+| 2026-11-02 | migros-03112998 | 1099.90 | 1799.90 |
+| 2026-11-02 | migros-03210008 | 645.00 | 1045.00 |
+| 2026-11-02 | migros-07015253 | 911.27 | 1175.49 |
+| 2026-11-02 | migros-07028857 | 434.21 | 1096.05 |
+| 2026-11-02 | migros-07028858 | 434.21 | 1096.05 |
+| 2026-11-02 | migros-07077983 | 329.90 | 449.95 |
+| 2026-11-02 | migros-08011896 | 90.83 | 156.06 |
+| 2026-11-02 | migros-08011899 | 90.83 | 156.06 |
+| 2026-11-02 | migros-08040900 | 41.58 | 68.75 |
+| 2026-11-02 | migros-08060028 | 40.33 | 19.83 |
+| 2026-11-02 | migros-12010025 | 699.00 | 1075.00 |
+| 2026-11-02 | migros-13000292 | 399.95 | 179.95 |
+| 2026-11-02 | migros-13000306 | 199.90 | 299.95 |
+| 2026-11-02 | migros-13000307 | 79.90 | 134.95 |
+| 2026-11-02 | migros-13000308 | 79.90 | 139.95 |
+| 2026-11-02 | migros-13000309 | 159.90 | 199.95 |
+| 2026-11-02 | migros-13025476 | 99.95 | 134.95 |
+| 2026-11-02 | migros-30000002 | 57.49 | 39.99 |
+| 2026-11-02 | migros-30001417 | 87.80 | 135.10 |
+| 2026-11-02 | migros-30001488 | 99.97 | 259.97 |
+| 2026-11-02 | migros-30130652 | 119.90 | 179.90 |
+| 2026-11-02 | migros-30403280 | 274.94 | 567.44 |
+| 2026-11-02 | migros-30530450 | 114.83 | 155.37 |
+| 2026-11-02 | migros-30530456 | 87.80 | 135.10 |
+| 2026-11-02 | migros-30530555 | 236.45 | 472.94 |
+| 2026-11-02 | migros-30638706 | 274.94 | 567.44 |
+| 2026-11-02 | migros-30980019 | 512.71 | 1068.27 |
+| 2026-11-02 | migros-31010013 | 469.95 | 239.95 |
