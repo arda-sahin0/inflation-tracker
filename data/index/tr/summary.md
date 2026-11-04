@@ -1,33 +1,33 @@
-# Market basket index — 03 November 2026
+# Market basket index — 04 November 2026
 
-- Period: 11 Sep 2026 to 03 Nov 2026 (53 days)
-- **Food & non-alcoholic beverages: 104.65** (+4.65%)
-- Whole basket (incl. household & personal care): 108.02 (+8.02%)
-- Food at the same pace for a year would be: +36.8%
+- Period: 11 Sep 2026 to 04 Nov 2026 (54 days)
+- **Food & non-alcoholic beverages: 104.81** (+4.81%)
+- Whole basket (incl. household & personal care): 108.19 (+8.19%)
+- Food at the same pace for a year would be: +37.4%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 104.33 | +4.33% |
-| migros | 104.85 | +4.85% |
+| a101 | 104.40 | +4.40% |
+| migros | 105.07 | +5.07% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 104.51 | +4.51% |
-| dairy_eggs | 103.77 | +3.77% |
-| drinks | 102.46 | +2.46% |
-| fruit_nuts | 110.36 | +10.36% |
-| household | 110.08 | +10.08% |
-| meat | 107.94 | +7.94% |
+| bread_cereals | 104.74 | +4.74% |
+| dairy_eggs | 103.81 | +3.81% |
+| drinks | 102.48 | +2.48% |
+| fruit_nuts | 111.23 | +11.23% |
+| household | 110.18 | +10.18% |
+| meat | 108.00 | +8.00% |
 | oils_fats | 101.92 | +1.92% |
 | other_food | 108.79 | +8.79% |
-| personal_care | 122.74 | +22.74% |
-| sugar_sweets | 103.96 | +3.96% |
-| tea_coffee | 101.72 | +1.72% |
-| vegetables_pulses | 101.10 | +1.10% |
+| personal_care | 123.09 | +23.09% |
+| sugar_sweets | 104.11 | +4.11% |
+| tea_coffee | 101.76 | +1.76% |
+| vegetables_pulses | 101.26 | +1.26% |
 
 ## Biggest movers since the start
 
@@ -37,12 +37,12 @@
 | Topitop Meyve Aromalı Lolipop 8'li Poşet 11 G | migros | 10586.36 | +700.0% |
 | Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
 | Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 116.65 | +180.1% |
-| Palmolive Smoothies Karpuz 450 Ml | migros | 399.89 | +157.3% |
+| Palmolive Smoothies Şeftali 450 Ml | migros | 399.89 | +157.3% |
+| NIVEA Kadın Pump Sprey Deodorant 48 Saat Ter Koruması 75 Ml | migros | 1866.00 | -53.3% |
+| NIVEA MEN Erkek Pump Sprey Deodorant Fresh Active 75 Ml | migros | 1866.00 | -53.3% |
 | Nestle 1927 Bol Sütlü Çikolata 4 x 60 G | migros | 707.92 | -53.8% |
 | Keskinoğlu Piliç Izgara Kanat Kg | migros | 179.95 | -55.0% |
 | Axe Premium Collection Cherry Spritz Sprey Deodorant 185 Ml | migros | 1242.97 | -55.8% |
-| Verita Taze Hindistan Cevizi Adet | migros | 104.95 | -56.5% |
-| Erüst Salata Karışık 150 G | migros | 666.33 | -58.6% |
 
 ## One-day moves over 25% (worth a look)
 
@@ -1106,3 +1106,39 @@
 | 2026-11-03 | migros-30628727 | 479.80 | 607.80 |
 | 2026-11-03 | migros-30980019 | 1068.27 | 512.71 |
 | 2026-11-03 | migros-46040143 | 99.95 | 159.95 |
+| 2026-11-04 | a101-11000706 | 222.75 | 283.50 |
+| 2026-11-04 | a101-15001353 | 450.00 | 795.00 |
+| 2026-11-04 | a101-24006920 | 966.67 | 1933.33 |
+| 2026-11-04 | a101-24006921 | 966.67 | 1933.33 |
+| 2026-11-04 | a101-24006922 | 966.67 | 1933.33 |
+| 2026-11-04 | a101-24006923 | 966.67 | 1933.33 |
+| 2026-11-04 | migros-07155924 | 1908.82 | 2391.18 |
+| 2026-11-04 | migros-07156010 | 1908.82 | 2391.18 |
+| 2026-11-04 | migros-27133000 | 99.95 | 125.95 |
+| 2026-11-04 | migros-27136001 | 41.95 | 62.95 |
+| 2026-11-04 | migros-27260002 | 41.95 | 62.95 |
+| 2026-11-04 | migros-27260004 | 57.95 | 38.95 |
+| 2026-11-04 | migros-27307015 | 39.95 | 49.95 |
+| 2026-11-04 | migros-27520001 | 104.95 | 167.95 |
+| 2026-11-04 | migros-27585012 | 924.00 | 1175.60 |
+| 2026-11-04 | migros-28129017 | 49.95 | 62.95 |
+| 2026-11-04 | migros-28130000 | 39.50 | 73.50 |
+| 2026-11-04 | migros-28180000 | 99.95 | 146.95 |
+| 2026-11-04 | migros-28303000 | 73.50 | 94.50 |
+| 2026-11-04 | migros-28330006 | 59.95 | 83.95 |
+| 2026-11-04 | migros-28340009 | 24.95 | 36.95 |
+| 2026-11-04 | migros-28410000 | 59.95 | 76.95 |
+| 2026-11-04 | migros-28470009 | 44.95 | 59.95 |
+| 2026-11-04 | migros-30001500 | 545.27 | 981.64 |
+| 2026-11-04 | migros-30010005 | 463.87 | 762.84 |
+| 2026-11-04 | migros-30010007 | 463.87 | 762.84 |
+| 2026-11-04 | migros-30130633 | 43.33 | 59.33 |
+| 2026-11-04 | migros-30131981 | 90.90 | 132.90 |
+| 2026-11-04 | migros-30530047 | 133.32 | 66.65 |
+| 2026-11-04 | migros-30530048 | 133.32 | 66.65 |
+| 2026-11-04 | migros-30530448 | 108.07 | 162.13 |
+| 2026-11-04 | migros-30530459 | 135.10 | 236.45 |
+| 2026-11-04 | migros-30530518 | 79.98 | 151.98 |
+| 2026-11-04 | migros-30530559 | 114.83 | 155.37 |
+| 2026-11-04 | migros-30570186 | 79.97 | 113.30 |
+| 2026-11-04 | migros-46040136 | 99.95 | 159.95 |
