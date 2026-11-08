@@ -1,16 +1,16 @@
-# Market basket index — 07 November 2026
+# Market basket index — 08 November 2026
 
-- Period: 11 Sep 2026 to 07 Nov 2026 (57 days)
+- Period: 11 Sep 2026 to 08 Nov 2026 (58 days)
 - **Food & non-alcoholic beverages: 105.36** (+5.36%)
 - Whole basket (incl. household & personal care): 108.84 (+8.84%)
-- Food at the same pace for a year would be: +39.7%
+- Food at the same pace for a year would be: +38.9%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 105.17 | +5.17% |
-| migros | 105.36 | +5.36% |
+| migros | 105.37 | +5.37% |
 
 ## By category
 
@@ -20,14 +20,14 @@
 | dairy_eggs | 103.93 | +3.93% |
 | drinks | 102.50 | +2.50% |
 | fruit_nuts | 110.17 | +10.17% |
-| household | 110.20 | +10.20% |
+| household | 110.21 | +10.21% |
 | meat | 111.50 | +11.50% |
 | oils_fats | 101.91 | +1.91% |
-| other_food | 108.76 | +8.76% |
-| personal_care | 125.42 | +25.42% |
+| other_food | 108.74 | +8.74% |
+| personal_care | 125.37 | +25.37% |
 | sugar_sweets | 104.29 | +4.29% |
 | tea_coffee | 104.33 | +4.33% |
-| vegetables_pulses | 101.21 | +1.21% |
+| vegetables_pulses | 101.28 | +1.28% |
 
 ## Biggest movers since the start
 
@@ -38,8 +38,8 @@
 | Mudurnu Piliç Bonfile 1000 G | a101 | 339000.00 | +146475.6% |
 | Mudurnu Parmak Bonfile 875 G | a101 | 261630.00 | +129240.5% |
 | Mudurnu Piliç Pirzola 950 G | a101 | 217550.00 | +120406.3% |
-| Wemara Matcha Splash Duş Jeli Banyo Köpüğü 500 Ml | migros | 179.90 | -52.6% |
-| Wemara Ocean Chill Bubbles Duş Jeli Banyo Köpüğü 500 Ml | migros | 179.90 | -52.6% |
+| Wemara Berry Splash Pop Duş Jeli Banyo Köpüğü 500 Ml | migros | 179.90 | -52.6% |
+| Wemara Citrus Splash Duş Jeli Banyo Köpüğü 500 Ml | migros | 179.90 | -52.6% |
 | Tukaş Basilico Makarna Sosu 360 G | migros | 102.78 | -53.1% |
 | Nestle 1927 Bol Sütlü Çikolata 4 x 60 G | migros | 707.92 | -53.8% |
 | NIVEA Creme Care Banyo ve Duş Jeli 250 Ml | migros | 319.80 | -55.6% |
@@ -1513,3 +1513,6 @@
 | 2026-11-07 | migros-34160003 | 259.95 | 169.95 |
 | 2026-11-07 | migros-34581006 | 219.95 | 344.95 |
 | 2026-11-07 | migros-34581007 | 219.95 | 344.95 |
+| 2026-11-08 | migros-16300046 | 803.96 | 450.00 |
+| 2026-11-08 | migros-28333129 | 62.95 | 104.95 |
+| 2026-11-08 | migros-34150340 | 539.95 | 399.95 |
