@@ -1,33 +1,33 @@
-# Market basket index — 12 November 2026
+# Market basket index — 13 November 2026
 
-- Period: 11 Sep 2026 to 12 Nov 2026 (62 days)
-- **Food & non-alcoholic beverages: 105.11** (+5.11%)
-- Whole basket (incl. household & personal care): 108.89 (+8.89%)
-- Food at the same pace for a year would be: +34.1%
+- Period: 11 Sep 2026 to 13 Nov 2026 (63 days)
+- **Food & non-alcoholic beverages: 105.16** (+5.16%)
+- Whole basket (incl. household & personal care): 108.90 (+8.90%)
+- Food at the same pace for a year would be: +33.9%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 103.80 | +3.80% |
-| migros | 105.98 | +5.98% |
+| migros | 106.08 | +6.08% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 105.13 | +5.13% |
-| dairy_eggs | 104.79 | +4.79% |
-| drinks | 102.56 | +2.56% |
-| fruit_nuts | 111.65 | +11.65% |
-| household | 110.63 | +10.63% |
-| meat | 104.84 | +4.84% |
-| oils_fats | 102.27 | +2.27% |
-| other_food | 108.78 | +8.78% |
-| personal_care | 126.38 | +26.38% |
-| sugar_sweets | 104.40 | +4.40% |
+| bread_cereals | 105.53 | +5.53% |
+| dairy_eggs | 104.83 | +4.83% |
+| drinks | 102.40 | +2.40% |
+| fruit_nuts | 111.69 | +11.69% |
+| household | 110.50 | +10.50% |
+| meat | 104.83 | +4.83% |
+| oils_fats | 102.44 | +2.44% |
+| other_food | 108.87 | +8.87% |
+| personal_care | 126.39 | +26.39% |
+| sugar_sweets | 104.41 | +4.41% |
 | tea_coffee | 104.93 | +4.93% |
-| vegetables_pulses | 101.72 | +1.72% |
+| vegetables_pulses | 101.70 | +1.70% |
 
 ## Biggest movers since the start
 
@@ -40,8 +40,8 @@
 | Biber Jalapeno Kg | migros | 251.95 | +166.6% |
 | Nestle 1927 Bol Sütlü Çikolata 4 x 60 G | migros | 707.92 | -53.8% |
 | NIVEA Creme Care Banyo ve Duş Jeli 250 Ml | migros | 319.80 | -55.6% |
-| Erüst Deniz Salata 125 G | migros | 799.60 | -55.8% |
 | Erüst Dağ Salata 125 G | migros | 799.60 | -55.8% |
+| Erüst Deniz Salata 125 G | migros | 799.60 | -55.8% |
 | Erüst Ege Salata 125 G | migros | 799.60 | -56.0% |
 
 ## One-day moves over 25% (worth a look)
@@ -1707,3 +1707,43 @@
 | 2026-11-12 | migros-34251300 | 149.92 | 199.92 |
 | 2026-11-12 | migros-34341427 | 2666.33 | 3333.00 |
 | 2026-11-12 | migros-46040139 | 359.95 | 249.95 |
+| 2026-11-13 | migros-05030069 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05030144 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05030145 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05030146 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05030147 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05030148 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05039481 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05039482 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05039483 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05039484 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05039485 | 46.50 | 73.90 |
+| 2026-11-13 | migros-05039486 | 46.50 | 73.90 |
+| 2026-11-13 | migros-08059519 | 159.09 | 77.78 |
+| 2026-11-13 | migros-08059521 | 159.09 | 77.78 |
+| 2026-11-13 | migros-08059522 | 159.09 | 77.78 |
+| 2026-11-13 | migros-08080393 | 799.83 | 499.67 |
+| 2026-11-13 | migros-09010020 | 104.23 | 168.94 |
+| 2026-11-13 | migros-10403874 | 749.38 | 999.38 |
+| 2026-11-13 | migros-13000294 | 399.95 | 269.95 |
+| 2026-11-13 | migros-13000307 | 134.95 | 99.95 |
+| 2026-11-13 | migros-13000308 | 89.95 | 139.95 |
+| 2026-11-13 | migros-13000309 | 179.95 | 299.95 |
+| 2026-11-13 | migros-13010184 | 179.95 | 339.95 |
+| 2026-11-13 | migros-13025476 | 134.95 | 99.95 |
+| 2026-11-13 | migros-13500628 | 599.83 | 378.33 |
+| 2026-11-13 | migros-27172017 | 129.95 | 79.95 |
+| 2026-11-13 | migros-27270000 | 114.95 | 79.95 |
+| 2026-11-13 | migros-28130013 | 83.95 | 115.50 |
+| 2026-11-13 | migros-28250532 | 94.50 | 62.95 |
+| 2026-11-13 | migros-28290000 | 24.90 | 39.95 |
+| 2026-11-13 | migros-28330006 | 83.95 | 62.95 |
+| 2026-11-13 | migros-30530052 | 51.99 | 27.00 |
+| 2026-11-13 | migros-30530053 | 51.99 | 27.00 |
+| 2026-11-13 | migros-30530054 | 51.99 | 27.00 |
+| 2026-11-13 | migros-30731802 | 165.27 | 113.27 |
+| 2026-11-13 | migros-30731806 | 206.60 | 133.27 |
+| 2026-11-13 | migros-30731807 | 206.60 | 133.27 |
+| 2026-11-13 | migros-34251322 | 149.92 | 199.92 |
+| 2026-11-13 | migros-46040136 | 159.95 | 94.90 |
+| 2026-11-13 | migros-46040139 | 249.95 | 359.95 |
