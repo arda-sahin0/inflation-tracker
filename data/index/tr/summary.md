@@ -1,33 +1,33 @@
-# Market basket index — 13 November 2026
+# Market basket index — 14 November 2026
 
-- Period: 11 Sep 2026 to 13 Nov 2026 (63 days)
-- **Food & non-alcoholic beverages: 105.16** (+5.16%)
-- Whole basket (incl. household & personal care): 108.90 (+8.90%)
-- Food at the same pace for a year would be: +33.9%
+- Period: 11 Sep 2026 to 14 Nov 2026 (64 days)
+- **Food & non-alcoholic beverages: 105.18** (+5.18%)
+- Whole basket (incl. household & personal care): 108.86 (+8.86%)
+- Food at the same pace for a year would be: +33.4%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 103.80 | +3.80% |
-| migros | 106.08 | +6.08% |
+| a101 | 103.82 | +3.82% |
+| migros | 106.10 | +6.10% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 105.53 | +5.53% |
-| dairy_eggs | 104.83 | +4.83% |
-| drinks | 102.40 | +2.40% |
-| fruit_nuts | 111.69 | +11.69% |
-| household | 110.50 | +10.50% |
-| meat | 104.83 | +4.83% |
+| bread_cereals | 105.57 | +5.57% |
+| dairy_eggs | 104.90 | +4.90% |
+| drinks | 102.45 | +2.45% |
+| fruit_nuts | 111.82 | +11.82% |
+| household | 110.23 | +10.23% |
+| meat | 104.64 | +4.64% |
 | oils_fats | 102.44 | +2.44% |
-| other_food | 108.87 | +8.87% |
-| personal_care | 126.39 | +26.39% |
+| other_food | 108.92 | +8.92% |
+| personal_care | 126.45 | +26.45% |
 | sugar_sweets | 104.41 | +4.41% |
 | tea_coffee | 104.93 | +4.93% |
-| vegetables_pulses | 101.70 | +1.70% |
+| vegetables_pulses | 101.74 | +1.74% |
 
 ## Biggest movers since the start
 
@@ -1747,3 +1747,8 @@
 | 2026-11-13 | migros-34251322 | 149.92 | 199.92 |
 | 2026-11-13 | migros-46040136 | 159.95 | 94.90 |
 | 2026-11-13 | migros-46040139 | 249.95 | 359.95 |
+| 2026-11-14 | a101-22002349 | 722.41 | 1032.76 |
+| 2026-11-14 | a101-22002779 | 128.80 | 161.17 |
+| 2026-11-14 | migros-13000307 | 99.95 | 134.95 |
+| 2026-11-14 | migros-13000308 | 139.95 | 79.90 |
+| 2026-11-14 | migros-27268051 | 139.83 | 175.00 |
