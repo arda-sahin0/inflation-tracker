@@ -1,31 +1,31 @@
-# Market basket index — 14 November 2026
+# Market basket index — 15 November 2026
 
-- Period: 11 Sep 2026 to 14 Nov 2026 (64 days)
-- **Food & non-alcoholic beverages: 105.18** (+5.18%)
-- Whole basket (incl. household & personal care): 108.86 (+8.86%)
-- Food at the same pace for a year would be: +33.4%
+- Period: 11 Sep 2026 to 15 Nov 2026 (65 days)
+- **Food & non-alcoholic beverages: 105.20** (+5.20%)
+- Whole basket (incl. household & personal care): 108.88 (+8.88%)
+- Food at the same pace for a year would be: +32.9%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 103.82 | +3.82% |
-| migros | 106.10 | +6.10% |
+| migros | 106.14 | +6.14% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
 | bread_cereals | 105.57 | +5.57% |
-| dairy_eggs | 104.90 | +4.90% |
-| drinks | 102.45 | +2.45% |
+| dairy_eggs | 104.91 | +4.91% |
+| drinks | 102.56 | +2.56% |
 | fruit_nuts | 111.82 | +11.82% |
-| household | 110.23 | +10.23% |
-| meat | 104.64 | +4.64% |
+| household | 110.20 | +10.20% |
+| meat | 104.76 | +4.76% |
 | oils_fats | 102.44 | +2.44% |
 | other_food | 108.92 | +8.92% |
-| personal_care | 126.45 | +26.45% |
-| sugar_sweets | 104.41 | +4.41% |
+| personal_care | 126.60 | +26.60% |
+| sugar_sweets | 104.37 | +4.37% |
 | tea_coffee | 104.93 | +4.93% |
 | vegetables_pulses | 101.74 | +1.74% |
 
@@ -38,11 +38,11 @@
 | Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
 | Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 116.65 | +180.1% |
 | Biber Jalapeno Kg | migros | 251.95 | +166.6% |
+| Wemara Berry Splash Pop Duş Jeli Banyo Köpüğü 500 Ml | migros | 179.90 | -52.6% |
+| Tukaş Basilico Makarna Sosu 360 G | migros | 102.78 | -53.1% |
 | Nestle 1927 Bol Sütlü Çikolata 4 x 60 G | migros | 707.92 | -53.8% |
 | NIVEA Creme Care Banyo ve Duş Jeli 250 Ml | migros | 319.80 | -55.6% |
-| Erüst Dağ Salata 125 G | migros | 799.60 | -55.8% |
-| Erüst Deniz Salata 125 G | migros | 799.60 | -55.8% |
-| Erüst Ege Salata 125 G | migros | 799.60 | -56.0% |
+| Yumoş Extra Amber Konsantre Yumuşatıcı Pouch 1200 Ml | migros | 82.50 | -61.2% |
 
 ## One-day moves over 25% (worth a look)
 
@@ -1752,3 +1752,22 @@
 | 2026-11-14 | migros-13000307 | 99.95 | 134.95 |
 | 2026-11-14 | migros-13000308 | 139.95 | 79.90 |
 | 2026-11-14 | migros-27268051 | 139.83 | 175.00 |
+| 2026-11-15 | migros-07079692 | 822.94 | 587.06 |
+| 2026-11-15 | migros-08040057 | 65.21 | 40.83 |
+| 2026-11-15 | migros-08059519 | 77.78 | 159.09 |
+| 2026-11-15 | migros-08059521 | 77.78 | 159.09 |
+| 2026-11-15 | migros-08059522 | 77.78 | 159.09 |
+| 2026-11-15 | migros-13010152 | 89.95 | 159.95 |
+| 2026-11-15 | migros-30530052 | 27.00 | 51.99 |
+| 2026-11-15 | migros-30530053 | 27.00 | 51.99 |
+| 2026-11-15 | migros-30530054 | 27.00 | 51.99 |
+| 2026-11-15 | migros-30580068 | 212.46 | 82.50 |
+| 2026-11-15 | migros-30619776 | 68.29 | 35.82 |
+| 2026-11-15 | migros-34110402 | 999.75 | 1899.75 |
+| 2026-11-15 | migros-34370152 | 474.88 | 674.88 |
+| 2026-11-15 | migros-34374173 | 474.88 | 674.88 |
+| 2026-11-15 | migros-34374226 | 474.88 | 674.88 |
+| 2026-11-15 | migros-34379349 | 474.88 | 674.88 |
+| 2026-11-15 | migros-34379353 | 474.88 | 674.88 |
+| 2026-11-15 | migros-34379354 | 474.88 | 674.88 |
+| 2026-11-15 | migros-35030020 | 999.75 | 1749.75 |
