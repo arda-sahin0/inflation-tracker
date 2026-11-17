@@ -1,33 +1,33 @@
-# Market basket index — 16 November 2026
+# Market basket index — 17 November 2026
 
-- Period: 11 Sep 2026 to 16 Nov 2026 (66 days)
-- **Food & non-alcoholic beverages: 105.15** (+5.15%)
-- Whole basket (incl. household & personal care): 108.85 (+8.85%)
-- Food at the same pace for a year would be: +32.0%
+- Period: 11 Sep 2026 to 17 Nov 2026 (67 days)
+- **Food & non-alcoholic beverages: 105.19** (+5.19%)
+- Whole basket (incl. household & personal care): 108.97 (+8.97%)
+- Food at the same pace for a year would be: +31.7%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 103.62 | +3.62% |
-| migros | 106.19 | +6.19% |
+| migros | 106.28 | +6.28% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 105.78 | +5.78% |
-| dairy_eggs | 104.97 | +4.97% |
-| drinks | 102.56 | +2.56% |
-| fruit_nuts | 110.82 | +10.82% |
-| household | 110.20 | +10.20% |
-| meat | 104.71 | +4.71% |
-| oils_fats | 102.55 | +2.55% |
-| other_food | 108.92 | +8.92% |
-| personal_care | 126.66 | +26.66% |
-| sugar_sweets | 104.40 | +4.40% |
-| tea_coffee | 104.97 | +4.97% |
-| vegetables_pulses | 101.79 | +1.79% |
+| bread_cereals | 105.66 | +5.66% |
+| dairy_eggs | 105.00 | +5.00% |
+| drinks | 102.62 | +2.62% |
+| fruit_nuts | 110.96 | +10.96% |
+| household | 110.54 | +10.54% |
+| meat | 104.87 | +4.87% |
+| oils_fats | 102.61 | +2.61% |
+| other_food | 108.90 | +8.90% |
+| personal_care | 126.79 | +26.79% |
+| sugar_sweets | 104.43 | +4.43% |
+| tea_coffee | 104.98 | +4.98% |
+| vegetables_pulses | 101.88 | +1.88% |
 
 ## Biggest movers since the start
 
@@ -35,14 +35,14 @@
 | --- | --- | --- | --- |
 | Beyaz Balkabağı Kg | migros | 59.95 | +762.6% |
 | Topitop Meyve Aromalı Lolipop 8'li Poşet 11 G | migros | 10586.36 | +700.0% |
+| Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 126.65 | +204.1% |
 | Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
-| Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 116.65 | +180.1% |
-| Biber Jalapeno Kg | migros | 251.95 | +166.6% |
+| Hıyar Kg | migros | 115.50 | +175.3% |
+| Nestle 1927 Bol Sütlü Çikolata 4 x 60 G | migros | 707.92 | -53.8% |
 | NIVEA Creme Care Banyo ve Duş Jeli 250 Ml | migros | 319.80 | -55.6% |
-| Erüst Dağ Salata 125 G | migros | 799.60 | -55.8% |
 | Erüst Deniz Salata 125 G | migros | 799.60 | -55.8% |
+| Erüst Dağ Salata 125 G | migros | 799.60 | -55.8% |
 | Erüst Ege Salata 125 G | migros | 799.60 | -56.0% |
-| Yumoş Extra Amber Konsantre Yumuşatıcı Pouch 1200 Ml | migros | 82.50 | -61.2% |
 
 ## One-day moves over 25% (worth a look)
 
@@ -1794,3 +1794,33 @@
 | 2026-11-16 | migros-34120403 | 1149.75 | 2199.75 |
 | 2026-11-16 | migros-46040139 | 359.95 | 269.95 |
 | 2026-11-16 | migros-46040143 | 159.95 | 99.95 |
+| 2026-11-17 | migros-05030350 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030351 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030352 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030353 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030354 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030355 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030356 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030357 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030358 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030359 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030361 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030363 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030364 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05030367 | 75.90 | 56.50 |
+| 2026-11-17 | migros-05046483 | 144.95 | 98.95 |
+| 2026-11-17 | migros-07079692 | 587.06 | 822.94 |
+| 2026-11-17 | migros-07151213 | 1201.50 | 630.00 |
+| 2026-11-17 | migros-08040057 | 40.83 | 65.21 |
+| 2026-11-17 | migros-13025476 | 86.90 | 109.95 |
+| 2026-11-17 | migros-27281012 | 69.95 | 94.50 |
+| 2026-11-17 | migros-28131001 | 41.95 | 104.95 |
+| 2026-11-17 | migros-30569675 | 54.04 | 40.27 |
+| 2026-11-17 | migros-30580068 | 82.50 | 212.46 |
+| 2026-11-17 | migros-30619776 | 35.82 | 68.29 |
+| 2026-11-17 | migros-34046486 | 199.95 | 264.95 |
+| 2026-11-17 | migros-34374184 | 599.83 | 933.17 |
+| 2026-11-17 | migros-34374185 | 599.83 | 933.17 |
+| 2026-11-17 | migros-34374187 | 599.83 | 933.17 |
+| 2026-11-17 | migros-34374191 | 599.83 | 933.17 |
+| 2026-11-17 | migros-34374206 | 599.83 | 933.17 |
