@@ -1,33 +1,33 @@
-# Market basket index — 17 November 2026
+# Market basket index — 18 November 2026
 
-- Period: 11 Sep 2026 to 17 Nov 2026 (67 days)
-- **Food & non-alcoholic beverages: 105.19** (+5.19%)
-- Whole basket (incl. household & personal care): 108.97 (+8.97%)
-- Food at the same pace for a year would be: +31.7%
+- Period: 11 Sep 2026 to 18 Nov 2026 (68 days)
+- **Food & non-alcoholic beverages: 105.24** (+5.24%)
+- Whole basket (incl. household & personal care): 109.02 (+9.02%)
+- Food at the same pace for a year would be: +31.5%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 103.62 | +3.62% |
-| migros | 106.28 | +6.28% |
+| a101 | 103.70 | +3.70% |
+| migros | nan | +nan% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 105.66 | +5.66% |
-| dairy_eggs | 105.00 | +5.00% |
+| bread_cereals | 105.69 | +5.69% |
+| dairy_eggs | 105.09 | +5.09% |
 | drinks | 102.62 | +2.62% |
-| fruit_nuts | 110.96 | +10.96% |
+| fruit_nuts | 110.65 | +10.65% |
 | household | 110.54 | +10.54% |
 | meat | 104.87 | +4.87% |
 | oils_fats | 102.61 | +2.61% |
-| other_food | 108.90 | +8.90% |
-| personal_care | 126.79 | +26.79% |
-| sugar_sweets | 104.43 | +4.43% |
-| tea_coffee | 104.98 | +4.98% |
-| vegetables_pulses | 101.88 | +1.88% |
+| other_food | 108.94 | +8.94% |
+| personal_care | 126.91 | +26.91% |
+| sugar_sweets | 104.44 | +4.44% |
+| tea_coffee | 104.99 | +4.99% |
+| vegetables_pulses | 102.47 | +2.47% |
 
 ## Biggest movers since the start
 
@@ -38,10 +38,10 @@
 | Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 126.65 | +204.1% |
 | Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
 | Hıyar Kg | migros | 115.50 | +175.3% |
+| Tukaş Basilico Makarna Sosu 360 G | migros | 102.78 | -53.1% |
 | Nestle 1927 Bol Sütlü Çikolata 4 x 60 G | migros | 707.92 | -53.8% |
-| NIVEA Creme Care Banyo ve Duş Jeli 250 Ml | migros | 319.80 | -55.6% |
-| Erüst Deniz Salata 125 G | migros | 799.60 | -55.8% |
 | Erüst Dağ Salata 125 G | migros | 799.60 | -55.8% |
+| Erüst Deniz Salata 125 G | migros | 799.60 | -55.8% |
 | Erüst Ege Salata 125 G | migros | 799.60 | -56.0% |
 
 ## One-day moves over 25% (worth a look)
@@ -1824,3 +1824,10 @@
 | 2026-11-17 | migros-34374187 | 599.83 | 933.17 |
 | 2026-11-17 | migros-34374191 | 599.83 | 933.17 |
 | 2026-11-17 | migros-34374206 | 599.83 | 933.17 |
+| 2026-11-18 | a101-12002545 | 558.00 | 858.00 |
+| 2026-11-18 | a101-18002488 | 1132.35 | 1467.65 |
+| 2026-11-18 | a101-20000764 | 59.50 | 89.50 |
+| 2026-11-18 | a101-24005643 | 497.50 | 622.50 |
+| 2026-11-18 | a101-24005644 | 497.50 | 622.50 |
+| 2026-11-18 | a101-24005645 | 568.57 | 711.43 |
+| 2026-11-18 | a101-24005646 | 568.57 | 711.43 |
