@@ -1,9 +1,9 @@
-# Market basket index — 21 November 2026
+# Market basket index — 22 November 2026
 
-- Period: 11 Sep 2026 to 21 Nov 2026 (71 days)
+- Period: 11 Sep 2026 to 22 Nov 2026 (72 days)
 - **Food & non-alcoholic beverages: 105.26** (+5.26%)
-- Whole basket (incl. household & personal care): 108.62 (+8.62%)
-- Food at the same pace for a year would be: +30.2%
+- Whole basket (incl. household & personal care): 108.61 (+8.61%)
+- Food at the same pace for a year would be: +29.7%
 
 ## By store (food index, each on its own products)
 
@@ -20,7 +20,7 @@
 | dairy_eggs | 105.42 | +5.42% |
 | drinks | 102.33 | +2.33% |
 | fruit_nuts | 110.18 | +10.18% |
-| household | 109.05 | +9.05% |
+| household | 109.04 | +9.04% |
 | meat | 104.87 | +4.87% |
 | oils_fats | 102.54 | +2.54% |
 | other_food | 108.83 | +8.83% |
@@ -39,8 +39,8 @@
 | Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
 | Hıyar Kg | migros | 115.50 | +175.3% |
 | Tukaş Basilico Makarna Sosu 360 G | migros | 102.78 | -53.1% |
-| Calve Sriracha Mayonez 240 G | migros | 374.79 | -54.3% |
 | Calve Trüflü Mayonez 235 G | migros | 382.77 | -54.3% |
+| Calve Sriracha Mayonez 240 G | migros | 374.79 | -54.3% |
 | Yumoş Extra Amber Konsantre Yumuşatıcı Pouch 1200 Ml | migros | 83.29 | -60.8% |
 | Omo Cold Power Sık Yıkananlar Tüm Renkler Sıvı Deterjan 2500 Ml | migros | 99.98 | -62.1% |
 
@@ -2172,3 +2172,4 @@
 | 2026-11-21 | migros-34370163 | 333.22 | 666.56 |
 | 2026-11-21 | migros-34374234 | 179.90 | 379.90 |
 | 2026-11-21 | migros-46040143 | 99.95 | 159.95 |
+| 2026-11-22 | migros-30130507 | 76.49 | 43.74 |
