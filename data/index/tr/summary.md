@@ -1,33 +1,33 @@
-# Market basket index — 23 November 2026
+# Market basket index — 24 November 2026
 
-- Period: 11 Sep 2026 to 23 Nov 2026 (73 days)
-- **Food & non-alcoholic beverages: 105.40** (+5.40%)
-- Whole basket (incl. household & personal care): 108.83 (+8.83%)
-- Food at the same pace for a year would be: +30.1%
+- Period: 11 Sep 2026 to 24 Nov 2026 (74 days)
+- **Food & non-alcoholic beverages: 105.56** (+5.56%)
+- Whole basket (incl. household & personal care): 108.94 (+8.94%)
+- Food at the same pace for a year would be: +30.6%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
 | a101 | 103.80 | +3.80% |
-| migros | 106.53 | +6.53% |
+| migros | 106.81 | +6.81% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 107.43 | +7.43% |
-| dairy_eggs | 105.80 | +5.80% |
+| bread_cereals | 107.48 | +7.48% |
+| dairy_eggs | 106.01 | +6.01% |
 | drinks | 102.84 | +2.84% |
-| fruit_nuts | 110.02 | +10.02% |
+| fruit_nuts | 110.90 | +10.90% |
 | household | 109.04 | +9.04% |
-| meat | 105.15 | +5.15% |
+| meat | 105.40 | +5.40% |
 | oils_fats | 102.49 | +2.49% |
 | other_food | 109.04 | +9.04% |
 | personal_care | 127.14 | +27.14% |
-| sugar_sweets | 104.67 | +4.67% |
-| tea_coffee | 103.87 | +3.87% |
-| vegetables_pulses | 102.74 | +2.74% |
+| sugar_sweets | 104.69 | +4.69% |
+| tea_coffee | 103.91 | +3.91% |
+| vegetables_pulses | 102.82 | +2.82% |
 
 ## Biggest movers since the start
 
@@ -38,10 +38,10 @@
 | Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 129.32 | +210.5% |
 | Wemara Body Scrub Duş Jeli Bronz 500 Ml | migros | 399.90 | +185.8% |
 | Hıyar Kg | migros | 115.50 | +175.3% |
-| Tukaş Basilico Makarna Sosu 360 G | migros | 102.78 | -53.1% |
 | Calve Trüflü Mayonez 235 G | migros | 382.77 | -54.3% |
 | Calve Sriracha Mayonez 240 G | migros | 374.79 | -54.3% |
 | Yumoş Extra Amber Konsantre Yumuşatıcı Pouch 1200 Ml | migros | 83.29 | -60.8% |
+| Omo Active Cold Power Siyahlar Sıvı Deterjan 2500 Ml | migros | 99.98 | -62.1% |
 | Omo Cold Power Sık Yıkananlar Tüm Renkler Sıvı Deterjan 2500 Ml | migros | 99.98 | -62.1% |
 
 ## One-day moves over 25% (worth a look)
@@ -2216,3 +2216,18 @@
 | 2026-11-23 | migros-13000309 | 159.90 | 299.95 |
 | 2026-11-23 | migros-13000310 | 119.90 | 189.95 |
 | 2026-11-23 | migros-13010389 | 199.90 | 299.95 |
+| 2026-11-24 | migros-06035029 | 131.90 | 83.90 |
+| 2026-11-24 | migros-06035032 | 77.47 | 44.48 |
+| 2026-11-24 | migros-07011050 | 159.89 | 205.56 |
+| 2026-11-24 | migros-09035756 | 178.96 | 310.30 |
+| 2026-11-24 | migros-13000306 | 199.90 | 299.95 |
+| 2026-11-24 | migros-13025476 | 79.90 | 134.95 |
+| 2026-11-24 | migros-16290505 | 137.38 | 204.88 |
+| 2026-11-24 | migros-25030352 | 611.25 | 849.88 |
+| 2026-11-24 | migros-27135000 | 104.95 | 59.95 |
+| 2026-11-24 | migros-27270000 | 79.95 | 136.50 |
+| 2026-11-24 | migros-28111000 | 79.95 | 178.50 |
+| 2026-11-24 | migros-28210000 | 31.50 | 19.95 |
+| 2026-11-24 | migros-28250532 | 59.95 | 94.50 |
+| 2026-11-24 | migros-28380106 | 73.50 | 104.95 |
+| 2026-11-24 | migros-28410000 | 73.50 | 49.95 |
