@@ -1,33 +1,33 @@
-# Market basket index — 25 November 2026
+# Market basket index — 26 November 2026
 
-- Period: 11 Sep 2026 to 25 Nov 2026 (75 days)
-- **Food & non-alcoholic beverages: 105.65** (+5.65%)
-- Whole basket (incl. household & personal care): 109.11 (+9.11%)
-- Food at the same pace for a year would be: +30.7%
+- Period: 11 Sep 2026 to 26 Nov 2026 (76 days)
+- **Food & non-alcoholic beverages: 105.69** (+5.69%)
+- Whole basket (incl. household & personal care): 109.14 (+9.14%)
+- Food at the same pace for a year would be: +30.4%
 
 ## By store (food index, each on its own products)
 
 | Store | Index | Change |
 | --- | --- | --- |
-| a101 | 103.87 | +3.87% |
-| migros | 106.89 | +6.89% |
+| a101 | 103.88 | +3.88% |
+| migros | 106.96 | +6.96% |
 
 ## By category
 
 | Category | Index | Change |
 | --- | --- | --- |
-| bread_cereals | 107.67 | +7.67% |
-| dairy_eggs | 106.36 | +6.36% |
-| drinks | 102.92 | +2.92% |
-| fruit_nuts | 110.76 | +10.76% |
-| household | 109.07 | +9.07% |
-| meat | 105.41 | +5.41% |
-| oils_fats | 102.52 | +2.52% |
-| other_food | 108.98 | +8.98% |
-| personal_care | 128.01 | +28.01% |
-| sugar_sweets | 104.80 | +4.80% |
+| bread_cereals | 107.56 | +7.56% |
+| dairy_eggs | 106.44 | +6.44% |
+| drinks | 103.18 | +3.18% |
+| fruit_nuts | 110.87 | +10.87% |
+| household | 109.08 | +9.08% |
+| meat | 105.31 | +5.31% |
+| oils_fats | 102.63 | +2.63% |
+| other_food | 109.02 | +9.02% |
+| personal_care | 128.08 | +28.08% |
+| sugar_sweets | 104.82 | +4.82% |
 | tea_coffee | 103.93 | +3.93% |
-| vegetables_pulses | 103.12 | +3.12% |
+| vegetables_pulses | 103.11 | +3.11% |
 
 ## Biggest movers since the start
 
@@ -38,8 +38,8 @@
 | SPK Jelibon Çilek Yumuşak Şeker 160 G | a101 | 737.50 | +337.0% |
 | Duru Sıvı Sabun Zeytinyağlı 3 L | migros | 129.32 | +210.5% |
 | URBAN Care EXPERT Biotin&Kafein Saç Bakım Şampuanı 350ml | migros | 2142.71 | +200.0% |
-| Calve Sriracha Mayonez 240 G | migros | 374.79 | -54.3% |
 | Calve Trüflü Mayonez 235 G | migros | 382.77 | -54.3% |
+| Calve Sriracha Mayonez 240 G | migros | 374.79 | -54.3% |
 | Yumoş Extra Amber Konsantre Yumuşatıcı Pouch 1200 Ml | migros | 83.29 | -60.8% |
 | Omo Cold Power Sık Yıkananlar Tüm Renkler Sıvı Deterjan 2500 Ml | migros | 99.98 | -62.1% |
 | Omo Active Cold Power Siyahlar Sıvı Deterjan 2500 Ml | migros | 99.98 | -62.1% |
@@ -2313,3 +2313,32 @@
 | 2026-11-25 | migros-34346256 | 1299.75 | 2849.75 |
 | 2026-11-25 | migros-34346288 | 1299.75 | 2849.75 |
 | 2026-11-25 | migros-34410273 | 2499.75 | 3499.75 |
+| 2026-11-26 | migros-05030081 | 132.38 | 92.50 |
+| 2026-11-26 | migros-05030168 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030332 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030701 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030706 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030707 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030708 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030710 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030711 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030712 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030714 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030721 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030722 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030726 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030727 | 105.90 | 74.00 |
+| 2026-11-26 | migros-05030742 | 105.90 | 74.00 |
+| 2026-11-26 | migros-07080026 | 325.00 | 442.25 |
+| 2026-11-26 | migros-08062203 | 7.30 | 14.99 |
+| 2026-11-26 | migros-09020010 | 245.82 | 508.11 |
+| 2026-11-26 | migros-13500638 | 459.90 | 309.00 |
+| 2026-11-26 | migros-25500563 | 174.62 | 126.92 |
+| 2026-11-26 | migros-27400009 | 2099.50 | 2625.00 |
+| 2026-11-26 | migros-30560224 | 40.61 | 56.23 |
+| 2026-11-26 | migros-30560227 | 40.61 | 56.23 |
+| 2026-11-26 | migros-34043583 | 387.95 | 499.95 |
+| 2026-11-26 | migros-34043590 | 387.95 | 499.95 |
+| 2026-11-26 | migros-34049015 | 203.95 | 274.95 |
+| 2026-11-26 | migros-34049016 | 229.95 | 339.95 |
+| 2026-11-26 | migros-34346151 | 1299.75 | 2849.75 |
